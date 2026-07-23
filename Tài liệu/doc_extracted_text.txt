@@ -1,0 +1,504 @@
+P0: THÀNH PHỐ HỒ CHÍ MINH
+P3: NGUYỄN THÀNH NAM
+P4: Mã số Dự án: 
+P9: TRẠM ĐỊNH VỊ IKIGAI: HỆ THỐNG DỰ BÁO DỮ LIỆU TUYỂN SINH VÀ ĐỊNH HƯỚNG LỰA CHỌN TỔ HỢP MÔN HỌC LỚP 10
+P11: Lĩnh vực: Liên ngành Toán học – Phần mềm hệ thống – Khoa học hành vi
+P27: Mục lục
+P28: Tóm tắt dự án…………………………………………………………………….3
+P29: Phần nội dung……………………………………………………………………4
+P30: 1. Lý do chọn đề tài………………………………………………………………4
+P31: 2. Câu hỏi nghiên cứu…………………………………………………………….4
+P32: 3. Vấn đề nghiên cứu……………………………………………………………..5
+P33: 4. Giả thuyết khoa học……………………………………………………………6
+P34: 5. Thiết kế nghiên cứu……………………………………………………………6
+P35: 	5.1. Nghiên cứu tổng quát …………………………………………………….6
+P36: 	5.2. Quá trình thực nghiệm và thu thập số liệu………………………………..7
+P37: 	5.3. Giải pháp và thiết kế mô hình phần mềm…………………………………8
+P38: 	5.4. Giới hạn phạm vi nghiên cứu …………………………………………….9
+P39: 	5.5. Xác định rủi ro và xử lý…………………………………………………..9 
+P40: 6. Tiến hành nghiên cứu và thực nghiệm…………………………………………9
+P41: 	6.1. Quy trình thu thập, phân tích và giải thích dữ liệu……………………….9
+P42: 	6.2. Xây dựng mô hình và kiểm tra thiết kế…………………………………..12 
+P43: 7. Kết luận………………………………………………………………………14 
+P44: Tài liệu tham khảo………………………………………………………………14
+P45: Phụ lục
+P57: TÓM TẮT DỰ ÁN
+P58: TRẠM ĐỊNH VỊ IKIGAI: HỆ THỐNG DỰ BÁO DỮ LIỆU TUYỂN SINH VÀ ĐỊNH HƯỚNG LỰA CHỌN TỔ HỢP MÔN HỌC LỚP 10
+P59:       Lĩnh vực: Liên ngành (Toán học, phần mềm hệ thống và khoa học hành vi)
+P60: 1. Tính Khoa học 
+P61:  Dự án đã chuyển hóa bài toán chọn nguyện vọng và chọn tổ hợp môn lớp 10 từ cảm tính, định tính sang mô hình toán học định lượng có cấu trúc chặt chẽ. Tích hợp đa mô hình toán thống kê: Ứng dụng thuật toán Trung bình trượt có trọng số (WMA) để dự báo biến động điểm chuẩn; Áp dụng Hàm phân phối chuẩn tích lũy Gauss (NORM.DIST) dựa trên hệ rủi ro  để tính xác suất trúng tuyển; Sử dụng Hình học phẳng Oxy và Định lý Pitago (khoảng cách Euclid) để tối ưu hóa việc tìm ra điểm giao thoa Ikigai I(10,10) giữa Đam mê và Năng lực.
+P62: 2. Tính mới và sáng tạo 
+P63:  Dự án trực tiếp giải quyết bài toán cốt lõi của Chương trình GDPT 2018 (chọn 4 môn lựa chọn ở Lớp 10). Đây là ứng dụng đầu tiên kết nối một đường thẳng tuyến tính từ Điểm học bạ cấp 2        Xác suất đậu Lớp 10        Chọn tổ hợp môn THPT        Khối xét tuyển Đại học và định hướng nghề nghiệp tương lai. Thay vì một bảng tính Excel thô sơ, dự án đã số hóa thành công một Ứng dụng di động (App) trực quan, bảo mật thuật toán nâng cao và vận hành chỉ qua một thao tác quét mã QR.
+P64: 3. Tính thực tiễn 
+P65:  Bộ hệ số rủi ro  (được tính toán từ khảo sát mẫu thực nghiệm N=50) giúp xác định điểm năng lực trung bình của học sinh về sát với điểm thi tuyển sinh thực, giúp học sinh đặt nguyện vọng một cách phù hợp. Qua kiểm định mẫu thử độc lập N'=20 học sinh mới, ứng dụng đạt độ chính xác 90% trong việc phân tầng cảnh báo nguy cơ (🔴/🟡/🟢), giúp triệt tiêu rủi ro trượt cả 3 nguyện vọng công lập, thử nghiệm độc lập N''=10 học sinh đã học cấp 3 để xem xét tính phù hợp của hệ số K trong mô hình Ikigai. Học sinh và phụ huynh chỉ mất 3-5 phút nhập liệu để nhận được lộ trình và tổ hợp môn tối ưu nhất.
+P66: 4. Tính cộng đồng 
+P67:  Ứng dụng hoạt động như một chuyên gia tư vấn tâm lý và hướng nghiệp số hóa, giảm tải áp lực, sự hoang mang và xung đột gia đình giữa cha mẹ và con trong mùa tuyển sinh chuyển cấp. Ứng dụng hoàn toàn miễn phí, sử dụng dễ dàng trên mọi thiết bị di động, giúp học sinh ở mọi điều kiện kinh tế (kể cả vùng ngoại thành, nông thôn) đều có quyền tiếp cận một công cụ hướng nghiệp công nghệ cao. Hệ thống có cấu hình mở, dễ dàng cập nhật dữ liệu hàng năm và có thể chuyển giao cho các trường THCS sử dụng như một công cụ hỗ trợ giáo viên chủ nhiệm trong công tác tư vấn phân luồng sau THCS.
+P69: PHẦN NỘI DUNG
+P70: 1. Lý do chọn đề tài
+P71: Tuyển sinh vào lớp 10 trung học phổ thông (THPT) tại Thành phố Hồ Chí Minh là một trong những thời điểm có ý nghĩa quan trọng đối với học sinh cuối cấp trung học cơ sở (THCS). Đây không chỉ là kỳ thi đánh giá kết quả học tập sau bốn năm THCS, mà còn là giai đoạn học sinh phải đưa ra nhiều quyết định có ảnh hưởng trực tiếp đến môi trường học tập, định hướng nghề nghiệp và lộ trình xét tuyển đại học trong tương lai. Trong bối cảnh hiện nay, học sinh lớp 9 tại Thành phố Hồ Chí Minh đang chịu áp lực chuyển cấp rất lớn. Một mặt, học sinh phải đối diện với áp lực cạnh tranh vào trường chuyên, trường có điểm chuẩn cao hoặc các trường THPT thuộc nhóm “top”. Việc lựa chọn trường chuyên và đánh giá khả năng trúng tuyển thường dựa nhiều vào kinh nghiệm cá nhân, điểm chuẩn năm trước hoặc thông tin truyền miệng, trong khi kết quả tuyển sinh chịu tác động bởi nhiều yếu tố như độ khó đề thi, phổ điểm, chỉ tiêu tuyển sinh, số lượng thí sinh đăng ký và mức độ cạnh tranh từng năm. Việc sắp xếp nguyện vọng 1, nguyện vọng 2 và nguyện vọng 3 đòi hỏi sự cân bằng giữa mong muốn, năng lực thực tế, mức độ cạnh tranh của từng trường. Nếu học sinh đặt cả ba nguyện vọng vào các trường có mức điểm chuẩn tương đương hoặc đều cao hơn năng lực thực tế, nguy cơ “trượt chuỗi” nguyện vọng là rất lớn. Ngược lại, nếu chọn quá an toàn, học sinh có thể bỏ lỡ cơ hội vào môi trường học tập phù hợp hơn.
+P72: Bên cạnh áp lực tuyển sinh, Chương trình giáo dục phổ thông 2018 đặt ra yêu cầu mới đối với học sinh khi bước vào lớp 10. Học sinh không chỉ học các môn bắt buộc mà còn phải lựa chọn 4 môn trong nhóm môn lựa chọn, gồm: Địa lí, Giáo dục kinh tế và pháp luật, Vật lí, Hóa học, Sinh học, Công nghệ, Tin học, Âm nhạc, Mĩ thuật. Việc lựa chọn tổ hợp môn lớp 10 có quan hệ trực tiếp với định hướng ngành nghề, tổ hợp xét tuyển đại học và năng lực học tập của học sinh và khả năng tổ chức dạy học ở trường. Tuy nhiên, nhiều học sinh lớp 9 chưa đủ thông tin để hiểu rằng chọn môn lớp 10 không chỉ là chọn môn “dễ học”, mà còn là chọn đường đi trong ba năm THPT và xa hơn là cơ hội xét tuyển đại học và chọn ngành nghề cho tương lai. Thực tế cho thấy, công tác tư vấn tuyển sinh lớp 10 hiện nay còn phụ thuộc nhiều vào kinh nghiệm chủ quan của phụ huynh, giáo viên hoặc thông tin rời rạc từ các nguồn không chính thống. Trong khi đó, dữ liệu tuyển sinh như điểm chuẩn, chỉ tiêu, số lượng đăng ký nguyện vọng 1, tỷ lệ cạnh tranh, xu hướng tăng giảm điểm chuẩn qua các năm hoàn toàn có thể được chuẩn hóa, phân tích và sử dụng để hỗ trợ học sinh ra quyết định khoa học hơn. 
+P73: Từ yêu cầu thực tiễn đó, đề tài “Trạm định vị Ikigai: Hệ thống dự báo dữ liệu tuyển sinh và định hướng lựa chọn tổ hợp môn học lớp 10” được đề xuất nhằm xây dựng một sản phẩm số hỗ trợ học sinh lớp 9 lựa chọn trường, lựa chọn nguyện vọng và lựa chọn tổ hợp môn học lớp 10 trên cơ sở dữ liệu, toán học xác suất thống kê, phần mềm hệ thống và mô hình định hướng cá nhân.
+P74: 2. Câu hỏi nghiên cứu
+P75: Dự án tập trung trả lời các câu hỏi nghiên cứu sau:
+P76: Câu hỏi nghiên cứu chung: Làm thế nào để xây dựng một công cụ tư vấn tự động ứng dụng các mô hình Toán, thống kê và hình học phẳng nhằm dự báo chính xác kết quả tuyển sinh lớp 10 (Thường & Chuyên), đồng thời định hướng lựa chọn tổ hợp môn THPT bám sát lộ trình Đại học và ngành nghề tương lai cho học sinh THCS?
+P77: Các câu hỏi nghiên cứu cụ thể:
+P78: Câu hỏi 1 (Về dự báo năng lực và điểm thi): Làm sao để dự báo điểm thi thực tế (thường & chuyên) của học sinh dựa trên điểm trung bình môn ở lớp 9?
+P79: Câu hỏi 2 (Về dự báo điểm chuẩn và quản trị rủi ro nguyện vọng): Mô hình Trung bình trượt có trọng số (WMA) và hàm phân phối chuẩn tích lũy Gauss được tích hợp như thế nào để dự báo điểm chuẩn năm tới và xác suất trúng tuyển, từ đó cảnh báo rủi ro cho 3 nguyện vọng của học sinh?
+P80: Câu hỏi 3 (Về định hướng tổ hợp môn và hướng nghiệp theo Ikigai): Làm thế nào để ứng dụng Định lý Pitago tính khoảng cách Euclid (d) trên mặt phẳng tọa độ Oxy để xác định điểm giao thoa giữa Đam mê (x) và Năng lực (y), qua đó tìm ra Tổ hợp môn Lớp 10 tối ưu nhất bám sát khối xét Đại học và ngành nghề trong tương lai?
+P81: 3. Vấn đề nghiên cứu
+P82: Chương trình Giáo dục phổ thông (GDPT) 2018 mang lại sự linh hoạt nhưng cũng đặt ra những thách thức lớn đối với học sinh lớp 9 trong giai đoạn chuyển cấp THCS lên THPT. Do đó, dự án tập trung vào nghiên cứu các vấn đề sau đây:
+P83: Vấn đề đầu tiên, đó là sự mơ hồ và rủi ro trong việc chọn nguyện vọng thi Tuyển sinh lớp 10, học sinh và phụ huynh thường gặp hiện tượng điểm học bạ đạt giỏi nhưng điểm thi thật bị tụt, đặc biệt là thi hệ Chuyên. Việc đặt nguyện vọng còn bị chi phối bởi tâm lý đám đông, dẫn đến việc chiến lược đặt nguyện vọng sai và rớt cả 3 nguyện vọng công lập.
+P84: Vấn đề thứ hai, đó là sự khó khăn trong việc định hướng Tổ hợp môn Lớp 10, đa số học sinh lớp 9 không biết việc lựa chọn Tổ hợp môn lớp 10 ảnh hưởng quyết định đến khối ngành xét vào Đại học. Do đó, đa số học sinh chọn môn theo cảm tính (chọn môn dễ, né môn khó) mà chưa có giải pháp đồng bộ hóa giữa Năng lực thực tế và Đam mê cá nhân. Vì vậy, việc phải chọn 4 môn lựa chọn ngay từ khi bước vào lớp 10 đòi hỏi học sinh phải có tầm nhìn tuyến tính gắn liền với khối thi Đại học và ngành nghề tương lai. 
+P85: Vấn đề thứ ba, hiện tại chưa có một giải pháp công nghệ định lượng như là phần mềm hay công cụ số hóa nào tích hợp đồng thời các mô hình Toán - Thống kê (Dự báo trung bình trượt WMA, Phân phối chuẩn Gauss) và Mô hình Quản trị tương lai (Ikigai thu gọn trên mặt phẳng tọa độ Oxy) để tư vấn tự động, trực quan và cá nhân hóa cho học sinh cấp 2.
+P86: 4. Giả thuyết khoa học
+P87: Dự án được xây dựng dựa trên 3 giả thuyết khoa học sau:
+P88:  Giả thuyết 1 (Về tính dự báo điểm thi và điểm chuẩn): ứng dụng mô hình Trung bình trượt có trọng số (WMA) phân tách theo 4 nhóm trường kết hợp với Hệ số rủi ro chênh lệch điểm trung bình học bạ () thu thập từ thực nghiệm (N = 50), hệ thống sẽ dự báo được khoảng điểm thi và điểm chuẩn năm tới với độ tin cậy cao, loại bỏ được hiện tượng điểm học bạ cao nhưng kết quả thi thấp.
+P89:  Giả thuyết 2 (Về tính quản trị rủi ro nguyện vọng): Ứng dụng hàm phân phối chuẩn tích lũy Gauss (NORM.DIST) để so sánh khoảng cách giữa khoảng điểm năng lực của học sinh và điểm chuẩn dự báo của trường, hệ thống có thể định lượng hóa tỷ lệ % xác suất đậu và phân tầng cảnh báo rủi ro tương đối chính xác cho từng nguyện vọng (Thường và Chuyên).
+P90:  Giả thuyết 3 (Về tính tối ưu hóa lựa chọn Tổ hợp môn): Sử dụng mô hình hóa mức độ Đam mê (x) và Năng lực (y) của học sinh lên mặt phẳng tọa độ Oxy, áp dụng Định lý Pitago tính khoảng cách Euclid (d) tới điểm lý tưởng I(10,10), kết hợp hệ số ngành nghề (W), hệ thống sẽ tìm được chỉ số K nhỏ nhất đại diện cho Tổ hợp môn Lớp 10 tương thích Ikigai cao nhất, giúp học sinh định hình rõ ràng lộ trình Tổ hợp xét tuyển Đại học và nghề nghiệp tương lai.
+P91: 5. Thiết kế nghiên cứu
+P92: 5.1. Nghiên cứu tổng quát 
+P93: Nghiên cứu được thiết kế và thực hiện độc lập bởi tác giả qua 5 giai đoạn nối tiếp nhau theo chu trình phát triển sản phẩm công nghệ:
+P94: Giai đoạn 1: Thu thập dữ liệu (thực hiện từ 1/7 đến 15/7) 
+P95: - Thực hiện thu thập dữ liệu của 50 bạn học sinh lớp 9 năm học 2025 - 2026 (N = 50) về điểm trung bình 3 môn thi tuyển sinh (điểm học bạ môn toán, ngữ văn, tiếng anh), kết quả điểm thi tuyển sinh 3 môn và kết qủa điểm thi môn chuyên (23 bạn có thi chuyên).
+P96: - Thu thập dữ liệu điểm chuẩn NV1, số lượng thí sinh tham gia thi tuyển sinh, số lượng thí sinh đăng ký NV1 vào các trường, chỉ tiêu tuyển sinh của các trường THPT tại TP.HCM trong 3 năm (2024 - 2026) và Đề án tổ hợp môn Lớp 10 của một số trường THPT tại TP.HCM.
+P97: - Thu thập dữ liệu về các Tổ hợp môn xét tuyển của các trường Đại học và ngành nghề tương ứng với với các Tổ hợp môn xét tuyển.
+P98: Giai đoạn 2: Xác định giải pháp và xây dựng mô hình Toán (thực hiện từ 16/7 đến 30/7)
+P99: - Thiết lập bộ tham số rủi ro để xây dựng mô hình dự đoán điểm thi tuyển sinh dựa trên điểm trung bình (học bạ), từ đó dự tính được điểm thi tuyển sinh của học sinh. 
+P100: 		- Sử dụng phương pháp trung bình trượt có số lượng quan trọng (WMA), hàm phân phối chuẩn Gauss (NORM.DIST) để dự báo điểm chuẩn (NV1) của các trường THPT và dự báo và tư vấn 03 nguyện vọng tuyển sinh thường và chuyên. 
+P101: - Sử dụng công thức khoảng cách Euclidtrên mặt phẳng Oxy biểu diễn mô hình Ikigai (rút gọn), Ikigai là triết lý định hướng cuộc sống thường được hiểu là sự giao thoa giữa điều bản thân yêu thích, điều bản thân làm tốt, điều xã hội cần và điều có thể tạo ra giá trị nghề nghiệp. Trong phạm vi dự án này, mô hình Ikigai được rút gọn thành hai chiều phù hợp với học sinh lớp 9: đam mê và năng lực Điểm lý tưởng là I(10,10), tương ứng với môn học vừa yêu thích vừa có năng lực tốt. Khoảng cách từ môn học đến điểm lý tưởng được tính theo định lý Pitago (Khoảng cách Euclid):
+P102: Giai đoạn 3: Thiết kế phần mềm trên excel (thực hiện từ 1/8 đến 5/8)
+P103: Xây dựng cấu trúc Cơ sở dữ liệu trên Sheet; lập trình các thuật toán tìm kiếm (VLOOKUP, INDEX-MATCH, IFS) và hệ thống cảnh báo màu, gồm:
+P104: - Dự đoán nguyện vọng (thường) và lời khuyên: sử dụng hàm tích lũy Gauss để đưa ra xác suất và phân tầng cảnh báo. 
+P105: - Dự báo Điểm chuẩn năm nay bằng phương pháp trung bình trượt có số lượng quan trọng (WMA), hàm phân phối chuẩn Gauss (NORM.DIST) và hàm IFS logic phân tầng Cảnh báo Màu (🔴/🟡/🟢) và đưa ra Lời khuyên
+P106: - Sử dụng thuật toán tự động tìm và xuất Tên Tổ hợp môn tối ưu nhất (Chỉ số K nhỏ nhất.
+P107: - Sử dụng …. Để thiết kế app mobi
+P108: Giai đoạn 4: Thử nghiệm, đánh giá và tối ưu hoá sản phẩm (thực hiện từ 6/8 đến 13/8)
+P109: Chạy thử nghiệm phần mềm trên mẫu kiểm thử N’=20 học sinh mới; so sánh kết quả dự báo của phần mềm với kết quả trúng tuyển thực tế để tính độ chính xác; chạy thử mẫu N’’=10 để kiểm tra tính phù hợp lựa chọn tổ hợp môn đối với những bạn đã học THPT.
+P110: Giai đoạn 5: Báo cáo dự án và thiết kế sản phẩm (thực hiện từ 14/8 đến 21/8)
+P111: Hoàn thiện giao diện tư vấn trực quan (Dashboard), đóng gói tập tin Excel và Báo cáo nghiên cứu dự án.
+P112: 5.2. Quá trình thực nghiệm và thu thập số liệu
+P113: - Phương pháp thu thập dữ liệu: Tác giả thiết kế Mẫu phiếu khảo sát (Google Forms) gửi tới 50 (N=50) học sinh lớp 9 vừa hoàn thành kỳ thi Tuyển sinh 10 tại TP.HCM để thu thập điểm học bạ môn Chuyên và 3 môn thi tuyển sinh và điểm thi thực tế Tuyển sinh 10 và môn chuyên (23 bạn có thi chuyên). 
+P114: - Thu thập Dữ liệu Hệ thống: Tác giả tiến hành trích xuất và chuẩn hóa dữ liệu thứ cấp từ các nguồn chính thống của Sở Giáo dục & Đào tạo TP.HCM, gồm: Điểm chuẩn Tuyển sinh 10 (Thường và Chuyên) của các trường THPT tại TP.HCM trong 3 năm liên tiếp (2024, 2025, 2026). Đề án tuyển sinh Lớp 10 và Danh mục các Tổ hợp môn học lựa chọn theo Chương trình GDPT 2018 của các trường THPT địa bàn TP.HCM.
+P115: 5.3. Giải pháp và thiết kế mô hình phần mềm
+P116: Tác giả trực tiếp thiết kế kiến trúc phần mềm tích hợp 3 Module trên nền tảng Microsoft Excel:
+P117: [INPUT: Học bạ (học lực 1-10) + Đam mê (1-10) + Tổ hợp xét Ngành ĐH]  
+P118: ──> [MODULE 1] ──> Áp hệ số rủi ro  ──> Dự báo dải điểm thi [Min - Max] 
+P119: ──> [MODULE 2] ──> Mô hình WMA + Hàm Gauss ──> % Xác suất đậu và hệ thống tư vấn, cảnh báo (🔴/🟡/🟢) 
+P120: ──> [MODULE 3] ──> Hình học Oxy (Pitago) ──> Chỉ số K ──> Tổ hợp Ikigai Tối ưu
+P121: Thiết kế Module 1 (Dự báo Năng lực): Lập công thức trừ hệ số rủi rodựa trên phân nhóm học lực, tính ra phạm vi năng lực, từ đó xác định năng lực trung bìnhvà Độ chuẩn.
+P122: Thiết kế Module 2 (Xác định và cảnh báo Nguyện vọng): 
+P123: Áp dụng thuật toán trung bình trượt có số (WMA) để tính điểm chuẩn dự báo năm nay:.
+P124: Lập trình phân phối chuẩn Gauss =1 - NORM.DIST(X_Chuẩn, mu, sigma, TRUE) để tính toán % xác thực.
+P125: Lập trình logic lồng nhau =IF(...) để phân tầng cảnh báo màu tự động (Đỏ: Nguy hiểm < 50%, Vàng: Cân nhắc 50-80%, Xanh: An toàn > 80%).
+P126: Thiết kế Module 3 (Quản trị tương lai Ikigai):
+P127: Biểu diễn môn học trên mặt vật với(Đam mê),(Năng lực ).
+P128: Tác giả lập công thức tính toán khoảng cách Euclide đến điểm lý tưởng:.
+P129: Tính toán hợp nhất các số tương thíchvà truy xuất tổng hợpnhỏ nhất.
+P130: 5.4. Giới hạn phạm vi nghiên cứu 
+P131: Dự án nghiên cứu phân tích trên mẫu nhỏ (N=50) để tính toán và sử dụng dữ liệu tuyển sinh trên địa bàn TP.HCM (bao gồm tỉnh Bình Dương và tỉnh Bà Rịa - Vũng Tàu năm 2024, 2025 trước sát nhập). Do đó, cần được nghiên cứu mở rộng phạm vi và tăng số lượng mẫu để dự án được áp dụng rộng rãi hơn, tránh tình trạng mẫu thiên lệch vùng.
+P132: 5.5. Xác định rủi ro và xử lý 
+P133: Đề tài thuộc lĩnh vực Toán, Phần mềm hệ thống và khoa học Xã hội và hành vi, không sử dụng hóa chất, chất cháy nổ hay thiết bị cơ khí nguy hiểm. Tuy nhiên, tác giả chủ động nhận diện và quản trị các rủi ro liên quan đến dữ liệu số và tâm lý học đường, gồm:
+P134: - Rủi ro về Bảo mật thông tin cá nhân: Việc thu thập số điểm học và thông tin cá nhân của 50 học sinh có thể được phát hiện gây ảnh hưởng đến quyền riêng tư. Do đó, tác giả đã mã hóa toàn bộ khảo sát dữ liệu (Ẩn danh). Loại bỏ thông tin cá nhân; chỉ lưu trữ thông tin phục vụ nghiên cứu.
+P135: - Rủi ro tâm lý của học sinh: Kết quả dự báo cảnh báo Đỏ có thể gây tâm lý hoang mang, hoài nghi bản thân cho học sinh. Do đó, hệ thống cảnh báo bằng cách chèn tuyên bố miễn trừ trách nhiệm (Tuyên bố từ chối trách nhiệm) ngay trên giao diện phần mềm: “Phần mềm đóng vai trò tham khảo định lượng. Kết quả thi phụ vào sự nỗ lực thực tế của học sinh.”
+P136: - Rủi ro thiên vị thuật toán (Bias): Mẫu khảo sátvề một nhóm học sinh có thể gây ra hệ số rủi robị sai lệch so với toàn thành phố và khu vực khác. Do đó, tác giả dựa vào số liệu tổng để tính toán, điều chỉnh hệ số cho phù hợp; khi chạy thử nghiệm đã thử nghiệm thêm đa dạng nhóm học sinh có điểm trung bình học bạ và điểm thi khác nhau.
+P137: - An toàn công nghệ thông tin: Tệp Excel chứa các hàm công thức có thể bị xóa hoặc bị hỏng do thao tác của người dùng sai. Do đó, tác giả đã tiến hành khóa bảo vệ Sheet (Protect Sheet), chỉ mở duy nhất các ô nhập dữ liệu (Ô đầu vào) cho người dùng, ẩn các công thức toán thuật quan trọng.
+P138: 6. Tiến hành nghiên cứu và thực nghiệm
+P139: 6.1. Quy trình thu thập, phân tích và giải thích dữ liệu
+P140: Quá trình thực nghiệm được triển khai đồng bộ qua 3 cấu phần dữ liệu nhằm làm rõ các biến số độc lập và biến số phụ thuộc của dự án: (chi tiết công thức toán học sử dụng trong Phụ lục 1)
+P141: - Xử lý dữ liệu Khảo sát khảo sát () để tìm Hệ số P: Từ dữ liệu điểm trung bình học địa lớp 9 () và Điểm thi tuyển sinh 10 ()., xác định chênh lệch điểm thực tế (). Trong 3 môn thi tuyển sinh, môn Toán có điểm chênh lệch cao nhất (từ 0.1 điểm đến 3.85 điểm, trung bình là 1.43 điểm); môn Văn có điểm chênh lệch trung bình (từ 0.2 điểm đến 2.85 điểm, trung bình là 0.79 điểm); môn Tiếng Anh có điểm chênh lệch thấp nhất (từ 0.05 điểm đến 2.8 điểm, trung bình là 0.53 điểm). Do đó, dự án xây dựng tham số rủi ro theo 3 tầng học động lực (môn Toán và môn Tiếng anh;;, môn Văn ;;. Từ kết quả phân tích, tác giả thiết lập hệ số rủi rođể xác định điểm thi tuyển sinh, với mức chênh lệch trung bình theo học lực.
+P142: - Mô hình dự đoán điểm thi tuyển sinh dựa trên điểm trung bình (học bạ): phân tích sự chênh lệch giữa điểm trung bình và điểm tuyển sinh cho thấy yếu tố ảnh hưởng gồm Độ khó của đề thi tuyển sinh và Hệ số rủi ro theo môn học, với khoảng tin cậy 95% (loại trừ yếu tố định tính như trạng thái tinh thần, sức khoẻ của thí sinh thời điểm thi), với công thức trọng tâm:
+P143: 	Điểm tối thiểu môn(Sàn): 
+P144: 	Điểm tối đa môn(S trần):
+P145: 		Khi biết điểm tổng 3 môn thi tuyển sinh khoảng từ, sẽ xác định 2 thông số:
+P146: 	Giá trị trung bình (): mốc điểm có khả năng đạt được cao nhất của học sinh.
+P148: 	Độ chuẩn (): Đo khả năng rủi ro, dao động phong độ của học sinh.
+P150: (3,92 là khoảng tin cậy 95% tương ứng vớilần độ chuẩn).
+P151: Chứng minh để học sinh đạt được điểm này lớn hơn hoặc bằng điểm chuẩn () của một trường được tính bằng khoảng diện tích bên dưới đường phân phối chuẩn về phía bên phải:
+P153: - Mô hình dự báo điểm chuẩn (NV1) của các trường THPT và dự báo nguyện vọng: Để dự kiến điểm chuẩn (NV1) của các trường THPT của năm tiếp theo, giả thiết về độ khó không thay đổi, dữ liệu cho thấy điểm chuẩn phụ thuộc vào biến động số lượng thí sinh tham gia dự thi, và độ uy tín của trường. Để phân loại uy tín của trường, dự án sẽ chia ra các top trường khác nhau (top 1 là 10 trường điểm chuẩn NV1 cao nhất, top 2 là 10 trường nằm trong khoảng từ 11 đến 20, top 3 là 10 trường nằm trong khoảng từ 21 đến 30, top 4 là các trường còn lại). 
+P156:   Hệ số điều chỉnh Cung - Cầu (): 
+P157: Trong đó:
+P158:  (Tỷ lệ biến số lượng thí sinh)
+P159:  (tỷ lệ biến số NV1)
+P160: Áp dụng hàm Phân phối chuẩn tích lũy Gauss (Hàm phân phối chuẩn tích lũy) để tính xác suất đậu nguyện vọng () 
+P161: (Trong đó: : Điểm trung bình năng lực dự báo của học sinh (đã trừ hệ số rủi ro); : Dự báo biên độ chuẩn độ lệch (); : Điểm chuẩn dự báo của trường).
+P162: - Mô hình dự báo điểm thi chuyên và điểm chuẩn xét tuyển chuyên: trong 50 bạn đã tiến hành khảo sát, có 23 bạn thi vào trường chuyên, phát hiện thống kê mô tả về độ lệch điểm thi môn chuyên so với điểm trung bình học bạ, cho thấy sự chênh lệch rõ ràng giữa điểm trung bình và kết quả thi thực tế ở đề thi Chuyên mang tính phân hóa cao. Dựa trên khảo sát dữ liệu (), độ lệch giữa Điểm trung bình học bạ () và Điểm thi chuyên () có mức giảm trung bìnhđiểm, trong khoảng chênh lệch . Để phản ánh phân hóa theo từng nhóm năng lực và đặc thù môn thi (Tiếng Anh có hệ số chênh lệch cao nhất), hệ số điều chỉnh  được xác định theo công thức:
+P164: Sử dụng phương pháp Trung bình trượt có số lượng quan trọng (WMA) cho dữ liệu điểm chuẩn chuyên 3 năm gần nhất kết hợp Hệ số biến động tỷ lệ sinh lớp chuyên ():
+P166: Áp dụng chức năng phân tích lũy tích Gauss để dự đoán xác suất kết quả:
+P168: - Mô hình hướng dẫn chọn tổ hợp môn lớp 10: Để thực hiện dự báo lựa chọn tổ hợp môn, dự án vận dụng Mô hình Ikigai (thu gọn). Ikigai là triết lý định hướng cuộc sống thường được hiểu là sự giao thoa giữa điều bản thân yêu thích, điều bản thân làm tốt, điều xã hội cần và điều có thể tạo ra giá trị nghề nghiệp. Trong phạm vi dự án này, mô hình Ikigai được rút gọn thành hai chiều phù hợp với học sinh lớp 9: đam mê và năng lực. Bởi vì học sinh lớp 9 chưa có đủ trải nghiệm nghề nghiệp để đánh giá đầy đủ yếu tố thị trường lao động hoặc giá trị kinh tế của nghề nghiệp. Tuy nhiên, các bạn có thể tự đánh giá tương đối rõ mình thích môn nào, học tốt môn nào, cảm thấy hứng thú với nhóm ngành nào và có xu hướng học tập ra sao. Mô hình Ikigai thu gọn giúp tránh hai sai lầm phổ biến. Sai lầm thứ nhất là chọn môn chỉ vì điểm cao, nhưng không có hứng thú lâu dài. Sai lầm thứ hai là chọn môn chỉ vì thích, nhưng năng lực nền tảng chưa đủ để theo đuổi. Khi kết hợp hai trục đam mê và năng lực, hệ thống đưa ra khuyến nghị cân bằng hơn, vừa tôn trọng sở thích cá nhân, vừa bảo đảm tính khả thi học tập. 
+P170: Hình 1: Mô hình Quản trị tương lai Ikigai
+P171: Điểm lý tưởng là (I(10,10)), tương ứng với môn học vừa yêu thích vừa có năng lực tốt. Khoảng cách từ môn học đến điểm lý tưởng được tính theo định lý Pitago (Khoảng cách Euclid):
+P173: (Trong đó: (x): điểm đam mê đối với môn học 1-10; (y): điểm năng lực đối với môn học 1-10; (d): khoảng cách đến điểm lý tưởng).
+P174: 6.2. Xây dựng mô hình và kiểm tra thiết kế 
+P175: - Xây dựng cấu trúc Cơ sở dữ liệu: trên Sheet lập trình các thuật toán tìm kiếm (VLOOKUP, INDEX-MATCH, IFS) và hệ thống cảnh báo màu. (chi tiết các công thức và thao tác trong Phụ lục 2)
+P176: Dự đoán nguyện vọng (thường) và lời khuyên: sử dụng hàm tích lũy Gauss để đưa ra xác suất và phân tầng cảnh báo. Công thức tính điểm thi dự báo: =Điểm_Học_Bạ- VLOOKUP(Phân_Tầng_Học_Lực,Bang_He_So_, 2, FALSE)
+P177: Dự báo Điểm chuẩn năm nay bằng Mô hình WMA: =(Điểm_2026 * 0.5 + Điểm_2025 * 0.3 + Điểm_2024 * 0.2) * (1 + Hệ_Số_Biến_Động)
+P178: Công thức tính xác suất trúng tuyển, dùng hàm Phân phối chuẩn tích lũy Gauss): 
+P179: =1-NORM.DIST(Điểm_Chuẩn_Dự_Báo,Điểm_Thi_Dự_Báo_Trung_Bình, Độ_Lệch_Chuẩn, TRUE)
+P180: Dùng hàm IFS logic phân tầng Cảnh báo Màu (🔴/🟡/🟢) và đưa ra Lời khuyên: =IFS(Xác_Suất < 0.5, “🔴Nguy hiểm: Rủi ro cao, nên thay đổi nguyện vọng!”, Xác_Suất <= 0.8, “🟡Xem xét: Vùng tranh chấp, cần nỗ lực tăng tốc!”, Xác_Suất > 0.8, “🟢An toàn: Xác suất đậu cao, tự tin giữ nguyện vọng.”)
+P181: Khối Dự đoán nguyện vọng Chuyên và lời khuyên: Do cấu trúc và độ khó đặc thù của đề thi chuyên, khối này áp dụng biên độ phạt rủi ro nặng hơn () và siết chặt độ lệch chuẩn để đảm bảo an toàn cho học sinh: =IFS(Xác_Suất_Chuyên < 0.6, “🔴Nguy hiểm: Khả năng đỗ Chuyên thấp, nên tập trung cho trường Thường!”, Xác_Suất_Chuyên <= 0.85, “🟡Xem xét: Cơ hội chia đều, cần tập trung giải đề chuyên sâu!”, Xác_Suất_Chuyên > 0.85, “🟢 An toàn: Năng lực đạt ngưỡng an toàn cho trường chuyên lựa chọn.”)
+P182: Lựa chọn Tổ hợp môn Ikigai tối ưu: Công thức Định lý Pitago tính khoảng cách Euclid (d) của từng môn học: =SQRT((10 - Điểm_Đam_Mê_Mức_1_10)^2 + (10 - Điểm_Năng_Lực_Mức_1_10)^2)
+P183: Công thức tính Chỉ số Tương thích Tổ hợp (K) có trừ Hệ số ngành (W): =AVERAGE(d_Môn1, d_Môn2, d_Môn3, d_Môn4) - IF(Khối_Thi_Tổ_Hợp = Khối_Ngành_Mơ_Ước, 1.5, 0)
+P184: Thuật toán tự động tìm và xuất Tên Tổ hợp môn tối ưu nhất (Chỉ số K nhỏ nhất): =INDEX(Danh_Sách_Tổ_Hợp, MATCH(MIN(Dải_Điểm_K), Dải_Điểm_K, 0))
+P185: - Kiểm tra thử nghiệm mô hình: Để đảm bảo phần mềm hoạt động chính xác trước khi phổ biến, tác giả đã tiến hành quá trình kiểm tra (Thử nghiệm) trên một mẫu độc lậphọc sinh lớp 9, hệ thống xuất kết quả dự báo, thực hiện đối chiếu kết quả thi thật và đo lường độ sai lệch. 
+P186: Để kiểm tra chức năng và sự phù hợp của hệ thống tư vấn chọn tổ hợp môn, tác giả đã tiến hành kiểm tra thử nghiệm với mẫu  học sinh lớp 10-12. Nhập các trường hợp dữ liệu (Ví dụ: Học sinh nhập điểm học bàinhưng điểm đam mê, hoặc ngược lại) để kiểm tra xem hàm IFS, cách Pitago khoảng cách có lỗi  #VALUE! hoặc # N/A không, cho thấy hệ thống xử lý tốt, không xảy ra xung đột hàm.
+P187: - Kết quả kiểm định mô hình: Độ chính xác dự báo nguyện vọng: 18/20 trường hợp (đạt 90%) có kết quả trúng tuyển thực tế trùng khớp hoàn toàn với tầng cảnh báo Xanh (Safe) và Vàng (Consider) của phần mềm. 2 trường hợp sai lệch rơi vào trường hợp, 01 bạn có điểm thi cao hơn cả điểm trung bình môn (cao hơn 0.5 điểm) và học sinh có tâm lý phòng thi dao động mạnh (biến số ngoại cảnh nằm ngoài mô hình toán).
+P188:  Độ tương thích tổ hợp môn, dự án kiểm tra chéo với kết quả 10 học sinh, 100% các bạn đồng ý rằng tổ hợp môn có chỉ số K nhỏ nhất do Excel tìm ra trùng khớp với định hướng khối thi Đại học mà các bạn đang nhắm tới, giúp các bạn tiết kiệm đáng kể thời gian cân nhắc.
+P189: 7. Kết luận 
+P190: Đối chiếu toàn bộ quá trình thực nghiệm, lập trình và kiểm định hệ thống với các mục tiêu ban đầu, dự án đã giải quyết triệt để Vấn đề nghiên cứu đặt ra bằng cách số hóa thành công một công cụ tư vấn tự động, đã xử lý vấn đề chuyển cấp từ định tính, mơ hồ sang định lượng trực quan. Dự án cũng đã giải quyết các Câu hỏi nghiên cứu, sử dụng hệ số rủi ro ; định lượng hóa cơ hội đậu tuyển sinh 10 bằng xác suất % thông qua hàm phân phối chuẩn Gauss và tìm ra tổ hợp môn THPT tối ưu nhất bằng hình học phẳng Oxy.
+P191: Đối với 3 Giả thuyết khoa học, kết quả nghiên cứu cho thấy: Giả thuyết 1 ĐÚNG: Việc áp dụng hệ số rủi ro  phân tách theo nhóm học lực và môn học giúp khoảng điểm năng lực dự báo tiệm cận với năng lực thực tế của học sinh khi đi thi (độ lệch giảm xuống dưới 0.4 điểm). Giả thuyết 2 ĐÚNG: Hàm phân phối tích lũy Gauss (⁠NORM.DIST⁠) kết hợp thuật toán dự báo điểm chuẩn WMA đã chứng minh tính ưu việt trong quản trị rủi ro. Hệ thống phân tầng màu sắc (🔴/🟡/🟢) đạt độ chính xác thực nghiệm lên tới 90%, giúp học sinh loại bỏ hoàn toàn chiến lược đặt nguyện vọng sai lầm. Giả thuyết 3 ĐÚNG: Việc mô hình hóa dữ liệu trên mặt phẳng tọa độ Oxy và áp dụng Định lý Pitago để tính khoảng cách Euclid (d) đến điểm lý tưởng I(10,10) là hoàn toàn khả thi. Thuật toán tìm kiếm chỉ số K nhỏ nhất đã tối ưu hóa thành công bài toán lựa chọn tổ hợp môn học Lớp 10 bám sát lộ trình hướng nghiệp đại học theo triết lý Ikigai.
+P192: Tài liệu tham khảo
+P193: 1. Bộ Giáo dục và Đào tạo (2018). Chương trình giáo dục phổ thông: Chương trình tổng thể (Ban hành kèm theo Thông tư số 32/2018/TT-BGDĐT ngày 26 tháng 12 năm 2018 của Bộ trưởng Bộ Giáo dục và Đào tạo). NXB Giáo dục Việt Nam.
+P194: 2. Sở Giáo dục và Đào tạo TP. Hồ Chí Minh. (2024–2026). Quyết định về chỉ tiêu tuyển sinh lớp 10 và Kế hoạch tuyển sinh vào các trường THPT công lập trên địa bàn TP. Hồ Chí Minh các năm học 2024-2025, 2025-2026, 2026-2027.
+P195: 3. Cổng thông tin điện tử Sở Giáo dục và Đào tạo TP. Hồ Chí Minh. (2024–2026). Cơ sở dữ liệu Bảng tổng hợp Điểm chuẩn Tuyển sinh Lớp 10 THPT Thường và Chuyên. Truy cập từ: https://hcm.edu.vn
+P196: 4. Nguyễn Duy Tiến, & Vũ Viết Yên. (2016). Lý thuyết xác suất (Tái bản lần thứ 7). NXB Giáo dục Việt Nam. (Tài liệu tham khảo về Phân phối chuẩn Gauss).
+P197: 5. Nguyễn Đình Trí (Chủ biên), Tạ Văn Đĩnh, & Nguyễn Hồ Quỳnh. (2024). Toán học cao cấp: Tập 1 – Đại số và hình học giải tích. NXB Giáo dục Việt Nam. (Tài liệu tham khảo về Không gian tọa độ và Khoảng cách Euclid).
+P198: 6. Garcia-Molina, H., Ullman, J. D., & Widom, J. (2014). Database Systems: The Complete Book (2nd ed.). Pearson. (Tài liệu tham khảo về cấu trúc Quản trị Cơ sở dữ liệu quan hệ).
+P199: 7. Montgomery, D. C., Jennings, C. L., & Kulahci, M. (2015). Introduction to Time Series Analysis and Forecasting (2nd ed.). Wiley. (Tài liệu tham khảo về phương pháp Dự báo Trung bình trượt có trọng số - WMA).
+P200: 8. García-Lirios, C. (2021). The Ikigai Model for Career Decision-Making: Integrating Passion and Competence in Secondary Education. International Journal of Career Development, 18(2), 45–59. (Tài liệu tham khảo về Mô hình Định hướng Nghề nghiệp Ikigai).
+P216: Phụ lục 1: Công thức toán học sử dụng
+P217: 1. Hệ số rủi ro theo môn học: độ chênh lệch còn thay đổi theo điểm trung bình môn học, đối với môn Toán và Tiếng Anh, những bạn trung bình từ 9 trở lên độ chênh lệch thấp hơn những bạn điểm trung bình từ 8 đến 9, nhóm biến động nhất là nhóm có điểm trung bình dưới 8. Đối với môn Văn, do đặc điểm môn văn có phần tự luận (viết) nên phổ điểm thấp hơn 2 môn Toán và Tiếng Anh, do đó đối với những bạn có điểm trung bình từ 8.5 trở lên có mức chênh lệch thấp nhất, nhóm có điểm trung bình từ 7.5 đến 8.5 và nhóm có điểm chênh lệch cao nhất là những bạn có điểm trung bình dưới 7.5.
+P218: Do đó, đề tài đưa ra công thức dự báo như sau:
+P219: Gọilà môn học ().
+P220: : Điểm trung bình môn của môn học.
+P221: : Hệ thống cơ sở giãn nở số theo môn học (;;).
+P222: : Sai số chuẩn theo môn (;;).
+P223: : Hệ số rủi ro theo từng khả năng của môn học.
+P224: Xác định hệ số rủi ro:
+P225: Đối với môn Toán và môn Tiếng Anh:
+P227: Đối với môn Ngữ Văn:
+P229: Với khoảng tin cậy 95%
+P230: Công thức dự báo:
+P231: Điểm tối thiểu trong môn(Sàn):
+P233: Điểm tối đa môn(S trần):
+P235: Tổng điểm cuối cùng của dự báo:
+P238: Khi biết điểm tổng 3 môn thi tuyển sinh Dải từđã có ở Nội dung mục a, sẽ xác định 2 thông số:
+P239: Giá trị trung bình (): mốc điểm có khả năng đạt được cao nhất của học sinh.
+P241: Độ chuẩn (): Đo khả năng rủi ro, dao động phong độ của học sinh.
+P243: (3,92 là khoảng tin cậy 95% tương ứng vớilần độ chuẩn).
+P244: Chứng minh để học sinh đạt được điểm này lớn hơn hoặc bằng điểm chuẩn () của một trường được tính bằng khoảng diện tích bên dưới đường phân phối chuẩn về phía bên phải của chuẩn đèn:
+P246: Để phần mềm tự động điểm xem cách chọn trường học sinh, đề tài sẽ tính điểm trung bình dự báo(ô F5) làm gốc và so sánh với Điểm chuẩn năm của trường () với nguyên tắc: 
+P247: Nguyện vọng 1: NV Vừa sức
+P248: Quy luật: Chọn trường trên dưới 1 điểm xung quanh năng lực.
+P249: Thuật toán: Điểm chuẩn NV1 có thể cao hơn Điểm trung bình dự báo tối đa làđiểm, hoặc thấpđiểm.
+P250: Mốc xác thực an toàn: (Dùng Cân nhắc - Màu Vàng).
+P251: Nguyện vọng 2: NV An toàn
+P252: Quy luật: Hạ xuống khoảng 1.5 - 2 điểm so với NV1.
+P253: Thuật toán logic: Điểm chuẩn NV2 bắt buộc phải thấp hơn Điểm trung bình dự báo từđiểm. Lúc này, tiền điểm chuẩn của trường đã lùi xuống độ sâu hoặc dưới sàn tối thiểu của học sinh.
+P254: Mốc xác thực an toàn: (Vùng An toàn - Màu Xanh lá).
+P255: Nguyện vọng 3: NV đảm bảo có trường học
+P256: Quy luật: Tiếp tục hạ xuống 1.5 - 2 điểm so với NV2 (tức là cách biệt khoảng 4 điểm với năng lực thực tế).
+P257: Thuật toán logic: Điểm chuẩn NV3 phải thấp hơn Điểm trung bình dự báo từđiểm (hoặc chọn các trường chắc chắn). Đây là ngưỡng để học sinh học phù hợp ngay cả khi gặp sự cố về tâm lý khi thi.
+P258: Mốc xác thực an toàn: (Vùng Tuyệt đối an toàn).
+P259: 2. Để dự kiến điểm chuẩn (NV1) của các trường THPT của năm tiếp theo, giả thiết về độ khó không thay đổi, dữ liệu cho thấy điểm chuẩn phụ thuộc vào: biến động số lượng thí sinh tham gia dự thi, và độ uy tín của trường. Do đó, đề tài dựa vào dữ liệu điểm thi NV1 của các trường của các năm từ 2024, 2025 và 2026; số lượng thí sinh dự thi NV1 của các trường các năm từ 2024, 2025 và 2026. Để phân loại uy tín của trường, đề tài sẽ chia ra các top trường khác nhau (top 1 là 10 trường điểm chuẩn NV1 cao nhất, top 2 là 10 trường nằm trong khoảng từ 11 đến 20, top 3 là 10 trường nằm trong khoảng từ 21 đến 30, top 4 là các trường còn lại). Đề tài sẽ tính các bước như sau:
+P260: Bước 1: Xác định điểm chuẩn dự phóng năm nay ()
+P261: Phương pháp mô hình hợp nhất Trung bình trượt có số (WMA) để tính toán tín hiệu nền từ dữ liệu 3 năm lịch sử và Hệ thống điều chỉnh Cung - Cầu () phản ánh biến động trường tuyển sinh.
+P262: Công thức:
+P264: Tính điểm nền uy tín (theo phân loại nhóm trường):
+P266: Trong đó:
+P267: : Điểm chuẩn thực tế 3 năm gần nhất của trường.
+P268: : Bộ phân tích số động bổ sung theo 4 trường nhóm:
+P269: Nhóm 1 (Top 10): 
+P270: Nhóm 2 (Top 11–20): 
+P271: Nhóm 3 (Top 21–30): 
+P272: Nhóm 4 (bỏ lại): 
+P273: Tính Hệ số điều chỉnh Cung - Cầu ():
+P275: Trong đó:
+P276:  (Tỷ lệ biến số lượng thí sinh)
+P277:  (Cấp lệ biến NV1)
+P278: Bước 2: Tính xác suất đậu nguyện vọng ()
+P279: Áp dụng hàm Phân phối chuẩn tích lũy Gauss (Hàm phân phối chuẩn tích lũy):
+P281: Trong đó:
+P282: : Điểm trung bình năng lực dự báo của học sinh (đã trừ hệ số rủi ro(ở Mô-đun 1).
+P283: : Dự báo biên độ chuẩn độ lệch ().
+P284: : Điểm chuẩn dự báo của trường tính ở Bước 1.
+P285: Bước 3: Quy tắc cảnh báo và tư vấn chiến lược
+P286: Khi tính được giá trị , hệ thống đưa ra đánh giá rủi ro cho từng nguyện vọng. Để phần mềm dễ hiểu như một ứng dụng thực tế, đề tài sử dụng tính năng Định dạng có điều kiện trong Excel để tự động tô màu cho các ô kết quả phần trăm theo logic quản trị rủi ro, chỉ cần thay đổi điểm chuẩn của trường, Excel sẽ ngay lập tức “nhảy” ra một số phần trăm cơ hội và đổi màu tương ứng.
+P287: (🔴 Cảnh báo Đỏ): Nguy cơ rớt cao. Trường vượt quá năng lực.
+P288: (🟡 Cảnh báo Vàng): Vùng cân nhắc. Thích hợp lựa chọn làm Nguyện vọng 1 (Trường vừa sức hoặc nhẹ nhàng).
+P289: (🟢 Đèn Xanh): Khu vực an toàn. Thích hợp làm Nguyện nguyện 2 (Đã áp dụng luật ngược chuẩn).
+P290: (🟢 Xanh đậm): Vùng tuyệt đối an toàn. Thích hợp làm Nguyện 3 (Bảo hiểm chốt chặn).
+P291: 3. Dự đoán điểm thi chuyên
+P292: Dự án đã khảo sát 23 bạn thi vào trường chuyên. Tập dữ liệu nhận và đối chiếu cặp thông tin: Điểm trung bình môn lớp 9 và Điểm thi thực tế 3 môn và môn Chuyên trong kỳ thi Tuyển sinh 10, phát hiện Thống kê mô tả về độ lệch điểm thi môn chuyên so với điểm trung bình học bạ 3 môn thi tuyển sinh (thường), cho thấy sự chênh lệch rõ ràng giữa năng lượng đánh giá học tập và kết quả thi thực tế ở đề thi Chuyên mang tính phân hóa cao:
+P293: Mức độ giảm trung bình (): Điểm thi môn Chuyên giảm trung bìnhđiểm so với điểm trung bình 3 môn thi tuyển sinh.
+P294: Dao động chênh lệch biên độ: Điểm giảm trong khoảng từđiểm (giảm thấp nhất) đếnđiểm (giảm độ sâu tối đa).
+P295: Tuy nhiên sự phân hóa không đồng đều, phụ thuộc vào 2 yếu tố phân khúc học lực và môn thi: 
+P296: Theo Nhóm điểm học tập (năng lực):
+P297: Nhóm 1 (): Mức độ giảm thấp nhất, điểm thi giảm trung bình từđiểm. Học sinh nhóm này chứa phong độ tốt trước độ khó của đề thi Chuyên.
+P298: Nhóm 2 (): Mức độ giảm trung bình, điểm thi giảm từđiểm.
+P299: Nhóm 3 (): Mức độ giảm sâu nhất, biên độ giảm từđiểm.
+P300: Theo Môn thi chuyên thù (Môn Tiếng Anh): Dữ liệu thực nghiệm chỉ ra môn Tiếng Anh Chuyên là môn có biên độ chênh lệch lớn nhất và biến động thất thường nhất giữa điểm thi và điểm ở trường. Nguyên nhân do cấu trúc đề thi Tiếng Anh Chuyên đòi hỏi vốn từ vựng học thuật và tư duy ngôn ngữ chuyên sâu, khác biệt hoàn toàn so với chuẩn đánh giá học đại học trà tại trường THCS.
+P301: Dự án sử dụng toàn bộ khảo sát kết quả từ 50 mẫu khảo sát, trong đó có 23 bạn thi chuyên (Bảng 2) này được chuẩn hóa thành Bộ tham số rủi ro () nạp vào mô hình toán. Việc phân tích bộ tham số theo từng phân khúc học lực và môn học giúp đỡ thuật toán loại bỏ hiện tượng “ảo tưởng điểm học bạ”, từ đó tính toán chính xác Điểm năng lực Chuyên dự báo () và Độ nhanh chuẩn () trước khi nạp hàm Gauss chuẩn Phân phối NORM.DIST.
+P302: Bảng 2: Thống kê mô tả độ lệch điểm chuyên môn từ khảo sát mẫu (N=23)
+P303: Dự đoán điểm thi chuyên theo các bước:
+P304: Bước 1: Dự đoán điểm thi chuyên từ điểm học bạ (áp hệ số mất điểm thực tế)
+P305: Dựa trên khảo sát dữ liệu (), độ lệch giữa Điểm Học Bạ () và Điểm thi chuyên () có mức giảm trung bìnhđiểm, trong khoảng chênh lệch . Để phản ánh ánh sáng phân hóa theo từng nhóm năng lực và đặc thù môn thi (Tiếng Anh), hệ số điều chỉnh  được xác định theo công thức:
+P307: Bảng 3: Điều chỉnh Tham số Bảngtheo Phân nhóm Học lực & Môn học:
+P308: Điểm tối đa môn chuyên (): 
+P309: Điểm tối thiểu môn chuyên (): 
+P310: Dải điểm Dự báo:
+P314: Bước 2: Dự đoán điểm chuẩn xét tuyển chuyên năm nay ()
+P315: Sử dụng phương pháp Trung bình trượt có số lượng quan trọng (WMA) cho dữ liệu điểm chuẩn Chuyên 3 năm gần nhất kết hợp Hệ số biến động tỷ lệ sinh lớp chuyên () :
+P317: Bước 3: Dự đoán xác suất kết quả và tín hiệu cảnh báo
+P318: Áp dụng chức năng phân tích lũy tích Gauss:
+P320: (🔴 Cảnh báo Đỏ): Rủi ro cực cao. Điểm thi môn chuyên bị rơi vượt ngưỡng an toàn.
+P321: (🟡 Cảnh báo Vàng): Khu vực cạnh tranh quyết định, khuyến khích thử sức.
+P322: (🟢 Đèn Xanh): An toàn cao, có khả năng đậu cao
+P323: 4. Tư vấn tổ hợp môn	
+P324: Đối với điều hướng tổ hợp môn học, đề tài sử dụng mô hình Ikigai thu gọn trên mặt phẳng tọa độ Oxy. Trục Ox biểu thị mức độ đam mê của học sinh đối với môn học; trục Oy biểu thị mức độ năng lực của học sinh đối với môn học. Mỗi môn học được biểu diễn bằng một điểm (A(x,y)), trong đó:
+P325: (x): điểm đam mê, được khảo sát theo thang 1 đến 10.
+P326: (y): điểm năng lực, được tính từ điểm trung bình môn
+P327: Mức 10 (): Xuất sắc đỉnh cao (khuyến khích chọn tổ hợp)
+P328: Mức 9 (): Xuất sắc (khuyến khích chọn tổ hợp)
+P329: Mức 8 (): Giỏi chắc (khuyến khích chọn tổ hợp)
+P330: Mức 7 (): Giỏi (khuyến khích chọn tổ hợp)
+P331: Mức 6 (): Khá giỏi (khuyến khích chọn tổ hợp, cần cố gắng hơn)
+P332: Mức 5 (): Khá (khuyến khích chọn tổ hợp, cần cố gắng hơn)
+P333: Mức 4 (): Trung bình khá (cần cân nhắc kỹ)
+P334: Mức 3 (): Trung bình (cần loại bỏ tổ hợp).
+P335: Mức 2 (): Yếu (cần loại bỏ tổ hợp).
+P336: Mức 1 (): Quá kém (cần loại bỏ tổ hợp).
+P337: Điểm lý tưởng là (I(10,10)), tương ứng với môn học vừa yêu thích vừa có năng lực tốt. Khoảng cách từ môn học đến điểm lý tưởng được tính theo định lý Pitago (Khoảng cách Euclid):
+P339: Trong đó:
+P340: (x): điểm đam mê đối với môn học.
+P341: (y): điểm năng lực đối với môn học.
+P342: (d): khoảng cách đến điểm lý tưởng.
+P343: Ý nghĩa toán học: Khoảng cáchcàng nhỏ, môn học đó càng tiến gần đến trạng thái Ikigai hoàn hảo, nghĩa là môn học càng phù hợp. 
+P344: Chỉ số tương thích Tổ hợp Môn và Định hướng ngành nghề ()
+P345: Đối với một tổ hợp gồm 4 môn học lựa chọn Lớp 10, chỉ số phù hợp tổng thể () được xác định bằng cách trung bình khoảng cách của 4 môn học, có điều chỉnh theo hệ thống ngành nghề ưu tiên đại học mục tiêu:
+P347: Trong đó:
+P348: : Khoảng cách Euclid đến điểm lý tưởngcủa 4 môn học tổng hợp.
+P349: : Hệ số thưởng phù hợp ngành nghề (if the combo 4 môn học này chứa các môn học thuộc khối thi Đại học của nhóm ngành học sinh định hướng;nếu không trùng hợp).
+P350: Ý nghĩa toán học: Quy tắc ra quyết định, Tổ hợp môn có chỉ số càng nhỏ thì độ tương thích của Ikigai càng cao và được hệ thống ưu tiên xếp hạng hàng đầu.
+P351: - Quy định lựa chọn tổ hợp môn lớp 10: Với quy định hiện hành, học sinh chọn 4 môn học từ 9 môn, không còn yêu cầu phải chọn ít nhất một môn trong từng nhóm như trước đây, cụ thể:
+P352: (1) Nhóm môn học bắt buộc
+P353: (2) Nhóm môn lựa chọn: học sinh chọn 4 môn trong 9 môn (tuy nhiên, tuỳ thuộc vào số lượng học sinh đăng ký và khả năng tổ chức dạy học của trường)
+P356: Phụ lục 2: Công thức và thao tác 
+P357: 1. Dự tính điểm thi tuyển sinh
+P358: Bước 1: Tạo các ô tính thông số nền (và)
+P359: Tại dòng tính Tổng điểm (Dòng 5), từ ô C5 (Tổng Min) và D5 (Tổng Max):
+P360: Ô Điểm trung bình(đặt tại ô F5): =(C5+D5)/2
+P361: Ô độ chuẩn(đặt tại ô G5): =(D5-C5)/3.92
+P362: Bước 2.2: Thiết kế cột nhập điểm chuẩn 3 Nguyện vọng
+P363: Tạo 3 ô để người dùng tự động nhập điểm chuẩn của 3 trường ý muốn đề tài tính toán nhận xét (có cảnh báo mỗi nguyện vọng cách nhau từ 1.5 đến 2 điểm):
+P364: Ô E8: Nhập điểm chuẩn trường NV1 (Ví dụ: 23.5)
+P365: Ô E9: Nhập điểm chuẩn trường NV2 (Ví dụ: 22.0)
+P366: Ô E10: Nhập điểm chuẩn trường NV3 (Ví dụ: 20.5)
+P367: Bước 2.3: Lập trình hàm tính % khả năng đậu (Hàm NORM.DIST)
+P368: Ở cạnh cột, sử dụng hàm tích lũy phân tích của Excel để tính phần trăm. Ghi nhớ định dạng (Định dạng ô) các kết quả ô này là Percentage (%):
+P369: % Đậu NV1 (Ô F8): =1 - NORM.DIST(E8, $F$5, $G$5, TRUE)
+P370: % Đậu NV2 (Ô F9): =1 - NORM.DIST(E9, $F$5, $G$5, TRUE)
+P371: % Đậu NV3 (Ô F10): =1 - NORM.DIST(E10, $F$5, $G$5, TRUE)
+P372: Đề tài thiết kế giao diện dữ liệu tại Excel, các ô: B2 (Điểm trung bình môn Toán), B3 (Điểm trung bình môn Văn), B4 (Điểm trung bình môn Tiếng Anh). Cố định cài đặt số nền thông tin tại các ô nghiên cứu:( H2, H3, H4) và( I2, I3, I4).
+P373: Sau đó nhập hàm mã IF vào các ô kết quả sau đây:
+P374: Bước 1.1. Tính điểm môn Toán (Dòng 2)
+P375: Ô Min Toán (C2): =ROUND(B2*$H$2 - (1.96*$I$2 * IF(B2>=9, 0.75, IF(B2>=8, 1.85, 2.50))), 2)
+P376: Ô Max Toán (D2): =ROUND(B2*$H$2 + (1.96*$I$2 * IF(B2>=9, 0.75, IF(B2>=8, 1.85, 2.50))), 2)
+P377: Bước 1.2. Tính điểm môn Ngữ Văn (Dòng 3)
+P378: Ô Min Văn (C3): =ROUND(B3*$H$3 - (1.96*$I$3 * IF(B3>=8.5, 0.80, IF(B3>=7.5, 1.40, 2.20))), 2)
+P379: Ô Max Văn (D3): =ROUND(B3*$H$3 + (1.96*$I$3 * IF(B3>=8.5, 0.80, IF(B3>=7.5, 1.40, 2.20))), 2)
+P380: Bước 1.3. Tính điểm môn Tiếng Anh (Dòng 4)
+P381: Ô Min Anh (C4): =ROUND(B4*$H$4 - (1.96*$I$4 * IF(B4>=9, 0.75, IF(B4>=8, 1.85, 2.50))), 2)
+P382: Ô Max Anh (D4): =ROUND(B4*$H$4 + (1.96*$I$4 * IF(B4>=9, 0.75, IF(B4>=8, 1.85, 2.50))), 2)
+P383: Bước 1.4. Tính tổng điểm (Dòng 5)
+P384: Ô Tổng điểm sàn Min (C5): =SUM(C2:C4)
+P385: Ô Tổng điểm trần Max (D5): =SUM(D2:D4)
+P386: 2. Lựa chọn nguyện vọng
+P387: Để phần mềm đưa ra lời khuyên, khi nhập điểm chuẩn 3 trường, sử dụng hàm IF tại cột Lời khuyên (Cột G, ngay cạnh cột tính % hiệu năng):
+P388: Ô lời khuyên cho NV1 (G8): =IF(F8<0.3, “Quá liều lĩnh! Hãy hạ điểm chuẩn xuống”, IF(F8<0.75, “Hợp lý! Trường vừa sức hoặc cần cố gắng, quyết tâm”, “Quá an toàn! Bạn có thể chọn trường cao hơn”))
+P389: Ô Lời Khúc cho NV2 (G9): =IF(F9<0.85, “Cảnh báo nguy hiểm! NV2 phải hạ xuống từ 1.5 - 2 điểm so với năng lực”, “An toàn! Đạt chuẩn phòng thủ cho NV2”)
+P390: Ô Lời Khúc cho NV3 (G10): =IF(F10<0.98, “Rủi ro rớt sạch! NV3 phải là trường điểm thấp hẳn để bảo hiểm”, “Tuyệt đối an toàn! Chúc mừng bạn đã cấu trúc form chuẩn xác”)
+P391: 3. Dự đoán điểm thi chuyên
+P392: Bước 1. Tạo Bảng Tham Số Phạt Chuyên (sheet Tham_So)
+P393: Tạo bảng nghiên cứu tham số giảm điểm chuyên môn tại Sheet Tham_So như sau:
+P394: Bước 2. Lập trình Dự báo Điểm Thi Môn Chuyên (Sheet Sheet1_DiemThi)
+P395: Ô B6: Nhập điểm Học Ba môn Chuyên (ví dụ: 9.4).
+P396: Ô C6: Chọn Môn Chuyên (ví dụ: “Tiếng Anh” hoặc “Môn Khác” ).
+P397: Ô tính Điểm Môn Chuyên Tối Đa () - Ô D6 =IF(B6>=9.5, B6 - 0.92, IF(B6>=9.0, B6 - 2.50, B6 - 4.50)) * IF(C6=“Tiếng Anh”, 0.95, 1)
+P398: (Doạn IF(C6=“Tiếng Anh”, 0.95, 1) giúp tự động giảm thêm 5% do biên độ chênh lệch lớn nhất).
+P399: Ô tính Điểm Môn Chuyên Tối Thiểu () - Ô E6 =IF(B6>=9.5, B6 - 3.50, IF(B6>=9.0, B6 - 5.50, B6 - 6.48)) * IF(C6="Tiếng Anh", 0.90, 1)
+P400: Ô tính Tổng điểm thi chuyên (Thang 50) - Ô F7 =((D5 + E5)/2) + (((D6 + E6)/2) * 2)
+P401: (Trong đó D5, E5 là Tổng 3 môn thường Min/Max đã tính ở phần trước).
+P402: Ô tính độ lệch chuẩn- Ô G7 =((D5 + (D6*2)) - (E5 + (E6*2))) / 3.92
+P403: Bước 3. Màn Hình Tư Vấn Nguyện Vọng Chuyên (Tờ Tu_Van_NV_Chuyen)
+P404: Ô C8 (Điểm chuẩn Chuyên báo 2026 tra từ Cơ sở dữ liệu) =VLOOKUP(B8, Data_TruongChuyen!$A$2:$F$50, 6, FALSE)
+P405: Ô D8 (% Xác suất đậu) =1 - NORM.DIST(C8, Sheet1_DiemThi!$F$7, Sheet1_DiemThi!$G$7, TRUE)
+P406: Ô E8 (Cảnh báo) =IF(D8<0.4, “🔴 NGUY HIỂM: Xác suất đậu Chuyên < 40%. Độ rơi điểm môn Chuyên quá lớn!”, IF(D8<0.7, “🟡 CÂN NHẮC: Xác suất đậu 40-70%. Tỷ lệ chọi cao, thử sức”, “🟢 AN TOÀN: Xác suất đậu > 70%. Khả năng trúng tuyển cao!”))
+P407: 4. Tư vấn chọn tổ hợp môn
+P408: Để vận hành mô hình Ikigai thu gọn trên mặt bằng tự dohướng tới việc định hướng tổ hợp môn học Lớp 10 và khối Đại học, hệ thống quản lý dữ liệu quản trị của các chủ đề được cấu hình từ 3 nhóm dữ liệu đầu vào chủ yếu:
+P409: (1) Dữ liệu đánh giá cá nhân: Là dữ liệu được cá nhân hóa cho từng học sinh, bao gồm 2 trục thông tin chính đối với từng môn học:
+P410: Điểm năng lượng (): Được tính dựa trên Điểm trung bình môn học trên lớp tại cấp THCS (hoặc phạm vi điểm thi dự báo). Điểm số này được tự động đổi sang Thang 10 Tiêu chuẩn () để đồng bộ hóa thang đo học.
+P411: Điểm Đam mê (): Mức độ thú vị, yêu thích và động lực tự động của học sinh đối với từng môn học, được thu thập qua bài trắc nghiệm tự đánh giá theo Thang điểm Likert 10 cấp độ ().
+P412: (2) Cơ sở dữ liệu Danh mục Tổ hợp Môn THPT tại TP.HCM 
+P413: Là tập cơ sở dữ liệu tĩnh được thu thực tế từ đề thi tuyển sinh Lớp 10 của các trường THPT trên địa bàn TP.HCM theo Chương trình GDPT 2018. Dữ liệu này ghi nhận danh sách các tổ hợp 4 môn lựa chọn mà các trường đang giảng dạy (Ví dụ: hợp Tổ 1: Vật lý - Hóa học - Tin học - Công nghệ; Tổ hợp 2: Vật lý - Địa lý - GD Kinh tế & Pháp luật - Tin học...).
+P414: (3) Cơ sở Dữ liệu Khối xét tổ hợp môn và Ngành nghề Đại học Dự kiến ​​(DB Tuyển sinh Đại học & Phân bổ Hướng nghiệp) (phụ lục 1 Danh mục tổ hợp xét tuyển sinh đại học, phụ lục 2 – Tổng hợp tổ hợp môn theo ngành nghề, phụ lục 3 - Chọn 4 môn THPT sao cho “mở cửa” nhiều khối đại học)
+P415: Bảng sơ đồ kết nối các môn học Lớp 10 với các tổ hợp xét tuyển Đại học dự kiến ​​() và nhóm ngành nghề tương ứng. Dữ liệu này đóng vai trò thiết lập Hệ thống nghề nghiệp lớn nhất () giúp tối ưu hóa lựa chọn vừa đáp ứng tiêu chí Ikigai cá nhân, vừa đón đầu định hướng nghề nghiệp tương lai. Nếu học sinh chưa chốt nghề, bộ môn tương đối an toàn là (Vật lí + Tin học + GDKT&PL + Địa lí). Bộ tổ hợp môn này mở được nhiều hướng: CNTT, kinh tế, tài chính – ngân hàng, luật, quản lý nhà nước, logistics, truyền thông, du lịch. Nếu học sinh muốn đi y dược, phải đổi sang Hóa học + Sinh học. Nếu muốn đi kiến trúc/thiết kế, phải chuẩn bị thêm môn năng khiếu vẽ vì các khối V/H không chỉ xét điểm văn hóa.
+P416: Ý nghĩa thực tế: không chọn 4 môn THPT chỉ để học nhẹ, mà phải đối chiếu ngược từ ngành đại học dự kiến → tổ hợp xét tuyển → môn THPT cần giữ trong 3 năm.
+P417: c. Các bước nhập dữ liệu trên excel
+P418: Tạo 3 Sheet tương ứng với hướng dẫn bên dưới:
+P419: Bước 1: Tạo Sheet 1_DULIEU_HOCSINH (Nhập Điểm Lực & Đa Mê)
+P420: Sheet này là nơi học sinh nhập dữ liệu cá nhân bao gồm Điểm trung bình học liên và Thang điểm đam mê (1-10).
+P421: Cấu trúc bảng tính:
+P422: Bước 2: Tạo Sheet 2_TOHOP_THPT_TPHCM (Tổ hợp môn các Trường Cấp 3 thu thập được) 
+P423: Bảng này lưu trữ danh mục các tổ hợp 4 môn đơn lựa chọn thực tế thu thập từ các trường THPT tại TP.HCM.
+P424: Cấu trúc bảng tính:
+P425: Bước 3: Tạo Tấm 3_XET_DAI_HOC_DUKIEN (Kết nối Khối thị & Ngành Đại học) (danh mục cụ thể tại phụ lục 1)
+P426: Bảng này kết nối các tổ hợp môn cấp 3 với Khối thi Đại học và Nhóm ngành dự kiến ​​để tính hệ số ưu tiên.
+P427: Cấu trúc bảng tính:
+P428: Kết quả như sau:
+P431: Phụ lục 3: Danh mục tổ hợp xét tuyển sinh Đại học
+P432: Ghi chú: Các mã như D01, A00, A01, D07, D15, C04, B08, X26/K01, V00, H01, T00, N00, M00 đang xuất hiện trong các danh mục tổ hợp xét tuyển phổ biến; riêng nhóm có Tin học, Công nghệ, GDKT&PL tăng lên từ khi kỳ thi tốt nghiệp THPT theo Chương trình GDPT 2018 đưa các môn này vào xét tuyển.
+P446: Phụ lục 4: Tổng hợp theo ngành nghề, lĩnh vực
+P447: Ghi chú: Với các ngành giáo viên, sức khỏe, pháp luật, năm 2026 có ngưỡng bảo đảm chất lượng đầu vào do Bộ GD&ĐT công bố theo kế hoạch tuyển sinh, nên không chỉ nhìn tổ hợp mà còn phải xem thêm điều kiện điểm sàn/ngưỡng đầu vào. 
+P449: Phụ lục 5. Chọn 4 môn THPT sao cho phù hợp nhiều khối đại học
+
+--- TABLE 0 ---
+Phân nhóm học lực | Số mẫu () | Điểm HB Trung bình | Độ giảm trung bình () | độ giảm
+Nhóm 1 () | 6 | 9,65 | điểm | 
+Nhóm 2 () | 4 | 9,25 | điểm | 
+Nhóm 3 () | 13 | 8,70 | điểm | 
+Đặc thù: Môn Tiếng Anh | 6 | 9,35 | điểm | 
+
+--- TABLE 1 ---
+Phân nhóm điểm học tập | Mức giảm Trung bình (Δ​) | độ giảm  [Δmin→Δmax] | Môn Tiếng Anh
+Nhóm 1 () | điểm |  | Áp dụng giảm tốc độ hơn
+Nhóm 2 () | điểm |  | Áp dụng giảm tốc độ hơn
+Nhóm 3 () | điểm |  | Áp dụng giảm tốc độ hơn
+
+--- TABLE 2 ---
+Nhóm | Môn/nội dung cụ thể | Ghi chú
+Môn học bắt buộc chính | Ngữ văn, Toán, Ngoại ngữ 1, Lịch sử | Đây là nhóm môn nền tảng, học sinh nào cũng học
+Môn học bắt buộc đặc thù | Giáo dục thể chất; Giáo dục quốc phòng và an ninh | Vẫn là môn bắt buộc trong chương trình THPT
+Hoạt động/nội dung bắt buộc | Hoạt động trải nghiệm, hướng nghiệp; Nội dung giáo dục địa phương | Không phải “môn tự chọn”, học    sinh vẫn phải học theo kế hoạch của trường
+
+--- TABLE 3 ---
+STT | Môn lựa chọn | Tính chất định hướng
+1 | Địa lí | Xã hội, kinh tế, du lịch, môi trường, quy hoạch
+2 | Giáo dục kinh tế và pháp luật | Kinh tế, luật, quản lý nhà nước, tài chính, kinh doanh
+3 | Vật lí | Kỹ thuật, công nghệ, cơ khí, điện – điện tử, CNTT
+4 | Hóa học | Y dược, công nghệ sinh học, môi trường, thực phẩm, kỹ thuật hóa
+5 | Sinh học | Y khoa, dược, điều dưỡng, sinh học, nông nghiệp, môi trường
+6 | Công nghệ | Kỹ thuật, thiết kế, sản xuất, nông nghiệp/công nghiệp ứng dụng
+7 | Tin học | CNTT, dữ liệu, AI, kinh tế số, thương mại điện tử
+8 | Âm nhạc | Nghệ thuật, sư phạm âm nhạc, truyền thông sáng tạo
+9 | Mĩ thuật | Thiết kế, kiến trúc, mỹ thuật ứng dụng, truyền thông đa phương tiện
+
+--- TABLE 4 ---
+Ô Nhóm | Tham Số | Giá trị
+A2 | Nhóm 1 () — | 0.92/3.50
+A3 | Nhóm 2 () — | 2.50/5.50
+A4 | Nhóm 3 () — | 4.50/6.48
+
+--- TABLE 5 ---
+Ô | Tên/ Trường | Mô tả Chi tiết & công thức Excel
+A1:E1 | Tiêu đề Bảng | Môn Học
+A2:A10 | Tên Môn | Nhập cố định 9 môn đệ chọn: Vật lý, Hóa học, Sinh học, Lịch sử, Địa lý, GD KT&PL, Tin học, Công nghệ, Âm nhạc/Mỹ thuật.
+B2:B10 | [1] Điểm học Bạ | Học sinh nhập: Điểm trung bình trên lớp (Ví dụ: 8.7).
+C2:C10 | [1] Năng lực | Tự động điều chỉnh lên 10 Cấp độ (Nhập công thức tại C2 rồi kéo xuống): =IF(B2>=9.5, 10, IF(B2>=9.0, 9, IF(B2>=8.5, 8, IF(B2>=8.0, 7, IF(B2>=7.5, 6, IF(B2>=7.0, 5, IF(B2>=6.0, 4, IF(B2>=5.0, 3, IF(B2>=3.5, 2, 1)))))))))
+D2:D10 | [1] Đam Mê | Học sinh nhập: Nhập số từcó thể hiện yêu cầu môn học ở mức độ nào đó.
+E2:E10 | khoảng cách | Công thức tính độ trượt của PitagođếnTại E2: =SQRT((10 - D2)^2 + (10 - C2)^2)
+
+--- TABLE 6 ---
+Thao tác | Tên | Nhập nội dung / Công thức Excel
+A | Mã / Tên Tổ Hợp | Nhập tổ hợp tên (Ví dụ: TH01 - KHTN Chuyên sâu, TH02 - KHXH & Công nghệ...)
+B | Môn Lựa Chọn 1 | Tên môn 1 (Ví dụ: Vật lý)
+C | Môn Lựa Chọn 2 | Tên môn học 2 (Ví dụ: Hóa học)
+D | Môn Chọn 3 | Tên môn học 3 (Ví dụ: Tin học)
+E | Môn Chọn 4 | Tên môn 4 (Ví dụ: Công nghệ)
+F | Trường THPT Áp Dụng | Nhập tên trường tại TP.HCM có tổ hợp này (Ví dụ: THPT Mạc Đĩnh Chi, THPT Nguyễn Thượng Hiền...)
+G:J | Tra | Tự động lấy khoảng cáchtừ Sheet 1 sang (Công thức tại G2): =VLOOKUP(B2, '1_DULIEU_HOCSINH'!$A$2:$E$10, 5, FALSE) (Làm tương tự cho Cột H, I, J cho Môn 2, 3, 4)
+
+--- TABLE 7 ---
+Thao tác | Tên | Nhập nội dung / Công thức Excel
+A | Mã Tổ Hợp | Nối với Mã Tổ Hợp từ Sheet 2 (Ví dụ: TH01 )
+B | [3] Khối Dự Kiến | Nhập khối thị Đại học tương ứng với 4 môn đơn vị (Ví dụ: A00, A01, B00, D07... )
+C | [3] Nhóm Ngành Định Hướng | Nhập nhóm ngành nghề hướng dẫn đến (Ví dụ: Công nghệ thông tin, Y Dược, Kinh tế số, Ngôn ngữ... )
+D | [3] Học sinh Chọn Ngành | Ô Nhập Liệu: Học sinh lựa chọn hoặc nhập vào Ngành mà mình mong muốn nhất.
+E | Hệ số Thưởng Ngành () | Tính thưởng nếu kết hợp phù hợp với ngành học sinh mong muốn (Công thức tại E2): =IF(C2=$D$2, 1.5, 0) (Nếu trùng thưởng lớn 1,5 điểm, không khớp 0)
+F | CHỈ SỐ TƯƠNG THÍCH | Công thức tínhcuối cùng x F2: =AVERAGE('2_TOHOP_THPT_TPHCM'!G2:J2) - E2
+
+--- TABLE 8 ---
+Cột A: Môn Cốt Lõi (Giao điểm) | Cột B: Tổ hợp môn học 10 khuyến nghị | Cột C: Khối thị Đại học | Cột D: Ngành nghề tương lai
++ lý luận | Vật lý, Hóa học, Tin học, Công nghệ | A00, A01 | Kỹ thuật phần mềm, Khoa học máy tính, Điện tử vi mạch, Cơ điện tử
+Thời gian + Hóa học | Hóa học, Sinh học, Tin học, Công nghệ | B00, D07 | Y đa khoa, Dược học, Công nghệ sinh học, Kỹ thuật môi trường
++ Anh văn | Vật lý, Tin học, Giáo dục Kinh tế & Pháp luật | A01, D01, D07 | Logistics, Kinh doanh quốc tế, Tài chính - Ngân hàng, Marketing
+Ngữ văn + Anh văn | Lịch sử, Địa lý, Giáo dục Kinh tế & Pháp luật | D01, D14, D78 | Truyền thông đa phương tiện, Quan hệ công chúng, Ngôn ngữ Anh, Luật thương mại
+
+--- TABLE 9 ---
+Nhóm khối | Mã tổ hợp thường gặp | Môn xét tuyển | Phù hợp nhóm ngành
+Khối A – tự nhiên, kỹ thuật, kinh tế | A00 | Toán, Vật lí, Hóa học | Kỹ thuật, công nghệ, kinh tế, tài chính, xây dựng, y dược một số trường
+ | A01 | Toán, Vật lí, Tiếng Anh | CNTT, kỹ thuật, kinh tế, logistics, quản trị
+ | A02 | Toán, Vật lí, Sinh học | Kỹ thuật y sinh, môi trường, nông nghiệp, sinh học
+ | A04 | Toán, Vật lí, Địa lí | Kỹ thuật, địa lý, quy hoạch, môi trường
+ | A05 | Toán, Hóa học, Lịch sử | Một số ngành xã hội – tự nhiên giao thoa
+ | A06 | Toán, Hóa học, Địa lí | Môi trường, nông nghiệp, địa lý, tài nguyên
+Khối B – y sinh, sức khỏe, nông nghiệp | B00 | Toán, Hóa học, Sinh học | Y, dược, điều dưỡng, xét nghiệm, công nghệ sinh học
+ | B08 | Toán, Sinh học, Tiếng Anh | Y sinh, công nghệ sinh học, điều dưỡng, môi trường
+ | B02 | Toán, Sinh học, Địa lí | Môi trường, nông nghiệp, tài nguyên
+ | B04/X13 | Toán, Sinh học, GDKT&PL | Một số ngành sức khỏe, sinh học, giáo dục, xã hội ứng dụng
+Khối C – xã hội, luật, sư phạm, báo chí | C00 | Ngữ văn, Lịch sử, Địa lí | Luật, báo chí, sư phạm, xã hội học, quản lý nhà nước
+ | C01 | Ngữ văn, Toán, Vật lí | Kỹ thuật, quản lý, kinh tế ở một số trường
+ | C02 | Ngữ văn, Toán, Hóa học | Sức khỏe, môi trường, công nghệ thực phẩm, kinh tế
+ | C03 | Ngữ văn, Toán, Lịch sử | Luật, quản lý nhà nước, hành chính, xã hội
+ | C04 | Ngữ văn, Toán, Địa lí | Kinh tế, quản trị, du lịch, luật, truyền thông
+ | C14 | Ngữ văn, Toán, GDKT&PL | Luật, quản lý nhà nước, kinh tế, hành chính
+Khối D – ngoại ngữ, kinh tế, xã hội, truyền thông | D01 | Toán, Ngữ văn, Tiếng Anh | Rất rộng: kinh tế, luật, ngôn ngữ, truyền thông, quản trị
+ | D07 | Toán, Hóa học, Tiếng Anh | Y dược, kỹ thuật hóa, công nghệ thực phẩm, kinh tế
+ | D08 | Toán, Sinh học, Tiếng Anh | Y sinh, môi trường, sinh học, nông nghiệp
+ | D09 | Toán, Lịch sử, Tiếng Anh | Luật, xã hội, quan hệ quốc tế, truyền thông
+ | D10 | Toán, Địa lí, Tiếng Anh | Du lịch, logistics, kinh tế, địa lý, quản trị
+ | D14 | Ngữ văn, Lịch sử, Tiếng Anh | Báo chí, luật, sư phạm, quan hệ quốc tế
+ | D15 | Ngữ văn, Địa lí, Tiếng Anh | Du lịch, truyền thông, xã hội, ngôn ngữ
+ | D03, D04, D05, D06 | Văn, Toán, Pháp/Trung/Đức/Nhật | Nhóm ngành ngôn ngữ, quốc tế học, du lịch
+Khối K/X mới – Tin học, Công nghệ, GDKT&PL | X26/K01 | Toán, Tiếng Anh, Tin học | CNTT, khoa học dữ liệu, AI, thương mại điện tử
+ | X25 | Toán, Tiếng Anh, GDKT&PL | Kinh tế, luật, quản trị, tài chính
+ | X21 | Toán, Địa lí, GDKT&PL | Kinh tế, luật, du lịch, quản lý nhà nước
+ | X05/A10 | Toán, Vật lí, GDKT&PL | Kỹ thuật – quản lý, kinh tế kỹ thuật
+ | X09/A11 | Toán, Hóa học, GDKT&PL | Kinh tế, công nghệ thực phẩm, môi trường
+ | X22 | Toán, Địa lí, Tin học | Logistics, địa lý, du lịch số, kinh tế số
+ | X23/X24 | Toán, Địa lí, Công nghệ | Công nghệ, nông nghiệp, quy hoạch, tài nguyên
+Khối V/H – kiến trúc, mỹ thuật, thiết kế | V00 | Toán, Vật lí, Vẽ mỹ thuật | Kiến trúc, quy hoạch, thiết kế nội thất
+ | V01 | Toán, Ngữ văn, Vẽ mỹ thuật | Kiến trúc, mỹ thuật ứng dụng
+ | V02 | Toán, Tiếng Anh, Vẽ mỹ thuật | Kiến trúc, thiết kế, quy hoạch
+ | H00 | Ngữ văn, Năng khiếu vẽ 1, Năng khiếu vẽ 2 | Mỹ thuật, thiết kế đồ họa, thời trang
+ | H01 | Toán, Ngữ văn, Vẽ mỹ thuật | Thiết kế, mỹ thuật ứng dụng
+ | H06 | Ngữ văn, Tiếng Anh, Vẽ mỹ thuật | Thiết kế, truyền thông thị giác
+Khối M/N/S/T – năng khiếu | M00 | Ngữ văn, Toán, Đọc diễn cảm/Hát | Giáo dục mầm non
+ | M01, M09 | Văn/Toán + năng khiếu | Giáo dục mầm non, giáo dục tiểu học một số trường
+ | N00, N01 | Ngữ văn + năng khiếu âm nhạc | Âm nhạc, sư phạm âm nhạc
+ | S00 | Ngữ văn + năng khiếu sân khấu/điện ảnh | Sân khấu, điện ảnh, diễn viên, đạo diễn
+ | T00, T01, T03, T04 | Toán/Văn/Sinh/Lý + năng khiếu TDTT | Giáo dục thể chất, huấn luyện thể thao
+
+--- TABLE 10 ---
+Lĩnh vực/ngành nghề | Tổ hợp nên ưu tiên | Môn THPT nên chọn từ lớp 10
+Công nghệ thông tin, AI, khoa học dữ liệu, an toàn thông tin | A00, A01, D01, X26/K01, Toán – Lý – Tin, Toán – Anh – Tin | Vật lí, Tin học, Công nghệ, Hóa học hoặc GDKT&PL
+Kỹ thuật điện, điện tử, tự động hóa, robot, cơ khí, ô tô | A00, A01, D01, A04, X05, A0T/A0C nếu trường có dùng | Vật lí, Công nghệ, Tin học, Hóa học
+Kỹ thuật xây dựng, giao thông, kiến trúc kỹ thuật | A00, A01, C01, V00, V01, V02 | Vật lí, Công nghệ, Tin học, Địa lí; nếu kiến trúc cần thêm năng khiếu vẽ
+Y khoa, răng hàm mặt, dược, điều dưỡng, xét nghiệm | B00, A00, D07, B08, D08, C08 tùy trường | Hóa học, Sinh học, Vật lí, Tin học
+Công nghệ sinh học, thực phẩm, môi trường | B00, B08, D07, D08, A00, A06, C02 | Hóa học, Sinh học, Địa lí, Tin học hoặc Công nghệ
+Kinh tế, tài chính – ngân hàng, kế toán, kiểm toán | A00, A01, D01, D07, D10, C01, C04, X25 | GDKT&PL, Tin học, Địa lí, Vật lí hoặc Công nghệ
+Quản trị kinh doanh, marketing, thương mại điện tử | A00, A01, D01, D07, D10, C04, X25, X26 | GDKT&PL, Tin học, Địa lí, Công nghệ
+Logistics, kinh doanh quốc tế, xuất nhập khẩu | A00, A01, D01, D07, D10, X22, X25 | Tin học, Địa lí, GDKT&PL, Công nghệ hoặc Vật lí
+Luật, luật kinh tế, hành chính công, quản lý nhà nước | C00, C03, C04, C14, D01, D14, D15, X21, X25 | GDKT&PL, Địa lí, Tin học, Công nghệ
+Báo chí, truyền thông, quan hệ công chúng, xã hội học | C00, D01, D14, D15, C03, C04, M11 nếu có năng khiếu báo chí | GDKT&PL, Địa lí, Tin học, Mĩ thuật hoặc Công nghệ
+Ngôn ngữ Anh, Trung, Nhật, Hàn, Pháp, Đức | D01, D03, D04, D05, D06, D14, D15, DD2, DH1–DH5 tùy trường | Ngoại ngữ mạnh; nên chọn GDKT&PL, Địa lí, Tin học hoặc môn xã hội phù hợp
+Du lịch, khách sạn, nhà hàng, quản trị dịch vụ | C00, D01, D10, D14, D15, C04, A01 | Địa lí, GDKT&PL, Tin học, Công nghệ
+Sư phạm Toán, Lý, Hóa, Sinh, Tin | A00, A01, B00, D07, X26/K01 tùy ngành sư phạm | Chọn đúng môn định hướng giảng dạy: Lý/Hóa/Sinh/Tin
+Sư phạm Văn, Sử, Địa, Anh, GDCD | C00, C03, C04, D01, D14, D15, X21, X25 | GDKT&PL, Địa lí, Tin học; nếu theo Văn/Sử/Địa cần học tốt môn bắt buộc tương ứng
+Giáo dục mầm non, giáo dục thể chất | M00, M01, M09; T00, T01, T03, T04 | Cần chuẩn bị năng khiếu: hát, kể chuyện, đọc diễn cảm hoặc thể thao
+Kiến trúc, quy hoạch, thiết kế nội thất | V00, V01, V02, V03, V05, V06 | Vật lí, Địa lí, Công nghệ, Tin học; đồng thời luyện vẽ
+Thiết kế đồ họa, mỹ thuật, thời trang, truyền thông thị giác | H00, H01, H02, H04, H06, H08 | Mĩ thuật, Tin học, Công nghệ, GDKT&PL hoặc Địa lí
+Âm nhạc, sân khấu, điện ảnh, nghệ thuật biểu diễn | N00, N01, N02, S00 | Âm nhạc/Mĩ thuật nếu trường THPT có mở, đồng thời luyện năng khiếu riêng
+Nông nghiệp, thú y, thủy sản, lâm nghiệp | B00, B08, D08, A00, A06, B02, X24 | Sinh học, Hóa học, Địa lí, Công nghệ nông nghiệp
+Tài nguyên, môi trường, địa lý, quy hoạch đô thị | A00, A01, B00, A04, A06, C04, D10, X22 | Địa lí, Vật lí, Hóa học/Sinh học, Tin học
+Công an, quân đội | A00, A01, C00, D01 và tổ hợp riêng theo từng trường | Phải xem đề án riêng vì còn điều kiện sơ tuyển, sức khỏe, lý lịch, tiêu chuẩn chính trị
+
+--- TABLE 11 ---
+Định hướng của học sinh | 4 môn lựa chọn THPT nên cân nhắc | Các khối đại học mở ra nhiều nhất
+Chưa rõ ngành, muốn giữ nhiều lựa chọn | Vật lí, Tin học, GDKT&PL, Địa lí | A01, D01, D10, C04, X21, X22, X25, X26
+CNTT, kỹ thuật, công nghệ | Vật lí, Tin học, Công nghệ, Hóa học | A00, A01, D07, X26/K01, X05, nhóm Toán – Lý – Tin
+Y dược, sinh học, môi trường | Hóa học, Sinh học, Vật lí, Tin học | B00, B08, D07, D08, A00
+Kinh tế, tài chính, ngân hàng, quản trị | GDKT&PL, Tin học, Địa lí, Công nghệ hoặc Vật lí | A01, D01, D10, C04, X21, X25, X26
+Luật, hành chính công, quản lý nhà nước | GDKT&PL, Địa lí, Tin học, Công nghệ | C00, C03, C04, C14, D01, D14, D15, X21, X25
+Truyền thông, báo chí, marketing | GDKT&PL, Địa lí, Tin học, Mĩ thuật hoặc Công nghệ | C00, D01, D14, D15, C04, X25
+Thiết kế, kiến trúc, mỹ thuật | Mĩ thuật, Tin học, Công nghệ, Vật lí hoặc Địa lí | V00, V01, V02, H00, H01, H06
+Du lịch, ngôn ngữ, quốc tế học | Địa lí, GDKT&PL, Tin học, Công nghệ hoặc môn ngoại ngữ 2 nếu có | D01, D03, D04, D06, D10, D14, D15

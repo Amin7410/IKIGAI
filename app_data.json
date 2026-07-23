@@ -1,0 +1,65 @@
+{
+  "schools": [
+    {"id": 1, "name": "THPT Trưng Vương", "district": "Quận 1", "score2024": 21.0, "score2025": 20.25, "score2026": 21.75},
+    {"id": 2, "name": "THPT Bùi Thị Xuân", "district": "Quận 1", "score2024": 22.25, "score2025": 22.25, "score2026": 24.25},
+    {"id": 3, "name": "THPT Ten Lơ Man", "district": "Quận 1", "score2024": 18.25, "score2025": 18.0, "score2026": 20.5},
+    {"id": 4, "name": "THPT Lê Quý Đôn", "district": "Quận 3", "score2024": 22.5, "score2025": 22.25, "score2026": 23.75},
+    {"id": 5, "name": "THPT Nguyễn Thị Minh Khai", "district": "Quận 3", "score2024": 23.25, "score2025": 23.75, "score2026": 24.5},
+    {"id": 6, "name": "THPT Marie Curie", "district": "Quận 3", "score2024": 19.75, "score2025": 19.5, "score2026": 22.25},
+    {"id": 7, "name": "THPT Mạc Đĩnh Chi", "district": "Quận 6", "score2024": 21.0, "score2025": 21.25, "score2026": 22.75},
+    {"id": 8, "name": "THPT Gia Định", "district": "Bình Thạnh", "score2024": 22.75, "score2025": 23.0, "score2026": 24.0},
+    {"id": 9, "name": "THPT Phú Nhuận", "district": "Phú Nhuận", "score2024": 22.5, "score2025": 22.5, "score2026": 23.5},
+    {"id": 10, "name": "THPT Nguyễn Thượng Hiền", "district": "Tân Bình", "score2024": 24.25, "score2025": 24.5, "score2026": 25.5},
+    {"id": 11, "name": "THPT Nguyễn Hữu Huân", "district": "TP. Thủ Đức", "score2024": 22.0, "score2025": 22.25, "score2026": 23.5},
+    {"id": 12, "name": "THPT Lương Thế Vinh", "district": "Quận 1", "score2024": 19.0, "score2025": 19.25, "score2026": 20.75},
+    {"id": 13, "name": "THPT Hùng Vương", "district": "Quận 5", "score2024": 18.5, "score2025": 18.25, "score2026": 20.0},
+    {"id": 14, "name": "THPT Trần Hưng Đạo", "district": "Gò Vấp", "score2024": 19.5, "score2025": 19.75, "score2026": 21.0},
+    {"id": 15, "name": "THPT Trần Phú", "district": "Tân Phú", "score2024": 21.5, "score2025": 21.75, "score2026": 22.75}
+  ],
+  "specializedSchools": [
+    {"id": 1, "name": "THPT Chuyên Lê Hồng Phong - Chuyên Anh", "score2024": 37.5, "score2025": 38.0, "score2026": 39.0},
+    {"id": 2, "name": "THPT Chuyên Lê Hồng Phong - Chuyên Toán", "score2024": 38.0, "score2025": 38.5, "score2026": 39.5},
+    {"id": 3, "name": "THPT Chuyên Trần Đại Nghĩa - Chuyên Anh", "score2024": 36.5, "score2025": 37.0, "score2026": 38.0},
+    {"id": 4, "name": "THPT Gia Định - Chuyên Tin", "score2024": 34.0, "score2025": 34.5, "score2026": 35.5},
+    {"id": 5, "name": "THPT Nguyễn Hữu Huân - Chuyên Lý", "score2024": 33.5, "score2025": 34.0, "score2026": 35.0}
+  ],
+  "careers": [
+    {
+      "id": "cntt",
+      "name": "Công nghệ thông tin, AI, Khoa học dữ liệu",
+      "priorityCombos": ["A00", "A01", "D01", "X26/K01"],
+      "recommendedSubjects": ["Vật lí", "Tin học", "Công nghệ", "GDKT&PL"]
+    },
+    {
+      "id": "kinhte",
+      "name": "Kinh tế, Tài chính - Ngân hàng, Quản trị",
+      "priorityCombos": ["A00", "A01", "D01", "D07", "X25"],
+      "recommendedSubjects": ["GDKT&PL", "Tin học", "Địa lí", "Vật lí"]
+    },
+    {
+      "id": "yduoc",
+      "name": "Y khoa, Dược phẩm, Công nghệ sinh học",
+      "priorityCombos": ["B00", "A00", "D07", "B08"],
+      "recommendedSubjects": ["Hóa học", "Sinh học", "Vật lí", "Tin học"]
+    },
+    {
+      "id": "truyenthong",
+      "name": "Luật, Báo chí, Truyền thông, Ngôn ngữ",
+      "priorityCombos": ["C00", "D01", "D14", "D15", "X21"],
+      "recommendedSubjects": ["GDKT&PL", "Địa lí", "Tin học", "Mĩ thuật"]
+    },
+    {
+      "id": "kientruc",
+      "name": "Kiến trúc, Thiết kế đồ họa, Mỹ thuật",
+      "priorityCombos": ["V00", "V01", "H00", "H01"],
+      "recommendedSubjects": ["Mĩ thuật", "Tin học", "Công nghệ", "Vật lí"]
+    }
+  ],
+  "subjectCombos": [
+    {"id": 1, "name": "Tổ hợp Tự nhiên 1", "subjects": ["Vật lí", "Hóa học", "Tin học", "Công nghệ"], "blocks": "A00, A01, X26"},
+    {"id": 2, "name": "Tổ hợp Y sinh", "subjects": ["Hóa học", "Sinh học", "Vật lí", "Tin học"], "blocks": "B00, A00, D07"},
+    {"id": 3, "name": "Tổ hợp Kinh tế - Công nghệ", "subjects": ["Vật lí", "Tin học", "GDKT&PL", "Địa lí"], "blocks": "A01, D01, D10, X21, X25"},
+    {"id": 4, "name": "Tổ hợp Xã hội - Truyền thông", "subjects": ["GDKT&PL", "Địa lí", "Tin học", "Mĩ thuật"], "blocks": "C00, D01, D14, D15"},
+    {"id": 5, "name": "Tổ hợp Thiết kế - Mỹ thuật", "subjects": ["Mĩ thuật", "Tin học", "Công nghệ", "Vật lí"], "blocks": "V00, V01, H00, H01"}
+  ]
+}

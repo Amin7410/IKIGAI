@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trạm Định Vị IKIGAI - Tuyển Sinh Lớp 10 & Hướng Nghiệp GDPT 2018</title>
+  <!-- Tailwind CSS & FontAwesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- PWA & Mobile App Setup -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6366f1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(err => console.log('SW Reg failed:', err));
+      });
+    }
+  </script>
+</head>
+<body class="min-h-screen pb-12">
+
+  <!-- HEADER & NAVBAR -->
+  <header class="border-b border-gray-800 bg-gray-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-indigo-500/30">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-extrabold tracking-tight">TRẠM ĐỊNH VỊ <span class="gradient-text">IKIGAI</span></h1>
+          <p class="text-xs text-gray-400">Hệ Thống Dự Báo Tuyển Sinh Lớp 10 & Định Hướng Tổ Hợp Môn THPT</p>
+        </div>
+      </div>
+
+      <!-- MODULE STRATEGY SWITCHER (CÔNG TẮC CHUYỂN ĐỔI THUẬT TOÁN) -->
+      <div id="engineSwitcherContainer" class="flex items-center gap-3 bg-gray-800/80 p-2 rounded-2xl border border-gray-700">
+        <div class="text-right hidden sm:block">
+          <div class="text-xs font-bold text-gray-200" id="currentEngineLabel">Bản 1</div>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="engineToggle" class="sr-only peer" onchange="switchEngine(this.checked)">
+          <div class="w-14 h-7 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-indigo-600 peer-checked:to-purple-600"></div>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 mt-8">
+
+    <!-- MAIN NAVIGATION TABS -->
+    <div class="flex border-b border-gray-800 mb-8 overflow-x-auto">
+      <button onclick="changeTab('tab1')" id="tab1-btn" class="px-6 py-3 font-semibold text-sm border-b-2 border-indigo-500 text-indigo-400 flex items-center gap-2 whitespace-nowrap">
+        <i class="fa-solid fa-graduation-cap"></i> 1. Tuyển Sinh THPT Thường
+      </button>
+      <button onclick="changeTab('tab2')" id="tab2-btn" class="px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-gray-400 hover:text-gray-200 flex items-center gap-2 whitespace-nowrap">
+        <i class="fa-solid fa-award"></i> 2. Tuyển Sinh Trường Chuyên
+      </button>
+      <button onclick="changeTab('tab3')" id="tab3-btn" class="px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-gray-400 hover:text-gray-200 flex items-center gap-2 whitespace-nowrap">
+        <i class="fa-solid fa-shapes"></i> 3. Định Hướng Ikigai Chọn Môn Lớp 10
+      </button>
+    </div>
+
+    <!-- TAB 1: TUYỂN SINH THƯỜNG -->
+    <div id="tab1" class="tab-content grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- CỘT NHẬP DỮ LIỆU -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="glass-card rounded-2xl p-6">
+          <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-pen-to-square text-indigo-400"></i> Nhập Điểm Học Bạ Lớp 9 (Thang 10)
+          </h2>
+          <div class="grid grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Toán</label>
+              <input type="number" id="mathScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-indigo-500 font-bold text-center" oninput="calculateNormalProbabilities()">
+            </div>
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Ngữ Văn</label>
+              <input type="number" id="litScore" value="8.0" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-indigo-500 font-bold text-center" oninput="calculateNormalProbabilities()">
+            </div>
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Tiếng Anh</label>
+              <input type="number" id="engScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-indigo-500 font-bold text-center" oninput="calculateNormalProbabilities()">
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-list-check text-purple-400"></i> Chọn 3 Nguyện Vọng Đăng Ký
+          </h2>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Nguyện Vọng 1 (NV Vừa Sức / Mơ Ước)</label>
+              <select id="nv1Select" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-purple-500 text-sm" onchange="calculateNormalProbabilities()">
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Nguyện Vọng 2 (NV An Toàn - Hạ 1.5 đến 2 điểm)</label>
+              <select id="nv2Select" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-purple-500 text-sm" onchange="calculateNormalProbabilities()">
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Nguyện Vọng 3 (NV Bảo Hiểm - Chốt Chặn)</label>
+              <select id="nv3Select" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-purple-500 text-sm" onchange="calculateNormalProbabilities()">
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CỘT KẾT QUẢ & ĐỒ THỊ -->
+      <div class="lg:col-span-7 space-y-6">
+        <!-- ĐỒ THỊ HÌNH CHUÔNG GAUSS -->
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-chart-area text-pink-400"></i> Đồ Thị Phổ Điểm Dự Báo & Vị Trí Nguyện Vọng
+            </h3>
+            <span id="engineBadge" class="text-[10px] px-2.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-semibold">Bản 1</span>
+          </div>
+          <div class="h-56 relative">
+            <canvas id="gaussChart"></canvas>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-gray-800 text-center">
+            <div>
+              <div class="text-xs text-gray-400">Điểm Kỳ Vọng Trung Bình (μ)</div>
+              <div class="text-xl font-extrabold text-indigo-400" id="statMean">--</div>
+            </div>
+            <div>
+              <div class="text-xs text-gray-400">Độ Dao Động Phong Độ (σ)</div>
+              <div class="text-xl font-extrabold text-purple-400" id="statStdDev">--</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- THẺ KẾT QUẢ % VÀ CẢNH BÁO -->
+        <div class="glass-card rounded-2xl p-6">
+          <h3 class="text-base font-bold text-white mb-4">Kết Quả Phân Tầng Cảnh Báo Nguyện Vọng</h3>
+          <div class="space-y-4" id="nvResultCards">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: TUYỂN SINH CHUYÊN -->
+    <div id="tab2" class="tab-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-5 space-y-6">
+        <div class="glass-card rounded-2xl p-6">
+          <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-star text-amber-400"></i> Nhập Thông Tin Thi Chuyên
+          </h2>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Điểm Học Bạ Môn Chuyên (Thang 10)</label>
+              <input type="number" id="specScoreInput" value="9.4" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white font-bold text-center" oninput="calculateSpecialized()">
+            </div>
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Loại Môn Chuyên Thi</label>
+              <select id="specTypeSelect" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-sm" onchange="calculateSpecialized()">
+                <option value="english">Môn Tiếng Anh Chuyên (Biên độ chênh lệch 5-10%)</option>
+                <option value="other">Môn Chuyên Khác (Toán, Văn, Lý, Hóa, Sinh, Tin)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Chọn Trường / Lớp Chuyên Mục Tiêu</label>
+              <select id="specSchoolSelect" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-sm" onchange="calculateSpecialized()">
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 space-y-6">
+        <div class="glass-card rounded-2xl p-6">
+          <h3 class="text-base font-bold text-white mb-4">Kết Quả Dự Báo Điểm Thi Chuyên (Thang 50)</h3>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-gray-800/60 p-4 rounded-xl text-center border border-gray-700">
+              <div class="text-xs text-gray-400">Dải Điểm Chuyên Dự Báo</div>
+              <div class="text-2xl font-black text-amber-400" id="specPointRange">--</div>
+            </div>
+            <div class="bg-gray-800/60 p-4 rounded-xl text-center border border-gray-700">
+              <div class="text-xs text-gray-400">Xác Suất Trúng Tuyển</div>
+              <div class="text-2xl font-black text-emerald-400" id="specProbPercent">--</div>
+            </div>
+          </div>
+          <div id="specWarningBox" class="p-4 rounded-xl border text-sm font-semibold">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: ĐỊNH HƯỚNG IKIGAI CHỌN MÔN LỚP 10 -->
+    <div id="tab3" class="tab-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-6 space-y-6">
+        <div class="glass-card rounded-2xl p-6">
+          <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-sliders text-indigo-400"></i> Đánh Giá 9 Môn Lựa Chọn THPT (Thang 1-10)
+          </h2>
+          <div class="space-y-3 max-h-[420px] overflow-y-auto pr-2" id="subjectRatingsContainer">
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <h2 class="text-lg font-bold text-white mb-3">Chọn Ngành Học / Nghề Nghiệp Ước Mơ</h2>
+          <select id="careerSelect" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-sm" onchange="calculateIkigai()">
+          </select>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 space-y-6">
+        <!-- ĐỒ THỊ TỌA ĐỘ IKIGAI OXY -->
+        <div class="glass-card rounded-2xl p-6">
+          <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-bullseye text-pink-400"></i> Sơ Đồ Tọa Độ Ikigai Oxy & Mốc Lý Tưởng I(10,10)
+          </h3>
+          <div class="h-64 relative">
+            <canvas id="ikigaiChart"></canvas>
+          </div>
+        </div>
+
+        <!-- KHUYẾN NGHỊ TOP TỔ HỢP MÔN -->
+        <div class="glass-card rounded-2xl p-6">
+          <h3 class="text-base font-bold text-white mb-4">Gợi Ý Top 4 Môn Lựa Chọn Lớp 10 Tối Ưu Nhất</h3>
+          <div class="space-y-4" id="ikigaiComboResults">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
