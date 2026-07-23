@@ -4,7 +4,7 @@ import { ExcelOriginalEngine, MathCorrectedEngine } from './engines/calculationE
 import { renderGaussChart, renderIkigaiChart } from './ui/charts.js';
 
 export const CONFIG = {
-  SHOW_ENGINE_SWITCHER: false
+  SHOW_ENGINE_SWITCHER: true
 };
 
 let isMathCorrectedEngine = false;
