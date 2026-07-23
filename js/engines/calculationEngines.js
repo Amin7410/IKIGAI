@@ -27,18 +27,8 @@ export const ExcelOriginalEngine = {
 export const MathCorrectedEngine = {
   name: 'Bản 2',
   calculateStdDev: function(minTotal, maxTotal, stdMath, stdLit, stdEng) {
-    const rMathEng = 0.45;
-    const rMathLit = 0.25;
-    const rLitEng = 0.35;
-
-    const covMathEng = rMathEng * stdMath * stdEng;
-    const covMathLit = rMathLit * stdMath * stdLit;
-    const covLitEng  = rLitEng  * stdLit * stdEng;
-
-    const varianceTotal = Math.pow(stdMath, 2) + Math.pow(stdLit, 2) + Math.pow(stdEng, 2)
-                        + (2 * covMathEng) + (2 * covMathLit) + (2 * covLitEng);
-
-    return Math.sqrt(varianceTotal);
+    // Độ lệch chuẩn cố định chuẩn hóa bằng 1.00 (theo trung vị đánh giá rủi ro)
+    return 1.00;
   },
   calculateProbabilities: function(d1, d2, d3, mean, stdDev) {
     const p1 = 1 - normalCDF(d1, mean, stdDev);

@@ -83,10 +83,10 @@ export function calculateNormalProbabilities() {
   const s2 = db.schools.find(s => s.id == s2Val) || db.schools[1];
   const s3 = db.schools.find(s => s.id == s3Val) || db.schools[2];
 
-  const probs = engine.calculateProbabilities(s1.score2026, s2.score2026, s3.score2026, mean, stdDev);
+  const probs = engine.calculateProbabilities(s1.score2027, s2.score2027, s3.score2027, mean, stdDev);
 
   renderNVResultCards(s1, s2, s3, probs);
-  renderGaussChart('gaussChart', mean, stdDev, s1.score2026, s2.score2026, s3.score2026);
+  renderGaussChart('gaussChart', mean, stdDev, s1.score2027, s2.score2027, s3.score2027);
 }
 
 function renderNVResultCards(s1, s2, s3, probs) {
@@ -95,9 +95,9 @@ function renderNVResultCards(s1, s2, s3, probs) {
   let html = '';
 
   const nvList = [
-    { name: 'NV1: ' + s1.name, score: s1.score2026, prob: probs.nv1, label: 'NV Vừa Sức' },
-    { name: 'NV2: ' + s2.name, score: s2.score2026, prob: probs.nv2, label: 'NV An Toàn' },
-    { name: 'NV3: ' + s3.name, score: s3.score2026, prob: probs.nv3, label: 'NV Bảo Hiểm' }
+    { name: 'NV1: ' + s1.name, score: s1.score2027, prob: probs.nv1, label: 'NV Vừa Sức' },
+    { name: 'NV2: ' + s2.name, score: s2.score2027, prob: probs.nv2, label: 'NV An Toàn' },
+    { name: 'NV3: ' + s3.name, score: s3.score2027, prob: probs.nv3, label: 'NV Bảo Hiểm' }
   ];
 
   nvList.forEach((item) => {
@@ -115,7 +115,7 @@ function renderNVResultCards(s1, s2, s3, probs) {
 
     html += '<div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700 flex items-center justify-between">';
     html += '<div><div class="flex items-center gap-2"><span class="font-bold text-white">' + item.name + '</span><span class="text-[10px] px-2 py-0.5 rounded ' + badgeColor + ' border font-semibold">' + badgeText + '</span></div>';
-    html += '<div class="text-xs text-gray-400 mt-1">Điểm chuẩn dự báo 2026: <span class="font-bold text-gray-200">' + item.score + '</span></div></div>';
+    html += '<div class="text-xs text-gray-400 mt-1">Điểm chuẩn dự báo 2027 (Tính từ 2024-2026): <span class="font-bold text-gray-200">' + item.score + '</span></div></div>';
     html += '<div class="text-right"><div class="text-2xl font-black ' + (item.prob >= 0.75 ? 'text-emerald-400' : (item.prob >= 0.3 ? 'text-amber-400' : 'text-red-400')) + '">' + percentDisplay + '</div>';
     html += '<div class="text-[10px] text-gray-400">' + (probs.isJoint ? 'Xác suất phân bố rời rạc' : 'Xác suất độc lập') + '</div></div></div>';
   });
@@ -170,7 +170,7 @@ export function calculateSpecialized() {
   const specMean = (totalSpecMax + totalSpecMin) / 2;
   const specStd = (totalSpecMax - totalSpecMin) / 3.92;
 
-  const prob = 1 - normalCDF(school.score2026, specMean, specStd);
+  const prob = 1 - normalCDF(school.score2027, specMean, specStd);
 
   const rangeEl = document.getElementById('specPointRange');
   const probEl = document.getElementById('specProbPercent');
@@ -281,20 +281,20 @@ export function initApp() {
     s2.innerHTML = '';
     s3.innerHTML = '';
     db.schools.forEach(s => {
-      s1.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2026: ' + s.score2026 + '</option>';
-      s2.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2026: ' + s.score2026 + '</option>';
-      s3.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2026: ' + s.score2026 + '</option>';
+      s1.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
+      s2.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
+      s3.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
     });
     s1.value = 1;
     s2.value = 2;
     s3.value = 3;
   }
 
-  const specSelect = document.getElementById('specSchoolSelect');
-  if (specSelect) {
-    specSelect.innerHTML = '';
+  const specSchool = document.getElementById('specSchoolSelect');
+  if (specSchool) {
+    specSchool.innerHTML = '';
     db.specializedSchools.forEach(s => {
-      specSelect.innerHTML += '<option value="' + s.id + '">' + s.name + ' - ĐC: ' + s.score2026 + '</option>';
+      specSchool.innerHTML += '<option value="' + s.id + '">' + s.name + ' - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
     });
   }
 
