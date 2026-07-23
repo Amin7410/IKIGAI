@@ -158,9 +158,29 @@
             <i class="fa-solid fa-star text-amber-400"></i> Nhập Thông Tin Thi Chuyên
           </h2>
           <div class="space-y-4">
+            <div class="p-3 bg-indigo-950/30 border border-indigo-800/40 rounded-xl text-xs text-indigo-300">
+              <i class="fa-solid fa-calculator mr-1 text-indigo-400"></i> <strong>Công thức tính điểm Chuyên (Thang 50):</strong><br>
+              <span class="text-gray-300">Tổng điểm = (Toán + Văn + Tiếng Anh) + (Môn Chuyên × 2)</span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2">
+              <div>
+                <label class="block text-[11px] text-gray-400 mb-1 text-center">Toán</label>
+                <input type="number" id="specMathScore" value="9.0" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-2 py-2 text-white font-bold text-center text-sm" oninput="calculateSpecialized()">
+              </div>
+              <div>
+                <label class="block text-[11px] text-gray-400 mb-1 text-center">Ngữ Văn</label>
+                <input type="number" id="specLitScore" value="9.0" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-2 py-2 text-white font-bold text-center text-sm" oninput="calculateSpecialized()">
+              </div>
+              <div>
+                <label class="block text-[11px] text-gray-400 mb-1 text-center">Tiếng Anh</label>
+                <input type="number" id="specEngScore" value="9.5" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-2 py-2 text-white font-bold text-center text-sm" oninput="calculateSpecialized()">
+              </div>
+            </div>
+
             <div>
-              <label class="block text-xs text-gray-400 mb-1">Điểm Học Bạ Môn Chuyên (Thang 10)</label>
-              <input type="number" id="specScoreInput" value="9.4" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white font-bold text-center" oninput="calculateSpecialized()">
+              <label class="block text-xs text-gray-400 mb-1">Điểm Học Bạ Môn Chuyên (Thang 10 - Nhân Hệ Số 2)</label>
+              <input type="number" id="specScoreInput" value="9.4" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-purple-500/50 rounded-xl px-3 py-2 text-purple-300 font-bold text-center text-base" oninput="calculateSpecialized()">
             </div>
             <div>
               <label class="block text-xs text-gray-400 mb-1">Loại Môn Chuyên Thi</label>

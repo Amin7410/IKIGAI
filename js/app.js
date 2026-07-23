@@ -132,11 +132,26 @@ export function calculateSpecialized() {
   const typeSelect = document.getElementById('specTypeSelect');
   const schoolSelect = document.getElementById('specSchoolSelect');
 
+  const mathEl = document.getElementById('specMathScore');
+  const litEl  = document.getElementById('specLitScore');
+  const engEl  = document.getElementById('specEngScore');
+
   if (!scoreInput || !typeSelect || !schoolSelect) return;
 
   const specScore = parseFloat(scoreInput.value) || 0;
   const type = typeSelect.value;
   const schoolId = schoolSelect.value;
+
+  const math = parseFloat(mathEl?.value) || parseFloat(document.getElementById('mathScore')?.value) || 9.0;
+  const lit  = parseFloat(litEl?.value)  || parseFloat(document.getElementById('litScore')?.value)  || 9.0;
+  const eng  = parseFloat(engEl?.value)  || parseFloat(document.getElementById('engScore')?.value)  || 9.5;
+
+  const kMath = (math >= 9.0) ? 0.75 : (math >= 8.0 ? 1.85 : 2.50);
+  const kLit  = (lit >= 8.5)  ? 0.80 : (lit >= 7.5  ? 1.40 : 2.20);
+  const kEng  = (eng >= 9.0)  ? 0.75 : (eng >= 8.0  ? 1.85 : 2.50);
+
+  const baseMin = (math - 1.96 * kMath) + (lit - 1.96 * kLit) + (eng - 1.96 * kEng);
+  const baseMax = (math + 1.96 * kMath) + (lit + 1.96 * kLit) + (eng + 1.96 * kEng);
 
   const school = db.specializedSchools.find(s => s.id == schoolId) || db.specializedSchools[0];
 
@@ -149,9 +164,8 @@ export function calculateSpecialized() {
   const specMax = (specScore - penaltyMax) * engMultiplierMax;
   const specMin = (specScore - penaltyMin) * engMultiplierMin;
 
-  const baseMean = parseFloat(document.getElementById('statMean')?.innerText) || 24;
-  const totalSpecMax = baseMean + (specMax * 2);
-  const totalSpecMin = baseMean + (specMin * 2);
+  const totalSpecMax = baseMax + (specMax * 2);
+  const totalSpecMin = baseMin + (specMin * 2);
 
   const specMean = (totalSpecMax + totalSpecMin) / 2;
   const specStd = (totalSpecMax - totalSpecMin) / 3.92;
