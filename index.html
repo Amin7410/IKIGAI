@@ -43,10 +43,10 @@
       <!-- MODULE STRATEGY SWITCHER (CÔNG TẮC CHUYỂN ĐỔI THUẬT TOÁN) -->
       <div id="engineSwitcherContainer" class="flex items-center gap-3 bg-gray-800/80 p-2 rounded-2xl border border-gray-700">
         <div class="text-right hidden sm:block">
-          <div class="text-xs font-bold text-gray-200" id="currentEngineLabel">Bản 1</div>
+          <div class="text-xs font-bold text-gray-200" id="currentEngineLabel">Bản 2</div>
         </div>
         <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" id="engineToggle" class="sr-only peer" onchange="switchEngine(this.checked)">
+          <input type="checkbox" id="engineToggle" class="sr-only peer" checked onchange="switchEngine(this.checked)">
           <div class="w-14 h-7 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-indigo-600 peer-checked:to-purple-600"></div>
         </label>
       </div>
@@ -124,7 +124,7 @@
             <h3 class="text-base font-bold text-white flex items-center gap-2">
               <i class="fa-solid fa-chart-area text-pink-400"></i> Đồ Thị Phổ Điểm Dự Báo & Vị Trí Nguyện Vọng
             </h3>
-            <span id="engineBadge" class="text-[10px] px-2.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-semibold">Bản 1</span>
+            <span id="engineBadge" class="text-[10px] px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-semibold">Bản 2</span>
           </div>
           <div class="h-56 relative">
             <canvas id="gaussChart"></canvas>

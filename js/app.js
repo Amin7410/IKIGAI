@@ -7,16 +7,16 @@ export const CONFIG = {
   SHOW_ENGINE_SWITCHER: true
 };
 
-let isMathCorrectedEngine = false;
+let isMathCorrectedEngine = true;
 
 export function getActiveEngine() {
   return isMathCorrectedEngine ? MathCorrectedEngine : ExcelOriginalEngine;
 }
 
 export function switchEngine(checked) {
+  // Toggle checked = false means user switched to Bản 1, checked = true means default Bản 2
   isMathCorrectedEngine = checked;
   const label = document.getElementById('currentEngineLabel');
-  const desc = document.getElementById('currentEngineDesc');
   const badge = document.getElementById('engineBadge');
 
   if (checked) {
