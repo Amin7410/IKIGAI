@@ -285,9 +285,9 @@ export function initApp() {
       s2.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
       s3.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
     });
-    s1.value = 1;
-    s2.value = 2;
-    s3.value = 3;
+    s1.value = 1;  // THPT Nguyễn Thượng Hiền (25.5đ)
+    s2.value = 5;  // THPT Lê Quý Đôn (23.75đ - cách NV1 1.75đ)
+    s3.value = 11; // THPT Trưng Vương (21.75đ - cách NV2 2.00đ)
   }
 
   const specSchool = document.getElementById('specSchoolSelect');
