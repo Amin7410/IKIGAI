@@ -83,21 +83,26 @@ export function calculateNormalProbabilities() {
   const s2 = db.schools.find(s => s.id == s2Val) || db.schools[1];
   const s3 = db.schools.find(s => s.id == s3Val) || db.schools[2];
 
-  const probs = engine.calculateProbabilities(s1.score2027, s2.score2027, s3.score2027, mean, stdDev);
+  // Quy tắc tuyển sinh TP.HCM: NV2 cộng +1.0 điểm chuẩn, NV3 cộng +2.0 điểm chuẩn
+  const scoreNv1 = s1.score2027;
+  const scoreNv2 = s2.score2027 + 1.0;
+  const scoreNv3 = s3.score2027 + 2.0;
 
-  renderNVResultCards(s1, s2, s3, probs);
-  renderGaussChart('gaussChart', mean, stdDev, s1.score2027, s2.score2027, s3.score2027);
+  const probs = engine.calculateProbabilities(scoreNv1, scoreNv2, scoreNv3, mean, stdDev);
+
+  renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3);
+  renderGaussChart('gaussChart', mean, stdDev, scoreNv1, scoreNv2, scoreNv3);
 }
 
-function renderNVResultCards(s1, s2, s3, probs) {
+function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3) {
   const container = document.getElementById('nvResultCards');
   if (!container) return;
   let html = '';
 
   const nvList = [
-    { name: 'NV1: ' + s1.name, score: s1.score2027, prob: probs.nv1, label: 'NV Vừa Sức' },
-    { name: 'NV2: ' + s2.name, score: s2.score2027, prob: probs.nv2, label: 'NV An Toàn' },
-    { name: 'NV3: ' + s3.name, score: s3.score2027, prob: probs.nv3, label: 'NV Bảo Hiểm' }
+    { name: 'NV1: ' + s1.name, score: scoreNv1, rawScore: s1.score2027, prob: probs.nv1, note: '' },
+    { name: 'NV2: ' + s2.name, score: scoreNv2, rawScore: s2.score2027, prob: probs.nv2, note: ' (Đã cộng +1.0đ quy chế NV2)' },
+    { name: 'NV3: ' + s3.name, score: scoreNv3, rawScore: s3.score2027, prob: probs.nv3, note: ' (Đã cộng +2.0đ quy chế NV3)' }
   ];
 
   nvList.forEach((item) => {
@@ -115,7 +120,7 @@ function renderNVResultCards(s1, s2, s3, probs) {
 
     html += '<div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700 flex items-center justify-between">';
     html += '<div><div class="flex items-center gap-2"><span class="font-bold text-white">' + item.name + '</span><span class="text-[10px] px-2 py-0.5 rounded ' + badgeColor + ' border font-semibold">' + badgeText + '</span></div>';
-    html += '<div class="text-xs text-gray-400 mt-1">Điểm chuẩn dự báo 2027 (Tính từ 2024-2026): <span class="font-bold text-gray-200">' + item.score + '</span></div></div>';
+    html += '<div class="text-xs text-gray-400 mt-1">Điểm chuẩn xét tuyển dự báo 2027: <span class="font-bold text-gray-200">' + item.score.toFixed(2) + '</span><span class="text-[10px] text-amber-300/80">' + item.note + '</span></div></div>';
     html += '<div class="text-right"><div class="text-2xl font-black ' + (item.prob >= 0.75 ? 'text-emerald-400' : (item.prob >= 0.3 ? 'text-amber-400' : 'text-red-400')) + '">' + percentDisplay + '</div>';
     html += '<div class="text-[10px] text-gray-400">' + (probs.isJoint ? 'Xác suất phân bố rời rạc' : 'Xác suất độc lập') + '</div></div></div>';
   });
