@@ -132,6 +132,15 @@ export const db = {
     },
     {
         "id": 15,
+        "name": "Mĩ thuật",
+        "district": "TP.HCM cũ",
+        "score2024": 21.0,
+        "score2025": 21.5,
+        "score2026": 23.5,
+        "score2027": 22.4
+    },
+    {
+        "id": 16,
         "name": "THPT Nguyễn Hữu Thọ",
         "district": "TP.HCM cũ",
         "score2024": 16.0,
@@ -140,7 +149,7 @@ export const db = {
         "score2027": 16.52
     },
     {
-        "id": 16,
+        "id": 17,
         "name": "THPT Hùng Vương",
         "district": "TP.HCM cũ",
         "score2024": 18.25,
@@ -149,7 +158,7 @@ export const db = {
         "score2027": 19.48
     },
     {
-        "id": 17,
+        "id": 18,
         "name": "Trung học thực hành Sư phạm",
         "district": "TP.HCM cũ",
         "score2024": 23.0,
@@ -158,7 +167,7 @@ export const db = {
         "score2027": 23.75
     },
     {
-        "id": 18,
+        "id": 19,
         "name": "THPT Trần Khai Nguyên",
         "district": "TP.HCM cũ",
         "score2024": 19.75,
@@ -167,7 +176,7 @@ export const db = {
         "score2027": 21.75
     },
     {
-        "id": 19,
+        "id": 20,
         "name": "THPT Trần Hữu Trang",
         "district": "TP.HCM cũ",
         "score2024": 13.75,
@@ -176,7 +185,7 @@ export const db = {
         "score2027": 13.5
     },
     {
-        "id": 20,
+        "id": 21,
         "name": "THPT Mạc Đĩnh Chi",
         "district": "TP.HCM cũ",
         "score2024": 22.5,
@@ -185,7 +194,7 @@ export const db = {
         "score2027": 23.3
     },
     {
-        "id": 21,
+        "id": 22,
         "name": "THPT Bình Phú",
         "district": "TP.HCM cũ",
         "score2024": 19.5,
@@ -194,7 +203,7 @@ export const db = {
         "score2027": 21.23
     },
     {
-        "id": 22,
+        "id": 23,
         "name": "THPT Nguyễn Tất Thành",
         "district": "TP.HCM cũ",
         "score2024": 17.0,
@@ -203,7 +212,7 @@ export const db = {
         "score2027": 18.3
     },
     {
-        "id": 23,
+        "id": 24,
         "name": "THPT Phạm Phú Thứ",
         "district": "TP.HCM cũ",
         "score2024": 14.75,
@@ -212,7 +221,7 @@ export const db = {
         "score2027": 15.72
     },
     {
-        "id": 24,
+        "id": 25,
         "name": "THPT Lê Thánh Tôn",
         "district": "TP.HCM cũ",
         "score2024": 17.25,
@@ -221,7 +230,7 @@ export const db = {
         "score2027": 18.62
     },
     {
-        "id": 25,
+        "id": 26,
         "name": "THPT Tân Phong",
         "district": "TP.HCM cũ",
         "score2024": 14.0,
@@ -230,7 +239,7 @@ export const db = {
         "score2027": 14.8
     },
     {
-        "id": 26,
+        "id": 27,
         "name": "THPT Ngô Quyền",
         "district": "TP.HCM cũ",
         "score2024": 18.75,
@@ -239,7 +248,7 @@ export const db = {
         "score2027": 20.38
     },
     {
-        "id": 27,
+        "id": 28,
         "name": "THPT Nam Sài Gòn",
         "district": "TP.HCM cũ",
         "score2024": 20.25,
@@ -248,7 +257,7 @@ export const db = {
         "score2027": 21.25
     },
     {
-        "id": 28,
+        "id": 29,
         "name": "THPT Lương Văn Can",
         "district": "TP.HCM cũ",
         "score2024": 13.5,
@@ -257,7 +266,7 @@ export const db = {
         "score2027": 14.25
     },
     {
-        "id": 29,
+        "id": 30,
         "name": "THPT Ngô Gia Tự",
         "district": "TP.HCM cũ",
         "score2024": 14.0,
@@ -266,7 +275,7 @@ export const db = {
         "score2027": 12.58
     },
     {
-        "id": 30,
+        "id": 31,
         "name": "THPT Tạ Quang Bửu",
         "district": "TP.HCM cũ",
         "score2024": 15.25,
@@ -275,7 +284,7 @@ export const db = {
         "score2027": 16.55
     },
     {
-        "id": 31,
+        "id": 32,
         "name": "THPT Nguyễn Văn Linh",
         "district": "TP.HCM cũ",
         "score2024": 11.25,
@@ -284,7 +293,7 @@ export const db = {
         "score2027": 11.28
     },
     {
-        "id": 32,
+        "id": 33,
         "name": "THPT Võ Văn Kiệt",
         "district": "TP.HCM cũ",
         "score2024": 16.5,
@@ -293,7 +302,7 @@ export const db = {
         "score2027": 16.8
     },
     {
-        "id": 33,
+        "id": 34,
         "name": "Phổ thông NK TDTT Nguyễn Thị Định",
         "district": "TP.HCM cũ",
         "score2024": 13.0,
@@ -302,7 +311,7 @@ export const db = {
         "score2027": 13.6
     },
     {
-        "id": 34,
+        "id": 35,
         "name": "THPT Nguyễn Huệ",
         "district": "TP.HCM cũ",
         "score2024": 15.25,
@@ -311,7 +320,7 @@ export const db = {
         "score2027": 16.8
     },
     {
-        "id": 35,
+        "id": 36,
         "name": "THPT Phước Long",
         "district": "TP.HCM cũ",
         "score2024": 16.25,
@@ -320,7 +329,7 @@ export const db = {
         "score2027": 17.75
     },
     {
-        "id": 36,
+        "id": 37,
         "name": "THPT Long Trường",
         "district": "TP.HCM cũ",
         "score2024": 12.0,
@@ -329,7 +338,7 @@ export const db = {
         "score2027": 11.8
     },
     {
-        "id": 37,
+        "id": 38,
         "name": "THPT Nguyễn Văn Tăng",
         "district": "TP.HCM cũ",
         "score2024": 11.0,
@@ -338,7 +347,7 @@ export const db = {
         "score2027": 11.35
     },
     {
-        "id": 38,
+        "id": 39,
         "name": "THPT Dương Văn Thì",
         "district": "TP.HCM cũ",
         "score2024": 14.75,
@@ -347,7 +356,7 @@ export const db = {
         "score2027": 15.25
     },
     {
-        "id": 39,
+        "id": 40,
         "name": "THPT Nguyễn Khuyến",
         "district": "TP.HCM cũ",
         "score2024": 18.25,
@@ -356,7 +365,7 @@ export const db = {
         "score2027": 19.65
     },
     {
-        "id": 40,
+        "id": 41,
         "name": "THPT Nguyễn Du",
         "district": "TP.HCM cũ",
         "score2024": 19.5,
@@ -365,7 +374,7 @@ export const db = {
         "score2027": 20.4
     },
     {
-        "id": 41,
+        "id": 42,
         "name": "THPT Nguyễn An Ninh",
         "district": "TP.HCM cũ",
         "score2024": 15.25,
@@ -374,7 +383,7 @@ export const db = {
         "score2027": 15.3
     },
     {
-        "id": 42,
+        "id": 43,
         "name": "THPT Diên Hồng",
         "district": "TP.HCM cũ",
         "score2024": 15.0,
@@ -383,7 +392,7 @@ export const db = {
         "score2027": 14.03
     },
     {
-        "id": 43,
+        "id": 44,
         "name": "THPT Sương Nguyệt Anh",
         "district": "TP.HCM cũ",
         "score2024": 14.25,
@@ -392,7 +401,7 @@ export const db = {
         "score2027": 12.97
     },
     {
-        "id": 44,
+        "id": 45,
         "name": "THPT Nguyễn Hiền",
         "district": "TP.HCM cũ",
         "score2024": 19.75,
@@ -401,7 +410,7 @@ export const db = {
         "score2027": 18.7
     },
     {
-        "id": 45,
+        "id": 46,
         "name": "THPT Trần Quang Khải",
         "district": "TP.HCM cũ",
         "score2024": 16.75,
@@ -410,7 +419,7 @@ export const db = {
         "score2027": 17.03
     },
     {
-        "id": 46,
+        "id": 47,
         "name": "THPT Nam Kỳ Khởi Nghĩa",
         "district": "TP.HCM cũ",
         "score2024": 15.5,
@@ -419,7 +428,7 @@ export const db = {
         "score2027": 15.47
     },
     {
-        "id": 47,
+        "id": 48,
         "name": "THPT Võ Trường Toản",
         "district": "TP.HCM cũ",
         "score2024": 20.75,
@@ -428,7 +437,7 @@ export const db = {
         "score2027": 21.85
     },
     {
-        "id": 48,
+        "id": 49,
         "name": "THPT Trường Chinh",
         "district": "TP.HCM cũ",
         "score2024": 18.0,
@@ -437,25 +446,25 @@ export const db = {
         "score2027": 18.4
     },
     {
-        "id": 49,
+        "id": 50,
         "name": "THPT Phan Văn Hớn",
         "district": "TP.HCM cũ",
-        "score2024": 0.0,
-        "score2025": 0.0,
+        "score2024": 16.0,
+        "score2025": 16.0,
         "score2026": 16.0,
         "score2027": 16.0
     },
     {
-        "id": 50,
+        "id": 51,
         "name": "TH, THCS và THPT Lê Thị Riêng",
         "district": "TP.HCM cũ",
-        "score2024": 0.0,
-        "score2025": 0.0,
+        "score2024": 16.25,
+        "score2025": 16.25,
         "score2026": 16.25,
         "score2027": 16.25
     },
     {
-        "id": 51,
+        "id": 52,
         "name": "THPT Thạnh Lộc",
         "district": "TP.HCM cũ",
         "score2024": 16.25,
@@ -464,7 +473,7 @@ export const db = {
         "score2027": 16.65
     },
     {
-        "id": 52,
+        "id": 53,
         "name": "THPT Thanh Đa",
         "district": "TP.HCM cũ",
         "score2024": 15.0,
@@ -473,7 +482,7 @@ export const db = {
         "score2027": 15.25
     },
     {
-        "id": 53,
+        "id": 54,
         "name": "THPT Võ Thị Sáu",
         "district": "TP.HCM cũ",
         "score2024": 19.5,
@@ -482,7 +491,7 @@ export const db = {
         "score2027": 19.73
     },
     {
-        "id": 54,
+        "id": 55,
         "name": "THPT Gia Định",
         "district": "TP.HCM cũ",
         "score2024": 23.0,
@@ -491,7 +500,7 @@ export const db = {
         "score2027": 21.98
     },
     {
-        "id": 55,
+        "id": 56,
         "name": "THPT Phan Đăng Lưu",
         "district": "TP.HCM cũ",
         "score2024": 16.0,
@@ -500,7 +509,7 @@ export const db = {
         "score2027": 16.0
     },
     {
-        "id": 56,
+        "id": 57,
         "name": "THPT Trần Văn Giàu",
         "district": "TP.HCM cũ",
         "score2024": 17.25,
@@ -509,7 +518,7 @@ export const db = {
         "score2027": 16.88
     },
     {
-        "id": 57,
+        "id": 58,
         "name": "THPT Hoàng Hoa Thám",
         "district": "TP.HCM cũ",
         "score2024": 18.25,
@@ -518,7 +527,7 @@ export const db = {
         "score2027": 19.05
     },
     {
-        "id": 58,
+        "id": 59,
         "name": "THPT Gò Vấp",
         "district": "TP.HCM cũ",
         "score2024": 16.5,
@@ -527,7 +536,7 @@ export const db = {
         "score2027": 17.02
     },
     {
-        "id": 59,
+        "id": 60,
         "name": "THPT Nguyễn Công Trứ",
         "district": "TP.HCM cũ",
         "score2024": 20.25,
@@ -536,7 +545,7 @@ export const db = {
         "score2027": 21.05
     },
     {
-        "id": 60,
+        "id": 61,
         "name": "THPT Trần Hưng Đạo",
         "district": "TP.HCM cũ",
         "score2024": 19.75,
@@ -545,7 +554,7 @@ export const db = {
         "score2027": 21.15
     },
     {
-        "id": 61,
+        "id": 62,
         "name": "THPT Nguyễn Trung Trực",
         "district": "TP.HCM cũ",
         "score2024": 17.25,
@@ -554,7 +563,7 @@ export const db = {
         "score2027": 18.5
     },
     {
-        "id": 62,
+        "id": 63,
         "name": "THPT Phú Nhuận",
         "district": "TP.HCM cũ",
         "score2024": 22.5,
@@ -563,7 +572,7 @@ export const db = {
         "score2027": 23.25
     },
     {
-        "id": 63,
+        "id": 64,
         "name": "THPT Hàn Thuyên",
         "district": "TP.HCM cũ",
         "score2024": 15.25,
@@ -572,7 +581,7 @@ export const db = {
         "score2027": 15.23
     },
     {
-        "id": 64,
+        "id": 65,
         "name": "THPT Tân Bình",
         "district": "TP.HCM cũ",
         "score2024": 19.5,
@@ -581,7 +590,7 @@ export const db = {
         "score2027": 20.58
     },
     {
-        "id": 65,
+        "id": 66,
         "name": "THPT Nguyễn Chí Thanh",
         "district": "TP.HCM cũ",
         "score2024": 18.25,
@@ -590,7 +599,7 @@ export const db = {
         "score2027": 19.17
     },
     {
-        "id": 66,
+        "id": 67,
         "name": "THPT Trần Phú",
         "district": "TP.HCM cũ",
         "score2024": 23.25,
@@ -599,7 +608,7 @@ export const db = {
         "score2027": 23.6
     },
     {
-        "id": 67,
+        "id": 68,
         "name": "THPT Nguyễn Thượng Hiền",
         "district": "TP.HCM cũ",
         "score2024": 24.25,
@@ -608,7 +617,7 @@ export const db = {
         "score2027": 24.28
     },
     {
-        "id": 68,
+        "id": 69,
         "name": "THPT Nguyễn Thái Bình",
         "district": "TP.HCM cũ",
         "score2024": 17.0,
@@ -617,7 +626,7 @@ export const db = {
         "score2027": 17.65
     },
     {
-        "id": 69,
+        "id": 70,
         "name": "THPT Nguyễn Hữu Huân",
         "district": "TP.HCM cũ",
         "score2024": 23.25,
@@ -626,7 +635,7 @@ export const db = {
         "score2027": 23.83
     },
     {
-        "id": 70,
+        "id": 71,
         "name": "THPT Thủ Đức",
         "district": "TP.HCM cũ",
         "score2024": 20.5,
@@ -635,7 +644,7 @@ export const db = {
         "score2027": 21.78
     },
     {
-        "id": 71,
+        "id": 72,
         "name": "THPT Tam Phú",
         "district": "TP.HCM cũ",
         "score2024": 18.0,
@@ -644,7 +653,7 @@ export const db = {
         "score2027": 18.93
     },
     {
-        "id": 72,
+        "id": 73,
         "name": "THPT Hiệp Bình",
         "district": "TP.HCM cũ",
         "score2024": 14.0,
@@ -653,7 +662,7 @@ export const db = {
         "score2027": 15.23
     },
     {
-        "id": 73,
+        "id": 74,
         "name": "THPT Đào Sơn Tây",
         "district": "TP.HCM cũ",
         "score2024": 13.5,
@@ -662,7 +671,7 @@ export const db = {
         "score2027": 13.6
     },
     {
-        "id": 74,
+        "id": 75,
         "name": "THPT Linh Trung",
         "district": "TP.HCM cũ",
         "score2024": 15.0,
@@ -671,7 +680,7 @@ export const db = {
         "score2027": 14.88
     },
     {
-        "id": 75,
+        "id": 76,
         "name": "THPT Bình Chiểu",
         "district": "TP.HCM cũ",
         "score2024": 14.0,
@@ -680,7 +689,7 @@ export const db = {
         "score2027": 14.35
     },
     {
-        "id": 76,
+        "id": 77,
         "name": "THPT Bình Chánh",
         "district": "TP.HCM cũ",
         "score2024": 13.5,
@@ -689,7 +698,7 @@ export const db = {
         "score2027": 13.05
     },
     {
-        "id": 77,
+        "id": 78,
         "name": "THPT Tân Túc",
         "district": "TP.HCM cũ",
         "score2024": 14.0,
@@ -698,7 +707,7 @@ export const db = {
         "score2027": 12.33
     },
     {
-        "id": 78,
+        "id": 79,
         "name": "THPT Vĩnh Lộc B",
         "district": "TP.HCM cũ",
         "score2024": 15.75,
@@ -707,7 +716,7 @@ export const db = {
         "score2027": 15.4
     },
     {
-        "id": 79,
+        "id": 80,
         "name": "Phổ thông Năng khiếu TDTT Bình Chánh",
         "district": "TP.HCM cũ",
         "score2024": 14.0,
@@ -716,7 +725,7 @@ export const db = {
         "score2027": 13.15
     },
     {
-        "id": 80,
+        "id": 81,
         "name": "THPT Phong Phú",
         "district": "TP.HCM cũ",
         "score2024": 12.5,
@@ -725,7 +734,7 @@ export const db = {
         "score2027": 11.03
     },
     {
-        "id": 81,
+        "id": 82,
         "name": "THPT Lê Minh Xuân",
         "district": "TP.HCM cũ",
         "score2024": 15.0,
@@ -734,7 +743,7 @@ export const db = {
         "score2027": 13.95
     },
     {
-        "id": 82,
+        "id": 83,
         "name": "THPT Đa Phước",
         "district": "TP.HCM cũ",
         "score2024": 11.5,
@@ -743,7 +752,7 @@ export const db = {
         "score2027": 10.7
     },
     {
-        "id": 83,
+        "id": 84,
         "name": "THPT Bình Khánh",
         "district": "TP.HCM cũ",
         "score2024": 10.5,
@@ -752,7 +761,7 @@ export const db = {
         "score2027": 10.25
     },
     {
-        "id": 84,
+        "id": 85,
         "name": "THPT Cần Thạnh",
         "district": "TP.HCM cũ",
         "score2024": 10.5,
@@ -761,7 +770,7 @@ export const db = {
         "score2027": 9.75
     },
     {
-        "id": 85,
+        "id": 86,
         "name": "THPT An Nghĩa",
         "district": "TP.HCM cũ",
         "score2024": 10.5,
@@ -770,7 +779,7 @@ export const db = {
         "score2027": 10.25
     },
     {
-        "id": 86,
+        "id": 87,
         "name": "THPT Củ Chi",
         "district": "TP.HCM cũ",
         "score2024": 16.25,
@@ -779,7 +788,7 @@ export const db = {
         "score2027": 14.93
     },
     {
-        "id": 87,
+        "id": 88,
         "name": "THPT Quang Trung",
         "district": "TP.HCM cũ",
         "score2024": 13.0,
@@ -788,7 +797,7 @@ export const db = {
         "score2027": 12.17
     },
     {
-        "id": 88,
+        "id": 89,
         "name": "THPT An Nhơn Tây",
         "district": "TP.HCM cũ",
         "score2024": 11.5,
@@ -797,7 +806,7 @@ export const db = {
         "score2027": 11.2
     },
     {
-        "id": 89,
+        "id": 90,
         "name": "THPT Trung Phú",
         "district": "TP.HCM cũ",
         "score2024": 15.5,
@@ -806,7 +815,7 @@ export const db = {
         "score2027": 15.5
     },
     {
-        "id": 90,
+        "id": 91,
         "name": "THPT Trung Lập",
         "district": "TP.HCM cũ",
         "score2024": 11.75,
@@ -815,7 +824,7 @@ export const db = {
         "score2027": 10.75
     },
     {
-        "id": 91,
+        "id": 92,
         "name": "THPT Phú Hòa",
         "district": "TP.HCM cũ",
         "score2024": 13.5,
@@ -824,7 +833,7 @@ export const db = {
         "score2027": 12.98
     },
     {
-        "id": 92,
+        "id": 93,
         "name": "THPT Tân Thông Hội",
         "district": "TP.HCM cũ",
         "score2024": 14.75,
@@ -833,7 +842,7 @@ export const db = {
         "score2027": 14.52
     },
     {
-        "id": 93,
+        "id": 94,
         "name": "THPT Nguyễn Hữu Cầu",
         "district": "TP.HCM cũ",
         "score2024": 22.5,
@@ -842,7 +851,7 @@ export const db = {
         "score2027": 23.4
     },
     {
-        "id": 94,
+        "id": 95,
         "name": "THPT Lý Thường Kiệt",
         "district": "TP.HCM cũ",
         "score2024": 19.75,
@@ -851,7 +860,7 @@ export const db = {
         "score2027": 20.4
     },
     {
-        "id": 95,
+        "id": 96,
         "name": "THPT Bà Điểm",
         "district": "TP.HCM cũ",
         "score2024": 18.5,
@@ -860,7 +869,7 @@ export const db = {
         "score2027": 19.65
     },
     {
-        "id": 96,
+        "id": 97,
         "name": "THPT Nguyễn Văn Cừ",
         "district": "TP.HCM cũ",
         "score2024": 16.5,
@@ -869,7 +878,7 @@ export const db = {
         "score2027": 15.48
     },
     {
-        "id": 97,
+        "id": 98,
         "name": "THPT Nguyễn Hữu Tiến",
         "district": "TP.HCM cũ",
         "score2024": 18.0,
@@ -878,7 +887,7 @@ export const db = {
         "score2027": 18.35
     },
     {
-        "id": 98,
+        "id": 99,
         "name": "THPT Phạm Văn Sáng",
         "district": "TP.HCM cũ",
         "score2024": 16.75,
@@ -887,7 +896,7 @@ export const db = {
         "score2027": 16.98
     },
     {
-        "id": 99,
+        "id": 100,
         "name": "THPT Hồ Thị Bi",
         "district": "TP.HCM cũ",
         "score2024": 17.5,
@@ -896,7 +905,7 @@ export const db = {
         "score2027": 17.23
     },
     {
-        "id": 100,
+        "id": 101,
         "name": "THPT Long Thới",
         "district": "TP.HCM cũ",
         "score2024": 12.25,
@@ -905,7 +914,7 @@ export const db = {
         "score2027": 12.68
     },
     {
-        "id": 101,
+        "id": 102,
         "name": "THPT Phước Kiển",
         "district": "TP.HCM cũ",
         "score2024": 12.75,
@@ -914,7 +923,7 @@ export const db = {
         "score2027": 11.65
     },
     {
-        "id": 102,
+        "id": 103,
         "name": "THPT Dương Văn Dương",
         "district": "TP.HCM cũ",
         "score2024": 13.0,
@@ -923,7 +932,7 @@ export const db = {
         "score2027": 12.38
     },
     {
-        "id": 103,
+        "id": 104,
         "name": "THPT Tây Thạnh",
         "district": "TP.HCM cũ",
         "score2024": 21.0,
@@ -932,7 +941,7 @@ export const db = {
         "score2027": 22.35
     },
     {
-        "id": 104,
+        "id": 105,
         "name": "THPT Lê Trọng Tấn",
         "district": "TP.HCM cũ",
         "score2024": 19.5,
@@ -941,16 +950,16 @@ export const db = {
         "score2027": 20.33
     },
     {
-        "id": 105,
+        "id": 106,
         "name": "THPT Thoại Ngọc Hầu",
         "district": "TP.HCM cũ",
-        "score2024": 0.0,
-        "score2025": 0.0,
+        "score2024": 16.25,
+        "score2025": 16.25,
         "score2026": 16.25,
         "score2027": 16.25
     },
     {
-        "id": 106,
+        "id": 107,
         "name": "THPT Vĩnh Lộc",
         "district": "TP.HCM cũ",
         "score2024": 16.5,
@@ -959,7 +968,7 @@ export const db = {
         "score2027": 17.82
     },
     {
-        "id": 107,
+        "id": 108,
         "name": "THPT Nguyễn Hữu Cảnh",
         "district": "TP.HCM cũ",
         "score2024": 18.0,
@@ -968,7 +977,7 @@ export const db = {
         "score2027": 19.57
     },
     {
-        "id": 108,
+        "id": 109,
         "name": "THPT Bình Hưng Hòa",
         "district": "TP.HCM cũ",
         "score2024": 18.5,
@@ -977,7 +986,7 @@ export const db = {
         "score2027": 18.9
     },
     {
-        "id": 109,
+        "id": 110,
         "name": "THPT Bình Tân",
         "district": "TP.HCM cũ",
         "score2024": 15.0,
@@ -986,16 +995,16 @@ export const db = {
         "score2027": 15.27
     },
     {
-        "id": 110,
+        "id": 111,
         "name": "THPT Hoàng Thế Thiện (trường Bình Trị Đông B trước)",
         "district": "TP.HCM cũ",
-        "score2024": 0.0,
+        "score2024": 13.0,
         "score2025": 13.0,
         "score2026": 15.5,
-        "score2027": 15.5
+        "score2027": 14.25
     },
     {
-        "id": 111,
+        "id": 112,
         "name": "THPT An Lạc",
         "district": "TP.HCM cũ",
         "score2024": 15.25,
@@ -1004,7 +1013,7 @@ export const db = {
         "score2027": 16.25
     },
     {
-        "id": 112,
+        "id": 113,
         "name": "THPT Lý Thái Tổ",
         "district": "Bình Dương cũ",
         "score2024": 17.05,
@@ -1013,7 +1022,7 @@ export const db = {
         "score2027": 17.3
     },
     {
-        "id": 113,
+        "id": 114,
         "name": "THPT Lê Lợi",
         "district": "Bình Dương cũ",
         "score2024": 14.75,
@@ -1022,7 +1031,7 @@ export const db = {
         "score2027": 13.97
     },
     {
-        "id": 114,
+        "id": 115,
         "name": "THPT Tân Bình",
         "district": "Bình Dương cũ",
         "score2024": 10.25,
@@ -1031,7 +1040,7 @@ export const db = {
         "score2027": 13.54
     },
     {
-        "id": 115,
+        "id": 116,
         "name": "THPT Dĩ An",
         "district": "Bình Dương cũ",
         "score2024": 23.3,
@@ -1040,7 +1049,7 @@ export const db = {
         "score2027": 22.91
     },
     {
-        "id": 116,
+        "id": 117,
         "name": "THPT Võ Minh Đức",
         "district": "Bình Dương cũ",
         "score2024": 18.1,
@@ -1049,7 +1058,7 @@ export const db = {
         "score2027": 18.99
     },
     {
-        "id": 117,
+        "id": 118,
         "name": "THCS và THPT Minh Hòa",
         "district": "Bình Dương cũ",
         "score2024": 13.0,
@@ -1058,7 +1067,7 @@ export const db = {
         "score2027": 11.72
     },
     {
-        "id": 118,
+        "id": 119,
         "name": "THPT Bình An",
         "district": "Bình Dương cũ",
         "score2024": 18.25,
@@ -1067,7 +1076,7 @@ export const db = {
         "score2027": 18.95
     },
     {
-        "id": 119,
+        "id": 120,
         "name": "THPT Nguyễn Đình Chiểu",
         "district": "Bình Dương cũ",
         "score2024": 16.15,
@@ -1076,7 +1085,7 @@ export const db = {
         "score2027": 16.45
     },
     {
-        "id": 120,
+        "id": 121,
         "name": "THPT Trịnh Hoài Đức",
         "district": "Bình Dương cũ",
         "score2024": 23.65,
@@ -1085,7 +1094,7 @@ export const db = {
         "score2027": 23.03
     },
     {
-        "id": 121,
+        "id": 122,
         "name": "THPT Nguyễn Trãi",
         "district": "Bình Dương cũ",
         "score2024": 19.15,
@@ -1094,7 +1103,7 @@ export const db = {
         "score2027": 19.15
     },
     {
-        "id": 122,
+        "id": 123,
         "name": "THPT Nguyễn An Ninh",
         "district": "Bình Dương cũ",
         "score2024": 17.4,
@@ -1103,7 +1112,7 @@ export const db = {
         "score2027": 16.65
     },
     {
-        "id": 123,
+        "id": 124,
         "name": "THPT Huỳnh Văn Nghệ",
         "district": "Bình Dương cũ",
         "score2024": 15.4,
@@ -1112,7 +1121,7 @@ export const db = {
         "score2027": 15.62
     },
     {
-        "id": 124,
+        "id": 125,
         "name": "THPT Phước Vĩnh",
         "district": "Bình Dương cũ",
         "score2024": 11.6,
@@ -1121,7 +1130,7 @@ export const db = {
         "score2027": 11.73
     },
     {
-        "id": 125,
+        "id": 126,
         "name": "THPT Bến Cát",
         "district": "Bình Dương cũ",
         "score2024": 17.7,
@@ -1130,7 +1139,7 @@ export const db = {
         "score2027": 18.07
     },
     {
-        "id": 126,
+        "id": 127,
         "name": "THPT Dầu Tiếng",
         "district": "Bình Dương cũ",
         "score2024": 13.4,
@@ -1139,7 +1148,7 @@ export const db = {
         "score2027": 12.88
     },
     {
-        "id": 127,
+        "id": 128,
         "name": "THPT Bình Phú",
         "district": "Bình Dương cũ",
         "score2024": 14.85,
@@ -1148,7 +1157,7 @@ export const db = {
         "score2027": 15.69
     },
     {
-        "id": 128,
+        "id": 129,
         "name": "THPT Trần Văn Ơn",
         "district": "Bình Dương cũ",
         "score2024": 16.25,
@@ -1157,7 +1166,7 @@ export const db = {
         "score2027": 16.79
     },
     {
-        "id": 129,
+        "id": 130,
         "name": "THCS và THPT Tây Sơn",
         "district": "Bình Dương cũ",
         "score2024": 12.6,
@@ -1166,7 +1175,7 @@ export const db = {
         "score2027": 11.66
     },
     {
-        "id": 130,
+        "id": 131,
         "name": "THCS và THPT Nguyễn Huệ",
         "district": "Bình Dương cũ",
         "score2024": 12.05,
@@ -1175,7 +1184,7 @@ export const db = {
         "score2027": 11.32
     },
     {
-        "id": 131,
+        "id": 132,
         "name": "THPT Tây Nam",
         "district": "Bình Dương cũ",
         "score2024": 14.6,
@@ -1184,7 +1193,7 @@ export const db = {
         "score2027": 14.78
     },
     {
-        "id": 132,
+        "id": 133,
         "name": "THPT Tân Phước Khánh",
         "district": "Bình Dương cũ",
         "score2024": 17.7,
@@ -1193,7 +1202,7 @@ export const db = {
         "score2027": 18.59
     },
     {
-        "id": 133,
+        "id": 134,
         "name": "THPT Thái Hòa",
         "district": "Bình Dương cũ",
         "score2024": 16.25,
@@ -1202,7 +1211,7 @@ export const db = {
         "score2027": 16.18
     },
     {
-        "id": 134,
+        "id": 135,
         "name": "THPT An Mỹ",
         "district": "Bình Dương cũ",
         "score2024": 16.9,
@@ -1211,7 +1220,7 @@ export const db = {
         "score2027": 17.84
     },
     {
-        "id": 135,
+        "id": 136,
         "name": "THPT Phước Hòa",
         "district": "Bình Dương cũ",
         "score2024": 10.9,
@@ -1220,7 +1229,7 @@ export const db = {
         "score2027": 12.24
     },
     {
-        "id": 136,
+        "id": 137,
         "name": "THPT Bàu Bàng",
         "district": "Bình Dương cũ",
         "score2024": 13.35,
@@ -1229,7 +1238,7 @@ export const db = {
         "score2027": 14.81
     },
     {
-        "id": 137,
+        "id": 138,
         "name": "THPT Long Hòa",
         "district": "Bình Dương cũ",
         "score2024": 12.15,
@@ -1238,7 +1247,7 @@ export const db = {
         "score2027": 12.25
     },
     {
-        "id": 138,
+        "id": 139,
         "name": "THPT Nguyễn Thị Minh Khai",
         "district": "Bình Dương cũ",
         "score2024": 20.2,
@@ -1247,7 +1256,7 @@ export const db = {
         "score2027": 19.88
     },
     {
-        "id": 139,
+        "id": 140,
         "name": "THPT Thường Tân",
         "district": "Bình Dương cũ",
         "score2024": 13.95,
@@ -1256,7 +1265,7 @@ export const db = {
         "score2027": 13.27
     },
     {
-        "id": 140,
+        "id": 141,
         "name": "THPT Thanh Tuyền",
         "district": "Bình Dương cũ",
         "score2024": 13.65,
@@ -1265,16 +1274,16 @@ export const db = {
         "score2027": 13.63
     },
     {
-        "id": 141,
+        "id": 142,
         "name": "THPT Hà Huy Tập",
         "district": "Bình Dương cũ",
-        "score2024": 0.0,
-        "score2025": 0.0,
+        "score2024": 16.5,
+        "score2025": 16.5,
         "score2026": 16.5,
         "score2027": 16.5
     },
     {
-        "id": 142,
+        "id": 143,
         "name": "THPT Vũng Tàu",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 36.75,
@@ -1283,7 +1292,7 @@ export const db = {
         "score2027": 24.6
     },
     {
-        "id": 143,
+        "id": 144,
         "name": "THPT Châu Thành",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 29.75,
@@ -1292,7 +1301,7 @@ export const db = {
         "score2027": 17.9
     },
     {
-        "id": 144,
+        "id": 145,
         "name": "THPT Trần Phú",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 22.75,
@@ -1301,7 +1310,7 @@ export const db = {
         "score2027": 11.38
     },
     {
-        "id": 145,
+        "id": 146,
         "name": "THPT Xuyên Mộc",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 25.25,
@@ -1310,7 +1319,7 @@ export const db = {
         "score2027": 15.75
     },
     {
-        "id": 146,
+        "id": 147,
         "name": "THPT Phú Mỹ",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 27.75,
@@ -1319,7 +1328,7 @@ export const db = {
         "score2027": 13.25
     },
     {
-        "id": 147,
+        "id": 148,
         "name": "THPT Trần Hưng Đạo",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 20.75,
@@ -1328,7 +1337,7 @@ export const db = {
         "score2027": 13.05
     },
     {
-        "id": 148,
+        "id": 149,
         "name": "THPT Hắc Dịch",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 22.0,
@@ -1337,7 +1346,7 @@ export const db = {
         "score2027": 11.9
     },
     {
-        "id": 149,
+        "id": 150,
         "name": "THPT Trần Văn Quan",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 22.75,
@@ -1346,7 +1355,7 @@ export const db = {
         "score2027": 12.32
     },
     {
-        "id": 150,
+        "id": 151,
         "name": "THPT Võ Thị Sáu",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 22.25,
@@ -1355,7 +1364,7 @@ export const db = {
         "score2027": 13.48
     },
     {
-        "id": 151,
+        "id": 152,
         "name": "THPT Hòa Hội",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 21.75,
@@ -1364,7 +1373,7 @@ export const db = {
         "score2027": 12.55
     },
     {
-        "id": 152,
+        "id": 153,
         "name": "THPT Nguyễn Bỉnh Khiêm",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 22.25,
@@ -1373,7 +1382,7 @@ export const db = {
         "score2027": 12.88
     },
     {
-        "id": 153,
+        "id": 154,
         "name": "THPT Nguyễn Trãi",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 22.75,
@@ -1382,7 +1391,7 @@ export const db = {
         "score2027": 12.32
     },
     {
-        "id": 154,
+        "id": 155,
         "name": "THPT Phước Bửu",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 22.5,
@@ -1391,7 +1400,7 @@ export const db = {
         "score2027": 11.85
     },
     {
-        "id": 155,
+        "id": 156,
         "name": "THPT Long Hải - Phước Tỉnh",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 19.5,
@@ -1400,7 +1409,7 @@ export const db = {
         "score2027": 12.9
     },
     {
-        "id": 156,
+        "id": 157,
         "name": "THPT Nguyễn Văn Cừ",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 20.75,
@@ -1409,7 +1418,7 @@ export const db = {
         "score2027": 11.12
     },
     {
-        "id": 157,
+        "id": 158,
         "name": "THPT Minh Đạm",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 28.5,
@@ -1418,7 +1427,7 @@ export const db = {
         "score2027": 15.65
     },
     {
-        "id": 158,
+        "id": 159,
         "name": "THPT Nguyễn Khuyến",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 29.75,
@@ -1427,7 +1436,7 @@ export const db = {
         "score2027": 19.0
     },
     {
-        "id": 159,
+        "id": 160,
         "name": "THPT Nguyễn Huệ",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 31.75,
@@ -1436,7 +1445,7 @@ export const db = {
         "score2027": 21.68
     },
     {
-        "id": 160,
+        "id": 161,
         "name": "THPT Đinh Tiên Hoàng",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 29.75,
@@ -1445,7 +1454,7 @@ export const db = {
         "score2027": 19.07
     },
     {
-        "id": 161,
+        "id": 162,
         "name": "THPT Trần Nguyên Hãn",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 30.75,
@@ -1454,7 +1463,7 @@ export const db = {
         "score2027": 19.2
     },
     {
-        "id": 162,
+        "id": 163,
         "name": "THPT Ngô Quyền",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 22.5,
@@ -1463,7 +1472,7 @@ export const db = {
         "score2027": 11.07
     },
     {
-        "id": 163,
+        "id": 164,
         "name": "THPT Hòa Bình",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 24.0,
@@ -1472,7 +1481,7 @@ export const db = {
         "score2027": 12.0
     },
     {
-        "id": 164,
+        "id": 165,
         "name": "THPT Trần Quang Khải",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 20.75,
@@ -1481,7 +1490,7 @@ export const db = {
         "score2027": 13.38
     },
     {
-        "id": 165,
+        "id": 166,
         "name": "THPT Dương Bạch Mai",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 22.75,
@@ -1490,7 +1499,7 @@ export const db = {
         "score2027": 11.6
     },
     {
-        "id": 166,
+        "id": 167,
         "name": "THPT Bà Rịa",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 27.0,
@@ -1499,7 +1508,7 @@ export const db = {
         "score2027": 16.67
     },
     {
-        "id": 167,
+        "id": 168,
         "name": "THPT Bưng Riềng",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 20.5,
@@ -1508,7 +1517,7 @@ export const db = {
         "score2027": 11.45
     },
     {
-        "id": 168,
+        "id": 169,
         "name": "THPT Nguyễn Du",
         "district": "Bà Rịa - Vũng Tàu cũ",
         "score2024": 19.25,
@@ -1517,11 +1526,11 @@ export const db = {
         "score2027": 14.92
     },
     {
-        "id": 169,
+        "id": 170,
         "name": "THPT Võ Nguyên Giáp",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 0.0,
-        "score2025": 0.0,
+        "score2024": 9.0,
+        "score2025": 9.0,
         "score2026": 9.0,
         "score2027": 9.0
     }

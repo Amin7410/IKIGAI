@@ -90,11 +90,11 @@ export function calculateNormalProbabilities() {
 
   const probs = engine.calculateProbabilities(scoreNv1, scoreNv2, scoreNv3, mean, stdDev);
 
-  renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3);
+  renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3, mean);
   renderGaussChart('gaussChart', mean, stdDev, scoreNv1, scoreNv2, scoreNv3);
 }
 
-function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3) {
+function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3, mean) {
   const container = document.getElementById('nvResultCards');
   if (!container) return;
   let html = '';
@@ -108,20 +108,29 @@ function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3) {
   nvList.forEach((item) => {
     let badgeColor = 'bg-red-500/20 text-red-400 border-red-500/30';
     let badgeText = '🔴 Nguy Hiểm';
+    let percentColor = 'text-red-400';
     let percentDisplay = (item.prob * 100).toFixed(1) + '%';
 
-    if (item.prob >= 0.75) {
+    const ei = (mean !== undefined) ? (mean - item.score) : 0;
+
+    if (ei >= 5.0) {
+      badgeColor = 'bg-purple-500/20 text-purple-300 border-purple-500/40';
+      badgeText = '🟣 Lãng Phí Điểm Số (EI ≥ 5.0)';
+      percentColor = 'text-purple-300';
+    } else if (item.prob >= 0.75) {
       badgeColor = 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
       badgeText = '🟢 An Toàn Cao';
+      percentColor = 'text-emerald-400';
     } else if (item.prob >= 0.30) {
       badgeColor = 'bg-amber-500/20 text-amber-400 border-amber-500/30';
       badgeText = '🟡 Cân Nhắc';
+      percentColor = 'text-amber-400';
     }
 
     html += '<div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700 flex items-center justify-between">';
     html += '<div><div class="flex items-center gap-2"><span class="font-bold text-white">' + item.name + '</span><span class="text-[10px] px-2 py-0.5 rounded ' + badgeColor + ' border font-semibold">' + badgeText + '</span></div>';
     html += '<div class="text-xs text-gray-400 mt-1">Điểm chuẩn xét tuyển dự báo 2027: <span class="font-bold text-gray-200">' + item.score.toFixed(2) + '</span><span class="text-[10px] text-amber-300/80">' + item.note + '</span></div></div>';
-    html += '<div class="text-right"><div class="text-2xl font-black ' + (item.prob >= 0.75 ? 'text-emerald-400' : (item.prob >= 0.3 ? 'text-amber-400' : 'text-red-400')) + '">' + percentDisplay + '</div>';
+    html += '<div class="text-right"><div class="text-2xl font-black ' + percentColor + '">' + percentDisplay + '</div>';
     html += '<div class="text-[10px] text-gray-400">' + (probs.isJoint ? 'Xác suất phân bố rời rạc' : 'Xác suất độc lập') + '</div></div></div>';
   });
 
@@ -202,8 +211,17 @@ export function initSubjectRatings() {
   if (!container) return;
   let html = '';
 
+  const optionsHtml = `
+    <option value="10">10 - Xuất sắc</option>
+    <option value="9">9 - Rất tốt</option>
+    <option value="8" selected>8 - Giỏi</option>
+    <option value="7">7 - Khá giỏi</option>
+    <option value="6">6 - Khá</option>
+    <option value="5">5 - Trung bình</option>
+  `;
+
   db.subjectList.forEach((sub, idx) => {
-    html += '<div class="bg-gray-800/40 p-3 rounded-xl border border-gray-700/60 flex items-center justify-between gap-4"><span class="font-semibold text-sm text-gray-200 w-28">' + sub + '</span><div class="flex items-center gap-4"><div class="text-center"><span class="text-[10px] text-gray-400 block">Đam mê</span><input type="number" id="passion-' + idx + '" value="8" min="1" max="10" class="w-14 bg-gray-900 border border-gray-700 rounded-lg px-2 py-1 text-xs text-center font-bold text-pink-400" oninput="window.ikigaiApp.calculateIkigai()"></div><div class="text-center"><span class="text-[10px] text-gray-400 block">Năng lực</span><input type="number" id="ability-' + idx + '" value="8" min="1" max="10" class="w-14 bg-gray-900 border border-gray-700 rounded-lg px-2 py-1 text-xs text-center font-bold text-indigo-400" oninput="window.ikigaiApp.calculateIkigai()"></div></div></div>';
+    html += '<div class="bg-gray-800/40 p-3 rounded-xl border border-gray-700/60 flex items-center justify-between gap-4"><span class="font-semibold text-sm text-gray-200 w-28">' + sub + '</span><div class="flex items-center gap-3"><div class="text-center"><span class="text-[10px] text-gray-400 block mb-0.5">Đam mê</span><select id="passion-' + idx + '" class="bg-gray-900 border border-gray-700 rounded-lg px-2 py-1 text-xs text-center font-bold text-pink-400" onchange="window.ikigaiApp.calculateIkigai()">' + optionsHtml + '</select></div><div class="text-center"><span class="text-[10px] text-gray-400 block mb-0.5">Năng lực</span><select id="ability-' + idx + '" class="bg-gray-900 border border-gray-700 rounded-lg px-2 py-1 text-xs text-center font-bold text-indigo-400" onchange="window.ikigaiApp.calculateIkigai()">' + optionsHtml + '</select></div></div></div>';
   });
   container.innerHTML = html;
 }
