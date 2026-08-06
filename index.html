@@ -158,33 +158,42 @@
             <h2 class="text-lg font-bold text-white flex items-center gap-2">
               <i class="fa-solid fa-star text-amber-400"></i> Nhập Thông Tin Thi Chuyên
             </h2>
-            <button onclick="window.ikigaiApp.syncScoresFromModule1()" class="text-xs px-2.5 py-1 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 border border-indigo-500/40 transition flex items-center gap-1">
-              <i class="fa-solid fa-arrows-rotate"></i> Lấy điểm M1
-            </button>
+            <span class="text-[11px] px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 font-semibold">
+              <i class="fa-solid fa-link"></i> Tự động đồng bộ M1
+            </span>
           </div>
 
           <div class="space-y-4">
             <div class="p-3 bg-indigo-950/30 border border-indigo-800/40 rounded-xl text-xs text-indigo-300">
-              <i class="fa-solid fa-calculator mr-1 text-indigo-400"></i> <strong>Công thức tính điểm Chuyên (Thang 50):</strong><br>
-              <span class="text-gray-300">Tổng điểm = (Tổng 3 môn thường đã trừ rủi ro) + (Điểm Chuyên trừ rủi ro × 2)</span>
+              <i class="fa-solid fa-calculator mr-1 text-indigo-400"></i> <strong>Công thức tính điểm Chuyên (Thang 50 - Sheet 4):</strong><br>
+              <span class="text-gray-300">Tổng điểm = (Tổng 3 môn thường trừ rủi ro) + (Điểm Chuyên trừ rủi ro × 2)</span>
             </div>
 
-            <!-- 3 MÔN THƯỜNG -->
-            <div>
-              <label class="block text-xs font-semibold text-gray-300 mb-1.5">1. Điểm 3 môn thi chung (kế thừa từ Module 1)</label>
-              <div class="grid grid-cols-3 gap-2">
-                <div>
-                  <label class="block text-[10px] text-gray-400 mb-1 text-center">Toán</label>
-                  <input type="number" id="specMathScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-2 py-2 text-white font-bold text-center text-sm" oninput="calculateSpecialized()">
+            <!-- TỔNG KẾT 3 MÔN THƯỜNG ĐỒNG BỘ TỪ M1 -->
+            <div class="bg-gray-800/60 p-3.5 rounded-xl border border-gray-700/80">
+              <div class="flex justify-between items-center mb-2">
+                <label class="block text-xs font-semibold text-gray-200">1. Điểm 3 môn thi chung (Lấy trực tiếp từ Module 1)</label>
+                <button onclick="window.ikigaiApp.syncScoresFromModule1()" class="text-[11px] text-indigo-400 hover:text-indigo-300 underline font-medium">
+                  <i class="fa-solid fa-rotate mr-0.5"></i> Cập nhật
+                </button>
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center">
+                <div class="bg-gray-900/60 p-2 rounded-lg border border-gray-700/50">
+                  <span class="text-[10px] text-gray-400 block">Toán</span>
+                  <input type="number" id="specMathScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-transparent text-white font-bold text-center text-sm focus:outline-none" oninput="calculateSpecialized()">
                 </div>
-                <div>
-                  <label class="block text-[10px] text-gray-400 mb-1 text-center">Ngữ Văn</label>
-                  <input type="number" id="specLitScore" value="8.0" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-2 py-2 text-white font-bold text-center text-sm" oninput="calculateSpecialized()">
+                <div class="bg-gray-900/60 p-2 rounded-lg border border-gray-700/50">
+                  <span class="text-[10px] text-gray-400 block">Ngữ Văn</span>
+                  <input type="number" id="specLitScore" value="8.0" min="0" max="10" step="0.1" class="w-full bg-transparent text-white font-bold text-center text-sm focus:outline-none" oninput="calculateSpecialized()">
                 </div>
-                <div>
-                  <label class="block text-[10px] text-gray-400 mb-1 text-center">Tiếng Anh</label>
-                  <input type="number" id="specEngScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-2 py-2 text-white font-bold text-center text-sm" oninput="calculateSpecialized()">
+                <div class="bg-gray-900/60 p-2 rounded-lg border border-gray-700/50">
+                  <span class="text-[10px] text-gray-400 block">Tiếng Anh</span>
+                  <input type="number" id="specEngScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-transparent text-white font-bold text-center text-sm focus:outline-none" oninput="calculateSpecialized()">
                 </div>
+              </div>
+              <div class="text-[11px] text-indigo-300 mt-2 flex justify-between items-center">
+                <span>Tổng 3 môn kỳ vọng (đã trừ rủi ro):</span>
+                <span class="font-bold text-white text-xs" id="specBaseExpectedDisplay">--</span>
               </div>
             </div>
 
@@ -282,11 +291,16 @@
     <div id="tab3" class="tab-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8">
       <div class="lg:col-span-6 space-y-6">
         <div class="glass-card rounded-2xl p-6">
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-lg font-bold text-white flex items-center gap-2">
-              <i class="fa-solid fa-sliders text-indigo-400"></i> Đánh Giá 10 Môn Lựa Chọn THPT (Thang 1-10)
-            </h2>
-            <span class="text-[10px] text-gray-400 bg-gray-800 px-2 py-1 rounded border border-gray-700">Thang chuẩn GDPT 2018</span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-sliders text-indigo-400"></i> Đánh Giá 10 Môn Lựa Chọn THPT
+              </h2>
+              <p class="text-xs text-gray-400">Thang điểm 1 - 10 theo Chương trình GDPT 2018</p>
+            </div>
+            <button onclick="window.ikigaiApp.openScaleModal()" class="text-xs px-3 py-1.5 rounded-xl bg-purple-600/30 hover:bg-purple-600/50 text-purple-300 border border-purple-500/40 transition flex items-center gap-1.5 font-medium shrink-0">
+              <i class="fa-solid fa-book-open"></i> Thang chuẩn 10 mức
+            </button>
           </div>
           <div class="space-y-3 max-h-[460px] overflow-y-auto pr-2" id="subjectRatingsContainer">
           </div>
@@ -328,6 +342,30 @@
     </div>
 
   </main>
+
+  <!-- MODAL HƯỚNG DẪN THANG ĐIỂM ĐÁNH GIÁ NĂNG LỰC & ĐAM MÊ (SHEET 5) -->
+  <div id="scaleModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-gray-900 border border-gray-700 rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-4 sm:p-5 border-b border-gray-800 flex justify-between items-center bg-gray-800/50">
+        <div>
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-table-list text-purple-400"></i> Bảng Tiêu Chuẩn Thang Điểm Đánh Giá 1 - 10 (Sheet 5)
+          </h3>
+          <p class="text-xs text-gray-400 mt-0.5">Quy chuẩn đánh giá Đam mê (X) và Năng lực học tập (Y) theo Báo cáo Đề tài</p>
+        </div>
+        <button onclick="window.ikigaiApp.closeScaleModal()" class="text-gray-400 hover:text-white text-xl p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-4 sm:p-5 overflow-y-auto flex-1 space-y-3" id="scaleModalContent">
+      </div>
+      <div class="p-4 border-t border-gray-800 text-right bg-gray-800/40">
+        <button onclick="window.ikigaiApp.closeScaleModal()" class="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
+          Đã hiểu & Đóng lại
+        </button>
+      </div>
+    </div>
+  </div>
 
   <footer class="max-w-7xl mx-auto px-4 py-6 text-center border-t border-gray-800 mt-8">
     <p class="text-xs text-gray-400 font-medium">

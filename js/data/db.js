@@ -2604,138 +2604,127 @@ export const db = {
     "Mĩ thuật",
     "Âm nhạc",
     "Lịch sử"
-],
+  ],
+  evaluationScale: [
+    { level: 10, range: "9.5 ≤ Y ≤ 10.0", title: "Năng lực vượt trội", passion: "Đam mê mãnh liệt", desc: "Luôn chủ động tìm hiểu, sẵn sàng dành nhiều thời gian và mong muốn gắn bó lâu dài. Rất phù hợp; ưu tiên lựa chọn." },
+    { level: 9, range: "9.0 ≤ Y < 9.5", title: "Năng lực xuất sắc", passion: "Rất đam mê", desc: "Có hứng thú sâu sắc, thường xuyên tự học và mong muốn phát triển thành thế mạnh. Phù hợp cao; khuyến khích lựa chọn." },
+    { level: 8, range: "8.5 ≤ Y < 9.0", title: "Năng lực rất tốt", passion: "Đam mê rõ ràng", desc: "Rất thích, có động lực học tập và chủ động tham gia các hoạt động liên quan. Có nền tảng vững chắc; khuyến khích lựa chọn." },
+    { level: 7, range: "8.0 ≤ Y < 8.5", title: "Năng lực tốt", passion: "Yêu thích", desc: "Cảm thấy hứng thú, học tập tích cực và có mong muốn tìm hiểu thêm. Phù hợp; có khả năng phát triển tốt." },
+    { level: 6, range: "7.5 ≤ Y < 8.0", title: "Năng lực khá tốt", passion: "Khá yêu thích", desc: "Có thiện cảm và hứng thú tương đối. Có thể lựa chọn, nhưng cần tiếp tục củng cố kiến thức và kỹ năng." },
+    { level: 5, range: "7.0 ≤ Y < 7.5", title: "Năng lực khá", passion: "Có quan tâm", desc: "Không bài xích, có thể học khi có mục tiêu rõ ràng. Có thể cân nhắc; cần xây dựng kế hoạch cải thiện." },
+    { level: 4, range: "6.5 ≤ Y < 7.0", title: "Năng lực trung bình khá", passion: "Ít hứng thú", desc: "Chỉ quan tâm hạn chế, chưa có động lực tự thân. Cần cân nhắc kỹ, đánh giá thêm đam mê và khả năng tiến bộ." },
+    { level: 3, range: "6.0 ≤ Y < 6.5", title: "Năng lực trung bình", passion: "Không yêu thích", desc: "Thường thiếu động lực, ít chủ động. Chưa nên ưu tiên; chỉ lựa chọn khi có quyết tâm cao cải thiện." },
+    { level: 2, range: "5.0 ≤ Y < 6.0", title: "Năng lực còn hạn chế", passion: "Rất ít hứng thú", desc: "Cảm thấy miễn cưỡng, khó duy trì tập trung. Không nên lựa chọn làm tổ hợp hoặc định hướng chính." },
+    { level: 1, range: "Y < 5.0", title: "Năng lực chưa đáp ứng", passion: "Không có đam mê", desc: "Không hứng thú, có xu hướng né tránh. Nên loại khỏi nhóm ưu tiên, trừ trường hợp có kế hoạch bồi dưỡng đặc biệt." }
+  ],
   combos: [
     {
-        "id": "A00",
-        "name": "Tổ hợp A00: Tự nhiên truyền thống",
-        "subjects": [
-            "Vật lí",
-            "Hóa học"
-        ],
-        "blocks": [
-            "A00",
-            "A01",
-            "X26"
-        ],
-        "majors": "Kỹ thuật, công nghệ, kinh tế, tài chính, xây dựng, y dược"
+      id: "TH01",
+      name: "Tổ hợp Kỹ thuật - CNTT & AI",
+      subjects: ["Vật lí", "Tin học", "Công nghệ", "Hóa học"],
+      blocks: ["A00", "A01", "D07", "X26/K01", "X05"],
+      majors: "CNTT, Khoa học dữ liệu, AI, Kỹ thuật công nghệ, Điện tử, Tự động hóa"
     },
     {
-        "id": "A01",
-        "name": "Tổ hợp A01: Kỹ thuật - Công nghệ - Ngoại ngữ",
-        "subjects": [
-            "Vật lí",
-            "Tin học"
-        ],
-        "blocks": [
-            "A01",
-            "D01",
-            "X26"
-        ],
-        "majors": "CNTT, AI, Khoa học dữ liệu, Kỹ thuật, Logistics, Quản trị"
+      id: "TH02",
+      name: "Tổ hợp Đa Năng (Giữ nhiều lựa chọn xét tuyển)",
+      subjects: ["Vật lí", "Tin học", "GDKT&PL", "Địa lí"],
+      blocks: ["A01", "D01", "D10", "C04", "X21", "X22", "X25", "X26/K01"],
+      majors: "Kinh tế số, Quản trị, Logistics, Thương mại điện tử, CNTT, Truyền thông"
     },
     {
-        "id": "B00",
-        "name": "Tổ hợp B00: Y Dược & Sinh hóa",
-        "subjects": [
-            "Hóa học",
-            "Sinh học"
-        ],
-        "blocks": [
-            "B00",
-            "B08",
-            "D07"
-        ],
-        "majors": "Y khoa, Dược, Điều dưỡng, Công nghệ sinh học, Môi trường"
+      id: "TH03",
+      name: "Tổ hợp Y Dược - Sinh Hóa & Sức Khỏe",
+      subjects: ["Hóa học", "Sinh học", "Vật lí", "Tin học"],
+      blocks: ["B00", "B08", "D07", "D08", "A00"],
+      majors: "Y khoa, Dược học, Nha khoa, Điều dưỡng, Công nghệ sinh học, Môi trường"
     },
     {
-        "id": "C00",
-        "name": "Tổ hợp C00: Xã hội & Nhân văn",
-        "subjects": [
-            "Lịch sử",
-            "Địa lí"
-        ],
-        "blocks": [
-            "C00",
-            "C03",
-            "C14"
-        ],
-        "majors": "Luật, Báo chí, Truyền thông, Sư phạm, Quản lý nhà nước"
+      id: "TH04",
+      name: "Tổ hợp Kinh Tế - Tài Chính - Quản Trị",
+      subjects: ["GDKT&PL", "Tin học", "Địa lí", "Vật lí"],
+      blocks: ["A01", "D01", "D10", "C04", "X21", "X25", "X26/K01"],
+      majors: "Tài chính - Ngân hàng, Kế toán, Quản trị kinh doanh, Marketing, Kinh tế đối ngoại"
     },
     {
-        "id": "D01",
-        "name": "Tổ hợp D01: Kinh tế - Quản trị - Ngôn ngữ",
-        "subjects": [
-            "Địa lí",
-            "GDKT&PL"
-        ],
-        "blocks": [
-            "D01",
-            "D10",
-            "X25"
-        ],
-        "majors": "Kinh tế, Tài chính, Marketing, Ngoại ngữ, Quan hệ quốc tế"
+      id: "TH05",
+      name: "Tổ hợp Luật - Hành Chính - Quản Lý Nhà Nước",
+      subjects: ["GDKT&PL", "Địa lí", "Tin học", "Công nghệ"],
+      blocks: ["C00", "C03", "C04", "C14", "D01", "D14", "D15", "X21", "X25"],
+      majors: "Luật học, Luật kinh tế, Quản lý nhà nước, Quan hệ quốc tế, Hành chính công"
     },
     {
-        "id": "X26",
-        "name": "Tổ hợp Công nghệ mới (X26/K01): CNTT & AI",
-        "subjects": [
-            "Tin học",
-            "Công nghệ"
-        ],
-        "blocks": [
-            "X26",
-            "A01",
-            "K01"
-        ],
-        "majors": "Khoa học máy tính, AI, Kỹ thuật phần mềm, Thương mại điện tử"
+      id: "TH06",
+      name: "Tổ hợp Truyền Thông - Báo Chí - Marketing",
+      subjects: ["GDKT&PL", "Địa lí", "Tin học", "Mĩ thuật"],
+      blocks: ["C00", "D01", "D14", "D15", "C04", "X25"],
+      majors: "Báo chí, Truyền thông đa phương tiện, Marketing số, Quan hệ công chúng"
     },
     {
-        "id": "V00",
-        "name": "Tổ hợp V00/H00: Thiết kế & Nghệ thuật",
-        "subjects": [
-            "Mĩ thuật",
-            "Tin học"
-        ],
-        "blocks": [
-            "V00",
-            "V01",
-            "H00",
-            "H01"
-        ],
-        "majors": "Kiến trúc, Thiết kế đồ họa, Nội thất, Mỹ thuật ứng dụng"
+      id: "TH07",
+      name: "Tổ hợp Thiết Kế - Kiến Trúc - Mỹ Thuật",
+      subjects: ["Mĩ thuật", "Tin học", "Công nghệ", "Vật lí"],
+      blocks: ["V00", "V01", "V02", "H00", "H01", "H06"],
+      majors: "Kiến trúc, Thiết kế đồ họa, Thiết kế nội thất, Mỹ thuật ứng dụng"
+    },
+    {
+      id: "TH08",
+      name: "Tổ hợp Du Lịch - Ngôn Ngữ - Quốc Tế Học",
+      subjects: ["Địa lí", "GDKT&PL", "Tin học", "Lịch sử"],
+      blocks: ["D01", "D09", "D10", "D14", "D15"],
+      majors: "Quản trị du lịch, Khách sạn, Ngôn ngữ học, Đông phương học, Quốc tế học"
+    },
+    {
+      id: "TH09",
+      name: "Tổ hợp Xã Hội - Nhân Văn - Sư Phạm",
+      subjects: ["Lịch sử", "Địa lí", "GDKT&PL", "Tin học"],
+      blocks: ["C00", "C03", "C14", "D14", "D15"],
+      majors: "Sư phạm Văn/Sử/Địa, Xã hội học, Tâm lý học, Văn hóa học"
     }
-],
+  ],
   careers: [
     {
       id: 'cntt',
-      name: 'CNTT, AI, Khoa học dữ liệu, Kỹ thuật số',
-      priorityCombos: ['A00', 'A01', 'X26/K01'],
-      recommended: ['Tin học', 'Vật lí', 'Công nghệ', 'Toán']
+      name: 'CNTT, AI, Khoa học dữ liệu, Kỹ thuật công nghệ',
+      priorityCombos: ['A00', 'A01', 'X26/K01', 'X05', 'D07'],
+      recommended: ['Tin học', 'Vật lí', 'Công nghệ', 'Hóa học']
     },
     {
       id: 'kinhte',
       name: 'Kinh tế, Tài chính - Ngân hàng, Quản trị, Logistics',
-      priorityCombos: ['A01', 'D01', 'X25', 'D10'],
+      priorityCombos: ['A01', 'D01', 'X25', 'D10', 'X21', 'C04'],
       recommended: ['GDKT&PL', 'Tin học', 'Địa lí', 'Vật lí']
     },
     {
       id: 'yduoc',
       name: 'Y khoa, Dược, Điều dưỡng, Công nghệ sinh học',
-      priorityCombos: ['B00', 'B08', 'D07'],
+      priorityCombos: ['B00', 'B08', 'D07', 'D08', 'A00'],
       recommended: ['Hóa học', 'Sinh học', 'Vật lí', 'Tin học']
     },
     {
       id: 'luat',
-      name: 'Luật, Quản lý nhà nước, Báo chí, Xã hội học',
-      priorityCombos: ['C00', 'C14', 'D01', 'D14'],
+      name: 'Luật, Hành chính công, Quản lý nhà nước, Ngoại giao',
+      priorityCombos: ['C00', 'C14', 'D01', 'D14', 'C03', 'X25'],
       recommended: ['GDKT&PL', 'Địa lí', 'Lịch sử', 'Tin học']
+    },
+    {
+      id: 'truyenthong',
+      name: 'Truyền thông, Báo chí, Quan hệ công chúng, Marketing',
+      priorityCombos: ['C00', 'D01', 'D14', 'D15', 'C04', 'X25'],
+      recommended: ['GDKT&PL', 'Địa lí', 'Tin học', 'Mĩ thuật']
     },
     {
       id: 'kientruc',
       name: 'Kiến trúc, Mỹ thuật, Thiết kế đồ họa, Truyền thông thị giác',
-      priorityCombos: ['V00', 'V01', 'H00', 'H01'],
-      recommended: ['Mĩ thuật', 'Tin học', 'Vật lí', 'Công nghệ']
+      priorityCombos: ['V00', 'V01', 'V02', 'H00', 'H01', 'H06'],
+      recommended: ['Mĩ thuật', 'Tin học', 'Công nghệ', 'Vật lí']
+    },
+    {
+      id: 'dulich',
+      name: 'Du lịch, Khách sạn, Ngôn ngữ & Quốc tế học',
+      priorityCombos: ['D01', 'D09', 'D10', 'D14', 'D15'],
+      recommended: ['Địa lí', 'GDKT&PL', 'Tin học', 'Lịch sử']
     }
   ]
 };
+

@@ -32,6 +32,7 @@ export function switchEngine(checked) {
     }
   }
   calculateNormalProbabilities();
+  syncScoresFromModule1(false);
 }
 
 /**
@@ -49,6 +50,14 @@ export function calculateNormalProbabilities() {
   const math = parseFloat(mathInput.value) || 0;
   const lit = parseFloat(litInput.value) || 0;
   const eng = parseFloat(engInput.value) || 0;
+
+  // Tự động đồng bộ điểm sang Module 2
+  const specMath = document.getElementById('specMathScore');
+  const specLit = document.getElementById('specLitScore');
+  const specEng = document.getElementById('specEngScore');
+  if (specMath && specMath.value != math) specMath.value = math;
+  if (specLit && specLit.value != lit) specLit.value = lit;
+  if (specEng && specEng.value != eng) specEng.value = eng;
 
   // 1. Hệ số co giãn beta theo môn (Sheet 2)
   const betaMath = 0.84;
@@ -110,6 +119,9 @@ export function calculateNormalProbabilities() {
 
   renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3, mean);
   renderGaussChart('gaussChart', mean, stdDev, scoreNv1, scoreNv2, scoreNv3);
+
+  // Cập nhật tính toán cho Module 2
+  calculateSpecialized();
 }
 
 function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3, mean) {
@@ -129,7 +141,7 @@ function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3, me
     let percentColor = 'text-red-400';
     let percentDisplay = (item.prob * 100).toFixed(1) + '%';
 
-    // Chỉ số chênh lệch năng lực: EI = mu - TargetScore
+    // Chỉ số chênh lệch năng lực: EI = mu - TargetScore (Sheet 2 & Yêu cầu khách)
     const ei = (mean !== undefined) ? (mean - item.score) : 0;
 
     if (ei >= 5.0) {
@@ -161,7 +173,7 @@ function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3, me
  * MODULE 2: DỰ BÁO TUYỂN SINH TRƯỜNG CHUYÊN (Sheet 3 & 4 Excel)
  * =====================================================================
  */
-export function syncScoresFromModule1() {
+export function syncScoresFromModule1(triggerCalc = true) {
   const mathM1 = document.getElementById('mathScore')?.value;
   const litM1 = document.getElementById('litScore')?.value;
   const engM1 = document.getElementById('engScore')?.value;
@@ -176,7 +188,9 @@ export function syncScoresFromModule1() {
     document.getElementById('specEngScore').value = engM1;
   }
 
-  onSpecSchoolChange();
+  if (triggerCalc) {
+    onSpecSchoolChange();
+  }
 }
 
 export function onSpecSchoolChange() {
@@ -194,25 +208,28 @@ export function onSpecSchoolChange() {
   const inputEl = document.getElementById('specScoreInput');
   const hintEl = document.getElementById('specInputHint');
 
-  // Cập nhật nhãn và tự động điền điểm nếu là môn chung
+  // Cập nhật nhãn và tự động điền điểm nếu là môn chung (lưu ý ghi chú Sheet 4)
   if (progName.includes('tiếng anh')) {
-    if (labelEl) labelEl.innerText = '3. Điểm môn chuyên Tiếng Anh (Thang 10 - Hệ số 2)';
+    if (labelEl) labelEl.innerText = '3. Điểm học bạ môn chuyên Tiếng Anh (Thang 10 - Hệ số 2)';
     if (inputEl) inputEl.value = eng;
     if (hintEl) hintEl.innerText = '* Tự động lấy từ điểm Tiếng Anh (bạn có thể điều chỉnh nếu thi chuyên sâu).';
   } else if (progName.includes('toán')) {
-    if (labelEl) labelEl.innerText = '3. Điểm môn chuyên Toán (Thang 10 - Hệ số 2)';
+    if (labelEl) labelEl.innerText = '3. Điểm học bạ môn chuyên Toán (Thang 10 - Hệ số 2)';
     if (inputEl) inputEl.value = math;
     if (hintEl) hintEl.innerText = '* Tự động lấy từ điểm Toán.';
   } else if (progName.includes('ngữ văn') || progName.includes('văn')) {
-    if (labelEl) labelEl.innerText = '3. Điểm môn chuyên Ngữ văn (Thang 10 - Hệ số 2)';
+    if (labelEl) labelEl.innerText = '3. Điểm học bạ môn chuyên Ngữ văn (Thang 10 - Hệ số 2)';
     if (inputEl) inputEl.value = lit;
     if (hintEl) hintEl.innerText = '* Tự động lấy từ điểm Ngữ văn.';
   } else if (progName.includes('vật lí') || progName.includes('hóa học') || progName.includes('sinh học')) {
-    if (labelEl) labelEl.innerText = '3. Điểm môn Khoa học Tự nhiên (KHTN) xét chuyên ' + selectedProgram.program;
-    if (hintEl) hintEl.innerText = '* Theo quy định mới: Môn Lý, Hóa, Sinh nhập điểm môn Khoa Học Tự Nhiên lớp 9.';
+    if (labelEl) labelEl.innerText = '3. Điểm môn Khoa học Tự nhiên (KHTN) lớp 9 xét chuyên ' + selectedProgram.program;
+    if (hintEl) hintEl.innerText = '* Lưu ý quy định mới (Sheet 4): Môn Lý, Hóa, Sinh nhập điểm môn Khoa Học Tự Nhiên lớp 9.';
   } else if (progName.includes('lịch sử') || progName.includes('địa lí')) {
-    if (labelEl) labelEl.innerText = '3. Điểm môn Lịch sử - Địa lý xét chuyên ' + selectedProgram.program;
-    if (hintEl) hintEl.innerText = '* Theo quy định mới: Môn Sử, Địa nhập điểm môn Lịch sử - Địa lý lớp 9.';
+    if (labelEl) labelEl.innerText = '3. Điểm môn Lịch sử - Địa lý lớp 9 xét chuyên ' + selectedProgram.program;
+    if (hintEl) hintEl.innerText = '* Lưu ý quy định mới (Sheet 4): Môn Sử, Địa nhập điểm môn Lịch sử - Địa lý lớp 9.';
+  } else if (progName.includes('tin học')) {
+    if (labelEl) labelEl.innerText = '3. Điểm môn Tin học / Toán lớp 9 xét chuyên Tin học';
+    if (hintEl) hintEl.innerText = '* Chuyên Tin: Nhập điểm Tin học hoặc điểm Toán nâng cao lớp 9.';
   } else {
     if (labelEl) labelEl.innerText = '3. Điểm học bạ môn chuyên ' + selectedProgram.program + ' (Thang 10)';
     if (hintEl) hintEl.innerText = '* Nhập điểm môn chuyên dự thi tương ứng.';
@@ -266,6 +283,9 @@ export function calculateSpecialized() {
   const minBaseTotal = minMath + minLit + minEng;
   const maxBaseTotal = maxMath + maxLit + maxEng;
   const baseExpected = (minBaseTotal + maxBaseTotal) / 2; // G2 trong Excel
+
+  const baseDisplayEl = document.getElementById('specBaseExpectedDisplay');
+  if (baseDisplayEl) baseDisplayEl.innerText = baseExpected.toFixed(2) + ' / 30đ';
 
   // 2. Điểm trung bình 3 môn thường (Sheet 4: E2 = (B2+C2+D2)/3)
   const avgBase = (math + lit + eng) / 3.0;
@@ -359,22 +379,58 @@ export function calculateSpecialized() {
  * MODULE 3: ĐỊNH HƯỚNG IKIGAI CHỌN MÔN LỚP 10 (Sheet 5 & 6 Excel)
  * =====================================================================
  */
+export function openScaleModal() {
+  const modal = document.getElementById('scaleModal');
+  const content = document.getElementById('scaleModalContent');
+  if (!modal || !content) return;
+
+  let html = '<div class="space-y-3">';
+  html += '<div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">';
+
+  db.evaluationScale.forEach(item => {
+    let colorCls = 'border-emerald-500/30 bg-emerald-950/20 text-emerald-300';
+    if (item.level <= 2) colorCls = 'border-red-500/30 bg-red-950/20 text-red-300';
+    else if (item.level <= 4) colorCls = 'border-amber-500/30 bg-amber-950/20 text-amber-300';
+    else if (item.level <= 6) colorCls = 'border-blue-500/30 bg-blue-950/20 text-blue-300';
+
+    html += `
+      <div class="p-3 rounded-xl border ${colorCls} space-y-1">
+        <div class="flex justify-between items-center">
+          <span class="font-extrabold text-white text-sm">Mức ${item.level} (${item.range})</span>
+          <span class="text-[11px] px-2 py-0.5 rounded bg-gray-900/80 font-semibold text-gray-300">${item.title}</span>
+        </div>
+        <div class="text-[11px] text-pink-300 font-medium"><i class="fa-solid fa-heart mr-1"></i> Đam mê: ${item.passion}</div>
+        <div class="text-[11px] text-gray-300">${item.desc}</div>
+      </div>
+    `;
+  });
+
+  html += '</div></div>';
+  content.innerHTML = html;
+  modal.classList.remove('hidden');
+}
+
+export function closeScaleModal() {
+  const modal = document.getElementById('scaleModal');
+  if (modal) modal.classList.add('hidden');
+}
+
 export function initSubjectRatings() {
   const container = document.getElementById('subjectRatingsContainer');
   if (!container) return;
   let html = '';
 
   const optionsHtml = `
-    <option value="10">10 - Xuất sắc / Mãnh liệt</option>
+    <option value="10">10 - Xuất sắc / Đam mê mãnh liệt</option>
     <option value="9">9 - Rất tốt / Rất đam mê</option>
-    <option value="8" selected>8 - Giỏi / Đam mê</option>
+    <option value="8" selected>8 - Giỏi / Đam mê rõ ràng</option>
     <option value="7">7 - Khá giỏi / Yêu thích</option>
     <option value="6">6 - Khá / Khá yêu thích</option>
     <option value="5">5 - Trung bình / Có quan tâm</option>
     <option value="4">4 - TB khá / Ít hứng thú</option>
     <option value="3">3 - TB yếu / Không yêu thích</option>
     <option value="2">2 - Yếu / Rất ít hứng thú</option>
-    <option value="1">1 - Kém / Không đam mê</option>
+    <option value="1">1 - Kém / Không có đam mê</option>
   `;
 
   db.subjectList.forEach((sub, idx) => {
@@ -422,10 +478,10 @@ function renderIkigaiCombos(scatterData, career) {
   combos.forEach(c => {
     let sumDist = 0;
     let warnings = [];
-    let hasCriticalRisk = false;
-    let hasWeakAbility = false;
-    let hasLowPassion = false;
-    let isAllHigh = true;
+    let hasCriticalRisk = false; // Rủi ro kép (cực ghét & cực dốt)
+    let hasWeakAbility = false;  // Năng lực < 6.0
+    let hasLowPassion = false;   // Đam mê < 5.0
+    let isAllHigh = true;        // Hoàn hảo (Y >= 6.0 & X >= 5.0 cho cả 4 môn)
 
     c.subjects.forEach(subName => {
       const item = scatterData.find(s => s.subject === subName);
@@ -434,20 +490,36 @@ function renderIkigaiCombos(scatterData, career) {
       const dist = item ? item.dist : 5.0;
       sumDist += dist;
 
-      // Kiểm tra cảnh báo 4 màu theo quy tắc phản hồi khách hàng (Sheet 5)
-      if (x <= 4 && y <= 4) {
-        warnings.push({ type: 'red', text: '🔴 ' + subName + ': Rủi ro kép (Đam mê & Năng lực đều ≤ 4)' });
+      // Tiêu chuẩn cảnh báo 5 cấp độ chuẩn xác theo Báo cáo Đề tài 24.7 (P341 - P360)
+      if (y < 6.0 && x < 5.0) {
+        // Cấp 4: Rủi ro Kép (P_Yếu > 0 & P_ĐM > 0)
+        warnings.push({
+          type: 'red',
+          title: '🚨 Cảnh báo Rủi ro Kép',
+          subject: subName,
+          text: `Môn <strong>${subName}</strong> (Năng lực: ${y}/10 | Đam mê: ${x}/10). Môn này bị yếu cả về năng lực lẫn thiếu đam mê. Nếu chọn tổ hợp này, môn sẽ kéo tụt điểm GPA Lớp 10! Không khuyến nghị chọn trừ khi bắt buộc.`
+        });
         hasCriticalRisk = true;
         isAllHigh = false;
-      } else if (y <= 4) {
-        warnings.push({ type: 'yellow', text: '🟡 ' + subName + ': Năng lực yếu (≤ 4đ, cần bồi dưỡng thêm)' });
+      } else if (y < 6.0) {
+        // Cấp 2: Cảnh báo Năng lực Yếu (P_Yếu > 0)
+        warnings.push({
+          type: 'yellow',
+          title: '🟡 Cảnh báo Năng lực Yếu',
+          subject: subName,
+          text: `Môn <strong>${subName}</strong> (Năng lực: ${y}/10). Bạn có đam mê nhưng nền tảng học lực cấp 2 chưa đạt (${y} < 6.0). Lên Lớp 10 kiến thức nặng hơn dễ đuối sức. Cần kế hoạch phụ đạo bổ trợ trước năm học.`
+        });
         hasWeakAbility = true;
         isAllHigh = false;
-      } else if (x <= 4) {
-        warnings.push({ type: 'orange', text: '🟠 ' + subName + ': Thiếu đam mê (≤ 4đ, dễ chán nản nếu học lâu dài)' });
+      } else if (x < 5.0) {
+        // Cấp 3: Cảnh báo Thiếu Đam Mê (P_ĐM > 0)
+        warnings.push({
+          type: 'orange',
+          title: '🟠 Cảnh báo Thiếu Đam Mê',
+          subject: subName,
+          text: `Môn <strong>${subName}</strong> (Đam mê: ${x}/10). Bạn học khá nhưng thiếu đam mê (${x} < 5.0), dễ gây tâm lý gượng ép, áp lực kéo dài suốt 3 năm THPT. Nên cân nhắc môn thay thế cùng nhóm.`
+        });
         hasLowPassion = true;
-        isAllHigh = false;
-      } else if (x < 7 || y < 7) {
         isAllHigh = false;
       }
     });
@@ -455,7 +527,28 @@ function renderIkigaiCombos(scatterData, career) {
     const avgDist = sumDist / c.subjects.length;
     const matchesCareer = c.blocks.some(b => career.priorityCombos.includes(b));
     const bonus = matchesCareer ? 1.5 : 0;
-    c.kIndex = avgDist - bonus;
+    
+    // Cấp 5: Cảnh báo lệch định hướng ngành (U = 0 và P_Risk > 0)
+    const isCareerMismatched = !matchesCareer;
+    const hasRisk = hasCriticalRisk || hasWeakAbility || hasLowPassion;
+    let isSevereMismatch = isCareerMismatched && hasRisk;
+
+    if (isSevereMismatch) {
+      warnings.push({
+        type: 'darkred',
+        title: '🚫 Cảnh báo Lệch Ngành & Rủi Ro',
+        subject: 'Định hướng nghề',
+        text: `Tổ hợp không thuộc khối xét Đại học cho ngành <strong>${career.name}</strong>, đồng thời lại chứa môn gặp rủi ro học tập.`
+      });
+    }
+
+    // Tính chỉ số K và phạt thứ hạng nếu có rủi ro nghiêm trọng để tránh bẫy "cực ghét cực dốt"
+    let penalty = 0;
+    if (hasCriticalRisk) penalty += 5.0; // Phạt nặng tổ hợp rủi ro kép
+    else if (isSevereMismatch) penalty += 3.0;
+
+    c.kIndex = avgDist - bonus + penalty;
+    c.rawKIndex = avgDist - bonus;
     c.avgDist = avgDist;
     c.bonus = bonus;
     c.warnings = warnings;
@@ -463,6 +556,7 @@ function renderIkigaiCombos(scatterData, career) {
     c.hasCriticalRisk = hasCriticalRisk;
     c.hasWeakAbility = hasWeakAbility;
     c.hasLowPassion = hasLowPassion;
+    c.isSevereMismatch = isSevereMismatch;
   });
 
   // Sắp xếp tổ hợp theo chỉ số K tăng dần (càng nhỏ càng tối ưu)
@@ -470,16 +564,18 @@ function renderIkigaiCombos(scatterData, career) {
 
   let html = '';
   combos.forEach((c, idx) => {
-    const isBest = (idx === 0);
+    const isBest = (idx === 0 && !c.hasCriticalRisk && !c.isSevereMismatch);
 
-    // Xác định huy hiệu trạng thái Ikigai
+    // Xác định huy hiệu trạng thái Ikigai theo 5 cấp độ chuẩn
     let badgeHtml = '';
     if (c.hasCriticalRisk) {
-      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-bold border border-red-500/30">🔴 Cảnh báo Rủi ro Kép</span>';
+      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-bold border border-red-500/30">🔴 Rủi Ro Kép</span>';
+    } else if (c.isSevereMismatch) {
+      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-rose-900/40 text-rose-300 font-bold border border-rose-700/50">🚫 Lệch Ngành & Rủi Ro</span>';
     } else if (c.hasWeakAbility) {
-      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold border border-amber-500/30">🟡 Cảnh báo Năng lực Yếu</span>';
+      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold border border-amber-500/30">🟡 Cảnh Báo Năng Lực Yếu</span>';
     } else if (c.hasLowPassion) {
-      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 font-bold border border-orange-500/30">🟠 Cảnh báo Thiếu Đam Mê</span>';
+      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 font-bold border border-orange-500/30">🟠 Cảnh Báo Thiếu Đam Mê</span>';
     } else if (c.isAllHigh) {
       badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">🟢 Chuẩn Ikigai Lý Tưởng</span>';
     } else {
@@ -493,20 +589,33 @@ function renderIkigaiCombos(scatterData, career) {
     html += '<div class="' + cardBg + ' p-4 rounded-xl border flex flex-col gap-2.5">';
     html += '<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">';
     html += '<div class="flex items-center gap-2 flex-wrap"><span class="font-bold text-white text-sm">' + c.name + '</span>' + (isBest ? '<span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/30 text-emerald-300 font-extrabold border border-emerald-500/50">Top 1 Tối Ưu</span>' : '') + badgeHtml + '</div>';
-    html += '<div class="text-right shrink-0"><span class="text-xs text-gray-400 mr-2">Chỉ số K:</span><span class="text-xl font-black ' + (isBest ? 'text-emerald-400' : 'text-purple-300') + '">' + c.kIndex.toFixed(2) + '</span></div>';
+    html += '<div class="text-right shrink-0"><span class="text-xs text-gray-400 mr-2">Chỉ số K:</span><span class="text-xl font-black ' + (isBest ? 'text-emerald-400' : 'text-purple-300') + '">' + c.rawKIndex.toFixed(2) + '</span></div>';
     html += '</div>';
 
     html += '<div class="text-xs text-gray-300">4 Môn lựa chọn: <span class="font-semibold text-indigo-300">' + c.subjects.join(' + ') + '</span></div>';
-    html += '<div class="text-[11px] text-gray-400">Khối thi mở rộng: <span class="text-gray-300 font-medium">' + c.blocks.join(', ') + '</span> ' + (c.bonus > 0 ? '<span class="text-amber-400 font-semibold">(Được cộng ưu tiên ngành -1.5đ)</span>' : '') + '</div>';
+    html += '<div class="text-[11px] text-gray-400">Khối thi đại học mở ra: <span class="text-gray-300 font-medium">' + c.blocks.join(', ') + '</span> ' + (c.bonus > 0 ? '<span class="text-amber-400 font-semibold">(Được cộng ưu tiên ngành -1.5đ)</span>' : '') + '</div>';
+    html += '<div class="text-[11px] text-gray-400">Ngành nghề tương ứng: <span class="text-gray-300">' + c.majors + '</span></div>';
 
-    // Hiển thị chi tiết cảnh báo nếu có môn yếu
+    // Hiển thị chi tiết cảnh báo và lời khuyên sư phạm
     if (c.warnings && c.warnings.length > 0) {
-      html += '<div class="pt-2 mt-1 border-t border-gray-700/50 space-y-1">';
+      html += '<div class="pt-2 mt-1 border-t border-gray-700/50 space-y-1.5">';
       c.warnings.forEach(w => {
-        const textCls = w.type === 'red' ? 'text-red-300 bg-red-950/30 border-red-800/40' : (w.type === 'yellow' ? 'text-amber-300 bg-amber-950/30 border-amber-800/40' : 'text-orange-300 bg-orange-950/30 border-orange-800/40');
-        html += '<div class="text-[11px] px-2.5 py-1 rounded-lg border ' + textCls + ' flex items-center gap-1.5 font-medium">' + w.text + '</div>';
+        let textCls = 'text-amber-300 bg-amber-950/30 border-amber-800/40';
+        if (w.type === 'red' || w.type === 'darkred') textCls = 'text-red-300 bg-red-950/30 border-red-800/40';
+        else if (w.type === 'orange') textCls = 'text-orange-300 bg-orange-950/30 border-orange-800/40';
+
+        html += '<div class="text-xs p-2 rounded-lg border ' + textCls + ' leading-relaxed">';
+        html += '<div class="font-bold mb-0.5">' + w.title + '</div>';
+        html += '<div class="text-[11px] opacity-90">' + w.text + '</div>';
+        html += '</div>';
       });
       html += '</div>';
+    } else if (c.isAllHigh) {
+      html += '<div class="pt-2 mt-1 border-t border-gray-700/50">';
+      html += '<div class="text-xs p-2 rounded-lg border text-emerald-300 bg-emerald-950/30 border-emerald-800/40">';
+      html += '<div class="font-bold mb-0.5">🟢 Lời khuyên tối ưu</div>';
+      html += '<div class="text-[11px] opacity-90">Học sinh có nền tảng năng lực vững chắc (≥ 6.0) và hứng thú đồng đều (≥ 5.0) ở cả 4 môn. Nên ưu tiên đăng ký Tổ hợp môn này!</div>';
+      html += '</div></div>';
     }
 
     html += '</div>';
@@ -594,6 +703,8 @@ window.ikigaiApp = {
   onSpecSchoolChange,
   calculateIkigai,
   changeTab,
+  openScaleModal,
+  closeScaleModal,
   initApp
 };
 
@@ -602,6 +713,8 @@ window.calculateNormalProbabilities = () => window.ikigaiApp.calculateNormalProb
 window.calculateSpecialized = () => window.ikigaiApp.calculateSpecialized();
 window.calculateIkigai = () => window.ikigaiApp.calculateIkigai();
 window.changeTab = (tabId) => window.ikigaiApp.changeTab(tabId);
+window.openScaleModal = () => window.ikigaiApp.openScaleModal();
+window.closeScaleModal = () => window.ikigaiApp.closeScaleModal();
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp);
