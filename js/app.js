@@ -14,7 +14,6 @@ export function getActiveEngine() {
 }
 
 export function switchEngine(checked) {
-  // Toggle checked = false means user switched to Bản 1, checked = true means default Bản 2
   isMathCorrectedEngine = checked;
   const label = document.getElementById('currentEngineLabel');
   const badge = document.getElementById('engineBadge');
@@ -35,6 +34,11 @@ export function switchEngine(checked) {
   calculateNormalProbabilities();
 }
 
+/**
+ * =====================================================================
+ * MODULE 1: DỰ BÁO TUYỂN SINH THPT THƯỜNG (Sheet 1 & 2 Excel)
+ * =====================================================================
+ */
 export function calculateNormalProbabilities() {
   const mathInput = document.getElementById('mathScore');
   const litInput = document.getElementById('litScore');
@@ -46,21 +50,35 @@ export function calculateNormalProbabilities() {
   const lit = parseFloat(litInput.value) || 0;
   const eng = parseFloat(engInput.value) || 0;
 
-  const kMath = (math >= 9.0) ? 0.75 : (math >= 8.0 ? 1.85 : 2.50);
-  const kLit = (lit >= 8.5) ? 0.80 : (lit >= 7.5 ? 1.40 : 2.20);
-  const kEng = (eng >= 9.0) ? 0.75 : (eng >= 8.0 ? 1.85 : 2.50);
+  // 1. Hệ số co giãn beta theo môn (Sheet 2)
+  const betaMath = 0.84;
+  const betaLit = 0.90;
+  const betaEng = 0.94;
 
-  const minMath = math - (1.96 * 1.0 * kMath);
-  const maxMath = math + (1.96 * 1.0 * kMath);
+  // 2. Sai số chuẩn theo môn (Sheet 2)
+  const seMath = 0.10;
+  const seLit = 0.12;
+  const seEng = 0.08;
 
-  const minLit = lit - (1.96 * 1.0 * kLit);
-  const maxLit = lit + (1.96 * 1.0 * kLit);
+  // 3. Hệ số rủi ro K theo môn (Sheet 2)
+  const kMath = (math >= 9.5) ? 0.75 : (math >= 8.5 ? 1.20 : 2.00);
+  const kLit  = (lit >= 8.5)  ? 0.80 : (lit >= 8.0  ? 1.40 : 2.20);
+  const kEng  = (eng >= 9.5)  ? 0.75 : (eng >= 8.5  ? 1.20 : 2.00);
 
-  const minEng = eng - (1.96 * 1.0 * kEng);
-  const maxEng = eng + (1.96 * 1.0 * kEng);
+  // 4. Điểm tối thiểu & tối đa từng môn (khoảng tin cậy 95% có rủi ro)
+  const minMath = math * betaMath - (1.96 * seMath * kMath);
+  const maxMath = math * betaMath + (1.96 * seMath * kMath);
+
+  const minLit = lit * betaLit - (1.96 * seLit * kLit);
+  const maxLit = lit * betaLit + (1.96 * seLit * kLit);
+
+  const minEng = eng * betaEng - (1.96 * seEng * kEng);
+  const maxEng = eng * betaEng + (1.96 * seEng * kEng);
 
   const minTotal = minMath + minLit + minEng;
   const maxTotal = maxMath + maxLit + maxEng;
+
+  // 5. Điểm kỳ vọng trung bình mu (Sheet 2: F2 = (E6+E7)/2)
   const mean = (minTotal + maxTotal) / 2;
 
   const stdMath = (maxMath - minMath) / 3.92;
@@ -80,10 +98,10 @@ export function calculateNormalProbabilities() {
   const s3Val = document.getElementById('nv3Select')?.value;
 
   const s1 = db.schools.find(s => s.id == s1Val) || db.schools[0];
-  const s2 = db.schools.find(s => s.id == s2Val) || db.schools[1];
-  const s3 = db.schools.find(s => s.id == s3Val) || db.schools[2];
+  const s2 = db.schools.find(s => s.id == s2Val) || db.schools[1] || db.schools[0];
+  const s3 = db.schools.find(s => s.id == s3Val) || db.schools[2] || db.schools[0];
 
-  // Quy tắc tuyển sinh TP.HCM: NV2 cộng +1.0 điểm chuẩn, NV3 cộng +2.0 điểm chuẩn
+  // Quy chế tuyển sinh: NV2 cộng +1.0đ, NV3 cộng +2.0đ so với điểm chuẩn dự kiến
   const scoreNv1 = s1.score2027;
   const scoreNv2 = s2.score2027 + 1.0;
   const scoreNv3 = s3.score2027 + 2.0;
@@ -101,8 +119,8 @@ function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3, me
 
   const nvList = [
     { name: 'NV1: ' + s1.name, score: scoreNv1, rawScore: s1.score2027, prob: probs.nv1, note: '' },
-    { name: 'NV2: ' + s2.name, score: scoreNv2, rawScore: s2.score2027, prob: probs.nv2, note: ' (Đã cộng +1.0đ quy chế NV2)' },
-    { name: 'NV3: ' + s3.name, score: scoreNv3, rawScore: s3.score2027, prob: probs.nv3, note: ' (Đã cộng +2.0đ quy chế NV3)' }
+    { name: 'NV2: ' + s2.name, score: scoreNv2, rawScore: s2.score2027, prob: probs.nv2, note: ' (+1.0đ quy chế NV2)' },
+    { name: 'NV3: ' + s3.name, score: scoreNv3, rawScore: s3.score2027, prob: probs.nv3, note: ' (+2.0đ quy chế NV3)' }
   ];
 
   nvList.forEach((item) => {
@@ -111,11 +129,12 @@ function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3, me
     let percentColor = 'text-red-400';
     let percentDisplay = (item.prob * 100).toFixed(1) + '%';
 
+    // Chỉ số chênh lệch năng lực: EI = mu - TargetScore
     const ei = (mean !== undefined) ? (mean - item.score) : 0;
 
     if (ei >= 5.0) {
       badgeColor = 'bg-purple-500/20 text-purple-300 border-purple-500/40';
-      badgeText = '🟣 Lãng Phí Điểm Số (EI ≥ 5.0)';
+      badgeText = '🟣 Lãng Phí Điểm Số (Thấp hơn năng lực ≥ 5đ)';
       percentColor = 'text-purple-300';
     } else if (item.prob >= 0.75) {
       badgeColor = 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
@@ -127,101 +146,244 @@ function renderNVResultCards(s1, s2, s3, probs, scoreNv1, scoreNv2, scoreNv3, me
       percentColor = 'text-amber-400';
     }
 
-    html += '<div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700 flex items-center justify-between">';
-    html += '<div><div class="flex items-center gap-2"><span class="font-bold text-white">' + item.name + '</span><span class="text-[10px] px-2 py-0.5 rounded ' + badgeColor + ' border font-semibold">' + badgeText + '</span></div>';
-    html += '<div class="text-xs text-gray-400 mt-1">Điểm chuẩn xét tuyển dự báo 2027: <span class="font-bold text-gray-200">' + item.score.toFixed(2) + '</span><span class="text-[10px] text-amber-300/80">' + item.note + '</span></div></div>';
-    html += '<div class="text-right"><div class="text-2xl font-black ' + percentColor + '">' + percentDisplay + '</div>';
+    html += '<div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700 flex items-center justify-between gap-3">';
+    html += '<div class="flex-1 min-w-0"><div class="flex items-center gap-2 flex-wrap"><span class="font-bold text-white text-sm">' + item.name + '</span><span class="text-[10px] px-2 py-0.5 rounded ' + badgeColor + ' border font-semibold whitespace-nowrap">' + badgeText + '</span></div>';
+    html += '<div class="text-xs text-gray-400 mt-1">Điểm chuẩn xét tuyển dự báo 2027: <span class="font-bold text-gray-200">' + item.score.toFixed(2) + '</span><span class="text-[11px] text-amber-300/90 ml-1 font-medium">' + item.note + '</span></div></div>';
+    html += '<div class="text-right shrink-0"><div class="text-2xl font-black ' + percentColor + '">' + percentDisplay + '</div>';
     html += '<div class="text-[10px] text-gray-400">' + (probs.isJoint ? 'Xác suất phân bố rời rạc' : 'Xác suất độc lập') + '</div></div></div>';
   });
-
-  if (probs.isJoint && probs.rot !== undefined) {
-    html += '<div class="bg-red-950/30 p-3 rounded-xl border border-red-800/40 text-xs text-red-300 flex justify-between items-center"><span><i class="fa-solid fa-triangle-exclamation mr-1"></i> Xác suất rớt sạch cả 3 nguyện vọng:</span><span class="font-bold text-sm">' + (probs.rot * 100).toFixed(1) + '%</span></div>';
-  }
 
   container.innerHTML = html;
 }
 
+/**
+ * =====================================================================
+ * MODULE 2: DỰ BÁO TUYỂN SINH TRƯỜNG CHUYÊN (Sheet 3 & 4 Excel)
+ * =====================================================================
+ */
+export function syncScoresFromModule1() {
+  const mathM1 = document.getElementById('mathScore')?.value;
+  const litM1 = document.getElementById('litScore')?.value;
+  const engM1 = document.getElementById('engScore')?.value;
+
+  if (mathM1 && document.getElementById('specMathScore')) {
+    document.getElementById('specMathScore').value = mathM1;
+  }
+  if (litM1 && document.getElementById('specLitScore')) {
+    document.getElementById('specLitScore').value = litM1;
+  }
+  if (engM1 && document.getElementById('specEngScore')) {
+    document.getElementById('specEngScore').value = engM1;
+  }
+
+  onSpecSchoolChange();
+}
+
+export function onSpecSchoolChange() {
+  const schoolSelect = document.getElementById('specSchoolSelect');
+  if (!schoolSelect) return;
+  const schoolId = schoolSelect.value;
+  const selectedProgram = db.specializedSchools.find(s => s.id == schoolId) || db.specializedSchools[0];
+
+  const math = parseFloat(document.getElementById('specMathScore')?.value) || 8.5;
+  const lit  = parseFloat(document.getElementById('specLitScore')?.value)  || 8.0;
+  const eng  = parseFloat(document.getElementById('specEngScore')?.value)  || 8.5;
+
+  const progName = selectedProgram.program.toLowerCase();
+  const labelEl = document.getElementById('specSubjectLabel');
+  const inputEl = document.getElementById('specScoreInput');
+  const hintEl = document.getElementById('specInputHint');
+
+  // Cập nhật nhãn và tự động điền điểm nếu là môn chung
+  if (progName.includes('tiếng anh')) {
+    if (labelEl) labelEl.innerText = '3. Điểm môn chuyên Tiếng Anh (Thang 10 - Hệ số 2)';
+    if (inputEl) inputEl.value = eng;
+    if (hintEl) hintEl.innerText = '* Tự động lấy từ điểm Tiếng Anh (bạn có thể điều chỉnh nếu thi chuyên sâu).';
+  } else if (progName.includes('toán')) {
+    if (labelEl) labelEl.innerText = '3. Điểm môn chuyên Toán (Thang 10 - Hệ số 2)';
+    if (inputEl) inputEl.value = math;
+    if (hintEl) hintEl.innerText = '* Tự động lấy từ điểm Toán.';
+  } else if (progName.includes('ngữ văn') || progName.includes('văn')) {
+    if (labelEl) labelEl.innerText = '3. Điểm môn chuyên Ngữ văn (Thang 10 - Hệ số 2)';
+    if (inputEl) inputEl.value = lit;
+    if (hintEl) hintEl.innerText = '* Tự động lấy từ điểm Ngữ văn.';
+  } else if (progName.includes('vật lí') || progName.includes('hóa học') || progName.includes('sinh học')) {
+    if (labelEl) labelEl.innerText = '3. Điểm môn Khoa học Tự nhiên (KHTN) xét chuyên ' + selectedProgram.program;
+    if (hintEl) hintEl.innerText = '* Theo quy định mới: Môn Lý, Hóa, Sinh nhập điểm môn Khoa Học Tự Nhiên lớp 9.';
+  } else if (progName.includes('lịch sử') || progName.includes('địa lí')) {
+    if (labelEl) labelEl.innerText = '3. Điểm môn Lịch sử - Địa lý xét chuyên ' + selectedProgram.program;
+    if (hintEl) hintEl.innerText = '* Theo quy định mới: Môn Sử, Địa nhập điểm môn Lịch sử - Địa lý lớp 9.';
+  } else {
+    if (labelEl) labelEl.innerText = '3. Điểm học bạ môn chuyên ' + selectedProgram.program + ' (Thang 10)';
+    if (hintEl) hintEl.innerText = '* Nhập điểm môn chuyên dự thi tương ứng.';
+  }
+
+  // Cập nhật thông tin điểm chuẩn lịch sử
+  const hist2024El = document.getElementById('specHist2024');
+  const hist2025El = document.getElementById('specHist2025');
+  const hist2026El = document.getElementById('specHist2026');
+  const hist2027El = document.getElementById('specHist2027');
+
+  if (hist2024El) hist2024El.innerText = selectedProgram.score2024 ? selectedProgram.score2024.toFixed(2) : '--';
+  if (hist2025El) hist2025El.innerText = selectedProgram.score2025 ? selectedProgram.score2025.toFixed(2) : '--';
+  if (hist2026El) hist2026El.innerText = selectedProgram.score2026 ? selectedProgram.score2026.toFixed(2) : '--';
+  if (hist2027El) hist2027El.innerText = selectedProgram.score2027 ? selectedProgram.score2027.toFixed(2) : '--';
+
+  calculateSpecialized();
+}
+
 export function calculateSpecialized() {
   const scoreInput = document.getElementById('specScoreInput');
-  const typeSelect = document.getElementById('specTypeSelect');
   const schoolSelect = document.getElementById('specSchoolSelect');
-
   const mathEl = document.getElementById('specMathScore');
   const litEl  = document.getElementById('specLitScore');
   const engEl  = document.getElementById('specEngScore');
 
-  if (!scoreInput || !typeSelect || !schoolSelect) return;
+  if (!scoreInput || !schoolSelect) return;
 
   const specScore = parseFloat(scoreInput.value) || 0;
-  const type = typeSelect.value;
   const schoolId = schoolSelect.value;
+  const selectedSchool = db.specializedSchools.find(s => s.id == schoolId) || db.specializedSchools[0];
 
-  const math = parseFloat(mathEl?.value) || parseFloat(document.getElementById('mathScore')?.value) || 9.0;
-  const lit  = parseFloat(litEl?.value)  || parseFloat(document.getElementById('litScore')?.value)  || 9.0;
-  const eng  = parseFloat(engEl?.value)  || parseFloat(document.getElementById('engScore')?.value)  || 9.5;
+  const math = parseFloat(mathEl?.value) || 8.5;
+  const lit  = parseFloat(litEl?.value)  || 8.0;
+  const eng  = parseFloat(engEl?.value)  || 8.5;
 
-  const kMath = (math >= 9.0) ? 0.75 : (math >= 8.0 ? 1.85 : 2.50);
-  const kLit  = (lit >= 8.5)  ? 0.80 : (lit >= 7.5  ? 1.40 : 2.20);
-  const kEng  = (eng >= 9.0)  ? 0.75 : (eng >= 8.0  ? 1.85 : 2.50);
+  // 1. Tính tổng 3 môn thường đã trừ rủi ro theo Sheet 4 (G2 = (G6+G7)/2)
+  const betaMath = 0.84, betaLit = 0.90, betaEng = 0.94;
+  const seMath = 0.10, seLit = 0.12, seEng = 0.08;
+  const kMath = (math >= 9.5) ? 0.75 : (math >= 8.5 ? 1.20 : 2.00);
+  const kLit  = (lit >= 8.5)  ? 0.80 : (lit >= 8.0  ? 1.40 : 2.20);
+  const kEng  = (eng >= 9.5)  ? 0.75 : (eng >= 8.5  ? 1.20 : 2.00);
 
-  const baseMin = (math - 1.96 * kMath) + (lit - 1.96 * kLit) + (eng - 1.96 * kEng);
-  const baseMax = (math + 1.96 * kMath) + (lit + 1.96 * kLit) + (eng + 1.96 * kEng);
+  const minMath = math * betaMath - (1.96 * seMath * kMath);
+  const maxMath = math * betaMath + (1.96 * seMath * kMath);
+  const minLit = lit * betaLit - (1.96 * seLit * kLit);
+  const maxLit = lit * betaLit + (1.96 * seLit * kLit);
+  const minEng = eng * betaEng - (1.96 * seEng * kEng);
+  const maxEng = eng * betaEng + (1.96 * seEng * kEng);
 
-  const school = db.specializedSchools.find(s => s.id == schoolId) || db.specializedSchools[0];
+  const minBaseTotal = minMath + minLit + minEng;
+  const maxBaseTotal = maxMath + maxLit + maxEng;
+  const baseExpected = (minBaseTotal + maxBaseTotal) / 2; // G2 trong Excel
 
-  let penaltyMax = (specScore >= 9.5) ? 0.92 : ((specScore >= 9.0) ? 2.50 : 4.50);
-  let penaltyMin = (specScore >= 9.5) ? 3.50 : ((specScore >= 9.0) ? 5.50 : 6.48);
+  // 2. Điểm trung bình 3 môn thường (Sheet 4: E2 = (B2+C2+D2)/3)
+  const avgBase = (math + lit + eng) / 3.0;
 
-  const engMultiplierMax = (type === 'english') ? 0.95 : 1.0;
-  const engMultiplierMin = (type === 'english') ? 0.90 : 1.0;
+  // 3. Chỉ số năng lực chuyên biệt (Sheet 4: SI = F2 - E2)
+  const si = specScore - avgBase;
 
-  const specMax = (specScore - penaltyMax) * engMultiplierMax;
-  const specMin = (specScore - penaltyMin) * engMultiplierMin;
+  // 4. Delta phân nhóm rủi ro (Sheet 4: I2 & J2)
+  // IF(H2>=0.8, 2.15, IF(F2>=9.5, 2.15, IF(F2>=8.5, 4.49, 6.68)))
+  let delta = 6.68;
+  let groupName = 'Nhóm 3 (Rủi ro cao)';
+  let deltaVol = 1.50; // Dải dao động phong độ môn chuyên (Sheet 4 J8-J9)
 
-  const totalSpecMax = baseMax + (specMax * 2);
-  const totalSpecMin = baseMin + (specMin * 2);
+  if (si >= 0.8) {
+    delta = 2.15;
+    deltaVol = 0.75;
+    groupName = 'Nhóm 1 (Ưu tiên năng lực vượt trội - SI ≥ 0.8)';
+  } else if (specScore >= 9.5) {
+    delta = 2.15;
+    deltaVol = 1.00;
+    groupName = 'Nhóm 1 (Điểm cực cao ≥ 9.5)';
+  } else if (specScore >= 8.5) {
+    delta = 4.49;
+    deltaVol = 1.25;
+    groupName = 'Nhóm 2 (Năng lực Khá - Giỏi)';
+  } else {
+    delta = 6.68;
+    deltaVol = 1.50;
+    groupName = 'Nhóm 3 (Rủi ro rơi điểm cao)';
+  }
 
-  const specMean = (totalSpecMax + totalSpecMin) / 2;
-  const specStd = (totalSpecMax - totalSpecMin) / 3.92;
+  // 5. Điểm môn chuyên kỳ vọng đã trừ rủi ro (Sheet 4: J2)
+  const specExpected = Math.min(10, Math.max(0, Math.round((specScore - delta) * 100) / 100));
 
-  const prob = 1 - normalCDF(school.score2027, specMean, specStd);
+  // 6. Dải biến thiên điểm chuyên (Sheet 4: J8, J9)
+  const specMin = Math.max(0, Math.round((specExpected - deltaVol) * 100) / 100);
+  const specMax = Math.min(10, Math.round((specExpected + deltaVol) * 100) / 100);
 
+  // 7. Tổng điểm xét tuyển chuyên (Sheet 4: L2 = G2 + J2*2)
+  const totalSpecExpected = Math.round((baseExpected + (specExpected * 2)) * 100) / 100;
+
+  // 8. Độ lệch chuẩn phong độ & dải dự báo (Sheet 4: M2 = MIN((J9-J8)/6, 1.5), N2 = M2*2)
+  const specStd = Math.min((specMax - specMin) / 6.0, 1.5);
+  const totalSpecStd = Math.round((specStd * 2.0) * 100) / 100;
+
+  const lowRange = Math.round((totalSpecExpected - totalSpecStd) * 100) / 100;
+  const highRange = Math.round((totalSpecExpected + totalSpecStd) * 100) / 100;
+
+  // 9. Xác suất trúng tuyển chuyên
+  const targetCutoff = selectedSchool.score2027;
+  const prob = 1 - normalCDF(targetCutoff, totalSpecExpected, Math.max(0.6, totalSpecStd));
+
+  // Cập nhật UI
+  const avgBaseEl = document.getElementById('specAvgBase');
+  const siValEl = document.getElementById('specSIValue');
+  const groupBadgeEl = document.getElementById('specGroupBadge');
+  const specExpEl = document.getElementById('specExpectedScore');
+
+  if (avgBaseEl) avgBaseEl.innerText = avgBase.toFixed(2);
+  if (siValEl) siValEl.innerText = (si >= 0 ? '+' : '') + si.toFixed(2);
+  if (groupBadgeEl) groupBadgeEl.innerText = groupName;
+  if (specExpEl) specExpEl.innerText = specExpected.toFixed(2) + '/10 (Dải: ' + specMin.toFixed(2) + ' - ' + specMax.toFixed(2) + ')';
+
+  const totalExpEl = document.getElementById('specTotalExpected');
   const rangeEl = document.getElementById('specPointRange');
   const probEl = document.getElementById('specProbPercent');
-  if (rangeEl) rangeEl.innerText = totalSpecMin.toFixed(1) + ' - ' + totalSpecMax.toFixed(1);
+  const targetEl = document.getElementById('specTargetCutoff');
+
+  if (totalExpEl) totalExpEl.innerText = totalSpecExpected.toFixed(2) + '/50';
+  if (rangeEl) rangeEl.innerText = lowRange.toFixed(2) + ' - ' + highRange.toFixed(2);
   if (probEl) probEl.innerText = (prob * 100).toFixed(1) + '%';
+  if (targetEl) targetEl.innerText = targetCutoff.toFixed(2) + 'đ (' + selectedSchool.school + ')';
 
   const box = document.getElementById('specWarningBox');
   if (box) {
-    if (prob >= 0.7) {
+    if (prob >= 0.70) {
       box.className = 'p-4 rounded-xl border border-emerald-500/40 bg-emerald-950/30 text-emerald-300 font-semibold';
-      box.innerHTML = '🟢 AN TOÀN: Xác suất đậu > 70%. Năng lực đạt ngưỡng an toàn cho lớp Chuyên!';
-    } else if (prob >= 0.4) {
+      box.innerHTML = '🟢 AN TOÀN CAO: Xác suất đậu > 70%. Tổng điểm dự báo vượt ngưỡng an toàn cho lớp chuyên!';
+    } else if (prob >= 0.40) {
       box.className = 'p-4 rounded-xl border border-amber-500/40 bg-amber-950/30 text-amber-300 font-semibold';
-      box.innerHTML = '🟡 CÂN NHẮC: Xác suất đậu 40 - 70%. Khu vực cạnh tranh quyết định, cần tập trung giải đề chuyên sâu!';
+      box.innerHTML = '🟡 CÂN NHẮC / CẠNH TRANH: Xác suất đậu 40% - 70%. Cần tăng cường luyện đề chuyên sâu để bứt phá!';
     } else {
       box.className = 'p-4 rounded-xl border border-red-500/40 bg-red-950/30 text-red-300 font-semibold';
-      box.innerHTML = '🔴 NGUY HIỂM: Xác suất đậu < 40%. Độ rơi điểm môn Chuyên quá lớn, nên tập trung cho trường Thường!';
+      box.innerHTML = '🔴 NGUY HIỂM / RỦI RO CAO: Xác suất đậu < 40%. Độ rơi điểm đề thi chuyên lớn, nên có phương án trường Thường an toàn!';
     }
   }
 }
 
+/**
+ * =====================================================================
+ * MODULE 3: ĐỊNH HƯỚNG IKIGAI CHỌN MÔN LỚP 10 (Sheet 5 & 6 Excel)
+ * =====================================================================
+ */
 export function initSubjectRatings() {
   const container = document.getElementById('subjectRatingsContainer');
   if (!container) return;
   let html = '';
 
   const optionsHtml = `
-    <option value="10">10 - Xuất sắc</option>
-    <option value="9">9 - Rất tốt</option>
-    <option value="8" selected>8 - Giỏi</option>
-    <option value="7">7 - Khá giỏi</option>
-    <option value="6">6 - Khá</option>
-    <option value="5">5 - Trung bình</option>
+    <option value="10">10 - Xuất sắc / Mãnh liệt</option>
+    <option value="9">9 - Rất tốt / Rất đam mê</option>
+    <option value="8" selected>8 - Giỏi / Đam mê</option>
+    <option value="7">7 - Khá giỏi / Yêu thích</option>
+    <option value="6">6 - Khá / Khá yêu thích</option>
+    <option value="5">5 - Trung bình / Có quan tâm</option>
+    <option value="4">4 - TB khá / Ít hứng thú</option>
+    <option value="3">3 - TB yếu / Không yêu thích</option>
+    <option value="2">2 - Yếu / Rất ít hứng thú</option>
+    <option value="1">1 - Kém / Không đam mê</option>
   `;
 
   db.subjectList.forEach((sub, idx) => {
-    html += '<div class="bg-gray-800/40 p-3 rounded-xl border border-gray-700/60 flex items-center justify-between gap-4"><span class="font-semibold text-sm text-gray-200 w-28">' + sub + '</span><div class="flex items-center gap-3"><div class="text-center"><span class="text-[10px] text-gray-400 block mb-0.5">Đam mê</span><select id="passion-' + idx + '" class="bg-gray-900 border border-gray-700 rounded-lg px-2 py-1 text-xs text-center font-bold text-pink-400" onchange="window.ikigaiApp.calculateIkigai()">' + optionsHtml + '</select></div><div class="text-center"><span class="text-[10px] text-gray-400 block mb-0.5">Năng lực</span><select id="ability-' + idx + '" class="bg-gray-900 border border-gray-700 rounded-lg px-2 py-1 text-xs text-center font-bold text-indigo-400" onchange="window.ikigaiApp.calculateIkigai()">' + optionsHtml + '</select></div></div></div>';
+    html += '<div class="bg-gray-800/40 p-3 rounded-xl border border-gray-700/60 flex items-center justify-between gap-3">';
+    html += '<span class="font-semibold text-sm text-gray-200 w-32 shrink-0">' + sub + '</span>';
+    html += '<div class="flex items-center gap-2 flex-1 justify-end">';
+    html += '<div class="text-center w-36"><span class="text-[10px] text-pink-300 font-semibold block mb-0.5"><i class="fa-solid fa-heart text-pink-400 mr-0.5"></i> Đam mê</span><select id="passion-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[11px] font-bold text-pink-300 focus:border-pink-500" onchange="window.ikigaiApp.calculateIkigai()">' + optionsHtml + '</select></div>';
+    html += '<div class="text-center w-36"><span class="text-[10px] text-indigo-300 font-semibold block mb-0.5"><i class="fa-solid fa-brain text-indigo-400 mr-0.5"></i> Năng lực</span><select id="ability-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[11px] font-bold text-indigo-300 focus:border-indigo-500" onchange="window.ikigaiApp.calculateIkigai()">' + optionsHtml + '</select></div>';
+    html += '</div></div>';
   });
   container.innerHTML = html;
 }
@@ -235,8 +397,8 @@ export function calculateIkigai() {
   const scatterData = [];
 
   db.subjectList.forEach((sub, idx) => {
-    const pass = parseFloat(document.getElementById('passion-' + idx)?.value) || 5;
-    const abil = parseFloat(document.getElementById('ability-' + idx)?.value) || 5;
+    const pass = parseFloat(document.getElementById('passion-' + idx)?.value) || 8;
+    const abil = parseFloat(document.getElementById('ability-' + idx)?.value) || 8;
     const dist = Math.sqrt(Math.pow(10 - pass, 2) + Math.pow(10 - abil, 2));
 
     scatterData.push({
@@ -259,29 +421,105 @@ function renderIkigaiCombos(scatterData, career) {
 
   combos.forEach(c => {
     let sumDist = 0;
+    let warnings = [];
+    let hasCriticalRisk = false;
+    let hasWeakAbility = false;
+    let hasLowPassion = false;
+    let isAllHigh = true;
+
     c.subjects.forEach(subName => {
       const item = scatterData.find(s => s.subject === subName);
-      sumDist += item ? item.dist : 5.0;
+      const x = item ? item.x : 5.0; // Đam mê
+      const y = item ? item.y : 5.0; // Năng lực
+      const dist = item ? item.dist : 5.0;
+      sumDist += dist;
+
+      // Kiểm tra cảnh báo 4 màu theo quy tắc phản hồi khách hàng (Sheet 5)
+      if (x <= 4 && y <= 4) {
+        warnings.push({ type: 'red', text: '🔴 ' + subName + ': Rủi ro kép (Đam mê & Năng lực đều ≤ 4)' });
+        hasCriticalRisk = true;
+        isAllHigh = false;
+      } else if (y <= 4) {
+        warnings.push({ type: 'yellow', text: '🟡 ' + subName + ': Năng lực yếu (≤ 4đ, cần bồi dưỡng thêm)' });
+        hasWeakAbility = true;
+        isAllHigh = false;
+      } else if (x <= 4) {
+        warnings.push({ type: 'orange', text: '🟠 ' + subName + ': Thiếu đam mê (≤ 4đ, dễ chán nản nếu học lâu dài)' });
+        hasLowPassion = true;
+        isAllHigh = false;
+      } else if (x < 7 || y < 7) {
+        isAllHigh = false;
+      }
     });
-    const avgDist = sumDist / 4.0;
+
+    const avgDist = sumDist / c.subjects.length;
     const matchesCareer = c.blocks.some(b => career.priorityCombos.includes(b));
     const bonus = matchesCareer ? 1.5 : 0;
     c.kIndex = avgDist - bonus;
     c.avgDist = avgDist;
     c.bonus = bonus;
+    c.warnings = warnings;
+    c.isAllHigh = isAllHigh;
+    c.hasCriticalRisk = hasCriticalRisk;
+    c.hasWeakAbility = hasWeakAbility;
+    c.hasLowPassion = hasLowPassion;
   });
 
+  // Sắp xếp tổ hợp theo chỉ số K tăng dần (càng nhỏ càng tối ưu)
   combos.sort((a, b) => a.kIndex - b.kIndex);
 
   let html = '';
   combos.forEach((c, idx) => {
     const isBest = (idx === 0);
-    html += '<div class="' + (isBest ? 'bg-gradient-to-r from-indigo-900/50 to-purple-900/50 border-indigo-500/50' : 'bg-gray-800/40 border-gray-700/60') + ' p-4 rounded-xl border flex flex-col md:flex-row justify-between items-start md:items-center gap-3"><div><div class="flex items-center gap-2 mb-1"><span class="font-bold text-white text-sm">' + c.name + '</span>' + (isBest ? '<span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">Top 1 Tối Ưu</span>' : '') + '</div><div class="text-xs text-gray-300">4 Môn: <span class="font-semibold text-indigo-300">' + c.subjects.join(' + ') + '</span></div><div class="text-[11px] text-gray-400 mt-1">Khối thi mở ra: ' + c.blocks.join(', ') + ' ' + (c.bonus > 0 ? '<span class="text-amber-400 font-semibold">(Được thưởng ngành -1.5đ)</span>' : '') + '</div></div><div class="text-right whitespace-nowrap"><div class="text-xs text-gray-400">Chỉ số K</div><div class="text-xl font-black ' + (isBest ? 'text-emerald-400' : 'text-purple-300') + '">' + c.kIndex.toFixed(2) + '</div></div></div>';
+
+    // Xác định huy hiệu trạng thái Ikigai
+    let badgeHtml = '';
+    if (c.hasCriticalRisk) {
+      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-bold border border-red-500/30">🔴 Cảnh báo Rủi ro Kép</span>';
+    } else if (c.hasWeakAbility) {
+      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold border border-amber-500/30">🟡 Cảnh báo Năng lực Yếu</span>';
+    } else if (c.hasLowPassion) {
+      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 font-bold border border-orange-500/30">🟠 Cảnh báo Thiếu Đam Mê</span>';
+    } else if (c.isAllHigh) {
+      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">🟢 Chuẩn Ikigai Lý Tưởng</span>';
+    } else {
+      badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-semibold border border-indigo-500/30">Khá Phù Hợp</span>';
+    }
+
+    const cardBg = isBest 
+      ? 'bg-gradient-to-r from-indigo-950/60 to-purple-950/60 border-indigo-500/60 shadow-lg shadow-indigo-950/30' 
+      : 'bg-gray-800/40 border-gray-700/60';
+
+    html += '<div class="' + cardBg + ' p-4 rounded-xl border flex flex-col gap-2.5">';
+    html += '<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">';
+    html += '<div class="flex items-center gap-2 flex-wrap"><span class="font-bold text-white text-sm">' + c.name + '</span>' + (isBest ? '<span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/30 text-emerald-300 font-extrabold border border-emerald-500/50">Top 1 Tối Ưu</span>' : '') + badgeHtml + '</div>';
+    html += '<div class="text-right shrink-0"><span class="text-xs text-gray-400 mr-2">Chỉ số K:</span><span class="text-xl font-black ' + (isBest ? 'text-emerald-400' : 'text-purple-300') + '">' + c.kIndex.toFixed(2) + '</span></div>';
+    html += '</div>';
+
+    html += '<div class="text-xs text-gray-300">4 Môn lựa chọn: <span class="font-semibold text-indigo-300">' + c.subjects.join(' + ') + '</span></div>';
+    html += '<div class="text-[11px] text-gray-400">Khối thi mở rộng: <span class="text-gray-300 font-medium">' + c.blocks.join(', ') + '</span> ' + (c.bonus > 0 ? '<span class="text-amber-400 font-semibold">(Được cộng ưu tiên ngành -1.5đ)</span>' : '') + '</div>';
+
+    // Hiển thị chi tiết cảnh báo nếu có môn yếu
+    if (c.warnings && c.warnings.length > 0) {
+      html += '<div class="pt-2 mt-1 border-t border-gray-700/50 space-y-1">';
+      c.warnings.forEach(w => {
+        const textCls = w.type === 'red' ? 'text-red-300 bg-red-950/30 border-red-800/40' : (w.type === 'yellow' ? 'text-amber-300 bg-amber-950/30 border-amber-800/40' : 'text-orange-300 bg-orange-950/30 border-orange-800/40');
+        html += '<div class="text-[11px] px-2.5 py-1 rounded-lg border ' + textCls + ' flex items-center gap-1.5 font-medium">' + w.text + '</div>';
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
   });
 
   container.innerHTML = html;
 }
 
+/**
+ * =====================================================================
+ * TAB NAVIGATION & APP INITIALIZATION
+ * =====================================================================
+ */
 export function changeTab(tabId) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
   const targetTab = document.getElementById(tabId);
@@ -304,20 +542,22 @@ export function initApp() {
     s2.innerHTML = '';
     s3.innerHTML = '';
     db.schools.forEach(s => {
-      s1.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
-      s2.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
-      s3.innerHTML += '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
+      const optHtml = '<option value="' + s.id + '">' + s.name + ' (' + s.district + ') - Chuẩn 2027: ' + s.score2027.toFixed(2) + '</option>';
+      s1.innerHTML += optHtml;
+      s2.innerHTML += optHtml;
+      s3.innerHTML += optHtml;
     });
-    s1.value = 1;  // THPT Nguyễn Thượng Hiền (25.5đ)
-    s2.value = 5;  // THPT Lê Quý Đôn (23.75đ - cách NV1 1.75đ)
-    s3.value = 11; // THPT Trưng Vương (21.75đ - cách NV2 2.00đ)
+    // Mặc định chọn 3 trường mẫu thực tế
+    s1.value = 1;  // THPT Trưng Vương (21.88đ)
+    s2.value = 3;  // THPT Ten Lơ Man (20.35đ)
+    s3.value = 4;  // THPT Năng khiếu TDTT (13.78đ)
   }
 
   const specSchool = document.getElementById('specSchoolSelect');
   if (specSchool) {
     specSchool.innerHTML = '';
     db.specializedSchools.forEach(s => {
-      specSchool.innerHTML += '<option value="' + s.id + '">' + s.name + ' - ĐC 2027 Dự báo: ' + s.score2027 + '</option>';
+      specSchool.innerHTML += '<option value="' + s.id + '">' + s.fullName + ' - Chuẩn 2027: ' + s.score2027.toFixed(2) + '</option>';
     });
   }
 
@@ -340,8 +580,9 @@ export function initApp() {
     }
   }
 
+  // Khởi chạy tính toán cho cả 3 module
   calculateNormalProbabilities();
-  calculateSpecialized();
+  onSpecSchoolChange();
   calculateIkigai();
 }
 
@@ -349,6 +590,8 @@ window.ikigaiApp = {
   switchEngine,
   calculateNormalProbabilities,
   calculateSpecialized,
+  syncScoresFromModule1,
+  onSpecSchoolChange,
   calculateIkigai,
   changeTab,
   initApp
@@ -365,3 +608,4 @@ if (document.readyState === 'loading') {
 } else {
   initApp();
 }
+

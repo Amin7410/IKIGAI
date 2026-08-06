@@ -1,6 +1,6 @@
 /**
  * Database Layer for IKIGAI Positioning System
- * Stores static dataset for Schools, Specialized Programs, Careers, and Combos
+ * Source: Dữ liệu dự án_NTN.xlsx (Full 170 standard schools + 42 specialized programs + Careers)
  */
 export const db = {
   schools: [
@@ -11,7 +11,9 @@ export const db = {
         "score2024": 21.0,
         "score2025": 20.25,
         "score2026": 21.75,
-        "score2027": 21.15
+        "scoreWMA": 21.15,
+        "score2027": 21.88,
+        "quota": 900
     },
     {
         "id": 2,
@@ -20,7 +22,9 @@ export const db = {
         "score2024": 22.25,
         "score2025": 22.25,
         "score2026": 24.25,
-        "score2027": 23.25
+        "scoreWMA": 23.25,
+        "score2027": 24.49,
+        "quota": 630
     },
     {
         "id": 3,
@@ -29,7 +33,9 @@ export const db = {
         "score2024": 18.25,
         "score2025": 18.0,
         "score2026": 20.5,
-        "score2027": 19.3
+        "scoreWMA": 19.3,
+        "score2027": 20.35,
+        "quota": 585
     },
     {
         "id": 4,
@@ -38,7 +44,9 @@ export const db = {
         "score2024": 13.0,
         "score2025": 11.75,
         "score2026": 14.0,
-        "score2027": 13.12
+        "scoreWMA": 13.12,
+        "score2027": 13.56,
+        "quota": 280
     },
     {
         "id": 5,
@@ -47,7 +55,9 @@ export const db = {
         "score2024": 20.0,
         "score2025": 24.5,
         "score2026": 24.0,
-        "score2027": 23.35
+        "scoreWMA": 23.35,
+        "score2027": 24.19,
+        "quota": 360
     },
     {
         "id": 6,
@@ -56,7 +66,9 @@ export const db = {
         "score2024": 20.5,
         "score2025": 20.75,
         "score2026": 22.75,
-        "score2027": 21.7
+        "scoreWMA": 21.7,
+        "score2027": 23.49,
+        "quota": 225
     },
     {
         "id": 7,
@@ -65,7 +77,9 @@ export const db = {
         "score2024": 16.75,
         "score2025": 17.5,
         "score2026": 18.75,
-        "score2027": 17.98
+        "scoreWMA": 17.98,
+        "score2027": 18.72,
+        "quota": 675
     },
     {
         "id": 8,
@@ -74,7 +88,9 @@ export const db = {
         "score2024": 14.0,
         "score2025": 12.5,
         "score2026": 14.25,
-        "score2027": 13.68
+        "scoreWMA": 13.68,
+        "score2027": 14.1,
+        "quota": 810
     },
     {
         "id": 9,
@@ -83,7 +99,9 @@ export const db = {
         "score2024": 22.5,
         "score2025": 22.25,
         "score2026": 23.75,
-        "score2027": 23.05
+        "scoreWMA": 23.05,
+        "score2027": 24.04,
+        "quota": 560
     },
     {
         "id": 10,
@@ -92,7 +110,9 @@ export const db = {
         "score2024": 23.25,
         "score2025": 23.75,
         "score2026": 24.5,
-        "score2027": 24.02
+        "scoreWMA": 24.02,
+        "score2027": 25.02,
+        "quota": 810
     },
     {
         "id": 11,
@@ -101,7 +121,9 @@ export const db = {
         "score2024": 14.75,
         "score2025": 12.0,
         "score2026": 14.25,
-        "score2027": 13.68
+        "scoreWMA": 13.68,
+        "score2027": 14.09,
+        "quota": 495
     },
     {
         "id": 12,
@@ -110,7 +132,9 @@ export const db = {
         "score2024": 19.75,
         "score2025": 19.5,
         "score2026": 22.25,
-        "score2027": 20.93
+        "scoreWMA": 20.93,
+        "score2027": 22.23,
+        "quota": 1000
     },
     {
         "id": 13,
@@ -119,7 +143,9 @@ export const db = {
         "score2024": 15.25,
         "score2025": 10.5,
         "score2026": 15.75,
-        "score2027": 14.08
+        "scoreWMA": 14.08,
+        "score2027": 14.67,
+        "quota": 765
     },
     {
         "id": 14,
@@ -128,16 +154,20 @@ export const db = {
         "score2024": 13.75,
         "score2025": 11.25,
         "score2026": 15.25,
-        "score2027": 13.75
+        "scoreWMA": 13.75,
+        "score2027": 14.37,
+        "quota": 675
     },
     {
         "id": 15,
-        "name": "Mĩ thuật",
+        "name": "Trung học thực hành Sài Gòn",
         "district": "TP.HCM cũ",
         "score2024": 21.0,
         "score2025": 21.5,
         "score2026": 23.5,
-        "score2027": 22.4
+        "scoreWMA": 22.4,
+        "score2027": 23.6,
+        "quota": 175
     },
     {
         "id": 16,
@@ -146,7 +176,9 @@ export const db = {
         "score2024": 16.0,
         "score2025": 14.0,
         "score2026": 18.25,
-        "score2027": 16.52
+        "scoreWMA": 16.52,
+        "score2027": 17.58,
+        "quota": 765
     },
     {
         "id": 17,
@@ -155,7 +187,9 @@ export const db = {
         "score2024": 18.25,
         "score2025": 17.75,
         "score2026": 21.0,
-        "score2027": 19.48
+        "scoreWMA": 19.48,
+        "score2027": 20.61,
+        "quota": 1035
     },
     {
         "id": 18,
@@ -164,7 +198,9 @@ export const db = {
         "score2024": 23.0,
         "score2025": 23.0,
         "score2026": 24.5,
-        "score2027": 23.75
+        "scoreWMA": 23.75,
+        "score2027": 24.96,
+        "quota": 280
     },
     {
         "id": 19,
@@ -173,7 +209,9 @@ export const db = {
         "score2024": 19.75,
         "score2025": 21.0,
         "score2026": 23.0,
-        "score2027": 21.75
+        "scoreWMA": 21.75,
+        "score2027": 23.08,
+        "quota": 720
     },
     {
         "id": 20,
@@ -182,7 +220,9 @@ export const db = {
         "score2024": 13.75,
         "score2025": 12.5,
         "score2026": 14.0,
-        "score2027": 13.5
+        "scoreWMA": 13.5,
+        "score2027": 13.89,
+        "quota": 540
     },
     {
         "id": 21,
@@ -191,7 +231,9 @@ export const db = {
         "score2024": 22.5,
         "score2025": 22.25,
         "score2026": 24.25,
-        "score2027": 23.3
+        "scoreWMA": 23.3,
+        "score2027": 24.39,
+        "quota": 990
     },
     {
         "id": 22,
@@ -200,7 +242,9 @@ export const db = {
         "score2024": 19.5,
         "score2025": 20.25,
         "score2026": 22.5,
-        "score2027": 21.23
+        "scoreWMA": 21.23,
+        "score2027": 22.44,
+        "quota": 720
     },
     {
         "id": 23,
@@ -209,7 +253,9 @@ export const db = {
         "score2024": 17.0,
         "score2025": 16.75,
         "score2026": 19.75,
-        "score2027": 18.3
+        "scoreWMA": 18.3,
+        "score2027": 19.28,
+        "quota": 855
     },
     {
         "id": 24,
@@ -218,7 +264,9 @@ export const db = {
         "score2024": 14.75,
         "score2025": 14.25,
         "score2026": 17.0,
-        "score2027": 15.72
+        "scoreWMA": 15.72,
+        "score2027": 16.46,
+        "quota": 675
     },
     {
         "id": 25,
@@ -227,7 +275,9 @@ export const db = {
         "score2024": 17.25,
         "score2025": 17.25,
         "score2026": 20.0,
-        "score2027": 18.62
+        "scoreWMA": 18.62,
+        "score2027": 19.72,
+        "quota": 585
     },
     {
         "id": 26,
@@ -236,7 +286,9 @@ export const db = {
         "score2024": 14.0,
         "score2025": 13.75,
         "score2026": 15.75,
-        "score2027": 14.8
+        "scoreWMA": 14.8,
+        "score2027": 15.41,
+        "quota": 765
     },
     {
         "id": 27,
@@ -245,7 +297,9 @@ export const db = {
         "score2024": 18.75,
         "score2025": 20.0,
         "score2026": 21.25,
-        "score2027": 20.38
+        "scoreWMA": 20.38,
+        "score2027": 21.3,
+        "quota": 765
     },
     {
         "id": 28,
@@ -254,7 +308,9 @@ export const db = {
         "score2024": 20.25,
         "score2025": 20.25,
         "score2026": 22.25,
-        "score2027": 21.25
+        "scoreWMA": 21.25,
+        "score2027": 22.55,
+        "quota": 225
     },
     {
         "id": 29,
@@ -263,7 +319,9 @@ export const db = {
         "score2024": 13.5,
         "score2025": 12.25,
         "score2026": 15.75,
-        "score2027": 14.25
+        "scoreWMA": 14.25,
+        "score2027": 15.0,
+        "quota": 675
     },
     {
         "id": 30,
@@ -272,7 +330,9 @@ export const db = {
         "score2024": 14.0,
         "score2025": 10.5,
         "score2026": 13.25,
-        "score2027": 12.58
+        "scoreWMA": 12.58,
+        "score2027": 13.16,
+        "quota": 765
     },
     {
         "id": 31,
@@ -281,7 +341,9 @@ export const db = {
         "score2024": 15.25,
         "score2025": 15.0,
         "score2026": 18.0,
-        "score2027": 16.55
+        "scoreWMA": 16.55,
+        "score2027": 17.45,
+        "quota": 720
     },
     {
         "id": 32,
@@ -290,7 +352,9 @@ export const db = {
         "score2024": 11.25,
         "score2025": 10.5,
         "score2026": 11.75,
-        "score2027": 11.28
+        "scoreWMA": 11.28,
+        "score2027": 11.55,
+        "quota": 675
     },
     {
         "id": 33,
@@ -299,7 +363,9 @@ export const db = {
         "score2024": 16.5,
         "score2025": 15.0,
         "score2026": 18.0,
-        "score2027": 16.8
+        "scoreWMA": 16.8,
+        "score2027": 17.65,
+        "quota": 720
     },
     {
         "id": 34,
@@ -308,7 +374,9 @@ export const db = {
         "score2024": 13.0,
         "score2025": 12.5,
         "score2026": 14.5,
-        "score2027": 13.6
+        "scoreWMA": 13.6,
+        "score2027": 14.16,
+        "quota": 360
     },
     {
         "id": 35,
@@ -317,7 +385,9 @@ export const db = {
         "score2024": 15.25,
         "score2025": 15.0,
         "score2026": 18.5,
-        "score2027": 16.8
+        "scoreWMA": 16.8,
+        "score2027": 17.96,
+        "quota": 675
     },
     {
         "id": 36,
@@ -326,7 +396,9 @@ export const db = {
         "score2024": 16.25,
         "score2025": 16.25,
         "score2026": 19.25,
-        "score2027": 17.75
+        "scoreWMA": 17.75,
+        "score2027": 18.89,
+        "quota": 675
     },
     {
         "id": 37,
@@ -335,7 +407,9 @@ export const db = {
         "score2024": 12.0,
         "score2025": 10.5,
         "score2026": 12.5,
-        "score2027": 11.8
+        "scoreWMA": 11.8,
+        "score2027": 12.3,
+        "quota": 720
     },
     {
         "id": 38,
@@ -344,7 +418,9 @@ export const db = {
         "score2024": 11.0,
         "score2025": 10.5,
         "score2026": 12.0,
-        "score2027": 11.35
+        "scoreWMA": 11.35,
+        "score2027": 11.63,
+        "quota": 1125
     },
     {
         "id": 39,
@@ -353,7 +429,9 @@ export const db = {
         "score2024": 14.75,
         "score2025": 13.5,
         "score2026": 16.5,
-        "score2027": 15.25
+        "scoreWMA": 15.25,
+        "score2027": 16.08,
+        "quota": 765
     },
     {
         "id": 40,
@@ -362,7 +440,9 @@ export const db = {
         "score2024": 18.25,
         "score2025": 18.75,
         "score2026": 20.75,
-        "score2027": 19.65
+        "scoreWMA": 19.65,
+        "score2027": 20.4,
+        "quota": 855
     },
     {
         "id": 41,
@@ -371,7 +451,9 @@ export const db = {
         "score2024": 19.5,
         "score2025": 18.75,
         "score2026": 21.75,
-        "score2027": 20.4
+        "scoreWMA": 20.4,
+        "score2027": 21.82,
+        "quota": 595
     },
     {
         "id": 42,
@@ -380,7 +462,9 @@ export const db = {
         "score2024": 15.25,
         "score2025": 13.75,
         "score2026": 16.25,
-        "score2027": 15.3
+        "scoreWMA": 15.3,
+        "score2027": 16.02,
+        "quota": 900
     },
     {
         "id": 43,
@@ -389,7 +473,9 @@ export const db = {
         "score2024": 15.0,
         "score2025": 11.75,
         "score2026": 15.0,
-        "score2027": 14.03
+        "scoreWMA": 14.03,
+        "score2027": 15.25,
+        "quota": 450
     },
     {
         "id": 44,
@@ -398,7 +484,9 @@ export const db = {
         "score2024": 14.25,
         "score2025": 11.25,
         "score2026": 13.5,
-        "score2027": 12.97
+        "scoreWMA": 12.97,
+        "score2027": 13.25,
+        "quota": 450
     },
     {
         "id": 45,
@@ -407,7 +495,9 @@ export const db = {
         "score2024": 19.75,
         "score2025": 16.25,
         "score2026": 19.75,
-        "score2027": 18.7
+        "scoreWMA": 18.7,
+        "score2027": 19.8,
+        "quota": 595
     },
     {
         "id": 46,
@@ -416,7 +506,9 @@ export const db = {
         "score2024": 16.75,
         "score2025": 16.0,
         "score2026": 17.75,
-        "score2027": 17.03
+        "scoreWMA": 17.03,
+        "score2027": 17.78,
+        "quota": 990
     },
     {
         "id": 47,
@@ -425,7 +517,9 @@ export const db = {
         "score2024": 15.5,
         "score2025": 13.75,
         "score2026": 16.5,
-        "score2027": 15.47
+        "scoreWMA": 15.47,
+        "score2027": 16.31,
+        "quota": 765
     },
     {
         "id": 48,
@@ -434,7 +528,9 @@ export const db = {
         "score2024": 20.75,
         "score2025": 21.5,
         "score2026": 22.5,
-        "score2027": 21.85
+        "scoreWMA": 21.85,
+        "score2027": 22.75,
+        "quota": 765
     },
     {
         "id": 49,
@@ -443,7 +539,9 @@ export const db = {
         "score2024": 18.0,
         "score2025": 17.25,
         "score2026": 19.25,
-        "score2027": 18.4
+        "scoreWMA": 18.4,
+        "score2027": 19.55,
+        "quota": 900
     },
     {
         "id": 50,
@@ -452,7 +550,9 @@ export const db = {
         "score2024": 16.0,
         "score2025": 16.0,
         "score2026": 16.0,
-        "score2027": 16.0
+        "scoreWMA": 16.0,
+        "score2027": 16.72,
+        "quota": 810
     },
     {
         "id": 51,
@@ -461,7 +561,9 @@ export const db = {
         "score2024": 16.25,
         "score2025": 16.25,
         "score2026": 16.25,
-        "score2027": 16.25
+        "scoreWMA": 16.25,
+        "score2027": 16.94,
+        "quota": 450
     },
     {
         "id": 52,
@@ -470,7 +572,9 @@ export const db = {
         "score2024": 16.25,
         "score2025": 15.5,
         "score2026": 17.5,
-        "score2027": 16.65
+        "scoreWMA": 16.65,
+        "score2027": 17.64,
+        "quota": 810
     },
     {
         "id": 53,
@@ -479,7 +583,9 @@ export const db = {
         "score2024": 15.0,
         "score2025": 13.75,
         "score2026": 16.25,
-        "score2027": 15.25
+        "scoreWMA": 15.25,
+        "score2027": 15.81,
+        "quota": 720
     },
     {
         "id": 54,
@@ -488,7 +594,9 @@ export const db = {
         "score2024": 19.5,
         "score2025": 17.75,
         "score2026": 21.0,
-        "score2027": 19.73
+        "scoreWMA": 19.73,
+        "score2027": 20.94,
+        "quota": 855
     },
     {
         "id": 55,
@@ -497,7 +605,9 @@ export const db = {
         "score2024": 23.0,
         "score2025": 18.75,
         "score2026": 23.5,
-        "score2027": 21.98
+        "scoreWMA": 21.98,
+        "score2027": 24.02,
+        "quota": 855
     },
     {
         "id": 56,
@@ -506,7 +616,9 @@ export const db = {
         "score2024": 16.0,
         "score2025": 13.5,
         "score2026": 17.5,
-        "score2027": 16.0
+        "scoreWMA": 16.0,
+        "score2027": 16.78,
+        "quota": 810
     },
     {
         "id": 57,
@@ -515,7 +627,9 @@ export const db = {
         "score2024": 17.25,
         "score2025": 14.75,
         "score2026": 18.0,
-        "score2027": 16.88
+        "scoreWMA": 16.88,
+        "score2027": 17.62,
+        "quota": 900
     },
     {
         "id": 58,
@@ -524,7 +638,9 @@ export const db = {
         "score2024": 18.25,
         "score2025": 16.75,
         "score2026": 20.75,
-        "score2027": 19.05
+        "scoreWMA": 19.05,
+        "score2027": 20.38,
+        "quota": 855
     },
     {
         "id": 59,
@@ -533,7 +649,9 @@ export const db = {
         "score2024": 16.5,
         "score2025": 15.75,
         "score2026": 18.0,
-        "score2027": 17.02
+        "scoreWMA": 17.02,
+        "score2027": 18.08,
+        "quota": 675
     },
     {
         "id": 60,
@@ -542,7 +660,9 @@ export const db = {
         "score2024": 20.25,
         "score2025": 20.0,
         "score2026": 22.0,
-        "score2027": 21.05
+        "scoreWMA": 21.05,
+        "score2027": 22.42,
+        "quota": 855
     },
     {
         "id": 61,
@@ -551,7 +671,9 @@ export const db = {
         "score2024": 19.75,
         "score2025": 20.25,
         "score2026": 22.25,
-        "score2027": 21.15
+        "scoreWMA": 21.15,
+        "score2027": 22.14,
+        "quota": 990
     },
     {
         "id": 62,
@@ -560,7 +682,9 @@ export const db = {
         "score2024": 17.25,
         "score2025": 17.25,
         "score2026": 19.75,
-        "score2027": 18.5
+        "scoreWMA": 18.5,
+        "score2027": 19.51,
+        "quota": 900
     },
     {
         "id": 63,
@@ -569,7 +693,9 @@ export const db = {
         "score2024": 22.5,
         "score2025": 22.5,
         "score2026": 24.0,
-        "score2027": 23.25
+        "scoreWMA": 23.25,
+        "score2027": 24.29,
+        "quota": 855
     },
     {
         "id": 64,
@@ -578,7 +704,9 @@ export const db = {
         "score2024": 15.25,
         "score2025": 13.5,
         "score2026": 16.25,
-        "score2027": 15.23
+        "scoreWMA": 15.23,
+        "score2027": 16.04,
+        "quota": 765
     },
     {
         "id": 65,
@@ -587,7 +715,9 @@ export const db = {
         "score2024": 19.5,
         "score2025": 19.75,
         "score2026": 21.5,
-        "score2027": 20.58
+        "scoreWMA": 20.58,
+        "score2027": 21.3,
+        "quota": 855
     },
     {
         "id": 66,
@@ -596,7 +726,9 @@ export const db = {
         "score2024": 18.25,
         "score2025": 18.0,
         "score2026": 20.25,
-        "score2027": 19.17
+        "scoreWMA": 19.17,
+        "score2027": 19.99,
+        "quota": 810
     },
     {
         "id": 67,
@@ -605,7 +737,9 @@ export const db = {
         "score2024": 23.25,
         "score2025": 22.75,
         "score2026": 24.25,
-        "score2027": 23.6
+        "scoreWMA": 23.6,
+        "score2027": 24.68,
+        "quota": 945
     },
     {
         "id": 68,
@@ -613,8 +747,10 @@ export const db = {
         "district": "TP.HCM cũ",
         "score2024": 24.25,
         "score2025": 23.5,
-        "score2026": 24.75,
-        "score2027": 24.28
+        "score2026": 25.5,
+        "scoreWMA": 24.65,
+        "score2027": 25.83,
+        "quota": 675
     },
     {
         "id": 69,
@@ -623,7 +759,9 @@ export const db = {
         "score2024": 17.0,
         "score2025": 16.25,
         "score2026": 18.75,
-        "score2027": 17.65
+        "scoreWMA": 17.65,
+        "score2027": 18.62,
+        "quota": 720
     },
     {
         "id": 70,
@@ -632,7 +770,9 @@ export const db = {
         "score2024": 23.25,
         "score2025": 23.5,
         "score2026": 24.25,
-        "score2027": 23.83
+        "scoreWMA": 23.83,
+        "score2027": 24.77,
+        "quota": 765
     },
     {
         "id": 71,
@@ -641,7 +781,9 @@ export const db = {
         "score2024": 20.5,
         "score2025": 21.0,
         "score2026": 22.75,
-        "score2027": 21.78
+        "scoreWMA": 21.78,
+        "score2027": 23.33,
+        "quota": 900
     },
     {
         "id": 72,
@@ -650,7 +792,9 @@ export const db = {
         "score2024": 18.0,
         "score2025": 17.75,
         "score2026": 20.0,
-        "score2027": 18.93
+        "scoreWMA": 18.93,
+        "score2027": 19.84,
+        "quota": 765
     },
     {
         "id": 73,
@@ -659,7 +803,9 @@ export const db = {
         "score2024": 14.0,
         "score2025": 13.5,
         "score2026": 16.75,
-        "score2027": 15.23
+        "scoreWMA": 15.23,
+        "score2027": 16.11,
+        "quota": 675
     },
     {
         "id": 74,
@@ -668,7 +814,9 @@ export const db = {
         "score2024": 13.5,
         "score2025": 11.75,
         "score2026": 14.75,
-        "score2027": 13.6
+        "scoreWMA": 13.6,
+        "score2027": 14.57,
+        "quota": 855
     },
     {
         "id": 75,
@@ -677,7 +825,9 @@ export const db = {
         "score2024": 15.0,
         "score2025": 12.5,
         "score2026": 16.25,
-        "score2027": 14.88
+        "scoreWMA": 14.88,
+        "score2027": 15.82,
+        "quota": 990
     },
     {
         "id": 76,
@@ -686,7 +836,9 @@ export const db = {
         "score2024": 14.0,
         "score2025": 12.25,
         "score2026": 15.75,
-        "score2027": 14.35
+        "scoreWMA": 14.35,
+        "score2027": 15.31,
+        "quota": 900
     },
     {
         "id": 77,
@@ -695,7 +847,9 @@ export const db = {
         "score2024": 13.5,
         "score2025": 10.75,
         "score2026": 14.25,
-        "score2027": 13.05
+        "scoreWMA": 13.05,
+        "score2027": 13.78,
+        "quota": 900
     },
     {
         "id": 78,
@@ -704,7 +858,9 @@ export const db = {
         "score2024": 14.0,
         "score2025": 10.5,
         "score2026": 12.75,
-        "score2027": 12.33
+        "scoreWMA": 12.33,
+        "score2027": 12.88,
+        "quota": 855
     },
     {
         "id": 79,
@@ -713,7 +869,9 @@ export const db = {
         "score2024": 15.75,
         "score2025": 13.75,
         "score2026": 16.25,
-        "score2027": 15.4
+        "scoreWMA": 15.4,
+        "score2027": 16.41,
+        "quota": 900
     },
     {
         "id": 80,
@@ -722,7 +880,9 @@ export const db = {
         "score2024": 14.0,
         "score2025": 12.0,
         "score2026": 13.5,
-        "score2027": 13.15
+        "scoreWMA": 13.15,
+        "score2027": 13.65,
+        "quota": 450
     },
     {
         "id": 81,
@@ -731,7 +891,9 @@ export const db = {
         "score2024": 12.5,
         "score2025": 10.5,
         "score2026": 10.75,
-        "score2027": 11.03
+        "scoreWMA": 11.03,
+        "score2027": 11.49,
+        "quota": 855
     },
     {
         "id": 82,
@@ -740,7 +902,9 @@ export const db = {
         "score2024": 15.0,
         "score2025": 12.75,
         "score2026": 14.25,
-        "score2027": 13.95
+        "scoreWMA": 13.95,
+        "score2027": 14.51,
+        "quota": 900
     },
     {
         "id": 83,
@@ -749,7 +913,9 @@ export const db = {
         "score2024": 11.5,
         "score2025": 10.5,
         "score2026": 10.5,
-        "score2027": 10.7
+        "scoreWMA": 10.7,
+        "score2027": 11.07,
+        "quota": 720
     },
     {
         "id": 84,
@@ -758,7 +924,9 @@ export const db = {
         "score2024": 10.5,
         "score2025": 10.5,
         "score2026": 10.0,
-        "score2027": 10.25
+        "scoreWMA": 10.25,
+        "score2027": 10.79,
+        "quota": 405
     },
     {
         "id": 85,
@@ -767,7 +935,9 @@ export const db = {
         "score2024": 10.5,
         "score2025": 10.5,
         "score2026": 9.0,
-        "score2027": 9.75
+        "scoreWMA": 9.75,
+        "score2027": 10.29,
+        "quota": 320
     },
     {
         "id": 86,
@@ -776,7 +946,9 @@ export const db = {
         "score2024": 10.5,
         "score2025": 10.5,
         "score2026": 10.0,
-        "score2027": 10.25
+        "scoreWMA": 10.25,
+        "score2027": 10.79,
+        "quota": 360
     },
     {
         "id": 87,
@@ -785,7 +957,9 @@ export const db = {
         "score2024": 16.25,
         "score2025": 12.25,
         "score2026": 16.0,
-        "score2027": 14.93
+        "scoreWMA": 14.93,
+        "score2027": 15.88,
+        "quota": 810
     },
     {
         "id": 88,
@@ -794,7 +968,9 @@ export const db = {
         "score2024": 13.0,
         "score2025": 11.5,
         "score2026": 12.25,
-        "score2027": 12.17
+        "scoreWMA": 12.17,
+        "score2027": 12.63,
+        "quota": 810
     },
     {
         "id": 89,
@@ -803,7 +979,9 @@ export const db = {
         "score2024": 11.5,
         "score2025": 10.5,
         "score2026": 11.5,
-        "score2027": 11.2
+        "scoreWMA": 11.2,
+        "score2027": 11.81,
+        "quota": 810
     },
     {
         "id": 90,
@@ -812,7 +990,9 @@ export const db = {
         "score2024": 15.5,
         "score2025": 14.25,
         "score2026": 16.25,
-        "score2027": 15.5
+        "scoreWMA": 15.5,
+        "score2027": 16.42,
+        "quota": 765
     },
     {
         "id": 91,
@@ -821,7 +1001,9 @@ export const db = {
         "score2024": 11.75,
         "score2025": 10.5,
         "score2026": 10.5,
-        "score2027": 10.75
+        "scoreWMA": 10.75,
+        "score2027": 11.36,
+        "quota": 585
     },
     {
         "id": 92,
@@ -830,7 +1012,9 @@ export const db = {
         "score2024": 13.5,
         "score2025": 11.75,
         "score2026": 13.5,
-        "score2027": 12.98
+        "scoreWMA": 12.98,
+        "score2027": 13.6,
+        "quota": 720
     },
     {
         "id": 93,
@@ -839,7 +1023,9 @@ export const db = {
         "score2024": 14.75,
         "score2025": 14.0,
         "score2026": 14.75,
-        "score2027": 14.52
+        "scoreWMA": 14.52,
+        "score2027": 15.2,
+        "quota": 720
     },
     {
         "id": 94,
@@ -848,7 +1034,9 @@ export const db = {
         "score2024": 22.5,
         "score2025": 23.0,
         "score2026": 24.0,
-        "score2027": 23.4
+        "scoreWMA": 23.4,
+        "score2027": 24.4,
+        "quota": 765
     },
     {
         "id": 95,
@@ -857,7 +1045,9 @@ export const db = {
         "score2024": 19.75,
         "score2025": 20.25,
         "score2026": 20.75,
-        "score2027": 20.4
+        "scoreWMA": 20.4,
+        "score2027": 21.12,
+        "quota": 765
     },
     {
         "id": 96,
@@ -866,7 +1056,9 @@ export const db = {
         "score2024": 18.5,
         "score2025": 19.0,
         "score2026": 20.5,
-        "score2027": 19.65
+        "scoreWMA": 19.65,
+        "score2027": 20.71,
+        "quota": 810
     },
     {
         "id": 97,
@@ -875,7 +1067,9 @@ export const db = {
         "score2024": 16.5,
         "score2025": 14.75,
         "score2026": 15.5,
-        "score2027": 15.48
+        "scoreWMA": 15.48,
+        "score2027": 16.4,
+        "quota": 675
     },
     {
         "id": 98,
@@ -884,7 +1078,9 @@ export const db = {
         "score2024": 18.0,
         "score2025": 17.5,
         "score2026": 19.0,
-        "score2027": 18.35
+        "scoreWMA": 18.35,
+        "score2027": 19.27,
+        "quota": 675
     },
     {
         "id": 99,
@@ -893,7 +1089,9 @@ export const db = {
         "score2024": 16.75,
         "score2025": 16.25,
         "score2026": 17.5,
-        "score2027": 16.98
+        "scoreWMA": 16.98,
+        "score2027": 17.76,
+        "quota": 810
     },
     {
         "id": 100,
@@ -902,7 +1100,9 @@ export const db = {
         "score2024": 17.5,
         "score2025": 17.0,
         "score2026": 17.25,
-        "score2027": 17.23
+        "scoreWMA": 17.23,
+        "score2027": 17.84,
+        "quota": 855
     },
     {
         "id": 101,
@@ -911,7 +1111,9 @@ export const db = {
         "score2024": 12.25,
         "score2025": 12.0,
         "score2026": 13.25,
-        "score2027": 12.68
+        "scoreWMA": 12.68,
+        "score2027": 13.27,
+        "quota": 450
     },
     {
         "id": 102,
@@ -920,7 +1122,9 @@ export const db = {
         "score2024": 12.75,
         "score2025": 10.75,
         "score2026": 11.75,
-        "score2027": 11.65
+        "scoreWMA": 11.65,
+        "score2027": 12.04,
+        "quota": 855
     },
     {
         "id": 103,
@@ -929,7 +1133,9 @@ export const db = {
         "score2024": 13.0,
         "score2025": 10.5,
         "score2026": 13.25,
-        "score2027": 12.38
+        "scoreWMA": 12.38,
+        "score2027": 12.88,
+        "quota": 765
     },
     {
         "id": 104,
@@ -938,7 +1144,9 @@ export const db = {
         "score2024": 21.0,
         "score2025": 21.75,
         "score2026": 23.25,
-        "score2027": 22.35
+        "scoreWMA": 22.35,
+        "score2027": 23.36,
+        "quota": 1035
     },
     {
         "id": 105,
@@ -947,7 +1155,9 @@ export const db = {
         "score2024": 19.5,
         "score2025": 18.5,
         "score2026": 21.75,
-        "score2027": 20.33
+        "scoreWMA": 20.33,
+        "score2027": 22.81,
+        "quota": 675
     },
     {
         "id": 106,
@@ -956,7 +1166,9 @@ export const db = {
         "score2024": 16.25,
         "score2025": 16.25,
         "score2026": 16.25,
-        "score2027": 16.25
+        "scoreWMA": 16.25,
+        "score2027": 16.94,
+        "quota": 675
     },
     {
         "id": 107,
@@ -965,7 +1177,9 @@ export const db = {
         "score2024": 16.5,
         "score2025": 16.75,
         "score2026": 19.0,
-        "score2027": 17.82
+        "scoreWMA": 17.82,
+        "score2027": 18.64,
+        "quota": 720
     },
     {
         "id": 108,
@@ -974,7 +1188,9 @@ export const db = {
         "score2024": 18.0,
         "score2025": 18.25,
         "score2026": 21.0,
-        "score2027": 19.57
+        "scoreWMA": 19.57,
+        "score2027": 20.76,
+        "quota": 630
     },
     {
         "id": 109,
@@ -983,7 +1199,9 @@ export const db = {
         "score2024": 18.5,
         "score2025": 17.75,
         "score2026": 19.75,
-        "score2027": 18.9
+        "scoreWMA": 18.9,
+        "score2027": 19.87,
+        "quota": 855
     },
     {
         "id": 110,
@@ -992,7 +1210,9 @@ export const db = {
         "score2024": 15.0,
         "score2025": 14.25,
         "score2026": 16.0,
-        "score2027": 15.27
+        "scoreWMA": 15.27,
+        "score2027": 15.89,
+        "quota": 855
     },
     {
         "id": 111,
@@ -1001,7 +1221,9 @@ export const db = {
         "score2024": 13.0,
         "score2025": 13.0,
         "score2026": 15.5,
-        "score2027": 14.25
+        "scoreWMA": 14.25,
+        "score2027": 15.53,
+        "quota": 810
     },
     {
         "id": 112,
@@ -1010,7 +1232,9 @@ export const db = {
         "score2024": 15.25,
         "score2025": 15.25,
         "score2026": 17.25,
-        "score2027": 16.25
+        "scoreWMA": 16.25,
+        "score2027": 16.89,
+        "quota": 855
     },
     {
         "id": 113,
@@ -1019,7 +1243,9 @@ export const db = {
         "score2024": 17.05,
         "score2025": 17.55,
         "score2026": 17.25,
-        "score2027": 17.3
+        "scoreWMA": 17.3,
+        "score2027": 17.99,
+        "quota": 810
     },
     {
         "id": 114,
@@ -1028,7 +1254,9 @@ export const db = {
         "score2024": 14.75,
         "score2025": 14.65,
         "score2026": 13.25,
-        "score2027": 13.97
+        "scoreWMA": 13.97,
+        "score2027": 14.56,
+        "quota": 315
     },
     {
         "id": 115,
@@ -1037,7 +1265,9 @@ export const db = {
         "score2024": 10.25,
         "score2025": 15.8,
         "score2026": 13.5,
-        "score2027": 13.54
+        "scoreWMA": 13.54,
+        "score2027": 14.15,
+        "quota": 450
     },
     {
         "id": 116,
@@ -1046,7 +1276,9 @@ export const db = {
         "score2024": 23.3,
         "score2025": 22.1,
         "score2026": 23.25,
-        "score2027": 22.91
+        "scoreWMA": 22.91,
+        "score2027": 23.83,
+        "quota": 540
     },
     {
         "id": 117,
@@ -1055,7 +1287,9 @@ export const db = {
         "score2024": 18.1,
         "score2025": 17.9,
         "score2026": 20.0,
-        "score2027": 18.99
+        "scoreWMA": 18.99,
+        "score2027": 19.79,
+        "quota": 810
     },
     {
         "id": 118,
@@ -1064,7 +1298,9 @@ export const db = {
         "score2024": 13.0,
         "score2025": 12.5,
         "score2026": 10.75,
-        "score2027": 11.72
+        "scoreWMA": 11.72,
+        "score2027": 12.25,
+        "quota": 360
     },
     {
         "id": 119,
@@ -1073,7 +1309,9 @@ export const db = {
         "score2024": 18.25,
         "score2025": 19.35,
         "score2026": 19.0,
-        "score2027": 18.95
+        "scoreWMA": 18.95,
+        "score2027": 19.71,
+        "quota": 470
     },
     {
         "id": 120,
@@ -1082,7 +1320,9 @@ export const db = {
         "score2024": 16.15,
         "score2025": 16.15,
         "score2026": 16.75,
-        "score2027": 16.45
+        "scoreWMA": 16.45,
+        "score2027": 17.19,
+        "quota": 585
     },
     {
         "id": 121,
@@ -1091,7 +1331,9 @@ export const db = {
         "score2024": 23.65,
         "score2025": 22.25,
         "score2026": 23.25,
-        "score2027": 23.03
+        "scoreWMA": 23.03,
+        "score2027": 23.95,
+        "quota": 765
     },
     {
         "id": 122,
@@ -1100,7 +1342,9 @@ export const db = {
         "score2024": 19.15,
         "score2025": 18.15,
         "score2026": 19.75,
-        "score2027": 19.15
+        "scoreWMA": 19.15,
+        "score2027": 19.92,
+        "quota": 630
     },
     {
         "id": 123,
@@ -1109,7 +1353,9 @@ export const db = {
         "score2024": 17.4,
         "score2025": 17.65,
         "score2026": 15.75,
-        "score2027": 16.65
+        "scoreWMA": 16.65,
+        "score2027": 17.32,
+        "quota": 540
     },
     {
         "id": 124,
@@ -1118,7 +1364,9 @@ export const db = {
         "score2024": 15.4,
         "score2025": 16.8,
         "score2026": 15.0,
-        "score2027": 15.62
+        "scoreWMA": 15.62,
+        "score2027": 16.28,
+        "quota": 675
     },
     {
         "id": 125,
@@ -1127,7 +1375,9 @@ export const db = {
         "score2024": 11.6,
         "score2025": 12.2,
         "score2026": 11.5,
-        "score2027": 11.73
+        "scoreWMA": 11.73,
+        "score2027": 12.26,
+        "quota": 630
     },
     {
         "id": 126,
@@ -1136,7 +1386,9 @@ export const db = {
         "score2024": 17.7,
         "score2025": 17.6,
         "score2026": 18.5,
-        "score2027": 18.07
+        "scoreWMA": 18.07,
+        "score2027": 18.79,
+        "quota": 810
     },
     {
         "id": 127,
@@ -1145,7 +1397,9 @@ export const db = {
         "score2024": 13.4,
         "score2025": 13.15,
         "score2026": 12.5,
-        "score2027": 12.88
+        "scoreWMA": 12.88,
+        "score2027": 13.45,
+        "quota": 450
     },
     {
         "id": 128,
@@ -1154,7 +1408,9 @@ export const db = {
         "score2024": 14.85,
         "score2025": 16.55,
         "score2026": 15.5,
-        "score2027": 15.69
+        "scoreWMA": 15.69,
+        "score2027": 16.39,
+        "quota": 810
     },
     {
         "id": 129,
@@ -1163,7 +1419,9 @@ export const db = {
         "score2024": 16.25,
         "score2025": 17.2,
         "score2026": 16.75,
-        "score2027": 16.79
+        "scoreWMA": 16.79,
+        "score2027": 17.54,
+        "quota": 540
     },
     {
         "id": 130,
@@ -1172,7 +1430,9 @@ export const db = {
         "score2024": 12.6,
         "score2025": 13.4,
         "score2026": 10.25,
-        "score2027": 11.66
+        "scoreWMA": 11.66,
+        "score2027": 12.19,
+        "quota": 450
     },
     {
         "id": 131,
@@ -1181,7 +1441,9 @@ export const db = {
         "score2024": 12.05,
         "score2025": 14.7,
         "score2026": 9.0,
-        "score2027": 11.32
+        "scoreWMA": 11.32,
+        "score2027": 11.83,
+        "quota": 450
     },
     {
         "id": 132,
@@ -1190,7 +1452,9 @@ export const db = {
         "score2024": 14.6,
         "score2025": 15.35,
         "score2026": 14.5,
-        "score2027": 14.78
+        "scoreWMA": 14.78,
+        "score2027": 15.44,
+        "quota": 675
     },
     {
         "id": 133,
@@ -1199,7 +1463,9 @@ export const db = {
         "score2024": 17.7,
         "score2025": 18.1,
         "score2026": 19.25,
-        "score2027": 18.59
+        "scoreWMA": 18.59,
+        "score2027": 19.38,
+        "quota": 495
     },
     {
         "id": 134,
@@ -1208,7 +1474,9 @@ export const db = {
         "score2024": 16.25,
         "score2025": 17.25,
         "score2026": 15.5,
-        "score2027": 16.18
+        "scoreWMA": 16.18,
+        "score2027": 16.82,
+        "quota": 765
     },
     {
         "id": 135,
@@ -1217,7 +1485,9 @@ export const db = {
         "score2024": 16.9,
         "score2025": 17.35,
         "score2026": 18.5,
-        "score2027": 17.84
+        "scoreWMA": 17.84,
+        "score2027": 18.62,
+        "quota": 810
     },
     {
         "id": 136,
@@ -1226,7 +1496,9 @@ export const db = {
         "score2024": 10.9,
         "score2025": 13.95,
         "score2026": 11.75,
-        "score2027": 12.24
+        "scoreWMA": 12.24,
+        "score2027": 12.79,
+        "quota": 270
     },
     {
         "id": 137,
@@ -1235,7 +1507,9 @@ export const db = {
         "score2024": 13.35,
         "score2025": 15.05,
         "score2026": 15.25,
-        "score2027": 14.81
+        "scoreWMA": 14.81,
+        "score2027": 15.48,
+        "quota": 585
     },
     {
         "id": 138,
@@ -1244,7 +1518,9 @@ export const db = {
         "score2024": 12.15,
         "score2025": 12.75,
         "score2026": 12.0,
-        "score2027": 12.25
+        "scoreWMA": 12.25,
+        "score2027": 12.81,
+        "quota": 270
     },
     {
         "id": 139,
@@ -1253,7 +1529,9 @@ export const db = {
         "score2024": 20.2,
         "score2025": 19.05,
         "score2026": 20.25,
-        "score2027": 19.88
+        "scoreWMA": 19.88,
+        "score2027": 20.68,
+        "quota": 855
     },
     {
         "id": 140,
@@ -1262,7 +1540,9 @@ export const db = {
         "score2024": 13.95,
         "score2025": 14.95,
         "score2026": 12.0,
-        "score2027": 13.27
+        "scoreWMA": 13.27,
+        "score2027": 13.84,
+        "quota": 240
     },
     {
         "id": 141,
@@ -1271,7 +1551,9 @@ export const db = {
         "score2024": 13.65,
         "score2025": 13.85,
         "score2026": 13.5,
-        "score2027": 13.63
+        "scoreWMA": 13.63,
+        "score2027": 14.25,
+        "quota": 225
     },
     {
         "id": 142,
@@ -1280,250 +1562,306 @@ export const db = {
         "score2024": 16.5,
         "score2025": 16.5,
         "score2026": 16.5,
-        "score2027": 16.5
+        "scoreWMA": 16.5,
+        "score2027": 17.2,
+        "quota": 720
     },
     {
         "id": 143,
         "name": "THPT Vũng Tàu",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 36.75,
+        "score2024": 22.05,
         "score2025": 21.25,
         "score2026": 21.75,
-        "score2027": 24.6
+        "scoreWMA": 21.66,
+        "score2027": 24.69,
+        "quota": 855
     },
     {
         "id": 144,
         "name": "THPT Châu Thành",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 29.75,
+        "score2024": 17.85,
         "score2025": 9.0,
         "score2026": 18.5,
-        "score2027": 17.9
+        "scoreWMA": 15.52,
+        "score2027": 16.61,
+        "quota": 540
     },
     {
         "id": 145,
         "name": "THPT Trần Phú",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 22.75,
+        "score2024": 13.65,
         "score2025": 7.75,
         "score2026": 9.0,
-        "score2027": 11.38
+        "scoreWMA": 9.55,
+        "score2027": 9.96,
+        "quota": 450
     },
     {
         "id": 146,
         "name": "THPT Xuyên Mộc",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 25.25,
+        "score2024": 15.15,
         "score2025": 15.25,
         "score2026": 12.25,
-        "score2027": 15.75
+        "scoreWMA": 13.73,
+        "score2027": 14.38,
+        "quota": 450
     },
     {
         "id": 147,
         "name": "THPT Phú Mỹ",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 27.75,
+        "score2024": 16.65,
         "score2025": 6.5,
         "score2026": 11.5,
-        "score2027": 13.25
+        "scoreWMA": 11.03,
+        "score2027": 11.99,
+        "quota": 900
     },
     {
         "id": 148,
         "name": "THPT Trần Hưng Đạo",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 20.75,
+        "score2024": 12.45,
         "score2025": 10.5,
         "score2026": 11.5,
-        "score2027": 13.05
+        "scoreWMA": 11.39,
+        "score2027": 11.97,
+        "quota": 585
     },
     {
         "id": 149,
         "name": "THPT Hắc Dịch",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 22.0,
+        "score2024": 13.2,
         "score2025": 10.0,
         "score2026": 9.0,
-        "score2027": 11.9
+        "scoreWMA": 10.14,
+        "score2027": 10.5,
+        "quota": 630
     },
     {
         "id": 150,
         "name": "THPT Trần Văn Quan",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 22.75,
+        "score2024": 13.65,
         "score2025": 8.0,
         "score2026": 10.75,
-        "score2027": 12.32
+        "scoreWMA": 10.51,
+        "score2027": 11.07,
+        "quota": 450
     },
     {
         "id": 151,
         "name": "THPT Võ Thị Sáu",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 22.25,
+        "score2024": 13.35,
         "score2025": 11.75,
         "score2026": 11.0,
-        "score2027": 13.48
+        "scoreWMA": 11.7,
+        "score2027": 12.3,
+        "quota": 495
     },
     {
         "id": 152,
         "name": "THPT Hòa Hội",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 21.75,
+        "score2024": 13.05,
         "score2025": 10.25,
         "score2026": 10.25,
-        "score2027": 12.55
+        "scoreWMA": 10.81,
+        "score2027": 11.33,
+        "quota": 405
     },
     {
         "id": 153,
         "name": "THPT Nguyễn Bỉnh Khiêm",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 22.25,
+        "score2024": 13.35,
         "score2025": 11.0,
         "score2026": 10.25,
-        "score2027": 12.88
+        "scoreWMA": 11.1,
+        "score2027": 11.34,
+        "quota": 585
     },
     {
         "id": 154,
         "name": "THPT Nguyễn Trãi",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 22.75,
+        "score2024": 13.65,
         "score2025": 9.25,
         "score2026": 10.0,
-        "score2027": 12.32
+        "scoreWMA": 10.51,
+        "score2027": 10.93,
+        "quota": 405
     },
     {
         "id": 155,
         "name": "THPT Phước Bửu",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 22.5,
+        "score2024": 13.5,
         "score2025": 9.5,
         "score2026": 9.0,
-        "score2027": 11.85
+        "scoreWMA": 10.05,
+        "score2027": 10.34,
+        "quota": 450
     },
     {
         "id": 156,
         "name": "THPT Long Hải - Phước Tỉnh",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 19.5,
+        "score2024": 11.7,
         "score2025": 12.5,
         "score2026": 10.5,
-        "score2027": 12.9
+        "scoreWMA": 11.34,
+        "score2027": 11.9,
+        "quota": 495
     },
     {
         "id": 157,
         "name": "THPT Nguyễn Văn Cừ",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 20.75,
+        "score2024": 12.45,
         "score2025": 8.25,
         "score2026": 9.0,
-        "score2027": 11.12
+        "scoreWMA": 9.46,
+        "score2027": 9.78,
+        "quota": 405
     },
     {
         "id": 158,
         "name": "THPT Minh Đạm",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 28.5,
+        "score2024": 17.1,
         "score2025": 14.0,
         "score2026": 11.5,
-        "score2027": 15.65
+        "scoreWMA": 13.37,
+        "score2027": 13.9,
+        "quota": 495
     },
     {
         "id": 159,
         "name": "THPT Nguyễn Khuyến",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 29.75,
+        "score2024": 17.85,
         "score2025": 17.25,
         "score2026": 15.75,
-        "score2027": 19.0
+        "scoreWMA": 16.62,
+        "score2027": 16.99,
+        "quota": 765
     },
     {
         "id": 160,
         "name": "THPT Nguyễn Huệ",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 31.75,
+        "score2024": 19.05,
         "score2025": 19.0,
         "score2026": 19.25,
-        "score2027": 21.68
+        "scoreWMA": 19.13,
+        "score2027": 20.37,
+        "quota": 900
     },
     {
         "id": 161,
         "name": "THPT Đinh Tiên Hoàng",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 29.75,
+        "score2024": 17.85,
         "score2025": 15.0,
         "score2026": 17.25,
-        "score2027": 19.07
+        "scoreWMA": 16.7,
+        "score2027": 17.66,
+        "quota": 720
     },
     {
         "id": 162,
         "name": "THPT Trần Nguyên Hãn",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 30.75,
+        "score2024": 18.45,
         "score2025": 16.0,
         "score2026": 16.5,
-        "score2027": 19.2
+        "scoreWMA": 16.74,
+        "score2027": 17.71,
+        "quota": 720
     },
     {
         "id": 163,
         "name": "THPT Ngô Quyền",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 22.5,
+        "score2024": 13.5,
         "score2025": 5.25,
         "score2026": 10.0,
-        "score2027": 11.07
+        "scoreWMA": 9.28,
+        "score2027": 9.76,
+        "quota": 405
     },
     {
         "id": 164,
         "name": "THPT Hòa Bình",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 24.0,
+        "score2024": 14.4,
         "score2025": 9.0,
         "score2026": 9.0,
-        "score2027": 12.0
+        "scoreWMA": 10.08,
+        "score2027": 10.45,
+        "quota": 450
     },
     {
         "id": 165,
         "name": "THPT Trần Quang Khải",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 20.75,
+        "score2024": 12.45,
         "score2025": 9.5,
         "score2026": 12.75,
-        "score2027": 13.38
+        "scoreWMA": 11.71,
+        "score2027": 12.18,
+        "quota": 540
     },
     {
         "id": 166,
         "name": "THPT Dương Bạch Mai",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 22.75,
+        "score2024": 13.65,
         "score2025": 8.5,
         "score2026": 9.0,
-        "score2027": 11.6
+        "scoreWMA": 9.78,
+        "score2027": 10.18,
+        "quota": 450
     },
     {
         "id": 167,
         "name": "THPT Bà Rịa",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 27.0,
+        "score2024": 16.2,
         "score2025": 14.25,
         "score2026": 14.0,
-        "score2027": 16.67
+        "scoreWMA": 14.51,
+        "score2027": 15.25,
+        "quota": 540
     },
     {
         "id": 168,
         "name": "THPT Bưng Riềng",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 20.5,
+        "score2024": 12.3,
         "score2025": 9.5,
         "score2026": 9.0,
-        "score2027": 11.45
+        "scoreWMA": 9.81,
+        "score2027": 10.15,
+        "quota": 450
     },
     {
         "id": 169,
         "name": "THPT Nguyễn Du",
         "district": "Bà Rịa - Vũng Tàu cũ",
-        "score2024": 19.25,
+        "score2024": 11.55,
         "score2025": 11.5,
         "score2026": 15.25,
-        "score2027": 14.92
+        "scoreWMA": 13.38,
+        "score2027": 14.27,
+        "quota": 405
     },
     {
         "id": 170,
@@ -1532,27 +1870,872 @@ export const db = {
         "score2024": 9.0,
         "score2025": 9.0,
         "score2026": 9.0,
-        "score2027": 9.0
+        "scoreWMA": 9.0,
+        "score2027": 9.41,
+        "quota": 675
     }
 ],
   specializedSchools: [
-    {id: 1, name: 'THPT Chuyên Lê Hồng Phong - Chuyên Anh', score2027: 39.0},
-    {id: 2, name: 'THPT Chuyên Lê Hồng Phong - Chuyên Toán', score2027: 39.5},
-    {id: 3, name: 'THPT Chuyên Trần Đại Nghĩa - Chuyên Anh', score2027: 38.0},
-    {id: 4, name: 'THPT Gia Định - Chuyên Tin', score2027: 35.5}
-  ],
-  careers: [
-    {id: 'cntt', name: 'CNTT, AI, Khoa học dữ liệu', priorityCombos: ['A00', 'A01', 'X26'], recommended: ['Vật lí', 'Tin học', 'Công nghệ', 'GDKT&PL']},
-    {id: 'kinhte', name: 'Kinh tế, Tài chính - Ngân hàng, Quản trị', priorityCombos: ['A01', 'D01', 'X25'], recommended: ['GDKT&PL', 'Tin học', 'Địa lí', 'Vật lí']},
-    {id: 'yduoc', name: 'Y khoa, Dược, Công nghệ sinh học', priorityCombos: ['B00', 'D07'], recommended: ['Hóa học', 'Sinh học', 'Vật lí', 'Tin học']},
-    {id: 'luat', name: 'Luật, Báo chí, Truyền thông', priorityCombos: ['C00', 'D01', 'D14'], recommended: ['GDKT&PL', 'Địa lí', 'Tin học', 'Mĩ thuật']}
-  ],
-  subjectList: ['Vật lí', 'Hóa học', 'Sinh học', 'Địa lí', 'GDKT&PL', 'Tin học', 'Công nghệ', 'Mĩ thuật', 'Âm nhạc'],
+    {
+        "id": 1,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Tiếng Anh",
+        "fullName": "THPT chuyên Lê Hồng Phong - Tiếng Anh",
+        "score2024": 37.0,
+        "score2025": 35.5,
+        "score2026": 36.25,
+        "scoreWMA": 36.17,
+        "score2027": 36.65
+    },
+    {
+        "id": 2,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Tiếng Anh – Đề án 5695",
+        "fullName": "THPT chuyên Lê Hồng Phong - Tiếng Anh – Đề án 5695",
+        "score2024": 37.5,
+        "score2025": 35.75,
+        "score2026": 37.75,
+        "scoreWMA": 37.1,
+        "score2027": 37.1
+    },
+    {
+        "id": 3,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Địa lí",
+        "fullName": "THPT chuyên Lê Hồng Phong - Địa lí",
+        "score2024": 34.0,
+        "score2025": 31.5,
+        "score2026": 34.5,
+        "scoreWMA": 33.5,
+        "score2027": 33.84
+    },
+    {
+        "id": 4,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Hóa học",
+        "fullName": "THPT chuyên Lê Hồng Phong - Hóa học",
+        "score2024": 35.0,
+        "score2025": 32.5,
+        "score2026": 38.5,
+        "scoreWMA": 36.0,
+        "score2027": 36.36
+    },
+    {
+        "id": 5,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Vật lí",
+        "fullName": "THPT chuyên Lê Hồng Phong - Vật lí",
+        "score2024": 34.5,
+        "score2025": 30.75,
+        "score2026": 34.25,
+        "scoreWMA": 33.25,
+        "score2027": 33.58
+    },
+    {
+        "id": 6,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Tiếng Nhật",
+        "fullName": "THPT chuyên Lê Hồng Phong - Tiếng Nhật",
+        "score2024": 30.0,
+        "score2025": 30.75,
+        "score2026": 30.75,
+        "scoreWMA": 30.6,
+        "score2027": 30.29
+    },
+    {
+        "id": 7,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Tiếng Pháp",
+        "fullName": "THPT chuyên Lê Hồng Phong - Tiếng Pháp",
+        "score2024": 31.0,
+        "score2025": 30.75,
+        "score2026": 31.25,
+        "scoreWMA": 31.05,
+        "score2027": 30.74
+    },
+    {
+        "id": 8,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Sinh học",
+        "fullName": "THPT chuyên Lê Hồng Phong - Sinh học",
+        "score2024": 34.75,
+        "score2025": 37.5,
+        "score2026": 39.25,
+        "scoreWMA": 37.83,
+        "score2027": 37.83
+    },
+    {
+        "id": 9,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Lịch sử",
+        "fullName": "THPT chuyên Lê Hồng Phong - Lịch sử",
+        "score2024": 27.0,
+        "score2025": 30.5,
+        "score2026": 33.25,
+        "scoreWMA": 31.17,
+        "score2027": 31.49
+    },
+    {
+        "id": 10,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Tin học",
+        "fullName": "THPT chuyên Lê Hồng Phong - Tin học",
+        "score2024": 37.25,
+        "score2025": 32.25,
+        "score2026": 33.0,
+        "scoreWMA": 33.62,
+        "score2027": 33.29
+    },
+    {
+        "id": 11,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Toán",
+        "fullName": "THPT chuyên Lê Hồng Phong - Toán",
+        "score2024": 37.25,
+        "score2025": 37.25,
+        "score2026": 37.5,
+        "scoreWMA": 37.38,
+        "score2027": 37.0
+    },
+    {
+        "id": 12,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Tiếng Trung",
+        "fullName": "THPT chuyên Lê Hồng Phong - Tiếng Trung",
+        "score2024": 28.5,
+        "score2025": 30.5,
+        "score2026": 32.75,
+        "scoreWMA": 31.22,
+        "score2027": 31.23
+    },
+    {
+        "id": 13,
+        "school": "THPT chuyên Lê Hồng Phong",
+        "program": "Ngữ văn",
+        "fullName": "THPT chuyên Lê Hồng Phong - Ngữ văn",
+        "score2024": 36.0,
+        "score2025": 36.0,
+        "score2026": 36.75,
+        "scoreWMA": 36.38,
+        "score2027": 36.01
+    },
+    {
+        "id": 14,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Tiếng Anh",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Tiếng Anh",
+        "score2024": 36.0,
+        "score2025": 34.25,
+        "score2026": 36.25,
+        "scoreWMA": 35.6,
+        "score2027": 36.21
+    },
+    {
+        "id": 15,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Tiếng Anh – Đề án 5695",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Tiếng Anh – Đề án 5695",
+        "score2024": 37.0,
+        "score2025": 35.0,
+        "score2026": 37.0,
+        "scoreWMA": 36.4,
+        "score2027": 36.4
+    },
+    {
+        "id": 16,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Địa lí",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Địa lí",
+        "score2024": 28.0,
+        "score2025": 29.5,
+        "score2026": 32.0,
+        "scoreWMA": 30.45,
+        "score2027": 30.45
+    },
+    {
+        "id": 17,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Hóa học",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Hóa học",
+        "score2024": 34.25,
+        "score2025": 30.25,
+        "score2026": 36.5,
+        "scoreWMA": 34.17,
+        "score2027": 34.52
+    },
+    {
+        "id": 18,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Vật lí",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Vật lí",
+        "score2024": 33.5,
+        "score2025": 29.5,
+        "score2026": 32.5,
+        "scoreWMA": 31.8,
+        "score2027": 32.12
+    },
+    {
+        "id": 19,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Sinh học",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Sinh học",
+        "score2024": 33.0,
+        "score2025": 35.75,
+        "score2026": 37.75,
+        "scoreWMA": 36.2,
+        "score2027": 36.2
+    },
+    {
+        "id": 20,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Lịch sử",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Lịch sử",
+        "score2024": 24.75,
+        "score2025": 27.0,
+        "score2026": 31.75,
+        "scoreWMA": 28.93,
+        "score2027": 29.21
+    },
+    {
+        "id": 21,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Tin học",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Tin học",
+        "score2024": 34.25,
+        "score2025": 30.5,
+        "score2026": 31.75,
+        "scoreWMA": 31.88,
+        "score2027": 31.56
+    },
+    {
+        "id": 22,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Toán",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Toán",
+        "score2024": 35.75,
+        "score2025": 35.25,
+        "score2026": 35.25,
+        "scoreWMA": 35.35,
+        "score2027": 35.0
+    },
+    {
+        "id": 23,
+        "school": "THPT chuyên Trần Đại Nghĩa",
+        "program": "Ngữ văn",
+        "fullName": "THPT chuyên Trần Đại Nghĩa - Ngữ văn",
+        "score2024": 34.0,
+        "score2025": 35.5,
+        "score2026": 36.0,
+        "scoreWMA": 35.45,
+        "score2027": 35.1
+    },
+    {
+        "id": 24,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Tiếng Anh",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Tiếng Anh",
+        "score2024": 34.05,
+        "score2025": 34.4,
+        "score2026": 32.25,
+        "scoreWMA": 33.26,
+        "score2027": 33.75
+    },
+    {
+        "id": 25,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Địa lí",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Địa lí",
+        "score2024": 31.05,
+        "score2025": 26.0,
+        "score2026": 27.0,
+        "scoreWMA": 27.51,
+        "score2027": 27.79
+    },
+    {
+        "id": 26,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Hóa học",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Hóa học",
+        "score2024": 33.2,
+        "score2025": 34.55,
+        "score2026": 32.75,
+        "scoreWMA": 33.38,
+        "score2027": 33.05
+    },
+    {
+        "id": 27,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Vật lí",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Vật lí",
+        "score2024": 32.8,
+        "score2025": 30.15,
+        "score2026": 28.25,
+        "scoreWMA": 29.73,
+        "score2027": 29.73
+    },
+    {
+        "id": 28,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Tiếng Nhật",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Tiếng Nhật",
+        "score2024": 27.0,
+        "score2025": 27.0,
+        "score2026": 27.0,
+        "scoreWMA": 27.0,
+        "score2027": 27.27
+    },
+    {
+        "id": 29,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Sinh học",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Sinh học",
+        "score2024": 32.6,
+        "score2025": 28.74,
+        "score2026": 31.75,
+        "scoreWMA": 31.02,
+        "score2027": 31.33
+    },
+    {
+        "id": 30,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Lịch sử",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Lịch sử",
+        "score2024": 29.85,
+        "score2025": 24.3,
+        "score2026": 27.0,
+        "scoreWMA": 26.76,
+        "score2027": 27.03
+    },
+    {
+        "id": 31,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Tin học",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Tin học",
+        "score2024": 33.8,
+        "score2025": 29.45,
+        "score2026": 27.0,
+        "scoreWMA": 29.09,
+        "score2027": 29.1
+    },
+    {
+        "id": 32,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Toán",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Toán",
+        "score2024": 34.1,
+        "score2025": 36.45,
+        "score2026": 30.25,
+        "scoreWMA": 32.88,
+        "score2027": 32.55
+    },
+    {
+        "id": 33,
+        "school": "THPT chuyên Hùng Vương – Bình Dương",
+        "program": "Ngữ văn",
+        "fullName": "THPT chuyên Hùng Vương – Bình Dương - Ngữ văn",
+        "score2024": 30.6,
+        "score2025": 31.4,
+        "score2026": 34.75,
+        "scoreWMA": 32.92,
+        "score2027": 33.24
+    },
+    {
+        "id": 34,
+        "school": "THPT chuyên Lê Quý Đôn – Vũng Tàu",
+        "program": "Tiếng Anh",
+        "fullName": "THPT chuyên Lê Quý Đôn – Vũng Tàu - Tiếng Anh",
+        "score2024": 35.2,
+        "score2025": 36.1,
+        "score2026": 33.25,
+        "scoreWMA": 34.49,
+        "score2027": 34.87
+    },
+    {
+        "id": 35,
+        "school": "THPT chuyên Lê Quý Đôn – Vũng Tàu",
+        "program": "Địa lí",
+        "fullName": "THPT chuyên Lê Quý Đôn – Vũng Tàu - Địa lí",
+        "score2024": 27.0,
+        "score2025": 27.0,
+        "score2026": 27.0,
+        "scoreWMA": 27.0,
+        "score2027": 27.27
+    },
+    {
+        "id": 36,
+        "school": "THPT chuyên Lê Quý Đôn – Vũng Tàu",
+        "program": "Hóa học",
+        "fullName": "THPT chuyên Lê Quý Đôn – Vũng Tàu - Hóa học",
+        "score2024": 35.65,
+        "score2025": 33.5,
+        "score2026": 32.5,
+        "scoreWMA": 33.43,
+        "score2027": 33.76
+    },
+    {
+        "id": 37,
+        "school": "THPT chuyên Lê Quý Đôn – Vũng Tàu",
+        "program": "Vật lí",
+        "fullName": "THPT chuyên Lê Quý Đôn – Vũng Tàu - Vật lí",
+        "score2024": 32.02,
+        "score2025": 30.0,
+        "score2026": 28.5,
+        "scoreWMA": 29.65,
+        "score2027": 29.95
+    },
+    {
+        "id": 38,
+        "school": "THPT chuyên Lê Quý Đôn – Vũng Tàu",
+        "program": "Sinh học",
+        "fullName": "THPT chuyên Lê Quý Đôn – Vũng Tàu - Sinh học",
+        "score2024": 36.75,
+        "score2025": 34.25,
+        "score2026": 31.25,
+        "scoreWMA": 33.25,
+        "score2027": 33.25
+    },
+    {
+        "id": 39,
+        "school": "THPT chuyên Lê Quý Đôn – Vũng Tàu",
+        "program": "Lịch sử",
+        "fullName": "THPT chuyên Lê Quý Đôn – Vũng Tàu - Lịch sử",
+        "score2024": 27.0,
+        "score2025": 27.0,
+        "score2026": 27.0,
+        "scoreWMA": 27.0,
+        "score2027": 27.27
+    },
+    {
+        "id": 40,
+        "school": "THPT chuyên Lê Quý Đôn – Vũng Tàu",
+        "program": "Tin học",
+        "fullName": "THPT chuyên Lê Quý Đôn – Vũng Tàu - Tin học",
+        "score2024": 35.5,
+        "score2025": 35.75,
+        "score2026": 27.0,
+        "scoreWMA": 31.33,
+        "score2027": 31.01
+    },
+    {
+        "id": 41,
+        "school": "THPT chuyên Lê Quý Đôn – Vũng Tàu",
+        "program": "Toán",
+        "fullName": "THPT chuyên Lê Quý Đôn – Vũng Tàu - Toán",
+        "score2024": 37.77,
+        "score2025": 38.25,
+        "score2026": 30.5,
+        "scoreWMA": 34.28,
+        "score2027": 33.94
+    },
+    {
+        "id": 42,
+        "school": "THPT chuyên Lê Quý Đôn – Vũng Tàu",
+        "program": "Ngữ văn",
+        "fullName": "THPT chuyên Lê Quý Đôn – Vũng Tàu - Ngữ văn",
+        "score2024": 37.77,
+        "score2025": 36.5,
+        "score2026": 34.25,
+        "scoreWMA": 35.63,
+        "score2027": 35.99
+    }
+],
+  careerCombosRaw: [
+    {
+        "group": "Khối A – tự nhiên, kỹ thuật, kinh tế",
+        "code": "A00",
+        "subjects": "Toán, Vật lí, Hóa học",
+        "majors": "Kỹ thuật, công nghệ, kinh tế, tài chính, xây dựng, y dược một số trường"
+    },
+    {
+        "group": "Khối A – tự nhiên, kỹ thuật, kinh tế",
+        "code": "A01",
+        "subjects": "Toán, Vật lí, Tiếng Anh",
+        "majors": "CNTT, kỹ thuật, kinh tế, logistics, quản trị"
+    },
+    {
+        "group": "Khối A – tự nhiên, kỹ thuật, kinh tế",
+        "code": "A02",
+        "subjects": "Toán, Vật lí, Sinh học",
+        "majors": "Kỹ thuật y sinh, môi trường, nông nghiệp, sinh học"
+    },
+    {
+        "group": "Khối A – tự nhiên, kỹ thuật, kinh tế",
+        "code": "A04",
+        "subjects": "Toán, Vật lí, Địa lí",
+        "majors": "Kỹ thuật, địa lý, quy hoạch, môi trường"
+    },
+    {
+        "group": "Khối A – tự nhiên, kỹ thuật, kinh tế",
+        "code": "A05",
+        "subjects": "Toán, Hóa học, Lịch sử",
+        "majors": "Một số ngành xã hội – tự nhiên giao thoa"
+    },
+    {
+        "group": "Khối A – tự nhiên, kỹ thuật, kinh tế",
+        "code": "A06",
+        "subjects": "Toán, Hóa học, Địa lí",
+        "majors": "Môi trường, nông nghiệp, địa lý, tài nguyên"
+    },
+    {
+        "group": "Khối B – y sinh, sức khỏe, nông nghiệp",
+        "code": "B00",
+        "subjects": "Toán, Hóa học, Sinh học",
+        "majors": "Y, dược, điều dưỡng, xét nghiệm, công nghệ sinh học"
+    },
+    {
+        "group": "Khối B – y sinh, sức khỏe, nông nghiệp",
+        "code": "B08",
+        "subjects": "Toán, Sinh học, Tiếng Anh",
+        "majors": "Y sinh, công nghệ sinh học, điều dưỡng, môi trường"
+    },
+    {
+        "group": "Khối B – y sinh, sức khỏe, nông nghiệp",
+        "code": "B02",
+        "subjects": "Toán, Sinh học, Địa lí",
+        "majors": "Môi trường, nông nghiệp, tài nguyên"
+    },
+    {
+        "group": "Khối B – y sinh, sức khỏe, nông nghiệp",
+        "code": "B04/X13",
+        "subjects": "Toán, Sinh học, GDKT&PL",
+        "majors": "Một số ngành sức khỏe, sinh học, giáo dục, xã hội ứng dụng"
+    },
+    {
+        "group": "Khối C – xã hội, luật, sư phạm, báo chí",
+        "code": "C00",
+        "subjects": "Ngữ văn, Lịch sử, Địa lí",
+        "majors": "Luật, báo chí, sư phạm, xã hội học, quản lý nhà nước"
+    },
+    {
+        "group": "Khối C – xã hội, luật, sư phạm, báo chí",
+        "code": "C01",
+        "subjects": "Ngữ văn, Toán, Vật lí",
+        "majors": "Kỹ thuật, quản lý, kinh tế ở một số trường"
+    },
+    {
+        "group": "Khối C – xã hội, luật, sư phạm, báo chí",
+        "code": "C02",
+        "subjects": "Ngữ văn, Toán, Hóa học",
+        "majors": "Sức khỏe, môi trường, công nghệ thực phẩm, kinh tế"
+    },
+    {
+        "group": "Khối C – xã hội, luật, sư phạm, báo chí",
+        "code": "C03",
+        "subjects": "Ngữ văn, Toán, Lịch sử",
+        "majors": "Luật, quản lý nhà nước, hành chính, xã hội"
+    },
+    {
+        "group": "Khối C – xã hội, luật, sư phạm, báo chí",
+        "code": "C04",
+        "subjects": "Ngữ văn, Toán, Địa lí",
+        "majors": "Kinh tế, quản trị, du lịch, luật, truyền thông"
+    },
+    {
+        "group": "Khối C – xã hội, luật, sư phạm, báo chí",
+        "code": "C14",
+        "subjects": "Ngữ văn, Toán, GDKT&PL",
+        "majors": "Luật, quản lý nhà nước, kinh tế, hành chính"
+    },
+    {
+        "group": "Khối D – ngoại ngữ, kinh tế, xã hội, truyền thông",
+        "code": "D01",
+        "subjects": "Toán, Ngữ văn, Tiếng Anh",
+        "majors": "Rất rộng: kinh tế, luật, ngôn ngữ, truyền thông, quản trị"
+    },
+    {
+        "group": "Khối D – ngoại ngữ, kinh tế, xã hội, truyền thông",
+        "code": "D07",
+        "subjects": "Toán, Hóa học, Tiếng Anh",
+        "majors": "Y dược, kỹ thuật hóa, công nghệ thực phẩm, kinh tế"
+    },
+    {
+        "group": "Khối D – ngoại ngữ, kinh tế, xã hội, truyền thông",
+        "code": "D08",
+        "subjects": "Toán, Sinh học, Tiếng Anh",
+        "majors": "Y sinh, môi trường, sinh học, nông nghiệp"
+    },
+    {
+        "group": "Khối D – ngoại ngữ, kinh tế, xã hội, truyền thông",
+        "code": "D09",
+        "subjects": "Toán, Lịch sử, Tiếng Anh",
+        "majors": "Luật, xã hội, quan hệ quốc tế, truyền thông"
+    },
+    {
+        "group": "Khối D – ngoại ngữ, kinh tế, xã hội, truyền thông",
+        "code": "D10",
+        "subjects": "Toán, Địa lí, Tiếng Anh",
+        "majors": "Du lịch, logistics, kinh tế, địa lý, quản trị"
+    },
+    {
+        "group": "Khối D – ngoại ngữ, kinh tế, xã hội, truyền thông",
+        "code": "D14",
+        "subjects": "Ngữ văn, Lịch sử, Tiếng Anh",
+        "majors": "Báo chí, luật, sư phạm, quan hệ quốc tế"
+    },
+    {
+        "group": "Khối D – ngoại ngữ, kinh tế, xã hội, truyền thông",
+        "code": "D15",
+        "subjects": "Ngữ văn, Địa lí, Tiếng Anh",
+        "majors": "Du lịch, truyền thông, xã hội, ngôn ngữ"
+    },
+    {
+        "group": "Khối D – ngoại ngữ, kinh tế, xã hội, truyền thông",
+        "code": "D03, D04, D05, D06",
+        "subjects": "Văn, Toán, Pháp/Trung/Đức/Nhật",
+        "majors": "Nhóm ngành ngôn ngữ, quốc tế học, du lịch"
+    },
+    {
+        "group": "Khối K/X mới – Tin học, Công nghệ, GDKT&PL",
+        "code": "X26/K01",
+        "subjects": "Toán, Tiếng Anh, Tin học",
+        "majors": "CNTT, khoa học dữ liệu, AI, thương mại điện tử"
+    },
+    {
+        "group": "Khối K/X mới – Tin học, Công nghệ, GDKT&PL",
+        "code": "X25",
+        "subjects": "Toán, Tiếng Anh, GDKT&PL",
+        "majors": "Kinh tế, luật, quản trị, tài chính"
+    },
+    {
+        "group": "Khối K/X mới – Tin học, Công nghệ, GDKT&PL",
+        "code": "X21",
+        "subjects": "Toán, Địa lí, GDKT&PL",
+        "majors": "Kinh tế, luật, du lịch, quản lý nhà nước"
+    },
+    {
+        "group": "Khối K/X mới – Tin học, Công nghệ, GDKT&PL",
+        "code": "X05/A10",
+        "subjects": "Toán, Vật lí, GDKT&PL",
+        "majors": "Kỹ thuật – quản lý, kinh tế kỹ thuật"
+    },
+    {
+        "group": "Khối K/X mới – Tin học, Công nghệ, GDKT&PL",
+        "code": "X09/A11",
+        "subjects": "Toán, Hóa học, GDKT&PL",
+        "majors": "Kinh tế, công nghệ thực phẩm, môi trường"
+    },
+    {
+        "group": "Khối K/X mới – Tin học, Công nghệ, GDKT&PL",
+        "code": "X22",
+        "subjects": "Toán, Địa lí, Tin học",
+        "majors": "Logistics, địa lý, du lịch số, kinh tế số"
+    },
+    {
+        "group": "Khối K/X mới – Tin học, Công nghệ, GDKT&PL",
+        "code": "X23/X24",
+        "subjects": "Toán, Địa lí, Công nghệ",
+        "majors": "Công nghệ, nông nghiệp, quy hoạch, tài nguyên"
+    },
+    {
+        "group": "Khối V/H – kiến trúc, mỹ thuật, thiết kế",
+        "code": "V00",
+        "subjects": "Toán, Vật lí, Vẽ mỹ thuật",
+        "majors": "Kiến trúc, quy hoạch, thiết kế nội thất"
+    },
+    {
+        "group": "Khối V/H – kiến trúc, mỹ thuật, thiết kế",
+        "code": "V01",
+        "subjects": "Toán, Ngữ văn, Vẽ mỹ thuật",
+        "majors": "Kiến trúc, mỹ thuật ứng dụng"
+    },
+    {
+        "group": "Khối V/H – kiến trúc, mỹ thuật, thiết kế",
+        "code": "V02",
+        "subjects": "Toán, Tiếng Anh, Vẽ mỹ thuật",
+        "majors": "Kiến trúc, thiết kế, quy hoạch"
+    },
+    {
+        "group": "Khối V/H – kiến trúc, mỹ thuật, thiết kế",
+        "code": "H00",
+        "subjects": "Ngữ văn, Năng khiếu vẽ 1, Năng khiếu vẽ 2",
+        "majors": "Mỹ thuật, thiết kế đồ họa, thời trang"
+    },
+    {
+        "group": "Khối V/H – kiến trúc, mỹ thuật, thiết kế",
+        "code": "H01",
+        "subjects": "Toán, Ngữ văn, Vẽ mỹ thuật",
+        "majors": "Thiết kế, mỹ thuật ứng dụng"
+    },
+    {
+        "group": "Khối V/H – kiến trúc, mỹ thuật, thiết kế",
+        "code": "H06",
+        "subjects": "Ngữ văn, Tiếng Anh, Vẽ mỹ thuật",
+        "majors": "Thiết kế, truyền thông thị giác"
+    },
+    {
+        "group": "Khối M/N/S/T – năng khiếu",
+        "code": "M00",
+        "subjects": "Ngữ văn, Toán, Đọc diễn cảm/Hát",
+        "majors": "Giáo dục mầm non"
+    },
+    {
+        "group": "Khối M/N/S/T – năng khiếu",
+        "code": "M01, M09",
+        "subjects": "Văn/Toán + năng khiếu",
+        "majors": "Giáo dục mầm non, giáo dục tiểu học một số trường"
+    },
+    {
+        "group": "Khối M/N/S/T – năng khiếu",
+        "code": "N00, N01",
+        "subjects": "Ngữ văn + năng khiếu âm nhạc",
+        "majors": "Âm nhạc, sư phạm âm nhạc"
+    },
+    {
+        "group": "Khối M/N/S/T – năng khiếu",
+        "code": "S00",
+        "subjects": "Ngữ văn + năng khiếu sân khấu/điện ảnh",
+        "majors": "Sân khấu, điện ảnh, diễn viên, đạo diễn"
+    },
+    {
+        "group": "Khối M/N/S/T – năng khiếu",
+        "code": "T00, T01, T03, T04",
+        "subjects": "Toán/Văn/Sinh/Lý + năng khiếu TDTT",
+        "majors": "Giáo dục thể chất, huấn luyện thể thao"
+    }
+],
+  subjectList: [
+    "Vật lí",
+    "Hóa học",
+    "Sinh học",
+    "Địa lí",
+    "GDKT&PL",
+    "Tin học",
+    "Công nghệ",
+    "Mĩ thuật",
+    "Âm nhạc",
+    "Lịch sử"
+],
   combos: [
-    {name: 'Tổ hợp 1: Tự Nhiên & Công Nghệ', subjects: ['Vật lí', 'Hóa học', 'Tin học', 'Công nghệ'], blocks: ['A00', 'A01', 'X26']},
-    {name: 'Tổ hợp 2: Y Sinh & Môi Trường', subjects: ['Hóa học', 'Sinh học', 'Vật lí', 'Tin học'], blocks: ['B00', 'A00', 'D07']},
-    {name: 'Tổ hợp 3: Kinh Tế - Số & Logistics', subjects: ['Vật lí', 'Tin học', 'GDKT&PL', 'Địa lí'], blocks: ['A01', 'D01', 'D10', 'X25']},
-    {name: 'Tổ hợp 4: Xã Hội & Truyền Thông', subjects: ['GDKT&PL', 'Địa lí', 'Tin học', 'Mĩ thuật'], blocks: ['C00', 'D01', 'D14', 'D15']},
-    {name: 'Tổ hợp 5: Thiết Kế & Mỹ Thuật', subjects: ['Mĩ thuật', 'Tin học', 'Công nghệ', 'Vật lí'], blocks: ['V00', 'V01', 'H00', 'H01']}
+    {
+        "id": "A00",
+        "name": "Tổ hợp A00: Tự nhiên truyền thống",
+        "subjects": [
+            "Vật lí",
+            "Hóa học"
+        ],
+        "blocks": [
+            "A00",
+            "A01",
+            "X26"
+        ],
+        "majors": "Kỹ thuật, công nghệ, kinh tế, tài chính, xây dựng, y dược"
+    },
+    {
+        "id": "A01",
+        "name": "Tổ hợp A01: Kỹ thuật - Công nghệ - Ngoại ngữ",
+        "subjects": [
+            "Vật lí",
+            "Tin học"
+        ],
+        "blocks": [
+            "A01",
+            "D01",
+            "X26"
+        ],
+        "majors": "CNTT, AI, Khoa học dữ liệu, Kỹ thuật, Logistics, Quản trị"
+    },
+    {
+        "id": "B00",
+        "name": "Tổ hợp B00: Y Dược & Sinh hóa",
+        "subjects": [
+            "Hóa học",
+            "Sinh học"
+        ],
+        "blocks": [
+            "B00",
+            "B08",
+            "D07"
+        ],
+        "majors": "Y khoa, Dược, Điều dưỡng, Công nghệ sinh học, Môi trường"
+    },
+    {
+        "id": "C00",
+        "name": "Tổ hợp C00: Xã hội & Nhân văn",
+        "subjects": [
+            "Lịch sử",
+            "Địa lí"
+        ],
+        "blocks": [
+            "C00",
+            "C03",
+            "C14"
+        ],
+        "majors": "Luật, Báo chí, Truyền thông, Sư phạm, Quản lý nhà nước"
+    },
+    {
+        "id": "D01",
+        "name": "Tổ hợp D01: Kinh tế - Quản trị - Ngôn ngữ",
+        "subjects": [
+            "Địa lí",
+            "GDKT&PL"
+        ],
+        "blocks": [
+            "D01",
+            "D10",
+            "X25"
+        ],
+        "majors": "Kinh tế, Tài chính, Marketing, Ngoại ngữ, Quan hệ quốc tế"
+    },
+    {
+        "id": "X26",
+        "name": "Tổ hợp Công nghệ mới (X26/K01): CNTT & AI",
+        "subjects": [
+            "Tin học",
+            "Công nghệ"
+        ],
+        "blocks": [
+            "X26",
+            "A01",
+            "K01"
+        ],
+        "majors": "Khoa học máy tính, AI, Kỹ thuật phần mềm, Thương mại điện tử"
+    },
+    {
+        "id": "V00",
+        "name": "Tổ hợp V00/H00: Thiết kế & Nghệ thuật",
+        "subjects": [
+            "Mĩ thuật",
+            "Tin học"
+        ],
+        "blocks": [
+            "V00",
+            "V01",
+            "H00",
+            "H01"
+        ],
+        "majors": "Kiến trúc, Thiết kế đồ họa, Nội thất, Mỹ thuật ứng dụng"
+    }
+],
+  careers: [
+    {
+      id: 'cntt',
+      name: 'CNTT, AI, Khoa học dữ liệu, Kỹ thuật số',
+      priorityCombos: ['A00', 'A01', 'X26/K01'],
+      recommended: ['Tin học', 'Vật lí', 'Công nghệ', 'Toán']
+    },
+    {
+      id: 'kinhte',
+      name: 'Kinh tế, Tài chính - Ngân hàng, Quản trị, Logistics',
+      priorityCombos: ['A01', 'D01', 'X25', 'D10'],
+      recommended: ['GDKT&PL', 'Tin học', 'Địa lí', 'Vật lí']
+    },
+    {
+      id: 'yduoc',
+      name: 'Y khoa, Dược, Điều dưỡng, Công nghệ sinh học',
+      priorityCombos: ['B00', 'B08', 'D07'],
+      recommended: ['Hóa học', 'Sinh học', 'Vật lí', 'Tin học']
+    },
+    {
+      id: 'luat',
+      name: 'Luật, Quản lý nhà nước, Báo chí, Xã hội học',
+      priorityCombos: ['C00', 'C14', 'D01', 'D14'],
+      recommended: ['GDKT&PL', 'Địa lí', 'Lịch sử', 'Tin học']
+    },
+    {
+      id: 'kientruc',
+      name: 'Kiến trúc, Mỹ thuật, Thiết kế đồ họa, Truyền thông thị giác',
+      priorityCombos: ['V00', 'V01', 'H00', 'H01'],
+      recommended: ['Mĩ thuật', 'Tin học', 'Vật lí', 'Công nghệ']
+    }
   ]
 };

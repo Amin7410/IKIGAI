@@ -6,7 +6,9 @@
     "score2024": 21.0,
     "score2025": 20.25,
     "score2026": 21.75,
-    "score2027": 21.15
+    "scoreWMA": 21.15,
+    "score2027": 21.88,
+    "quota": 900
   },
   {
     "id": 2,
@@ -15,7 +17,9 @@
     "score2024": 22.25,
     "score2025": 22.25,
     "score2026": 24.25,
-    "score2027": 23.25
+    "scoreWMA": 23.25,
+    "score2027": 24.49,
+    "quota": 630
   },
   {
     "id": 3,
@@ -24,7 +28,9 @@
     "score2024": 18.25,
     "score2025": 18.0,
     "score2026": 20.5,
-    "score2027": 19.3
+    "scoreWMA": 19.3,
+    "score2027": 20.35,
+    "quota": 585
   },
   {
     "id": 4,
@@ -33,7 +39,9 @@
     "score2024": 13.0,
     "score2025": 11.75,
     "score2026": 14.0,
-    "score2027": 13.12
+    "scoreWMA": 13.12,
+    "score2027": 13.56,
+    "quota": 280
   },
   {
     "id": 5,
@@ -42,7 +50,9 @@
     "score2024": 20.0,
     "score2025": 24.5,
     "score2026": 24.0,
-    "score2027": 23.35
+    "scoreWMA": 23.35,
+    "score2027": 24.19,
+    "quota": 360
   },
   {
     "id": 6,
@@ -51,7 +61,9 @@
     "score2024": 20.5,
     "score2025": 20.75,
     "score2026": 22.75,
-    "score2027": 21.7
+    "scoreWMA": 21.7,
+    "score2027": 23.49,
+    "quota": 225
   },
   {
     "id": 7,
@@ -60,7 +72,9 @@
     "score2024": 16.75,
     "score2025": 17.5,
     "score2026": 18.75,
-    "score2027": 17.98
+    "scoreWMA": 17.98,
+    "score2027": 18.72,
+    "quota": 675
   },
   {
     "id": 8,
@@ -69,7 +83,9 @@
     "score2024": 14.0,
     "score2025": 12.5,
     "score2026": 14.25,
-    "score2027": 13.68
+    "scoreWMA": 13.68,
+    "score2027": 14.1,
+    "quota": 810
   },
   {
     "id": 9,
@@ -78,7 +94,9 @@
     "score2024": 22.5,
     "score2025": 22.25,
     "score2026": 23.75,
-    "score2027": 23.05
+    "scoreWMA": 23.05,
+    "score2027": 24.04,
+    "quota": 560
   },
   {
     "id": 10,
@@ -87,7 +105,9 @@
     "score2024": 23.25,
     "score2025": 23.75,
     "score2026": 24.5,
-    "score2027": 24.02
+    "scoreWMA": 24.02,
+    "score2027": 25.02,
+    "quota": 810
   },
   {
     "id": 11,
@@ -96,7 +116,9 @@
     "score2024": 14.75,
     "score2025": 12.0,
     "score2026": 14.25,
-    "score2027": 13.68
+    "scoreWMA": 13.68,
+    "score2027": 14.09,
+    "quota": 495
   },
   {
     "id": 12,
@@ -105,7 +127,9 @@
     "score2024": 19.75,
     "score2025": 19.5,
     "score2026": 22.25,
-    "score2027": 20.93
+    "scoreWMA": 20.93,
+    "score2027": 22.23,
+    "quota": 1000
   },
   {
     "id": 13,
@@ -114,7 +138,9 @@
     "score2024": 15.25,
     "score2025": 10.5,
     "score2026": 15.75,
-    "score2027": 14.08
+    "scoreWMA": 14.08,
+    "score2027": 14.67,
+    "quota": 765
   },
   {
     "id": 14,
@@ -123,1383 +149,1724 @@
     "score2024": 13.75,
     "score2025": 11.25,
     "score2026": 15.25,
-    "score2027": 13.75
+    "scoreWMA": 13.75,
+    "score2027": 14.37,
+    "quota": 675
   },
   {
     "id": 15,
+    "name": "Trung học thực hành Sài Gòn",
+    "district": "TP.HCM cũ",
+    "score2024": 21.0,
+    "score2025": 21.5,
+    "score2026": 23.5,
+    "scoreWMA": 22.4,
+    "score2027": 23.6,
+    "quota": 175
+  },
+  {
+    "id": 16,
     "name": "THPT Nguyễn Hữu Thọ",
     "district": "TP.HCM cũ",
     "score2024": 16.0,
     "score2025": 14.0,
     "score2026": 18.25,
-    "score2027": 16.52
+    "scoreWMA": 16.52,
+    "score2027": 17.58,
+    "quota": 765
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "THPT Hùng Vương",
     "district": "TP.HCM cũ",
     "score2024": 18.25,
     "score2025": 17.75,
     "score2026": 21.0,
-    "score2027": 19.48
+    "scoreWMA": 19.48,
+    "score2027": 20.61,
+    "quota": 1035
   },
   {
-    "id": 17,
+    "id": 18,
     "name": "Trung học thực hành Sư phạm",
     "district": "TP.HCM cũ",
     "score2024": 23.0,
     "score2025": 23.0,
     "score2026": 24.5,
-    "score2027": 23.75
+    "scoreWMA": 23.75,
+    "score2027": 24.96,
+    "quota": 280
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "THPT Trần Khai Nguyên",
     "district": "TP.HCM cũ",
     "score2024": 19.75,
     "score2025": 21.0,
     "score2026": 23.0,
-    "score2027": 21.75
+    "scoreWMA": 21.75,
+    "score2027": 23.08,
+    "quota": 720
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "THPT Trần Hữu Trang",
     "district": "TP.HCM cũ",
     "score2024": 13.75,
     "score2025": 12.5,
     "score2026": 14.0,
-    "score2027": 13.5
+    "scoreWMA": 13.5,
+    "score2027": 13.89,
+    "quota": 540
   },
   {
-    "id": 20,
+    "id": 21,
     "name": "THPT Mạc Đĩnh Chi",
     "district": "TP.HCM cũ",
     "score2024": 22.5,
     "score2025": 22.25,
     "score2026": 24.25,
-    "score2027": 23.3
+    "scoreWMA": 23.3,
+    "score2027": 24.39,
+    "quota": 990
   },
   {
-    "id": 21,
+    "id": 22,
     "name": "THPT Bình Phú",
     "district": "TP.HCM cũ",
     "score2024": 19.5,
     "score2025": 20.25,
     "score2026": 22.5,
-    "score2027": 21.23
+    "scoreWMA": 21.23,
+    "score2027": 22.44,
+    "quota": 720
   },
   {
-    "id": 22,
+    "id": 23,
     "name": "THPT Nguyễn Tất Thành",
     "district": "TP.HCM cũ",
     "score2024": 17.0,
     "score2025": 16.75,
     "score2026": 19.75,
-    "score2027": 18.3
+    "scoreWMA": 18.3,
+    "score2027": 19.28,
+    "quota": 855
   },
   {
-    "id": 23,
+    "id": 24,
     "name": "THPT Phạm Phú Thứ",
     "district": "TP.HCM cũ",
     "score2024": 14.75,
     "score2025": 14.25,
     "score2026": 17.0,
-    "score2027": 15.72
+    "scoreWMA": 15.72,
+    "score2027": 16.46,
+    "quota": 675
   },
   {
-    "id": 24,
+    "id": 25,
     "name": "THPT Lê Thánh Tôn",
     "district": "TP.HCM cũ",
     "score2024": 17.25,
     "score2025": 17.25,
     "score2026": 20.0,
-    "score2027": 18.62
+    "scoreWMA": 18.62,
+    "score2027": 19.72,
+    "quota": 585
   },
   {
-    "id": 25,
+    "id": 26,
     "name": "THPT Tân Phong",
     "district": "TP.HCM cũ",
     "score2024": 14.0,
     "score2025": 13.75,
     "score2026": 15.75,
-    "score2027": 14.8
+    "scoreWMA": 14.8,
+    "score2027": 15.41,
+    "quota": 765
   },
   {
-    "id": 26,
+    "id": 27,
     "name": "THPT Ngô Quyền",
     "district": "TP.HCM cũ",
     "score2024": 18.75,
     "score2025": 20.0,
     "score2026": 21.25,
-    "score2027": 20.38
+    "scoreWMA": 20.38,
+    "score2027": 21.3,
+    "quota": 765
   },
   {
-    "id": 27,
+    "id": 28,
     "name": "THPT Nam Sài Gòn",
     "district": "TP.HCM cũ",
     "score2024": 20.25,
     "score2025": 20.25,
     "score2026": 22.25,
-    "score2027": 21.25
+    "scoreWMA": 21.25,
+    "score2027": 22.55,
+    "quota": 225
   },
   {
-    "id": 28,
+    "id": 29,
     "name": "THPT Lương Văn Can",
     "district": "TP.HCM cũ",
     "score2024": 13.5,
     "score2025": 12.25,
     "score2026": 15.75,
-    "score2027": 14.25
+    "scoreWMA": 14.25,
+    "score2027": 15.0,
+    "quota": 675
   },
   {
-    "id": 29,
+    "id": 30,
     "name": "THPT Ngô Gia Tự",
     "district": "TP.HCM cũ",
     "score2024": 14.0,
     "score2025": 10.5,
     "score2026": 13.25,
-    "score2027": 12.58
+    "scoreWMA": 12.58,
+    "score2027": 13.16,
+    "quota": 765
   },
   {
-    "id": 30,
+    "id": 31,
     "name": "THPT Tạ Quang Bửu",
     "district": "TP.HCM cũ",
     "score2024": 15.25,
     "score2025": 15.0,
     "score2026": 18.0,
-    "score2027": 16.55
+    "scoreWMA": 16.55,
+    "score2027": 17.45,
+    "quota": 720
   },
   {
-    "id": 31,
+    "id": 32,
     "name": "THPT Nguyễn Văn Linh",
     "district": "TP.HCM cũ",
     "score2024": 11.25,
     "score2025": 10.5,
     "score2026": 11.75,
-    "score2027": 11.28
+    "scoreWMA": 11.28,
+    "score2027": 11.55,
+    "quota": 675
   },
   {
-    "id": 32,
+    "id": 33,
     "name": "THPT Võ Văn Kiệt",
     "district": "TP.HCM cũ",
     "score2024": 16.5,
     "score2025": 15.0,
     "score2026": 18.0,
-    "score2027": 16.8
+    "scoreWMA": 16.8,
+    "score2027": 17.65,
+    "quota": 720
   },
   {
-    "id": 33,
+    "id": 34,
+    "name": "Phổ thông NK TDTT Nguyễn Thị Định",
+    "district": "TP.HCM cũ",
+    "score2024": 13.0,
+    "score2025": 12.5,
+    "score2026": 14.5,
+    "scoreWMA": 13.6,
+    "score2027": 14.16,
+    "quota": 360
+  },
+  {
+    "id": 35,
     "name": "THPT Nguyễn Huệ",
     "district": "TP.HCM cũ",
     "score2024": 15.25,
     "score2025": 15.0,
     "score2026": 18.5,
-    "score2027": 16.8
+    "scoreWMA": 16.8,
+    "score2027": 17.96,
+    "quota": 675
   },
   {
-    "id": 34,
+    "id": 36,
     "name": "THPT Phước Long",
     "district": "TP.HCM cũ",
     "score2024": 16.25,
     "score2025": 16.25,
     "score2026": 19.25,
-    "score2027": 17.75
+    "scoreWMA": 17.75,
+    "score2027": 18.89,
+    "quota": 675
   },
   {
-    "id": 35,
+    "id": 37,
     "name": "THPT Long Trường",
     "district": "TP.HCM cũ",
     "score2024": 12.0,
     "score2025": 10.5,
     "score2026": 12.5,
-    "score2027": 11.8
+    "scoreWMA": 11.8,
+    "score2027": 12.3,
+    "quota": 720
   },
   {
-    "id": 36,
+    "id": 38,
     "name": "THPT Nguyễn Văn Tăng",
     "district": "TP.HCM cũ",
     "score2024": 11.0,
     "score2025": 10.5,
     "score2026": 12.0,
-    "score2027": 11.35
+    "scoreWMA": 11.35,
+    "score2027": 11.63,
+    "quota": 1125
   },
   {
-    "id": 37,
+    "id": 39,
     "name": "THPT Dương Văn Thì",
     "district": "TP.HCM cũ",
     "score2024": 14.75,
     "score2025": 13.5,
     "score2026": 16.5,
-    "score2027": 15.25
+    "scoreWMA": 15.25,
+    "score2027": 16.08,
+    "quota": 765
   },
   {
-    "id": 38,
+    "id": 40,
     "name": "THPT Nguyễn Khuyến",
     "district": "TP.HCM cũ",
     "score2024": 18.25,
     "score2025": 18.75,
     "score2026": 20.75,
-    "score2027": 19.65
+    "scoreWMA": 19.65,
+    "score2027": 20.4,
+    "quota": 855
   },
   {
-    "id": 39,
+    "id": 41,
     "name": "THPT Nguyễn Du",
     "district": "TP.HCM cũ",
     "score2024": 19.5,
     "score2025": 18.75,
     "score2026": 21.75,
-    "score2027": 20.4
+    "scoreWMA": 20.4,
+    "score2027": 21.82,
+    "quota": 595
   },
   {
-    "id": 40,
+    "id": 42,
     "name": "THPT Nguyễn An Ninh",
     "district": "TP.HCM cũ",
     "score2024": 15.25,
     "score2025": 13.75,
     "score2026": 16.25,
-    "score2027": 15.3
+    "scoreWMA": 15.3,
+    "score2027": 16.02,
+    "quota": 900
   },
   {
-    "id": 41,
+    "id": 43,
     "name": "THPT Diên Hồng",
     "district": "TP.HCM cũ",
     "score2024": 15.0,
     "score2025": 11.75,
     "score2026": 15.0,
-    "score2027": 14.03
+    "scoreWMA": 14.03,
+    "score2027": 15.25,
+    "quota": 450
   },
   {
-    "id": 42,
+    "id": 44,
     "name": "THPT Sương Nguyệt Anh",
     "district": "TP.HCM cũ",
     "score2024": 14.25,
     "score2025": 11.25,
     "score2026": 13.5,
-    "score2027": 12.97
+    "scoreWMA": 12.97,
+    "score2027": 13.25,
+    "quota": 450
   },
   {
-    "id": 43,
+    "id": 45,
     "name": "THPT Nguyễn Hiền",
     "district": "TP.HCM cũ",
     "score2024": 19.75,
     "score2025": 16.25,
     "score2026": 19.75,
-    "score2027": 18.7
+    "scoreWMA": 18.7,
+    "score2027": 19.8,
+    "quota": 595
   },
   {
-    "id": 44,
+    "id": 46,
     "name": "THPT Trần Quang Khải",
     "district": "TP.HCM cũ",
     "score2024": 16.75,
     "score2025": 16.0,
     "score2026": 17.75,
-    "score2027": 17.03
+    "scoreWMA": 17.03,
+    "score2027": 17.78,
+    "quota": 990
   },
   {
-    "id": 45,
+    "id": 47,
     "name": "THPT Nam Kỳ Khởi Nghĩa",
     "district": "TP.HCM cũ",
     "score2024": 15.5,
     "score2025": 13.75,
     "score2026": 16.5,
-    "score2027": 15.47
+    "scoreWMA": 15.47,
+    "score2027": 16.31,
+    "quota": 765
   },
   {
-    "id": 46,
+    "id": 48,
     "name": "THPT Võ Trường Toản",
     "district": "TP.HCM cũ",
     "score2024": 20.75,
     "score2025": 21.5,
     "score2026": 22.5,
-    "score2027": 21.85
+    "scoreWMA": 21.85,
+    "score2027": 22.75,
+    "quota": 765
   },
   {
-    "id": 47,
+    "id": 49,
     "name": "THPT Trường Chinh",
     "district": "TP.HCM cũ",
     "score2024": 18.0,
     "score2025": 17.25,
     "score2026": 19.25,
-    "score2027": 18.4
-  },
-  {
-    "id": 48,
-    "name": "THPT Phan Văn Hớn",
-    "district": "TP.HCM cũ",
-    "score2024": 0.0,
-    "score2025": 0.0,
-    "score2026": 16.0,
-    "score2027": 16.0
-  },
-  {
-    "id": 49,
-    "name": "TH, THCS và THPT Lê Thị Riêng",
-    "district": "TP.HCM cũ",
-    "score2024": 0.0,
-    "score2025": 0.0,
-    "score2026": 16.25,
-    "score2027": 16.25
+    "scoreWMA": 18.4,
+    "score2027": 19.55,
+    "quota": 900
   },
   {
     "id": 50,
+    "name": "THPT Phan Văn Hớn",
+    "district": "TP.HCM cũ",
+    "score2024": 16.0,
+    "score2025": 16.0,
+    "score2026": 16.0,
+    "scoreWMA": 16.0,
+    "score2027": 16.72,
+    "quota": 810
+  },
+  {
+    "id": 51,
+    "name": "TH, THCS và THPT Lê Thị Riêng",
+    "district": "TP.HCM cũ",
+    "score2024": 16.25,
+    "score2025": 16.25,
+    "score2026": 16.25,
+    "scoreWMA": 16.25,
+    "score2027": 16.94,
+    "quota": 450
+  },
+  {
+    "id": 52,
     "name": "THPT Thạnh Lộc",
     "district": "TP.HCM cũ",
     "score2024": 16.25,
     "score2025": 15.5,
     "score2026": 17.5,
-    "score2027": 16.65
+    "scoreWMA": 16.65,
+    "score2027": 17.64,
+    "quota": 810
   },
   {
-    "id": 51,
+    "id": 53,
     "name": "THPT Thanh Đa",
     "district": "TP.HCM cũ",
     "score2024": 15.0,
     "score2025": 13.75,
     "score2026": 16.25,
-    "score2027": 15.25
+    "scoreWMA": 15.25,
+    "score2027": 15.81,
+    "quota": 720
   },
   {
-    "id": 52,
+    "id": 54,
     "name": "THPT Võ Thị Sáu",
     "district": "TP.HCM cũ",
     "score2024": 19.5,
     "score2025": 17.75,
     "score2026": 21.0,
-    "score2027": 19.73
+    "scoreWMA": 19.73,
+    "score2027": 20.94,
+    "quota": 855
   },
   {
-    "id": 53,
+    "id": 55,
     "name": "THPT Gia Định",
     "district": "TP.HCM cũ",
     "score2024": 23.0,
     "score2025": 18.75,
     "score2026": 23.5,
-    "score2027": 21.98
+    "scoreWMA": 21.98,
+    "score2027": 24.02,
+    "quota": 855
   },
   {
-    "id": 54,
+    "id": 56,
     "name": "THPT Phan Đăng Lưu",
     "district": "TP.HCM cũ",
     "score2024": 16.0,
     "score2025": 13.5,
     "score2026": 17.5,
-    "score2027": 16.0
+    "scoreWMA": 16.0,
+    "score2027": 16.78,
+    "quota": 810
   },
   {
-    "id": 55,
+    "id": 57,
     "name": "THPT Trần Văn Giàu",
     "district": "TP.HCM cũ",
     "score2024": 17.25,
     "score2025": 14.75,
     "score2026": 18.0,
-    "score2027": 16.88
+    "scoreWMA": 16.88,
+    "score2027": 17.62,
+    "quota": 900
   },
   {
-    "id": 56,
+    "id": 58,
     "name": "THPT Hoàng Hoa Thám",
     "district": "TP.HCM cũ",
     "score2024": 18.25,
     "score2025": 16.75,
     "score2026": 20.75,
-    "score2027": 19.05
+    "scoreWMA": 19.05,
+    "score2027": 20.38,
+    "quota": 855
   },
   {
-    "id": 57,
+    "id": 59,
     "name": "THPT Gò Vấp",
     "district": "TP.HCM cũ",
     "score2024": 16.5,
     "score2025": 15.75,
     "score2026": 18.0,
-    "score2027": 17.02
+    "scoreWMA": 17.02,
+    "score2027": 18.08,
+    "quota": 675
   },
   {
-    "id": 58,
+    "id": 60,
     "name": "THPT Nguyễn Công Trứ",
     "district": "TP.HCM cũ",
     "score2024": 20.25,
     "score2025": 20.0,
     "score2026": 22.0,
-    "score2027": 21.05
+    "scoreWMA": 21.05,
+    "score2027": 22.42,
+    "quota": 855
   },
   {
-    "id": 59,
+    "id": 61,
     "name": "THPT Trần Hưng Đạo",
     "district": "TP.HCM cũ",
     "score2024": 19.75,
     "score2025": 20.25,
     "score2026": 22.25,
-    "score2027": 21.15
+    "scoreWMA": 21.15,
+    "score2027": 22.14,
+    "quota": 990
   },
   {
-    "id": 60,
+    "id": 62,
     "name": "THPT Nguyễn Trung Trực",
     "district": "TP.HCM cũ",
     "score2024": 17.25,
     "score2025": 17.25,
     "score2026": 19.75,
-    "score2027": 18.5
+    "scoreWMA": 18.5,
+    "score2027": 19.51,
+    "quota": 900
   },
   {
-    "id": 61,
+    "id": 63,
     "name": "THPT Phú Nhuận",
     "district": "TP.HCM cũ",
     "score2024": 22.5,
     "score2025": 22.5,
     "score2026": 24.0,
-    "score2027": 23.25
+    "scoreWMA": 23.25,
+    "score2027": 24.29,
+    "quota": 855
   },
   {
-    "id": 62,
+    "id": 64,
     "name": "THPT Hàn Thuyên",
     "district": "TP.HCM cũ",
     "score2024": 15.25,
     "score2025": 13.5,
     "score2026": 16.25,
-    "score2027": 15.23
+    "scoreWMA": 15.23,
+    "score2027": 16.04,
+    "quota": 765
   },
   {
-    "id": 63,
+    "id": 65,
     "name": "THPT Tân Bình",
     "district": "TP.HCM cũ",
     "score2024": 19.5,
     "score2025": 19.75,
     "score2026": 21.5,
-    "score2027": 20.58
+    "scoreWMA": 20.58,
+    "score2027": 21.3,
+    "quota": 855
   },
   {
-    "id": 64,
+    "id": 66,
     "name": "THPT Nguyễn Chí Thanh",
     "district": "TP.HCM cũ",
     "score2024": 18.25,
     "score2025": 18.0,
     "score2026": 20.25,
-    "score2027": 19.17
+    "scoreWMA": 19.17,
+    "score2027": 19.99,
+    "quota": 810
   },
   {
-    "id": 65,
+    "id": 67,
     "name": "THPT Trần Phú",
     "district": "TP.HCM cũ",
     "score2024": 23.25,
     "score2025": 22.75,
     "score2026": 24.25,
-    "score2027": 23.6
+    "scoreWMA": 23.6,
+    "score2027": 24.68,
+    "quota": 945
   },
   {
-    "id": 66,
+    "id": 68,
     "name": "THPT Nguyễn Thượng Hiền",
     "district": "TP.HCM cũ",
     "score2024": 24.25,
     "score2025": 23.5,
-    "score2026": 24.75,
-    "score2027": 24.28
+    "score2026": 25.5,
+    "scoreWMA": 24.65,
+    "score2027": 25.83,
+    "quota": 675
   },
   {
-    "id": 67,
+    "id": 69,
     "name": "THPT Nguyễn Thái Bình",
     "district": "TP.HCM cũ",
     "score2024": 17.0,
     "score2025": 16.25,
     "score2026": 18.75,
-    "score2027": 17.65
+    "scoreWMA": 17.65,
+    "score2027": 18.62,
+    "quota": 720
   },
   {
-    "id": 68,
+    "id": 70,
     "name": "THPT Nguyễn Hữu Huân",
     "district": "TP.HCM cũ",
     "score2024": 23.25,
     "score2025": 23.5,
     "score2026": 24.25,
-    "score2027": 23.83
+    "scoreWMA": 23.83,
+    "score2027": 24.77,
+    "quota": 765
   },
   {
-    "id": 69,
+    "id": 71,
     "name": "THPT Thủ Đức",
     "district": "TP.HCM cũ",
     "score2024": 20.5,
     "score2025": 21.0,
     "score2026": 22.75,
-    "score2027": 21.78
+    "scoreWMA": 21.78,
+    "score2027": 23.33,
+    "quota": 900
   },
   {
-    "id": 70,
+    "id": 72,
     "name": "THPT Tam Phú",
     "district": "TP.HCM cũ",
     "score2024": 18.0,
     "score2025": 17.75,
     "score2026": 20.0,
-    "score2027": 18.93
+    "scoreWMA": 18.93,
+    "score2027": 19.84,
+    "quota": 765
   },
   {
-    "id": 71,
+    "id": 73,
     "name": "THPT Hiệp Bình",
     "district": "TP.HCM cũ",
     "score2024": 14.0,
     "score2025": 13.5,
     "score2026": 16.75,
-    "score2027": 15.23
+    "scoreWMA": 15.23,
+    "score2027": 16.11,
+    "quota": 675
   },
   {
-    "id": 72,
+    "id": 74,
     "name": "THPT Đào Sơn Tây",
     "district": "TP.HCM cũ",
     "score2024": 13.5,
     "score2025": 11.75,
     "score2026": 14.75,
-    "score2027": 13.6
+    "scoreWMA": 13.6,
+    "score2027": 14.57,
+    "quota": 855
   },
   {
-    "id": 73,
+    "id": 75,
     "name": "THPT Linh Trung",
     "district": "TP.HCM cũ",
     "score2024": 15.0,
     "score2025": 12.5,
     "score2026": 16.25,
-    "score2027": 14.88
+    "scoreWMA": 14.88,
+    "score2027": 15.82,
+    "quota": 990
   },
   {
-    "id": 74,
+    "id": 76,
     "name": "THPT Bình Chiểu",
     "district": "TP.HCM cũ",
     "score2024": 14.0,
     "score2025": 12.25,
     "score2026": 15.75,
-    "score2027": 14.35
+    "scoreWMA": 14.35,
+    "score2027": 15.31,
+    "quota": 900
   },
   {
-    "id": 75,
+    "id": 77,
     "name": "THPT Bình Chánh",
     "district": "TP.HCM cũ",
     "score2024": 13.5,
     "score2025": 10.75,
     "score2026": 14.25,
-    "score2027": 13.05
+    "scoreWMA": 13.05,
+    "score2027": 13.78,
+    "quota": 900
   },
   {
-    "id": 76,
+    "id": 78,
     "name": "THPT Tân Túc",
     "district": "TP.HCM cũ",
     "score2024": 14.0,
     "score2025": 10.5,
     "score2026": 12.75,
-    "score2027": 12.33
+    "scoreWMA": 12.33,
+    "score2027": 12.88,
+    "quota": 855
   },
   {
-    "id": 77,
+    "id": 79,
     "name": "THPT Vĩnh Lộc B",
     "district": "TP.HCM cũ",
     "score2024": 15.75,
     "score2025": 13.75,
     "score2026": 16.25,
-    "score2027": 15.4
+    "scoreWMA": 15.4,
+    "score2027": 16.41,
+    "quota": 900
   },
   {
-    "id": 78,
+    "id": 80,
+    "name": "Phổ thông Năng khiếu TDTT Bình Chánh",
+    "district": "TP.HCM cũ",
+    "score2024": 14.0,
+    "score2025": 12.0,
+    "score2026": 13.5,
+    "scoreWMA": 13.15,
+    "score2027": 13.65,
+    "quota": 450
+  },
+  {
+    "id": 81,
     "name": "THPT Phong Phú",
     "district": "TP.HCM cũ",
     "score2024": 12.5,
     "score2025": 10.5,
     "score2026": 10.75,
-    "score2027": 11.03
+    "scoreWMA": 11.03,
+    "score2027": 11.49,
+    "quota": 855
   },
   {
-    "id": 79,
+    "id": 82,
     "name": "THPT Lê Minh Xuân",
     "district": "TP.HCM cũ",
     "score2024": 15.0,
     "score2025": 12.75,
     "score2026": 14.25,
-    "score2027": 13.95
+    "scoreWMA": 13.95,
+    "score2027": 14.51,
+    "quota": 900
   },
   {
-    "id": 80,
+    "id": 83,
     "name": "THPT Đa Phước",
     "district": "TP.HCM cũ",
     "score2024": 11.5,
     "score2025": 10.5,
     "score2026": 10.5,
-    "score2027": 10.7
+    "scoreWMA": 10.7,
+    "score2027": 11.07,
+    "quota": 720
   },
   {
-    "id": 81,
+    "id": 84,
     "name": "THPT Bình Khánh",
     "district": "TP.HCM cũ",
     "score2024": 10.5,
     "score2025": 10.5,
     "score2026": 10.0,
-    "score2027": 10.25
+    "scoreWMA": 10.25,
+    "score2027": 10.79,
+    "quota": 405
   },
   {
-    "id": 82,
+    "id": 85,
     "name": "THPT Cần Thạnh",
     "district": "TP.HCM cũ",
     "score2024": 10.5,
     "score2025": 10.5,
     "score2026": 9.0,
-    "score2027": 9.75
+    "scoreWMA": 9.75,
+    "score2027": 10.29,
+    "quota": 320
   },
   {
-    "id": 83,
+    "id": 86,
     "name": "THPT An Nghĩa",
     "district": "TP.HCM cũ",
     "score2024": 10.5,
     "score2025": 10.5,
     "score2026": 10.0,
-    "score2027": 10.25
+    "scoreWMA": 10.25,
+    "score2027": 10.79,
+    "quota": 360
   },
   {
-    "id": 84,
+    "id": 87,
     "name": "THPT Củ Chi",
     "district": "TP.HCM cũ",
     "score2024": 16.25,
     "score2025": 12.25,
     "score2026": 16.0,
-    "score2027": 14.93
+    "scoreWMA": 14.93,
+    "score2027": 15.88,
+    "quota": 810
   },
   {
-    "id": 85,
+    "id": 88,
     "name": "THPT Quang Trung",
     "district": "TP.HCM cũ",
     "score2024": 13.0,
     "score2025": 11.5,
     "score2026": 12.25,
-    "score2027": 12.17
+    "scoreWMA": 12.17,
+    "score2027": 12.63,
+    "quota": 810
   },
   {
-    "id": 86,
+    "id": 89,
     "name": "THPT An Nhơn Tây",
     "district": "TP.HCM cũ",
     "score2024": 11.5,
     "score2025": 10.5,
     "score2026": 11.5,
-    "score2027": 11.2
+    "scoreWMA": 11.2,
+    "score2027": 11.81,
+    "quota": 810
   },
   {
-    "id": 87,
+    "id": 90,
     "name": "THPT Trung Phú",
     "district": "TP.HCM cũ",
     "score2024": 15.5,
     "score2025": 14.25,
     "score2026": 16.25,
-    "score2027": 15.5
+    "scoreWMA": 15.5,
+    "score2027": 16.42,
+    "quota": 765
   },
   {
-    "id": 88,
+    "id": 91,
     "name": "THPT Trung Lập",
     "district": "TP.HCM cũ",
     "score2024": 11.75,
     "score2025": 10.5,
     "score2026": 10.5,
-    "score2027": 10.75
+    "scoreWMA": 10.75,
+    "score2027": 11.36,
+    "quota": 585
   },
   {
-    "id": 89,
+    "id": 92,
     "name": "THPT Phú Hòa",
     "district": "TP.HCM cũ",
     "score2024": 13.5,
     "score2025": 11.75,
     "score2026": 13.5,
-    "score2027": 12.98
+    "scoreWMA": 12.98,
+    "score2027": 13.6,
+    "quota": 720
   },
   {
-    "id": 90,
+    "id": 93,
     "name": "THPT Tân Thông Hội",
     "district": "TP.HCM cũ",
     "score2024": 14.75,
     "score2025": 14.0,
     "score2026": 14.75,
-    "score2027": 14.52
+    "scoreWMA": 14.52,
+    "score2027": 15.2,
+    "quota": 720
   },
   {
-    "id": 91,
+    "id": 94,
     "name": "THPT Nguyễn Hữu Cầu",
     "district": "TP.HCM cũ",
     "score2024": 22.5,
     "score2025": 23.0,
     "score2026": 24.0,
-    "score2027": 23.4
+    "scoreWMA": 23.4,
+    "score2027": 24.4,
+    "quota": 765
   },
   {
-    "id": 92,
+    "id": 95,
     "name": "THPT Lý Thường Kiệt",
     "district": "TP.HCM cũ",
     "score2024": 19.75,
     "score2025": 20.25,
     "score2026": 20.75,
-    "score2027": 20.4
+    "scoreWMA": 20.4,
+    "score2027": 21.12,
+    "quota": 765
   },
   {
-    "id": 93,
+    "id": 96,
     "name": "THPT Bà Điểm",
     "district": "TP.HCM cũ",
     "score2024": 18.5,
     "score2025": 19.0,
     "score2026": 20.5,
-    "score2027": 19.65
+    "scoreWMA": 19.65,
+    "score2027": 20.71,
+    "quota": 810
   },
   {
-    "id": 94,
+    "id": 97,
     "name": "THPT Nguyễn Văn Cừ",
     "district": "TP.HCM cũ",
     "score2024": 16.5,
     "score2025": 14.75,
     "score2026": 15.5,
-    "score2027": 15.48
+    "scoreWMA": 15.48,
+    "score2027": 16.4,
+    "quota": 675
   },
   {
-    "id": 95,
+    "id": 98,
     "name": "THPT Nguyễn Hữu Tiến",
     "district": "TP.HCM cũ",
     "score2024": 18.0,
     "score2025": 17.5,
     "score2026": 19.0,
-    "score2027": 18.35
+    "scoreWMA": 18.35,
+    "score2027": 19.27,
+    "quota": 675
   },
   {
-    "id": 96,
+    "id": 99,
     "name": "THPT Phạm Văn Sáng",
     "district": "TP.HCM cũ",
     "score2024": 16.75,
     "score2025": 16.25,
     "score2026": 17.5,
-    "score2027": 16.98
+    "scoreWMA": 16.98,
+    "score2027": 17.76,
+    "quota": 810
   },
   {
-    "id": 97,
+    "id": 100,
     "name": "THPT Hồ Thị Bi",
     "district": "TP.HCM cũ",
     "score2024": 17.5,
     "score2025": 17.0,
     "score2026": 17.25,
-    "score2027": 17.23
+    "scoreWMA": 17.23,
+    "score2027": 17.84,
+    "quota": 855
   },
   {
-    "id": 98,
+    "id": 101,
     "name": "THPT Long Thới",
     "district": "TP.HCM cũ",
     "score2024": 12.25,
     "score2025": 12.0,
     "score2026": 13.25,
-    "score2027": 12.68
+    "scoreWMA": 12.68,
+    "score2027": 13.27,
+    "quota": 450
   },
   {
-    "id": 99,
+    "id": 102,
     "name": "THPT Phước Kiển",
     "district": "TP.HCM cũ",
     "score2024": 12.75,
     "score2025": 10.75,
     "score2026": 11.75,
-    "score2027": 11.65
+    "scoreWMA": 11.65,
+    "score2027": 12.04,
+    "quota": 855
   },
   {
-    "id": 100,
+    "id": 103,
     "name": "THPT Dương Văn Dương",
     "district": "TP.HCM cũ",
     "score2024": 13.0,
     "score2025": 10.5,
     "score2026": 13.25,
-    "score2027": 12.38
+    "scoreWMA": 12.38,
+    "score2027": 12.88,
+    "quota": 765
   },
   {
-    "id": 101,
+    "id": 104,
     "name": "THPT Tây Thạnh",
     "district": "TP.HCM cũ",
     "score2024": 21.0,
     "score2025": 21.75,
     "score2026": 23.25,
-    "score2027": 22.35
+    "scoreWMA": 22.35,
+    "score2027": 23.36,
+    "quota": 1035
   },
   {
-    "id": 102,
+    "id": 105,
     "name": "THPT Lê Trọng Tấn",
     "district": "TP.HCM cũ",
     "score2024": 19.5,
     "score2025": 18.5,
     "score2026": 21.75,
-    "score2027": 20.33
+    "scoreWMA": 20.33,
+    "score2027": 22.81,
+    "quota": 675
   },
   {
-    "id": 103,
+    "id": 106,
     "name": "THPT Thoại Ngọc Hầu",
     "district": "TP.HCM cũ",
-    "score2024": 0.0,
-    "score2025": 0.0,
+    "score2024": 16.25,
+    "score2025": 16.25,
     "score2026": 16.25,
-    "score2027": 16.25
+    "scoreWMA": 16.25,
+    "score2027": 16.94,
+    "quota": 675
   },
   {
-    "id": 104,
+    "id": 107,
     "name": "THPT Vĩnh Lộc",
     "district": "TP.HCM cũ",
     "score2024": 16.5,
     "score2025": 16.75,
     "score2026": 19.0,
-    "score2027": 17.82
+    "scoreWMA": 17.82,
+    "score2027": 18.64,
+    "quota": 720
   },
   {
-    "id": 105,
+    "id": 108,
     "name": "THPT Nguyễn Hữu Cảnh",
     "district": "TP.HCM cũ",
     "score2024": 18.0,
     "score2025": 18.25,
     "score2026": 21.0,
-    "score2027": 19.57
+    "scoreWMA": 19.57,
+    "score2027": 20.76,
+    "quota": 630
   },
   {
-    "id": 106,
+    "id": 109,
     "name": "THPT Bình Hưng Hòa",
     "district": "TP.HCM cũ",
     "score2024": 18.5,
     "score2025": 17.75,
     "score2026": 19.75,
-    "score2027": 18.9
+    "scoreWMA": 18.9,
+    "score2027": 19.87,
+    "quota": 855
   },
   {
-    "id": 107,
+    "id": 110,
     "name": "THPT Bình Tân",
     "district": "TP.HCM cũ",
     "score2024": 15.0,
     "score2025": 14.25,
     "score2026": 16.0,
-    "score2027": 15.27
+    "scoreWMA": 15.27,
+    "score2027": 15.89,
+    "quota": 855
   },
   {
-    "id": 108,
+    "id": 111,
     "name": "THPT Hoàng Thế Thiện (trường Bình Trị Đông B trước)",
     "district": "TP.HCM cũ",
-    "score2024": 0.0,
+    "score2024": 13.0,
     "score2025": 13.0,
     "score2026": 15.5,
-    "score2027": 15.5
+    "scoreWMA": 14.25,
+    "score2027": 15.53,
+    "quota": 810
   },
   {
-    "id": 109,
+    "id": 112,
     "name": "THPT An Lạc",
     "district": "TP.HCM cũ",
     "score2024": 15.25,
     "score2025": 15.25,
     "score2026": 17.25,
-    "score2027": 16.25
+    "scoreWMA": 16.25,
+    "score2027": 16.89,
+    "quota": 855
   },
   {
-    "id": 110,
+    "id": 113,
     "name": "THPT Lý Thái Tổ",
     "district": "Bình Dương cũ",
     "score2024": 17.05,
     "score2025": 17.55,
     "score2026": 17.25,
-    "score2027": 17.3
+    "scoreWMA": 17.3,
+    "score2027": 17.99,
+    "quota": 810
   },
   {
-    "id": 111,
+    "id": 114,
     "name": "THPT Lê Lợi",
     "district": "Bình Dương cũ",
     "score2024": 14.75,
     "score2025": 14.65,
     "score2026": 13.25,
-    "score2027": 13.97
+    "scoreWMA": 13.97,
+    "score2027": 14.56,
+    "quota": 315
   },
   {
-    "id": 112,
+    "id": 115,
     "name": "THPT Tân Bình",
     "district": "Bình Dương cũ",
     "score2024": 10.25,
     "score2025": 15.8,
     "score2026": 13.5,
-    "score2027": 13.54
+    "scoreWMA": 13.54,
+    "score2027": 14.15,
+    "quota": 450
   },
   {
-    "id": 113,
+    "id": 116,
     "name": "THPT Dĩ An",
     "district": "Bình Dương cũ",
     "score2024": 23.3,
     "score2025": 22.1,
     "score2026": 23.25,
-    "score2027": 22.91
+    "scoreWMA": 22.91,
+    "score2027": 23.83,
+    "quota": 540
   },
   {
-    "id": 114,
+    "id": 117,
     "name": "THPT Võ Minh Đức",
     "district": "Bình Dương cũ",
     "score2024": 18.1,
     "score2025": 17.9,
     "score2026": 20.0,
-    "score2027": 18.99
+    "scoreWMA": 18.99,
+    "score2027": 19.79,
+    "quota": 810
   },
   {
-    "id": 115,
+    "id": 118,
     "name": "THCS và THPT Minh Hòa",
     "district": "Bình Dương cũ",
     "score2024": 13.0,
     "score2025": 12.5,
     "score2026": 10.75,
-    "score2027": 11.72
+    "scoreWMA": 11.72,
+    "score2027": 12.25,
+    "quota": 360
   },
   {
-    "id": 116,
+    "id": 119,
     "name": "THPT Bình An",
     "district": "Bình Dương cũ",
     "score2024": 18.25,
     "score2025": 19.35,
     "score2026": 19.0,
-    "score2027": 18.95
+    "scoreWMA": 18.95,
+    "score2027": 19.71,
+    "quota": 470
   },
   {
-    "id": 117,
+    "id": 120,
     "name": "THPT Nguyễn Đình Chiểu",
     "district": "Bình Dương cũ",
     "score2024": 16.15,
     "score2025": 16.15,
     "score2026": 16.75,
-    "score2027": 16.45
+    "scoreWMA": 16.45,
+    "score2027": 17.19,
+    "quota": 585
   },
   {
-    "id": 118,
+    "id": 121,
     "name": "THPT Trịnh Hoài Đức",
     "district": "Bình Dương cũ",
     "score2024": 23.65,
     "score2025": 22.25,
     "score2026": 23.25,
-    "score2027": 23.03
+    "scoreWMA": 23.03,
+    "score2027": 23.95,
+    "quota": 765
   },
   {
-    "id": 119,
+    "id": 122,
     "name": "THPT Nguyễn Trãi",
     "district": "Bình Dương cũ",
     "score2024": 19.15,
     "score2025": 18.15,
     "score2026": 19.75,
-    "score2027": 19.15
+    "scoreWMA": 19.15,
+    "score2027": 19.92,
+    "quota": 630
   },
   {
-    "id": 120,
+    "id": 123,
     "name": "THPT Nguyễn An Ninh",
     "district": "Bình Dương cũ",
     "score2024": 17.4,
     "score2025": 17.65,
     "score2026": 15.75,
-    "score2027": 16.65
+    "scoreWMA": 16.65,
+    "score2027": 17.32,
+    "quota": 540
   },
   {
-    "id": 121,
+    "id": 124,
     "name": "THPT Huỳnh Văn Nghệ",
     "district": "Bình Dương cũ",
     "score2024": 15.4,
     "score2025": 16.8,
     "score2026": 15.0,
-    "score2027": 15.62
+    "scoreWMA": 15.62,
+    "score2027": 16.28,
+    "quota": 675
   },
   {
-    "id": 122,
+    "id": 125,
     "name": "THPT Phước Vĩnh",
     "district": "Bình Dương cũ",
     "score2024": 11.6,
     "score2025": 12.2,
     "score2026": 11.5,
-    "score2027": 11.73
+    "scoreWMA": 11.73,
+    "score2027": 12.26,
+    "quota": 630
   },
   {
-    "id": 123,
+    "id": 126,
     "name": "THPT Bến Cát",
     "district": "Bình Dương cũ",
     "score2024": 17.7,
     "score2025": 17.6,
     "score2026": 18.5,
-    "score2027": 18.07
+    "scoreWMA": 18.07,
+    "score2027": 18.79,
+    "quota": 810
   },
   {
-    "id": 124,
+    "id": 127,
     "name": "THPT Dầu Tiếng",
     "district": "Bình Dương cũ",
     "score2024": 13.4,
     "score2025": 13.15,
     "score2026": 12.5,
-    "score2027": 12.88
+    "scoreWMA": 12.88,
+    "score2027": 13.45,
+    "quota": 450
   },
   {
-    "id": 125,
+    "id": 128,
     "name": "THPT Bình Phú",
     "district": "Bình Dương cũ",
     "score2024": 14.85,
     "score2025": 16.55,
     "score2026": 15.5,
-    "score2027": 15.69
+    "scoreWMA": 15.69,
+    "score2027": 16.39,
+    "quota": 810
   },
   {
-    "id": 126,
+    "id": 129,
     "name": "THPT Trần Văn Ơn",
     "district": "Bình Dương cũ",
     "score2024": 16.25,
     "score2025": 17.2,
     "score2026": 16.75,
-    "score2027": 16.79
+    "scoreWMA": 16.79,
+    "score2027": 17.54,
+    "quota": 540
   },
   {
-    "id": 127,
+    "id": 130,
     "name": "THCS và THPT Tây Sơn",
     "district": "Bình Dương cũ",
     "score2024": 12.6,
     "score2025": 13.4,
     "score2026": 10.25,
-    "score2027": 11.66
+    "scoreWMA": 11.66,
+    "score2027": 12.19,
+    "quota": 450
   },
   {
-    "id": 128,
+    "id": 131,
     "name": "THCS và THPT Nguyễn Huệ",
     "district": "Bình Dương cũ",
     "score2024": 12.05,
     "score2025": 14.7,
     "score2026": 9.0,
-    "score2027": 11.32
+    "scoreWMA": 11.32,
+    "score2027": 11.83,
+    "quota": 450
   },
   {
-    "id": 129,
+    "id": 132,
     "name": "THPT Tây Nam",
     "district": "Bình Dương cũ",
     "score2024": 14.6,
     "score2025": 15.35,
     "score2026": 14.5,
-    "score2027": 14.78
+    "scoreWMA": 14.78,
+    "score2027": 15.44,
+    "quota": 675
   },
   {
-    "id": 130,
+    "id": 133,
     "name": "THPT Tân Phước Khánh",
     "district": "Bình Dương cũ",
     "score2024": 17.7,
     "score2025": 18.1,
     "score2026": 19.25,
-    "score2027": 18.59
+    "scoreWMA": 18.59,
+    "score2027": 19.38,
+    "quota": 495
   },
   {
-    "id": 131,
+    "id": 134,
     "name": "THPT Thái Hòa",
     "district": "Bình Dương cũ",
     "score2024": 16.25,
     "score2025": 17.25,
     "score2026": 15.5,
-    "score2027": 16.18
+    "scoreWMA": 16.18,
+    "score2027": 16.82,
+    "quota": 765
   },
   {
-    "id": 132,
+    "id": 135,
     "name": "THPT An Mỹ",
     "district": "Bình Dương cũ",
     "score2024": 16.9,
     "score2025": 17.35,
     "score2026": 18.5,
-    "score2027": 17.84
+    "scoreWMA": 17.84,
+    "score2027": 18.62,
+    "quota": 810
   },
   {
-    "id": 133,
+    "id": 136,
     "name": "THPT Phước Hòa",
     "district": "Bình Dương cũ",
     "score2024": 10.9,
     "score2025": 13.95,
     "score2026": 11.75,
-    "score2027": 12.24
+    "scoreWMA": 12.24,
+    "score2027": 12.79,
+    "quota": 270
   },
   {
-    "id": 134,
+    "id": 137,
     "name": "THPT Bàu Bàng",
     "district": "Bình Dương cũ",
     "score2024": 13.35,
     "score2025": 15.05,
     "score2026": 15.25,
-    "score2027": 14.81
+    "scoreWMA": 14.81,
+    "score2027": 15.48,
+    "quota": 585
   },
   {
-    "id": 135,
+    "id": 138,
     "name": "THPT Long Hòa",
     "district": "Bình Dương cũ",
     "score2024": 12.15,
     "score2025": 12.75,
     "score2026": 12.0,
-    "score2027": 12.25
+    "scoreWMA": 12.25,
+    "score2027": 12.81,
+    "quota": 270
   },
   {
-    "id": 136,
+    "id": 139,
     "name": "THPT Nguyễn Thị Minh Khai",
     "district": "Bình Dương cũ",
     "score2024": 20.2,
     "score2025": 19.05,
     "score2026": 20.25,
-    "score2027": 19.88
+    "scoreWMA": 19.88,
+    "score2027": 20.68,
+    "quota": 855
   },
   {
-    "id": 137,
+    "id": 140,
     "name": "THPT Thường Tân",
     "district": "Bình Dương cũ",
     "score2024": 13.95,
     "score2025": 14.95,
     "score2026": 12.0,
-    "score2027": 13.27
+    "scoreWMA": 13.27,
+    "score2027": 13.84,
+    "quota": 240
   },
   {
-    "id": 138,
+    "id": 141,
     "name": "THPT Thanh Tuyền",
     "district": "Bình Dương cũ",
     "score2024": 13.65,
     "score2025": 13.85,
     "score2026": 13.5,
-    "score2027": 13.63
-  },
-  {
-    "id": 139,
-    "name": "THPT Hà Huy Tập",
-    "district": "Bình Dương cũ",
-    "score2024": 0.0,
-    "score2025": 0.0,
-    "score2026": 16.5,
-    "score2027": 16.5
-  },
-  {
-    "id": 140,
-    "name": "THPT Vũng Tàu",
-    "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 36.75,
-    "score2025": 21.25,
-    "score2026": 21.75,
-    "score2027": 24.6
-  },
-  {
-    "id": 141,
-    "name": "THPT Châu Thành",
-    "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 29.75,
-    "score2025": 9.0,
-    "score2026": 18.5,
-    "score2027": 17.9
+    "scoreWMA": 13.63,
+    "score2027": 14.25,
+    "quota": 225
   },
   {
     "id": 142,
-    "name": "THPT Trần Phú",
-    "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 22.75,
-    "score2025": 7.75,
-    "score2026": 9.0,
-    "score2027": 11.38
+    "name": "THPT Hà Huy Tập",
+    "district": "Bình Dương cũ",
+    "score2024": 16.5,
+    "score2025": 16.5,
+    "score2026": 16.5,
+    "scoreWMA": 16.5,
+    "score2027": 17.2,
+    "quota": 720
   },
   {
     "id": 143,
-    "name": "THPT Xuyên Mộc",
+    "name": "THPT Vũng Tàu",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 25.25,
-    "score2025": 15.25,
-    "score2026": 12.25,
-    "score2027": 15.75
+    "score2024": 22.05,
+    "score2025": 21.25,
+    "score2026": 21.75,
+    "scoreWMA": 21.66,
+    "score2027": 24.69,
+    "quota": 855
   },
   {
     "id": 144,
-    "name": "THPT Phú Mỹ",
+    "name": "THPT Châu Thành",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 27.75,
-    "score2025": 6.5,
-    "score2026": 11.5,
-    "score2027": 13.25
+    "score2024": 17.85,
+    "score2025": 9.0,
+    "score2026": 18.5,
+    "scoreWMA": 15.52,
+    "score2027": 16.61,
+    "quota": 540
   },
   {
     "id": 145,
-    "name": "THPT Trần Hưng Đạo",
+    "name": "THPT Trần Phú",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 20.75,
-    "score2025": 10.5,
-    "score2026": 11.5,
-    "score2027": 13.05
+    "score2024": 13.65,
+    "score2025": 7.75,
+    "score2026": 9.0,
+    "scoreWMA": 9.55,
+    "score2027": 9.96,
+    "quota": 450
   },
   {
     "id": 146,
-    "name": "THPT Hắc Dịch",
+    "name": "THPT Xuyên Mộc",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 22.0,
-    "score2025": 10.0,
-    "score2026": 9.0,
-    "score2027": 11.9
+    "score2024": 15.15,
+    "score2025": 15.25,
+    "score2026": 12.25,
+    "scoreWMA": 13.73,
+    "score2027": 14.38,
+    "quota": 450
   },
   {
     "id": 147,
-    "name": "THPT Trần Văn Quan",
+    "name": "THPT Phú Mỹ",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 22.75,
-    "score2025": 8.0,
-    "score2026": 10.75,
-    "score2027": 12.32
+    "score2024": 16.65,
+    "score2025": 6.5,
+    "score2026": 11.5,
+    "scoreWMA": 11.03,
+    "score2027": 11.99,
+    "quota": 900
   },
   {
     "id": 148,
-    "name": "THPT Võ Thị Sáu",
+    "name": "THPT Trần Hưng Đạo",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 22.25,
-    "score2025": 11.75,
-    "score2026": 11.0,
-    "score2027": 13.48
+    "score2024": 12.45,
+    "score2025": 10.5,
+    "score2026": 11.5,
+    "scoreWMA": 11.39,
+    "score2027": 11.97,
+    "quota": 585
   },
   {
     "id": 149,
-    "name": "THPT Hòa Hội",
+    "name": "THPT Hắc Dịch",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 21.75,
-    "score2025": 10.25,
-    "score2026": 10.25,
-    "score2027": 12.55
+    "score2024": 13.2,
+    "score2025": 10.0,
+    "score2026": 9.0,
+    "scoreWMA": 10.14,
+    "score2027": 10.5,
+    "quota": 630
   },
   {
     "id": 150,
-    "name": "THPT Nguyễn Bỉnh Khiêm",
+    "name": "THPT Trần Văn Quan",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 22.25,
-    "score2025": 11.0,
-    "score2026": 10.25,
-    "score2027": 12.88
+    "score2024": 13.65,
+    "score2025": 8.0,
+    "score2026": 10.75,
+    "scoreWMA": 10.51,
+    "score2027": 11.07,
+    "quota": 450
   },
   {
     "id": 151,
-    "name": "THPT Nguyễn Trãi",
+    "name": "THPT Võ Thị Sáu",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 22.75,
-    "score2025": 9.25,
-    "score2026": 10.0,
-    "score2027": 12.32
+    "score2024": 13.35,
+    "score2025": 11.75,
+    "score2026": 11.0,
+    "scoreWMA": 11.7,
+    "score2027": 12.3,
+    "quota": 495
   },
   {
     "id": 152,
-    "name": "THPT Phước Bửu",
+    "name": "THPT Hòa Hội",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 22.5,
-    "score2025": 9.5,
-    "score2026": 9.0,
-    "score2027": 11.85
+    "score2024": 13.05,
+    "score2025": 10.25,
+    "score2026": 10.25,
+    "scoreWMA": 10.81,
+    "score2027": 11.33,
+    "quota": 405
   },
   {
     "id": 153,
-    "name": "THPT Long Hải - Phước Tỉnh",
+    "name": "THPT Nguyễn Bỉnh Khiêm",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 19.5,
-    "score2025": 12.5,
-    "score2026": 10.5,
-    "score2027": 12.9
+    "score2024": 13.35,
+    "score2025": 11.0,
+    "score2026": 10.25,
+    "scoreWMA": 11.1,
+    "score2027": 11.34,
+    "quota": 585
   },
   {
     "id": 154,
-    "name": "THPT Nguyễn Văn Cừ",
+    "name": "THPT Nguyễn Trãi",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 20.75,
-    "score2025": 8.25,
-    "score2026": 9.0,
-    "score2027": 11.12
+    "score2024": 13.65,
+    "score2025": 9.25,
+    "score2026": 10.0,
+    "scoreWMA": 10.51,
+    "score2027": 10.93,
+    "quota": 405
   },
   {
     "id": 155,
-    "name": "THPT Minh Đạm",
+    "name": "THPT Phước Bửu",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 28.5,
-    "score2025": 14.0,
-    "score2026": 11.5,
-    "score2027": 15.65
+    "score2024": 13.5,
+    "score2025": 9.5,
+    "score2026": 9.0,
+    "scoreWMA": 10.05,
+    "score2027": 10.34,
+    "quota": 450
   },
   {
     "id": 156,
-    "name": "THPT Nguyễn Khuyến",
+    "name": "THPT Long Hải - Phước Tỉnh",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 29.75,
-    "score2025": 17.25,
-    "score2026": 15.75,
-    "score2027": 19.0
+    "score2024": 11.7,
+    "score2025": 12.5,
+    "score2026": 10.5,
+    "scoreWMA": 11.34,
+    "score2027": 11.9,
+    "quota": 495
   },
   {
     "id": 157,
-    "name": "THPT Nguyễn Huệ",
+    "name": "THPT Nguyễn Văn Cừ",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 31.75,
-    "score2025": 19.0,
-    "score2026": 19.25,
-    "score2027": 21.68
+    "score2024": 12.45,
+    "score2025": 8.25,
+    "score2026": 9.0,
+    "scoreWMA": 9.46,
+    "score2027": 9.78,
+    "quota": 405
   },
   {
     "id": 158,
-    "name": "THPT Đinh Tiên Hoàng",
+    "name": "THPT Minh Đạm",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 29.75,
-    "score2025": 15.0,
-    "score2026": 17.25,
-    "score2027": 19.07
+    "score2024": 17.1,
+    "score2025": 14.0,
+    "score2026": 11.5,
+    "scoreWMA": 13.37,
+    "score2027": 13.9,
+    "quota": 495
   },
   {
     "id": 159,
-    "name": "THPT Trần Nguyên Hãn",
+    "name": "THPT Nguyễn Khuyến",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 30.75,
-    "score2025": 16.0,
-    "score2026": 16.5,
-    "score2027": 19.2
+    "score2024": 17.85,
+    "score2025": 17.25,
+    "score2026": 15.75,
+    "scoreWMA": 16.62,
+    "score2027": 16.99,
+    "quota": 765
   },
   {
     "id": 160,
-    "name": "THPT Ngô Quyền",
+    "name": "THPT Nguyễn Huệ",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 22.5,
-    "score2025": 5.25,
-    "score2026": 10.0,
-    "score2027": 11.07
+    "score2024": 19.05,
+    "score2025": 19.0,
+    "score2026": 19.25,
+    "scoreWMA": 19.13,
+    "score2027": 20.37,
+    "quota": 900
   },
   {
     "id": 161,
-    "name": "THPT Hòa Bình",
+    "name": "THPT Đinh Tiên Hoàng",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 24.0,
-    "score2025": 9.0,
-    "score2026": 9.0,
-    "score2027": 12.0
+    "score2024": 17.85,
+    "score2025": 15.0,
+    "score2026": 17.25,
+    "scoreWMA": 16.7,
+    "score2027": 17.66,
+    "quota": 720
   },
   {
     "id": 162,
-    "name": "THPT Trần Quang Khải",
+    "name": "THPT Trần Nguyên Hãn",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 20.75,
-    "score2025": 9.5,
-    "score2026": 12.75,
-    "score2027": 13.38
+    "score2024": 18.45,
+    "score2025": 16.0,
+    "score2026": 16.5,
+    "scoreWMA": 16.74,
+    "score2027": 17.71,
+    "quota": 720
   },
   {
     "id": 163,
-    "name": "THPT Dương Bạch Mai",
+    "name": "THPT Ngô Quyền",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 22.75,
-    "score2025": 8.5,
-    "score2026": 9.0,
-    "score2027": 11.6
+    "score2024": 13.5,
+    "score2025": 5.25,
+    "score2026": 10.0,
+    "scoreWMA": 9.28,
+    "score2027": 9.76,
+    "quota": 405
   },
   {
     "id": 164,
-    "name": "THPT Bà Rịa",
+    "name": "THPT Hòa Bình",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 27.0,
-    "score2025": 14.25,
-    "score2026": 14.0,
-    "score2027": 16.67
+    "score2024": 14.4,
+    "score2025": 9.0,
+    "score2026": 9.0,
+    "scoreWMA": 10.08,
+    "score2027": 10.45,
+    "quota": 450
   },
   {
     "id": 165,
-    "name": "THPT Bưng Riềng",
+    "name": "THPT Trần Quang Khải",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 20.5,
+    "score2024": 12.45,
     "score2025": 9.5,
-    "score2026": 9.0,
-    "score2027": 11.45
+    "score2026": 12.75,
+    "scoreWMA": 11.71,
+    "score2027": 12.18,
+    "quota": 540
   },
   {
     "id": 166,
-    "name": "THPT Nguyễn Du",
+    "name": "THPT Dương Bạch Mai",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 19.25,
-    "score2025": 11.5,
-    "score2026": 15.25,
-    "score2027": 14.92
+    "score2024": 13.65,
+    "score2025": 8.5,
+    "score2026": 9.0,
+    "scoreWMA": 9.78,
+    "score2027": 10.18,
+    "quota": 450
   },
   {
     "id": 167,
+    "name": "THPT Bà Rịa",
+    "district": "Bà Rịa - Vũng Tàu cũ",
+    "score2024": 16.2,
+    "score2025": 14.25,
+    "score2026": 14.0,
+    "scoreWMA": 14.51,
+    "score2027": 15.25,
+    "quota": 540
+  },
+  {
+    "id": 168,
+    "name": "THPT Bưng Riềng",
+    "district": "Bà Rịa - Vũng Tàu cũ",
+    "score2024": 12.3,
+    "score2025": 9.5,
+    "score2026": 9.0,
+    "scoreWMA": 9.81,
+    "score2027": 10.15,
+    "quota": 450
+  },
+  {
+    "id": 169,
+    "name": "THPT Nguyễn Du",
+    "district": "Bà Rịa - Vũng Tàu cũ",
+    "score2024": 11.55,
+    "score2025": 11.5,
+    "score2026": 15.25,
+    "scoreWMA": 13.38,
+    "score2027": 14.27,
+    "quota": 405
+  },
+  {
+    "id": 170,
     "name": "THPT Võ Nguyên Giáp",
     "district": "Bà Rịa - Vũng Tàu cũ",
-    "score2024": 0.0,
-    "score2025": 0.0,
+    "score2024": 9.0,
+    "score2025": 9.0,
     "score2026": 9.0,
-    "score2027": 9.0
+    "scoreWMA": 9.0,
+    "score2027": 9.41,
+    "quota": 675
   }
 ]
