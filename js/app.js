@@ -491,23 +491,23 @@ function renderIkigaiCombos(scatterData, career) {
       sumDist += dist;
 
       // Tiêu chuẩn cảnh báo 5 cấp độ chuẩn xác theo Báo cáo Đề tài 24.7 (P341 - P360)
-      if (y < 6.0 && x < 5.0) {
+      if (y < 5.0 && x < 5.0) {
         // Cấp 4: Rủi ro Kép (P_Yếu > 0 & P_ĐM > 0)
         warnings.push({
           type: 'red',
-          title: '🚨 Cảnh báo Rủi ro Kép',
+          title: '🚨 Cảnh báo nghiêm trọng: Rủi ro Kép',
           subject: subName,
-          text: `Môn <strong>${subName}</strong> (Năng lực: ${y}/10 | Đam mê: ${x}/10). Môn này bị yếu cả về năng lực lẫn thiếu đam mê. Nếu chọn tổ hợp này, môn sẽ kéo tụt điểm GPA Lớp 10! Không khuyến nghị chọn trừ khi bắt buộc.`
+          text: `Môn gặp rủi ro: <strong>${subName}</strong> (Năng lực: Mức ${y} | Đam mê: Mức ${x}). Môn học này bị yếu cả về năng lực lẫn không có đam mê. Nếu chọn tổ hợp này, môn học này sẽ trở thành nguy hiểm kéo tụt điểm trung bình chung (GPA) lớp 10. Không khuyến nghị chọn tổ hợp này trừ khi bắt buộc do yêu cầu của Ngành học mà bạn mơ ước.`
         });
         hasCriticalRisk = true;
         isAllHigh = false;
-      } else if (y < 6.0) {
+      } else if (y < 5.0) {
         // Cấp 2: Cảnh báo Năng lực Yếu (P_Yếu > 0)
         warnings.push({
           type: 'yellow',
-          title: '🟡 Cảnh báo Năng lực Yếu',
+          title: '🟡 Cảnh báo: Rào cản về kiến thức nền tảng',
           subject: subName,
-          text: `Môn <strong>${subName}</strong> (Năng lực: ${y}/10). Bạn có đam mê nhưng nền tảng học lực cấp 2 chưa đạt (${y} < 6.0). Lên Lớp 10 kiến thức nặng hơn dễ đuối sức. Cần kế hoạch phụ đạo bổ trợ trước năm học.`
+          text: `Môn gặp rủi ro: <strong>${subName}</strong> (Năng lực: Mức ${y}). Học sinh thích môn này nhưng nền tảng học lực cấp THCS chưa đạt, lên Lớp 10, độ khó tăng cao dễ dẫn đến đuối sức. Cần tăng cường Kế hoạch học tập Bổ trợ ôn tập kiến thức còn hổng để kéo năng lực lên mốc trên 7.0 trước khi vào năm học.`
         });
         hasWeakAbility = true;
         isAllHigh = false;
@@ -515,9 +515,9 @@ function renderIkigaiCombos(scatterData, career) {
         // Cấp 3: Cảnh báo Thiếu Đam Mê (P_ĐM > 0)
         warnings.push({
           type: 'orange',
-          title: '🟠 Cảnh báo Thiếu Đam Mê',
+          title: '🟠 Cảnh báo: Nguy cơ quá tải & chán nản',
           subject: subName,
-          text: `Môn <strong>${subName}</strong> (Đam mê: ${x}/10). Bạn học khá nhưng thiếu đam mê (${x} < 5.0), dễ gây tâm lý gượng ép, áp lực kéo dài suốt 3 năm THPT. Nên cân nhắc môn thay thế cùng nhóm.`
+          text: `Môn gặp rủi ro: <strong>${subName}</strong> (Đam mê: Mức ${x}). Học sinh có sức học khá/giỏi môn này nhưng không yêu thích. Chọn môn này sẽ gây ra tâm lý gượng ép, áp lực kéo dài trong suốt 3 năm THPT. Cân nhắc đổi sang môn tự chọn thuộc nhóm môn tương đương mà học sinh có hứng thú hơn.`
         });
         hasLowPassion = true;
         isAllHigh = false;
@@ -536,9 +536,9 @@ function renderIkigaiCombos(scatterData, career) {
     if (isSevereMismatch) {
       warnings.push({
         type: 'darkred',
-        title: '🚫 Cảnh báo Lệch Ngành & Rủi Ro',
+        title: '🚫 Cảnh báo tổ hợp lệch định hướng và rủi ro cao',
         subject: 'Định hướng nghề',
-        text: `Tổ hợp không thuộc khối xét Đại học cho ngành <strong>${career.name}</strong>, đồng thời lại chứa môn gặp rủi ro học tập.`
+        text: `Tổ hợp này vừa không hỗ trợ cho mục tiêu xét tuyển Đại học (Ngành mơ ước), vừa bắt buộc phải học môn chưa đủ năng lực. Do đó, hệ thống đã tự động bị loại khỏi danh sách đề xuất Top 3.`
       });
     }
 
@@ -611,11 +611,10 @@ function renderIkigaiCombos(scatterData, career) {
       });
       html += '</div>';
     } else if (c.isAllHigh) {
-      html += '<div class="pt-2 mt-1 border-t border-gray-700/50">';
-      html += '<div class="text-xs p-2 rounded-lg border text-emerald-300 bg-emerald-950/30 border-emerald-800/40">';
-      html += '<div class="font-bold mb-0.5">🟢 Lời khuyên tối ưu</div>';
-      html += '<div class="text-[11px] opacity-90">Học sinh có nền tảng năng lực vững chắc (≥ 6.0) và hứng thú đồng đều (≥ 5.0) ở cả 4 môn. Nên ưu tiên đăng ký Tổ hợp môn này!</div>';
-      html += '</div></div>';
+      html += '<div class="mt-2 p-2.5 rounded-lg bg-emerald-900/20 border border-emerald-500/20">';
+      html += '<div class="text-[11px] font-bold text-emerald-400 mb-1">🟢 Tổ hợp tương thích tối ưu</div>';
+      html += '<div class="text-[11px] text-emerald-200">Học sinh có nền tảng năng lực vững chắc và hứng thú đồng đều ở cả 4 môn. Nên ưu tiên đăng ký Tổ hợp môn này!</div>';
+      html += '</div>';
     }
 
     html += '</div>';
