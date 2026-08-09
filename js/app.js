@@ -420,25 +420,38 @@ export function initSubjectRatings() {
   if (!container) return;
   let html = '';
 
-  const optionsHtml = `
-    <option value="10">10 - Xuất sắc / Đam mê mãnh liệt</option>
-    <option value="9">9 - Rất tốt / Rất đam mê</option>
-    <option value="8" selected>8 - Giỏi / Đam mê rõ ràng</option>
-    <option value="7">7 - Khá giỏi / Yêu thích</option>
-    <option value="6">6 - Khá / Khá yêu thích</option>
-    <option value="5">5 - Trung bình / Có quan tâm</option>
-    <option value="4">4 - TB khá / Ít hứng thú</option>
-    <option value="3">3 - TB yếu / Không yêu thích</option>
-    <option value="2">2 - Yếu / Rất ít hứng thú</option>
-    <option value="1">1 - Kém / Không có đam mê</option>
+  const passionOptionsHtml = `
+    <option value="10">Mức 10 - Đam mê mãnh liệt</option>
+    <option value="9">Mức 9 - Rất đam mê</option>
+    <option value="8" selected>Mức 8 - Đam mê rõ ràng</option>
+    <option value="7">Mức 7 - Yêu thích</option>
+    <option value="6">Mức 6 - Khá yêu thích</option>
+    <option value="5">Mức 5 - Có quan tâm</option>
+    <option value="4">Mức 4 - Ít hứng thú</option>
+    <option value="3">Mức 3 - Không yêu thích</option>
+    <option value="2">Mức 2 - Rất ít hứng thú</option>
+    <option value="1">Mức 1 - Không có đam mê</option>
+  `;
+
+  const abilityOptionsHtml = `
+    <option value="10">Mức 10 - Năng lực vượt trội (9.5–10đ)</option>
+    <option value="9">Mức 9 - Năng lực xuất sắc (9.0–9.4đ)</option>
+    <option value="8" selected>Mức 8 - Năng lực rất tốt (8.5–8.9đ)</option>
+    <option value="7">Mức 7 - Năng lực tốt (8.0–8.4đ)</option>
+    <option value="6">Mức 6 - Năng lực khá tốt (7.5–7.9đ)</option>
+    <option value="5">Mức 5 - Năng lực khá (7.0–7.4đ)</option>
+    <option value="4">Mức 4 - NL trung bình khá (6.5–6.9đ)</option>
+    <option value="3">Mức 3 - NL trung bình (6.0–6.4đ)</option>
+    <option value="2">Mức 2 - NL còn hạn chế (5.0–5.9đ)</option>
+    <option value="1">Mức 1 - NL chưa đáp ứng (< 5.0đ)</option>
   `;
 
   db.subjectList.forEach((sub, idx) => {
     html += '<div class="bg-gray-800/40 p-3 rounded-xl border border-gray-700/60 flex items-center justify-between gap-3">';
     html += '<span class="font-semibold text-sm text-gray-200 w-32 shrink-0">' + sub + '</span>';
     html += '<div class="flex items-center gap-2 flex-1 justify-end">';
-    html += '<div class="text-center w-36"><span class="text-[10px] text-pink-300 font-semibold block mb-0.5"><i class="fa-solid fa-heart text-pink-400 mr-0.5"></i> Đam mê</span><select id="passion-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[11px] font-bold text-pink-300 focus:border-pink-500" onchange="window.ikigaiApp.calculateIkigai()">' + optionsHtml + '</select></div>';
-    html += '<div class="text-center w-36"><span class="text-[10px] text-indigo-300 font-semibold block mb-0.5"><i class="fa-solid fa-brain text-indigo-400 mr-0.5"></i> Năng lực</span><select id="ability-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[11px] font-bold text-indigo-300 focus:border-indigo-500" onchange="window.ikigaiApp.calculateIkigai()">' + optionsHtml + '</select></div>';
+    html += '<div class="text-center w-40"><span class="text-[10px] text-pink-300 font-semibold block mb-0.5"><i class="fa-solid fa-heart text-pink-400 mr-0.5"></i> Đam mê</span><select id="passion-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[11px] font-bold text-pink-300 focus:border-pink-500" onchange="window.ikigaiApp.calculateIkigai()">' + passionOptionsHtml + '</select></div>';
+    html += '<div class="text-center w-44"><span class="text-[10px] text-indigo-300 font-semibold block mb-0.5"><i class="fa-solid fa-brain text-indigo-400 mr-0.5"></i> Năng lực (Điểm TB)</span><select id="ability-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[11px] font-bold text-indigo-300 focus:border-indigo-500" onchange="window.ikigaiApp.calculateIkigai()">' + abilityOptionsHtml + '</select></div>';
     html += '</div></div>';
   });
   container.innerHTML = html;
