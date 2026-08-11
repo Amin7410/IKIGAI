@@ -4,33 +4,17 @@ import { ExcelOriginalEngine, MathCorrectedEngine } from './engines/calculationE
 import { renderGaussChart, renderIkigaiChart } from './ui/charts.js';
 
 export const CONFIG = {
-  SHOW_ENGINE_SWITCHER: true
+  SHOW_ENGINE_SWITCHER: false
 };
 
 let isMathCorrectedEngine = true;
 
 export function getActiveEngine() {
-  return isMathCorrectedEngine ? MathCorrectedEngine : ExcelOriginalEngine;
+  return MathCorrectedEngine;
 }
 
 export function switchEngine(checked) {
-  isMathCorrectedEngine = checked;
-  const label = document.getElementById('currentEngineLabel');
-  const badge = document.getElementById('engineBadge');
-
-  if (checked) {
-    if (label) label.innerText = 'Bản 2';
-    if (badge) {
-      badge.innerText = 'Bản 2';
-      badge.className = 'text-[10px] px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-semibold';
-    }
-  } else {
-    if (label) label.innerText = 'Bản 1';
-    if (badge) {
-      badge.innerText = 'Bản 1';
-      badge.className = 'text-[10px] px-2.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-semibold';
-    }
-  }
+  isMathCorrectedEngine = true;
   calculateNormalProbabilities();
   syncScoresFromModule1(false);
 }
@@ -447,11 +431,11 @@ export function initSubjectRatings() {
   `;
 
   db.subjectList.forEach((sub, idx) => {
-    html += '<div class="bg-gray-800/40 p-3 rounded-xl border border-gray-700/60 flex items-center justify-between gap-3">';
-    html += '<span class="font-semibold text-sm text-gray-200 w-32 shrink-0">' + sub + '</span>';
-    html += '<div class="flex items-center gap-2 flex-1 justify-end">';
-    html += '<div class="text-center w-40"><span class="text-[10px] text-pink-300 font-semibold block mb-0.5"><i class="fa-solid fa-heart text-pink-400 mr-0.5"></i> Đam mê</span><select id="passion-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[11px] font-bold text-pink-300 focus:border-pink-500" onchange="window.ikigaiApp.calculateIkigai()">' + passionOptionsHtml + '</select></div>';
-    html += '<div class="text-center w-44"><span class="text-[10px] text-indigo-300 font-semibold block mb-0.5"><i class="fa-solid fa-brain text-indigo-400 mr-0.5"></i> Năng lực (Điểm TB)</span><select id="ability-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[11px] font-bold text-indigo-300 focus:border-indigo-500" onchange="window.ikigaiApp.calculateIkigai()">' + abilityOptionsHtml + '</select></div>';
+    html += '<div class="bg-gray-800/40 p-2.5 sm:p-3 rounded-xl border border-gray-700/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">';
+    html += '<span class="font-semibold text-xs sm:text-sm text-gray-200 shrink-0">' + sub + '</span>';
+    html += '<div class="grid grid-cols-2 gap-2 w-full sm:w-auto sm:flex sm:items-center justify-end flex-1">';
+    html += '<div class="text-center w-full sm:w-40"><span class="text-[10px] text-pink-300 font-semibold block mb-0.5"><i class="fa-solid fa-heart text-pink-400 mr-0.5"></i> Đam mê</span><select id="passion-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[10px] sm:text-[11px] font-bold text-pink-300 focus:border-pink-500" onchange="window.ikigaiApp.calculateIkigai()">' + passionOptionsHtml + '</select></div>';
+    html += '<div class="text-center w-full sm:w-44"><span class="text-[10px] text-indigo-300 font-semibold block mb-0.5"><i class="fa-solid fa-brain text-indigo-400 mr-0.5"></i> Năng lực (Điểm TB)</span><select id="ability-' + idx + '" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-1.5 py-1 text-[10px] sm:text-[11px] font-bold text-indigo-300 focus:border-indigo-500" onchange="window.ikigaiApp.calculateIkigai()">' + abilityOptionsHtml + '</select></div>';
     html += '</div></div>';
   });
   container.innerHTML = html;

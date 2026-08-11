@@ -57,14 +57,15 @@ jobs:
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
+          mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/Tram_Dinh_Vi_IKIGAI_v1.0.0.apk
 
       - name: Create GitHub Release and Upload APK
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.0
-          name: "IKIGAI App Android APK Release v1.0.0"
-          body: "Tải file `app-debug.apk` cài đặt trực tiếp trên Android."
-          files: android/app/build/outputs/apk/debug/app-debug.apk
+          name: "Trạm Định Vị IKIGAI - Android App v1.0.0"
+          body: "Tải file `Tram_Dinh_Vi_IKIGAI_v1.0.0.apk` để cài đặt và sử dụng trực tiếp trên điện thoại Android."
+          files: android/app/build/outputs/apk/debug/Tram_Dinh_Vi_IKIGAI_v1.0.0.apk
           overwrite: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -28,97 +28,78 @@
 </head>
 <body class="min-h-screen pb-12 relative overflow-x-hidden">
 
-  <!-- SUBTLE BACKGROUND WATERMARK (CRE CHÌM) -->
-  <div class="fixed bottom-4 right-4 pointer-events-none select-none z-0 opacity-15 flex items-center gap-2">
-    <img src="icons/logo-white.png" alt="Amin Logo" class="w-8 h-8 object-contain">
-    <span class="text-[11px] font-bold text-indigo-300 tracking-wider uppercase">Powered by Amin</span>
-  </div>
-
   <!-- HEADER & NAVBAR -->
   <header class="border-b border-gray-800 bg-gray-900/85 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3.5 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-4 py-3 flex items-center justify-between gap-3">
       <div class="flex items-center gap-3">
-        <a href="https://github.com/Amin7410/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-md p-1 shrink-0 hover:scale-105 transition-transform" title="Github: Amin7410">
+        <a href="https://github.com/Amin7410/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white flex items-center justify-center shadow-md p-1 shrink-0 hover:scale-105 transition-transform" title="Github: Amin7410">
           <img src="icons/logo.png" alt="Amin Logo" class="w-full h-full object-contain">
         </a>
         <div>
-          <div class="flex items-center gap-2">
-            <h1 class="text-xl font-extrabold tracking-tight text-white">TRẠM ĐỊNH VỊ <span class="gradient-text"> IKIGAI </span></h1>
-          </div>
-          <p class="text-xs text-gray-400">Hệ Thống Dự Báo Tuyển Sinh Lớp 10 & Định Hướng Tổ Hợp Môn THPT GDPT 2018</p>
+          <h1 class="text-base sm:text-xl font-extrabold tracking-tight text-white">TRẠM ĐỊNH VỊ <span class="gradient-text">IKIGAI</span></h1>
+          <p class="text-[11px] sm:text-xs text-gray-400">Hệ Thống Dự Báo Tuyển Sinh Lớp 10 & Định Hướng Tổ Hợp Môn THPT GDPT 2018</p>
         </div>
-      </div>
-
-      <!-- MODULE STRATEGY SWITCHER (CÔNG TẮC CHUYỂN ĐỔI THUẬT TOÁN) -->
-      <div id="engineSwitcherContainer" class="flex items-center gap-3 bg-gray-800/80 p-2 rounded-2xl border border-gray-700">
-        <div class="text-right hidden sm:block">
-          <div class="text-xs font-bold text-gray-200" id="currentEngineLabel">Bản 2</div>
-        </div>
-        <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" id="engineToggle" class="sr-only peer" checked onchange="switchEngine(this.checked)">
-          <div class="w-14 h-7 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-indigo-600 peer-checked:to-purple-600"></div>
-        </label>
       </div>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 mt-8 relative z-10">
+  <main class="max-w-7xl mx-auto px-3 sm:px-4 mt-4 sm:mt-8 relative z-10">
 
     <!-- MAIN NAVIGATION TABS -->
-    <div class="flex border-b border-gray-800 mb-8 overflow-x-auto">
-      <button onclick="changeTab('tab1')" id="tab1-btn" class="px-6 py-3 font-semibold text-sm border-b-2 border-indigo-500 text-indigo-400 whitespace-nowrap">
+    <div class="flex border-b border-gray-800 mb-6 sm:mb-8 overflow-x-auto no-scrollbar">
+      <button onclick="changeTab('tab1')" id="tab1-btn" class="px-4 sm:px-6 py-2.5 sm:py-3 font-semibold text-xs sm:text-sm border-b-2 border-indigo-500 text-indigo-400 whitespace-nowrap">
         1. Tuyển Sinh THPT Thường
       </button>
-      <button onclick="changeTab('tab2')" id="tab2-btn" class="px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-gray-400 hover:text-gray-200 whitespace-nowrap">
+      <button onclick="changeTab('tab2')" id="tab2-btn" class="px-4 sm:px-6 py-2.5 sm:py-3 font-semibold text-xs sm:text-sm border-b-2 border-transparent text-gray-400 hover:text-gray-200 whitespace-nowrap">
         2. Tuyển Sinh Trường Chuyên
       </button>
-      <button onclick="changeTab('tab3')" id="tab3-btn" class="px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-gray-400 hover:text-gray-200 whitespace-nowrap">
+      <button onclick="changeTab('tab3')" id="tab3-btn" class="px-4 sm:px-6 py-2.5 sm:py-3 font-semibold text-xs sm:text-sm border-b-2 border-transparent text-gray-400 hover:text-gray-200 whitespace-nowrap">
         3. Định Hướng Ikigai Chọn Môn Lớp 10
       </button>
     </div>
 
     <!-- TAB 1: TUYỂN SINH THƯỜNG -->
-    <div id="tab1" class="tab-content grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <div id="tab1" class="tab-content grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8">
       <!-- CỘT NHẬP DỮ LIỆU -->
-      <div class="lg:col-span-5 space-y-6">
-        <div class="glass-card rounded-2xl p-6">
-          <h2 class="text-lg font-bold text-white mb-4">
+      <div class="lg:col-span-5 space-y-4 sm:space-y-6">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <h2 class="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4">
             Nhập Điểm Học Bạ Lớp 9 (Thang 10)
           </h2>
-          <div class="grid grid-cols-3 gap-4">
+          <div class="grid grid-cols-3 gap-2.5 sm:gap-4">
             <div>
-              <label class="block text-xs text-gray-400 mb-1">Toán</label>
-              <input type="number" id="mathScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-indigo-500 font-bold text-center" oninput="calculateNormalProbabilities()">
+              <label class="block text-[11px] sm:text-xs text-gray-400 mb-1">Toán</label>
+              <input type="number" id="mathScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-2 sm:px-3 py-2 text-white focus:outline-none focus:border-indigo-500 font-bold text-center text-sm sm:text-base" oninput="calculateNormalProbabilities()">
             </div>
             <div>
-              <label class="block text-xs text-gray-400 mb-1">Ngữ Văn</label>
-              <input type="number" id="litScore" value="8.0" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-indigo-500 font-bold text-center" oninput="calculateNormalProbabilities()">
+              <label class="block text-[11px] sm:text-xs text-gray-400 mb-1">Ngữ Văn</label>
+              <input type="number" id="litScore" value="8.0" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-2 sm:px-3 py-2 text-white focus:outline-none focus:border-indigo-500 font-bold text-center text-sm sm:text-base" oninput="calculateNormalProbabilities()">
             </div>
             <div>
-              <label class="block text-xs text-gray-400 mb-1">Tiếng Anh</label>
-              <input type="number" id="engScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-indigo-500 font-bold text-center" oninput="calculateNormalProbabilities()">
+              <label class="block text-[11px] sm:text-xs text-gray-400 mb-1">Tiếng Anh</label>
+              <input type="number" id="engScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-2 sm:px-3 py-2 text-white focus:outline-none focus:border-indigo-500 font-bold text-center text-sm sm:text-base" oninput="calculateNormalProbabilities()">
             </div>
           </div>
         </div>
 
-        <div class="glass-card rounded-2xl p-6">
-          <h2 class="text-lg font-bold text-white mb-4">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <h2 class="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4">
             Chọn 3 Nguyện Vọng Đăng Ký
           </h2>
-          <div class="space-y-4">
+          <div class="space-y-3 sm:space-y-4">
             <div>
-              <label class="block text-xs text-gray-400 mb-1">Nguyện Vọng 1 (NV Vừa Sức / Mơ Ước)</label>
-              <select id="nv1Select" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-purple-500 text-sm" onchange="calculateNormalProbabilities()">
+              <label class="block text-[11px] sm:text-xs text-gray-400 mb-1">Nguyện Vọng 1 (NV Vừa Sức / Mơ Ước)</label>
+              <select id="nv1Select" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm" onchange="calculateNormalProbabilities()">
               </select>
             </div>
             <div>
-              <label class="block text-xs text-gray-400 mb-1">Nguyện Vọng 2 (NV An Toàn - Hạ 1.5 đến 2 điểm)</label>
-              <select id="nv2Select" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-purple-500 text-sm" onchange="calculateNormalProbabilities()">
+              <label class="block text-[11px] sm:text-xs text-gray-400 mb-1">Nguyện Vọng 2 (NV An Toàn - Hạ 1.5 đến 2 điểm)</label>
+              <select id="nv2Select" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm" onchange="calculateNormalProbabilities()">
               </select>
             </div>
             <div>
-              <label class="block text-xs text-gray-400 mb-1">Nguyện Vọng 3 (NV Bảo Hiểm - Chốt Chặn)</label>
-              <select id="nv3Select" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-purple-500 text-sm" onchange="calculateNormalProbabilities()">
+              <label class="block text-[11px] sm:text-xs text-gray-400 mb-1">Nguyện Vọng 3 (NV Bảo Hiểm - Chốt Chặn)</label>
+              <select id="nv3Select" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm" onchange="calculateNormalProbabilities()">
               </select>
             </div>
           </div>
@@ -126,62 +107,61 @@
       </div>
 
       <!-- CỘT KẾT QUẢ & ĐỒ THỊ -->
-      <div class="lg:col-span-7 space-y-6">
+      <div class="lg:col-span-7 space-y-4 sm:space-y-6">
         <!-- ĐỒ THỊ HÌNH CHUÔNG GAUSS -->
-        <div class="glass-card rounded-2xl p-6">
-          <div class="flex justify-between items-center mb-4">
-            <h3 class="text-base font-bold text-white">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <div class="mb-3 sm:mb-4">
+            <h3 class="text-sm sm:text-base font-bold text-white">
               Đồ Thị Phổ Điểm Dự Báo & Vị Trí Nguyện Vọng
             </h3>
-            <span id="engineBadge" class="text-[10px] px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-semibold">Bản 2</span>
           </div>
-          <div class="h-56 relative">
+          <div class="h-48 sm:h-56 relative">
             <canvas id="gaussChart"></canvas>
           </div>
-          <div class="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-gray-800 text-center">
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-800 text-center">
             <div>
-              <div class="text-xs text-gray-400">Điểm Kỳ Vọng Trung Bình (μ)</div>
-              <div class="text-xl font-extrabold text-indigo-400" id="statMean">--</div>
+              <div class="text-[11px] sm:text-xs text-gray-400">Điểm Kỳ Vọng Trung Bình (μ)</div>
+              <div class="text-lg sm:text-xl font-extrabold text-indigo-400" id="statMean">--</div>
             </div>
             <div>
-              <div class="text-xs text-gray-400">Độ Dao Động Phong Độ (σ)</div>
-              <div class="text-xl font-extrabold text-purple-400" id="statStdDev">--</div>
+              <div class="text-[11px] sm:text-xs text-gray-400">Độ Dao Động Phong Độ (σ)</div>
+              <div class="text-lg sm:text-xl font-extrabold text-purple-400" id="statStdDev">--</div>
             </div>
           </div>
         </div>
 
         <!-- THẺ KẾT QUẢ % VÀ CẢNH BÁO -->
-        <div class="glass-card rounded-2xl p-6">
-          <h3 class="text-base font-bold text-white mb-4">Kết Quả Phân Tầng Cảnh Báo Nguyện Vọng</h3>
-          <div class="space-y-4" id="nvResultCards">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <h3 class="text-sm sm:text-base font-bold text-white mb-3 sm:mb-4">Kết Quả Phân Tầng Cảnh Báo Nguyện Vọng</h3>
+          <div class="space-y-3 sm:space-y-4" id="nvResultCards">
           </div>
         </div>
       </div>
     </div>
 
     <!-- TAB 2: TUYỂN SINH CHUYÊN -->
-    <div id="tab2" class="tab-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <div class="lg:col-span-5 space-y-6">
-        <div class="glass-card rounded-2xl p-6">
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-lg font-bold text-white">
+    <div id="tab2" class="tab-content hidden grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8">
+      <div class="lg:col-span-5 space-y-4 sm:space-y-6">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <div class="flex items-center justify-between mb-3 sm:mb-4">
+            <h2 class="text-base sm:text-lg font-bold text-white">
               Nhập Thông Tin Thi Chuyên
             </h2>
-            <span class="text-[11px] px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold">
+            <span class="text-[10px] sm:text-[11px] px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold">
               Tự động đồng bộ M1
             </span>
           </div>
 
-          <div class="space-y-4">
+          <div class="space-y-3 sm:space-y-4">
             <div class="p-3 bg-indigo-950/30 border border-indigo-800/40 rounded-xl text-xs text-indigo-300">
               <strong>Công thức tính điểm Chuyên (Thang 50 - Sheet 4):</strong><br>
               <span class="text-gray-300">Tổng điểm = (Tổng 3 môn thường trừ rủi ro) + (Điểm Chuyên trừ rủi ro × 2)</span>
             </div>
 
             <!-- TỔNG KẾT 3 MÔN THƯỜNG ĐỒNG BỘ TỪ M1 -->
-            <div class="bg-gray-800/60 p-3.5 rounded-xl border border-gray-700/80">
+            <div class="bg-gray-800/60 p-3 sm:p-3.5 rounded-xl border border-gray-700/80">
               <div class="flex justify-between items-center mb-2">
-                <label class="block text-xs font-semibold text-gray-200">1. Điểm 3 môn thi chung (Lấy trực tiếp từ Module 1)</label>
+                <label class="block text-[11px] sm:text-xs font-semibold text-gray-200">1. Điểm 3 môn thi chung (Từ Module 1)</label>
                 <button onclick="window.ikigaiApp.syncScoresFromModule1()" class="text-[11px] text-indigo-400 hover:text-indigo-300 underline font-medium">
                   Cập nhật
                 </button>
@@ -189,15 +169,15 @@
               <div class="grid grid-cols-3 gap-2 text-center">
                 <div class="bg-gray-900/60 p-2 rounded-lg border border-gray-700/50">
                   <span class="text-[10px] text-gray-400 block">Toán</span>
-                  <input type="number" id="specMathScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-transparent text-white font-bold text-center text-sm focus:outline-none" oninput="calculateSpecialized()">
+                  <input type="number" id="specMathScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-transparent text-white font-bold text-center text-xs sm:text-sm focus:outline-none" oninput="calculateSpecialized()">
                 </div>
                 <div class="bg-gray-900/60 p-2 rounded-lg border border-gray-700/50">
                   <span class="text-[10px] text-gray-400 block">Ngữ Văn</span>
-                  <input type="number" id="specLitScore" value="8.0" min="0" max="10" step="0.1" class="w-full bg-transparent text-white font-bold text-center text-sm focus:outline-none" oninput="calculateSpecialized()">
+                  <input type="number" id="specLitScore" value="8.0" min="0" max="10" step="0.1" class="w-full bg-transparent text-white font-bold text-center text-xs sm:text-sm focus:outline-none" oninput="calculateSpecialized()">
                 </div>
                 <div class="bg-gray-900/60 p-2 rounded-lg border border-gray-700/50">
                   <span class="text-[10px] text-gray-400 block">Tiếng Anh</span>
-                  <input type="number" id="specEngScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-transparent text-white font-bold text-center text-sm focus:outline-none" oninput="calculateSpecialized()">
+                  <input type="number" id="specEngScore" value="8.5" min="0" max="10" step="0.1" class="w-full bg-transparent text-white font-bold text-center text-xs sm:text-sm focus:outline-none" oninput="calculateSpecialized()">
                 </div>
               </div>
               <div class="text-[11px] text-indigo-300 mt-2 flex justify-between items-center">
@@ -208,18 +188,18 @@
 
             <!-- CHỌN TRƯỜNG & LỚP CHUYÊN -->
             <div>
-              <label class="block text-xs font-semibold text-gray-300 mb-1">2. Chọn Trường & Lớp Chuyên Mục Tiêu</label>
-              <select id="specSchoolSelect" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-sm" onchange="window.ikigaiApp.onSpecSchoolChange()">
+              <label class="block text-[11px] sm:text-xs font-semibold text-gray-300 mb-1">2. Chọn Trường & Lớp Chuyên Mục Tiêu</label>
+              <select id="specSchoolSelect" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-xs sm:text-sm" onchange="window.ikigaiApp.onSpecSchoolChange()">
               </select>
             </div>
 
             <!-- NHẬP ĐIỂM MÔN CHUYÊN -->
             <div>
               <div class="flex justify-between items-center mb-1">
-                <label class="block text-xs font-semibold text-gray-300" id="specSubjectLabel">3. Điểm học bạ môn Chuyên (Thang 10)</label>
+                <label class="block text-[11px] sm:text-xs font-semibold text-gray-300" id="specSubjectLabel">3. Điểm học bạ môn Chuyên (Thang 10)</label>
                 <span class="text-[10px] text-purple-300 bg-purple-900/40 px-2 py-0.5 rounded border border-purple-700/50" id="specSubjectNote">Hệ số 2</span>
               </div>
-              <input type="number" id="specScoreInput" value="9.0" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-purple-500/50 rounded-xl px-3 py-2 text-purple-300 font-bold text-center text-base" oninput="calculateSpecialized()">
+              <input type="number" id="specScoreInput" value="9.0" min="0" max="10" step="0.1" class="w-full bg-gray-800 border border-purple-500/50 rounded-xl px-3 py-2 text-purple-300 font-bold text-center text-sm sm:text-base" oninput="calculateSpecialized()">
               <p class="text-[11px] text-gray-400 mt-1" id="specInputHint">
                 * Môn Lý/Hóa/Sinh nhập điểm Khoa học tự nhiên; Môn Sử/Địa nhập điểm Lịch sử - Địa lý.
               </p>
@@ -248,48 +228,48 @@
         </div>
       </div>
 
-      <div class="lg:col-span-7 space-y-6">
-        <div class="glass-card rounded-2xl p-6">
-          <h3 class="text-base font-bold text-white mb-4">
+      <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <h3 class="text-sm sm:text-base font-bold text-white mb-3 sm:mb-4">
             Kết Quả Dự Báo Điểm Tuyển Sinh Chuyên (Thang 50)
           </h3>
-          <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="bg-gray-800/60 p-4 rounded-xl text-center border border-gray-700">
-              <div class="text-xs text-gray-400">Tổng Điểm Chuyên Kỳ Vọng (μ)</div>
-              <div class="text-2xl font-black text-amber-400" id="specTotalExpected">--</div>
-              <div class="text-[11px] text-gray-400 mt-1">Dải dự báo: <span id="specPointRange" class="text-amber-300 font-bold">--</span></div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <div class="bg-gray-800/60 p-3 sm:p-4 rounded-xl text-center border border-gray-700">
+              <div class="text-[11px] sm:text-xs text-gray-400">Tổng Điểm Chuyên Kỳ Vọng (μ)</div>
+              <div class="text-xl sm:text-2xl font-black text-amber-400" id="specTotalExpected">--</div>
+              <div class="text-[10px] sm:text-[11px] text-gray-400 mt-1">Dải dự báo: <span id="specPointRange" class="text-amber-300 font-bold">--</span></div>
             </div>
-            <div class="bg-gray-800/60 p-4 rounded-xl text-center border border-gray-700">
-              <div class="text-xs text-gray-400">Xác Suất Trúng Tuyển</div>
-              <div class="text-2xl font-black text-emerald-400" id="specProbPercent">--</div>
-              <div class="text-[11px] text-gray-400 mt-1">Chuẩn 2027: <span id="specTargetCutoff" class="text-gray-200 font-bold">--</span></div>
+            <div class="bg-gray-800/60 p-3 sm:p-4 rounded-xl text-center border border-gray-700">
+              <div class="text-[11px] sm:text-xs text-gray-400">Xác Suất Trúng Tuyển</div>
+              <div class="text-xl sm:text-2xl font-black text-emerald-400" id="specProbPercent">--</div>
+              <div class="text-[10px] sm:text-[11px] text-gray-400 mt-1">Chuẩn 2027: <span id="specTargetCutoff" class="text-gray-200 font-bold">--</span></div>
             </div>
           </div>
-          <div id="specWarningBox" class="p-4 rounded-xl border text-sm font-semibold">
+          <div id="specWarningBox" class="p-3 sm:p-4 rounded-xl border text-xs sm:text-sm font-semibold">
           </div>
         </div>
 
         <!-- BẢNG THÔNG TIN LỚP CHUYÊN ĐÃ CHỌN -->
-        <div class="glass-card rounded-2xl p-6" id="specClassDetailsCard">
-          <h4 class="text-sm font-bold text-gray-200 mb-3">
+        <div class="glass-card rounded-2xl p-4 sm:p-6" id="specClassDetailsCard">
+          <h4 class="text-xs sm:text-sm font-bold text-gray-200 mb-3">
             Thông Tin Điểm Chuẩn Lịch Sử Lớp Chuyên
           </h4>
-          <div class="grid grid-cols-4 gap-2 text-center text-xs">
-            <div class="bg-gray-800/40 p-2.5 rounded-xl border border-gray-700">
-              <div class="text-gray-400 text-[10px]">Năm 2024</div>
-              <div class="font-bold text-white text-sm" id="specHist2024">--</div>
+          <div class="grid grid-cols-4 gap-1.5 sm:gap-2 text-center text-xs">
+            <div class="bg-gray-800/40 p-2 sm:p-2.5 rounded-xl border border-gray-700">
+              <div class="text-gray-400 text-[9px] sm:text-[10px]">Năm 2024</div>
+              <div class="font-bold text-white text-xs sm:text-sm" id="specHist2024">--</div>
             </div>
-            <div class="bg-gray-800/40 p-2.5 rounded-xl border border-gray-700">
-              <div class="text-gray-400 text-[10px]">Năm 2025</div>
-              <div class="font-bold text-white text-sm" id="specHist2025">--</div>
+            <div class="bg-gray-800/40 p-2 sm:p-2.5 rounded-xl border border-gray-700">
+              <div class="text-gray-400 text-[9px] sm:text-[10px]">Năm 2025</div>
+              <div class="font-bold text-white text-xs sm:text-sm" id="specHist2025">--</div>
             </div>
-            <div class="bg-gray-800/40 p-2.5 rounded-xl border border-gray-700">
-              <div class="text-gray-400 text-[10px]">Năm 2026</div>
-              <div class="font-bold text-white text-sm" id="specHist2026">--</div>
+            <div class="bg-gray-800/40 p-2 sm:p-2.5 rounded-xl border border-gray-700">
+              <div class="text-gray-400 text-[9px] sm:text-[10px]">Năm 2026</div>
+              <div class="font-bold text-white text-xs sm:text-sm" id="specHist2026">--</div>
             </div>
-            <div class="bg-indigo-950/40 p-2.5 rounded-xl border border-indigo-700/50">
-              <div class="text-indigo-300 text-[10px]">Dự Báo 2027</div>
-              <div class="font-bold text-amber-300 text-sm" id="specHist2027">--</div>
+            <div class="bg-indigo-950/40 p-2 sm:p-2.5 rounded-xl border border-indigo-700/50">
+              <div class="text-indigo-300 text-[9px] sm:text-[10px]">Dự Báo 2027</div>
+              <div class="font-bold text-amber-300 text-xs sm:text-sm" id="specHist2027">--</div>
             </div>
           </div>
         </div>
@@ -297,12 +277,12 @@
     </div>
 
     <!-- TAB 3: ĐỊNH HƯỚNG IKIGAI CHỌN MÔN LỚP 10 -->
-    <div id="tab3" class="tab-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <div class="lg:col-span-6 space-y-6">
-        <div class="glass-card rounded-2xl p-6">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+    <div id="tab3" class="tab-content hidden grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8">
+      <div class="lg:col-span-6 space-y-4 sm:space-y-6">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3 sm:mb-4">
             <div>
-              <h2 class="text-lg font-bold text-white">
+              <h2 class="text-base sm:text-lg font-bold text-white">
                 Đánh Giá 10 Môn Lựa Chọn THPT
               </h2>
               <p class="text-xs text-gray-400">Thang điểm 1 - 10 theo Chương trình GDPT 2018</p>
@@ -311,40 +291,40 @@
               Thang chuẩn 10 mức
             </button>
           </div>
-          <div class="space-y-3 max-h-[460px] overflow-y-auto pr-2" id="subjectRatingsContainer">
+          <div class="space-y-2.5 max-h-[460px] overflow-y-auto pr-1 sm:pr-2" id="subjectRatingsContainer">
           </div>
         </div>
 
-        <div class="glass-card rounded-2xl p-6">
-          <h2 class="text-lg font-bold text-white mb-2">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <h2 class="text-base sm:text-lg font-bold text-white mb-2">
             Chọn Nhóm Ngành / Nghề Nghiệp Ước Mơ
           </h2>
           <p class="text-xs text-gray-400 mb-3">Hệ thống sẽ cộng điểm ưu tiên cho các tổ hợp mở ra khối thi xét tuyển đúng ngành này.</p>
-          <select id="careerSelect" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-sm" onchange="calculateIkigai()">
+          <select id="careerSelect" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-xs sm:text-sm" onchange="calculateIkigai()">
           </select>
         </div>
       </div>
 
-      <div class="lg:col-span-6 space-y-6">
+      <div class="lg:col-span-6 space-y-4 sm:space-y-6">
         <!-- ĐỒ THỊ TỌA ĐỘ IKIGAI OXY -->
-        <div class="glass-card rounded-2xl p-6">
-          <h3 class="text-base font-bold text-white mb-4">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <h3 class="text-sm sm:text-base font-bold text-white mb-3 sm:mb-4">
             Sơ Đồ Tọa Độ Ikigai Oxy & Mốc Lý Tưởng I(10,10)
           </h3>
-          <div class="h-64 relative">
+          <div class="h-56 sm:h-64 relative">
             <canvas id="ikigaiChart"></canvas>
           </div>
         </div>
 
         <!-- KHUYẾN NGHỊ TOP TỔ HỢP MÔN -->
-        <div class="glass-card rounded-2xl p-6">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-base font-bold text-white">
+        <div class="glass-card rounded-2xl p-4 sm:p-6">
+          <div class="flex items-center justify-between mb-3 sm:mb-4">
+            <h3 class="text-sm sm:text-base font-bold text-white">
               Gợi Ý Tổ Hợp 4 Môn Lớp 10 Tối Ưu Nhất
             </h3>
             <span class="text-[10px] text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-700/50">K-Index tối thiểu</span>
           </div>
-          <div class="space-y-4" id="ikigaiComboResults">
+          <div class="space-y-3 sm:space-y-4" id="ikigaiComboResults">
           </div>
         </div>
       </div>
@@ -353,22 +333,22 @@
   </main>
 
   <!-- MODAL HƯỚNG DẪN THANG ĐIỂM ĐÁNH GIÁ NĂNG LỰC & ĐAM MÊ (SHEET 5) -->
-  <div id="scaleModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <div id="scaleModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-4">
     <div class="bg-gray-900 border border-gray-700 rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
-      <div class="p-4 sm:p-5 border-b border-gray-800 flex justify-between items-center bg-gray-800/50">
+      <div class="p-3.5 sm:p-5 border-b border-gray-800 flex justify-between items-center bg-gray-800/50">
         <div>
-          <h3 class="text-base font-bold text-white">
+          <h3 class="text-sm sm:text-base font-bold text-white">
             Bảng Tiêu Chuẩn Thang Điểm Đánh Giá 1 - 10 (Sheet 5)
           </h3>
-          <p class="text-xs text-gray-400 mt-0.5">Quy chuẩn đánh giá Đam mê (X) và Năng lực học tập (Y) theo Báo cáo Đề tài</p>
+          <p class="text-[11px] sm:text-xs text-gray-400 mt-0.5">Quy chuẩn đánh giá Đam mê (X) và Năng lực học tập (Y) theo Báo cáo Đề tài</p>
         </div>
         <button onclick="window.ikigaiApp.closeScaleModal()" class="text-gray-400 hover:text-white text-xl p-1">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
-      <div class="p-4 sm:p-5 overflow-y-auto flex-1 space-y-3" id="scaleModalContent">
+      <div class="p-3.5 sm:p-5 overflow-y-auto flex-1 space-y-3" id="scaleModalContent">
       </div>
-      <div class="p-4 border-t border-gray-800 text-right bg-gray-800/40">
+      <div class="p-3.5 sm:p-4 border-t border-gray-800 text-right bg-gray-800/40">
         <button onclick="window.ikigaiApp.closeScaleModal()" class="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
           Đã hiểu & Đóng lại
         </button>
@@ -376,16 +356,10 @@
     </div>
   </div>
 
-  <footer class="max-w-7xl mx-auto px-4 py-6 border-t border-gray-800/80 mt-12 relative z-10">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400 font-medium">
-      <p>
-        <strong>Lưu ý:</strong> Phần mềm đóng vai trò tham khảo định lượng. Kết quả thi phụ thuộc vào sự nỗ lực thực tế của học sinh.
-      </p>
-      <a href="https://github.com/Amin7410/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-purple-300 hover:text-purple-200 font-semibold shrink-0 transition-colors">
-        <img src="icons/logo.png" alt="Amin Logo" class="w-4 h-4 object-contain rounded-full bg-white p-0.5 opacity-90">
-        <span>© 2026 IKIGAI • Designed & Developed by Amin</span>
-      </a>
-    </div>
+  <footer class="max-w-7xl mx-auto px-4 py-6 text-center border-t border-gray-800/80 mt-8 sm:mt-12 relative z-10">
+    <p class="text-xs text-gray-400 font-medium">
+      <strong>Lưu ý:</strong> Phần mềm đóng vai trò tham khảo định lượng. Kết quả thi phụ thuộc vào sự nỗ lực thực tế của học sinh.
+    </p>
   </footer>
 
   <script type="module" src="js/app.js"></script>
