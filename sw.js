@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ikigai-app-v1';
+const CACHE_NAME = 'ikigai-app-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -9,6 +9,10 @@ const ASSETS_TO_CACHE = [
   './js/ui/charts.js',
   './js/app.js',
   './manifest.json',
+  './icons/logo-white.png',
+  './icons/logo-dark.png',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
   'https://cdn.tailwindcss.com',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
   'https://cdn.jsdelivr.net/npm/chart.js'
