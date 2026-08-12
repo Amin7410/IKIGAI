@@ -1,9 +1,10 @@
-const CACHE_NAME = 'ikigai-app-v2';
+const CACHE_NAME = 'ikigai-app-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './css/styles.css',
   './js/data/db.js',
+  './js/data_payload.js',
   './js/core/mathUtils.js',
   './js/engines/calculationEngines.js',
   './js/ui/charts.js',

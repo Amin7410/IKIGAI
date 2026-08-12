@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Thư viện mã hóa CryptoJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="js/data_payload.js"></script>
   <link rel="stylesheet" href="css/styles.css">
   <!-- PWA & Mobile App Setup -->
   <link rel="manifest" href="manifest.json">
@@ -26,14 +29,34 @@
     }
   </script>
 </head>
-<body class="min-h-screen pb-12 relative overflow-x-hidden">
+<body class="min-h-screen pb-12 relative overflow-x-hidden bg-gray-900">
+
+  <!-- LOGIN OVERLAY -->
+  <div id="login-overlay" class="fixed inset-0 z-[100] bg-gray-900 flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full rounded-3xl p-8 text-center border border-gray-700 shadow-2xl bg-gray-800/80 backdrop-blur-xl">
+      <h2 class="text-2xl font-bold text-white mb-2 tracking-tight">Trạm Định Vị IKIGAI</h2>
+      <p class="text-sm text-gray-400 mb-6">Vui lòng nhập Mật khẩu hệ thống để truy cập dữ liệu</p>
+      
+      <div class="relative mb-6">
+        <input type="password" id="systemPassword" placeholder="Nhập mật khẩu..." class="w-full bg-gray-900 border border-gray-600 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-indigo-500 font-medium text-center shadow-inner text-lg transition-all" onkeypress="if(event.key === 'Enter') unlockSystem()">
+      </div>
+      
+      <button onclick="unlockSystem()" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-[0_4px_14px_0_rgba(99,102,241,0.39)] hover:shadow-[0_6px_20px_rgba(99,102,241,0.23)] hover:from-indigo-400 hover:to-purple-500 transition-all text-sm uppercase tracking-wider">
+        Giải Mã & Đăng Nhập
+      </button>
+      <p id="login-error" class="text-red-400 text-sm mt-4 hidden font-medium">Mật khẩu không chính xác!</p>
+    </div>
+  </div>
+
+  <!-- NỘI DUNG CHÍNH BỊ ẨN KHI CHƯA ĐĂNG NHẬP -->
+  <div id="app-content" class="hidden">
 
   <!-- HEADER & NAVBAR -->
   <header class="border-b border-gray-800 bg-gray-900/85 backdrop-blur sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-3.5 sm:px-4 py-3 flex items-center justify-between gap-3">
       <div class="flex items-center gap-3">
         <a href="https://github.com/Amin7410/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white flex items-center justify-center shadow-md p-1 shrink-0 hover:scale-105 transition-transform" title="Github: Amin7410">
-          <img src="icons/logo.png" alt="Amin Logo" class="w-full h-full object-contain">
+          <img src="icons/logo.png" alt="Amin Logo" class="w-full h-full object-contain grayscale">
         </a>
         <div>
           <h1 class="text-base sm:text-xl font-extrabold tracking-tight text-white">TRẠM ĐỊNH VỊ <span class="gradient-text">IKIGAI</span></h1>
@@ -361,6 +384,8 @@
       <strong>Lưu ý:</strong> Phần mềm đóng vai trò tham khảo định lượng. Kết quả thi phụ thuộc vào sự nỗ lực thực tế của học sinh.
     </p>
   </footer>
+
+  </div> <!-- End #app-content -->
 
   <script type="module" src="js/app.js"></script>
 </body>
