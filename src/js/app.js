@@ -1,14 +1,14 @@
 // ---------------- ANTI-CLONE (Domain Restriction) ----------------
 const allowedDomains = ['amin7410.github.io', 'localhost', '127.0.0.1'];
 if (!allowedDomains.includes(window.location.hostname) && window.location.hostname !== "") {
-    document.body.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100vh;background-color:#0f172a;color:#ef4444;font-family:sans-serif;text-align:center;padding:20px;"><div><h1 style="font-size:2rem;margin-bottom:10px;">Lỗi Bản Quyền</h1><p>Ứng dụng này đang được chạy trái phép trên một tên miền không được cấp phép.</p></div></div>';
-    throw new Error("Unauthorized domain!");
+  document.body.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100vh;background-color:#0f172a;color:#ef4444;font-family:sans-serif;text-align:center;padding:20px;"><div><h1 style="font-size:2rem;margin-bottom:10px;">Lỗi Bản Quyền</h1><p>Ứng dụng này đang được chạy trái phép trên một tên miền không được cấp phép.</p></div></div>';
+  throw new Error("Unauthorized domain!");
 }
 // ---------------------------------------------------------------
 
 // ---------------- ANTI-SCRAPING & ANTI-F12 ----------------
 document.addEventListener('contextmenu', event => event.preventDefault()); // Chặn chuột phải
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
   // Chặn F12
   if (e.key === 'F12' || e.keyCode === 123) {
     e.preventDefault();
@@ -30,7 +30,8 @@ import { ExcelOriginalEngine, MathCorrectedEngine } from './engines/calculationE
 import { renderGaussChart, renderIkigaiChart } from './ui/charts.js';
 
 export const CONFIG = {
-  SHOW_ENGINE_SWITCHER: false
+  SHOW_ENGINE_SWITCHER: false,
+  REQUIRE_PASSWORD: false
 };
 
 let isMathCorrectedEngine = true;
@@ -81,8 +82,8 @@ export function calculateNormalProbabilities() {
 
   // 3. Hệ số rủi ro K theo môn (Sheet 2)
   const kMath = (math >= 9.5) ? 0.75 : (math >= 8.5 ? 1.20 : 2.00);
-  const kLit  = (lit >= 8.5)  ? 0.80 : (lit >= 8.0  ? 1.40 : 2.20);
-  const kEng  = (eng >= 9.5)  ? 0.75 : (eng >= 8.5  ? 1.20 : 2.00);
+  const kLit = (lit >= 8.5) ? 0.80 : (lit >= 8.0 ? 1.40 : 2.20);
+  const kEng = (eng >= 9.5) ? 0.75 : (eng >= 8.5 ? 1.20 : 2.00);
 
   // 4. Điểm tối thiểu & tối đa từng môn (khoảng tin cậy 95% có rủi ro)
   const minMath = math * betaMath - (1.96 * seMath * kMath);
@@ -210,8 +211,8 @@ export function onSpecSchoolChange() {
   const selectedProgram = db.specializedSchools.find(s => s.id == schoolId) || db.specializedSchools[0];
 
   const math = parseFloat(document.getElementById('specMathScore')?.value) || 8.5;
-  const lit  = parseFloat(document.getElementById('specLitScore')?.value)  || 8.0;
-  const eng  = parseFloat(document.getElementById('specEngScore')?.value)  || 8.5;
+  const lit = parseFloat(document.getElementById('specLitScore')?.value) || 8.0;
+  const eng = parseFloat(document.getElementById('specEngScore')?.value) || 8.5;
 
   const progName = selectedProgram.program.toLowerCase();
   const labelEl = document.getElementById('specSubjectLabel');
@@ -263,8 +264,8 @@ export function calculateSpecialized() {
   const scoreInput = document.getElementById('specScoreInput');
   const schoolSelect = document.getElementById('specSchoolSelect');
   const mathEl = document.getElementById('specMathScore');
-  const litEl  = document.getElementById('specLitScore');
-  const engEl  = document.getElementById('specEngScore');
+  const litEl = document.getElementById('specLitScore');
+  const engEl = document.getElementById('specEngScore');
 
   if (!scoreInput || !schoolSelect) return;
 
@@ -273,15 +274,15 @@ export function calculateSpecialized() {
   const selectedSchool = db.specializedSchools.find(s => s.id == schoolId) || db.specializedSchools[0];
 
   const math = parseFloat(mathEl?.value) || 8.5;
-  const lit  = parseFloat(litEl?.value)  || 8.0;
-  const eng  = parseFloat(engEl?.value)  || 8.5;
+  const lit = parseFloat(litEl?.value) || 8.0;
+  const eng = parseFloat(engEl?.value) || 8.5;
 
   // 1. Tính tổng 3 môn thường đã trừ rủi ro theo Sheet 4 (G2 = (G6+G7)/2)
   const betaMath = 0.84, betaLit = 0.90, betaEng = 0.94;
   const seMath = 0.10, seLit = 0.12, seEng = 0.08;
   const kMath = (math >= 9.5) ? 0.75 : (math >= 8.5 ? 1.20 : 2.00);
-  const kLit  = (lit >= 8.5)  ? 0.80 : (lit >= 8.0  ? 1.40 : 2.20);
-  const kEng  = (eng >= 9.5)  ? 0.75 : (eng >= 8.5  ? 1.20 : 2.00);
+  const kLit = (lit >= 8.5) ? 0.80 : (lit >= 8.0 ? 1.40 : 2.20);
+  const kEng = (eng >= 9.5) ? 0.75 : (eng >= 8.5 ? 1.20 : 2.00);
 
   const minMath = math * betaMath - (1.96 * seMath * kMath);
   const maxMath = math * betaMath + (1.96 * seMath * kMath);
@@ -550,7 +551,7 @@ function renderIkigaiCombos(scatterData, career) {
     const avgDist = sumDist / c.subjects.length;
     const matchesCareer = c.blocks.some(b => career.priorityCombos.includes(b));
     const bonus = matchesCareer ? 1.5 : 0;
-    
+
     // Cấp 5: Cảnh báo lệch định hướng ngành (U = 0 và P_Risk > 0)
     const isCareerMismatched = !matchesCareer;
     const hasRisk = hasCriticalRisk || hasWeakAbility || hasLowPassion;
@@ -605,8 +606,8 @@ function renderIkigaiCombos(scatterData, career) {
       badgeHtml = '<span class="text-[10px] px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-semibold border border-indigo-500/30">Khá Phù Hợp</span>';
     }
 
-    const cardBg = isBest 
-      ? 'bg-gradient-to-r from-indigo-950/60 to-purple-950/60 border-indigo-500/60 shadow-lg shadow-indigo-950/30' 
+    const cardBg = isBest
+      ? 'bg-gradient-to-r from-indigo-950/60 to-purple-950/60 border-indigo-500/60 shadow-lg shadow-indigo-950/30'
       : 'bg-gray-800/40 border-gray-700/60';
 
     html += '<div class="' + cardBg + ' p-4 rounded-xl border flex flex-col gap-2.5">';
@@ -738,10 +739,12 @@ window.changeTab = (tabId) => window.ikigaiApp.changeTab(tabId);
 window.openScaleModal = () => window.ikigaiApp.openScaleModal();
 window.closeScaleModal = () => window.ikigaiApp.closeScaleModal();
 
-window.unlockSystem = () => {
+const DEFAULT_SECURITY_KEY = 'HongHanh123';
+
+window.unlockSystem = (forcedPassword = null) => {
   const pwdInput = document.getElementById('systemPassword');
   const errorEl = document.getElementById('login-error');
-  const password = pwdInput ? pwdInput.value : sessionStorage.getItem('ikigai_pwd');
+  const password = forcedPassword || (pwdInput ? pwdInput.value : sessionStorage.getItem('ikigai_pwd'));
 
   if (!password) {
     if (errorEl) {
@@ -755,7 +758,7 @@ window.unlockSystem = () => {
     // Giải mã dữ liệu
     const bytes = CryptoJS.AES.decrypt(window.ENCRYPTED_DB, password);
     const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
-    
+
     // Nạp dữ liệu vào db
     db.schools = decryptedData.schools;
     db.specializedSchools = decryptedData.specializedSchools;
@@ -765,15 +768,21 @@ window.unlockSystem = () => {
     db.combos = decryptedData.combos;
     db.careers = decryptedData.careers;
 
-    // Lưu phiên đăng nhập
-    sessionStorage.setItem('ikigai_pwd', password);
-    
+    // Lưu phiên đăng nhập nếu bật chế độ mật khẩu
+    const requirePwd = (typeof window.IKIGAI_REQUIRE_PASSWORD !== 'undefined')
+      ? window.IKIGAI_REQUIRE_PASSWORD
+      : CONFIG.REQUIRE_PASSWORD;
+
+    if (requirePwd) {
+      sessionStorage.setItem('ikigai_pwd', password);
+    }
+
     // Ẩn overlay, hiện app
     const overlay = document.getElementById('login-overlay');
     const content = document.getElementById('app-content');
     if (overlay) overlay.classList.add('hidden');
     if (content) content.classList.remove('hidden');
-    
+
     // Khởi tạo app
     initApp();
 
@@ -785,17 +794,27 @@ window.unlockSystem = () => {
     }
     sessionStorage.removeItem('ikigai_pwd');
   }
-}
+};
 
-// Kiểm tra phiên đăng nhập cũ
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
+function autoStart() {
+  const requirePwd = (typeof window.IKIGAI_REQUIRE_PASSWORD !== 'undefined')
+    ? window.IKIGAI_REQUIRE_PASSWORD
+    : CONFIG.REQUIRE_PASSWORD;
+
+  if (!requirePwd) {
+    // Nếu tắt yêu cầu mật khẩu: tự động giải mã và mở ứng dụng ngay
+    window.unlockSystem(DEFAULT_SECURITY_KEY);
+  } else {
+    // Nếu bật yêu cầu mật khẩu: kiểm tra phiên đăng nhập đã lưu
     if (sessionStorage.getItem('ikigai_pwd')) {
       window.unlockSystem();
     }
-  });
-} else {
-  if (sessionStorage.getItem('ikigai_pwd')) {
-    window.unlockSystem();
   }
+}
+
+// Khởi chạy khi tải trang
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', autoStart);
+} else {
+  autoStart();
 }
