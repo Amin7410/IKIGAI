@@ -31,7 +31,7 @@ import { renderGaussChart, renderIkigaiChart } from './ui/charts.js';
 
 export const CONFIG = {
   SHOW_ENGINE_SWITCHER: false,
-  REQUIRE_PASSWORD: true
+  REQUIRE_PASSWORD: false
 };
 
 let isMathCorrectedEngine = true;
